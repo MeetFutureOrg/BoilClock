@@ -11,11 +11,24 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    static var shared: AppDelegate? {
+        return UIApplication.shared.delegate as? AppDelegate
+    }
+    
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        
+        let libsManager = LibsManager.shared
+        libsManager.setupLibs(with: window)
+        
+        // Show initial screen
+        
+        Application.shared.presentInitialScreen(in: window!)
+        window?.makeKeyAndVisible()
         return true
     }
 

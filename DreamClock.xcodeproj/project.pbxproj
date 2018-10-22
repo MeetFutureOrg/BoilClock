@@ -10,15 +10,26 @@
 		0CF5EF9E2E874BAF62BD522A /* Pods_DreamClockTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 668E924B65372536E809AE1F /* Pods_DreamClockTests.framework */; };
 		3A0B3C8BCE0A99BF5CB41C60 /* Pods_DreamClock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6992769CB7C46056A5673451 /* Pods_DreamClock.framework */; };
 		610ECCB0C4DAB1BCACD16F6B /* Pods_DreamClockUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DE615ED0D42B6BC26A24F35 /* Pods_DreamClockUITests.framework */; };
-		A463F7BE217DE9F900EE055A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463F7BD217DE9F900EE055A /* AppDelegate.swift */; };
-		A463F7C0217DE9F900EE055A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463F7BF217DE9F900EE055A /* ViewController.swift */; };
+		A42F0E43217E29CB00009369 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A42F0E45217E29CB00009369 /* Launch Screen.storyboard */; };
 		A463F7C3217DE9F900EE055A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A463F7C1217DE9F900EE055A /* Main.storyboard */; };
 		A463F7C5217DE9FB00EE055A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A463F7C4217DE9FB00EE055A /* Assets.xcassets */; };
 		A463F7D3217DE9FB00EE055A /* DreamClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463F7D2217DE9FB00EE055A /* DreamClockTests.swift */; };
 		A463F7DE217DE9FB00EE055A /* DreamClockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463F7DD217DE9FB00EE055A /* DreamClockUITests.swift */; };
 		A463F7EE217DF48C00EE055A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463F7ED217DF48C00EE055A /* R.generated.swift */; };
-		A463F7F2217DF55400EE055A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A463F7F1217DF55400EE055A /* LaunchScreen.storyboard */; };
 		A463F7F4217DF58C00EE055A /* LibsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463F7F3217DF58C00EE055A /* LibsManager.swift */; };
+		A463F7FF217E0B9200EE055A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463F7FE217E0B9200EE055A /* AppDelegate.swift */; };
+		A463F80B217E0CC100EE055A /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463F80A217E0CC100EE055A /* Navigator.swift */; };
+		A463F80D217E0D8800EE055A /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463F80C217E0D8800EE055A /* Application.swift */; };
+		A463F810217E0F2000EE055A /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463F80F217E0F2000EE055A /* MainTabBarController.swift */; };
+		A463F812217E0F3C00EE055A /* MainTabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463F811217E0F3C00EE055A /* MainTabBarViewModel.swift */; };
+		A463F814217E0F6300EE055A /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463F813217E0F6300EE055A /* ViewModelType.swift */; };
+		A463F816217E0FCE00EE055A /* DreamAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463F815217E0FCE00EE055A /* DreamAPI.swift */; };
+		A463F818217E100800EE055A /* LogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463F817217E100800EE055A /* LogManager.swift */; };
+		A463F81B217E107B00EE055A /* ClockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463F81A217E107B00EE055A /* ClockViewModel.swift */; };
+		A463F81D217E108700EE055A /* ClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463F81C217E108700EE055A /* ClockViewController.swift */; };
+		A463F81F217E118900EE055A /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463F81E217E118900EE055A /* NavigationController.swift */; };
+		A463F821217E153600EE055A /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A463F820217E153600EE055A /* Image.xcassets */; };
+		A463F823217E160200EE055A /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463F822217E160200EE055A /* ThemeManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,9 +56,10 @@
 		668E924B65372536E809AE1F /* Pods_DreamClockTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DreamClockTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6992769CB7C46056A5673451 /* Pods_DreamClock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DreamClock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		775A0E2953C49A855F0D4CD1 /* Pods-DreamClockTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamClockTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DreamClockTests/Pods-DreamClockTests.release.xcconfig"; sourceTree = "<group>"; };
+		A42F0E44217E29CB00009369 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
+		A42F0E47217E29CC00009369 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "en.lproj/Launch Screen.strings"; sourceTree = "<group>"; };
+		A42F0E49217E29CD00009369 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Launch Screen.strings"; sourceTree = "<group>"; };
 		A463F7BA217DE9F900EE055A /* DreamClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DreamClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A463F7BD217DE9F900EE055A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A463F7BF217DE9F900EE055A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A463F7C2217DE9F900EE055A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A463F7C4217DE9FB00EE055A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A463F7C9217DE9FB00EE055A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,8 +70,22 @@
 		A463F7DD217DE9FB00EE055A /* DreamClockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamClockUITests.swift; sourceTree = "<group>"; };
 		A463F7DF217DE9FB00EE055A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A463F7ED217DF48C00EE055A /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
-		A463F7F1217DF55400EE055A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A463F7F3217DF58C00EE055A /* LibsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibsManager.swift; sourceTree = "<group>"; };
+		A463F7FE217E0B9200EE055A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A463F800217E0C8B00EE055A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		A463F809217E0C9F00EE055A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		A463F80A217E0CC100EE055A /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		A463F80C217E0D8800EE055A /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		A463F80F217E0F2000EE055A /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		A463F811217E0F3C00EE055A /* MainTabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewModel.swift; sourceTree = "<group>"; };
+		A463F813217E0F6300EE055A /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		A463F815217E0FCE00EE055A /* DreamAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamAPI.swift; sourceTree = "<group>"; };
+		A463F817217E100800EE055A /* LogManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogManager.swift; sourceTree = "<group>"; };
+		A463F81A217E107B00EE055A /* ClockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockViewModel.swift; sourceTree = "<group>"; };
+		A463F81C217E108700EE055A /* ClockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockViewController.swift; sourceTree = "<group>"; };
+		A463F81E217E118900EE055A /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		A463F820217E153600EE055A /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
+		A463F822217E160200EE055A /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		A70F96F035A4086457C6F90A /* Pods-DreamClockUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamClockUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DreamClockUITests/Pods-DreamClockUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D5B94BB28E44BA37BA709025 /* Pods-DreamClockUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamClockUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DreamClockUITests/Pods-DreamClockUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E5286670B6BE0A195F6A25B5 /* Pods-DreamClock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamClock.release.xcconfig"; path = "Pods/Target Support Files/Pods-DreamClock/Pods-DreamClock.release.xcconfig"; sourceTree = "<group>"; };
@@ -141,21 +167,15 @@
 		A463F7BC217DE9F900EE055A /* DreamClock */ = {
 			isa = PBXGroup;
 			children = (
+				A463F7F8217E006C00EE055A /* Application */,
 				A463F7FD217E00A500EE055A /* Networking */,
 				A463F7FC217E009400EE055A /* Modules */,
 				A463F7FB217E008A00EE055A /* Vendor */,
 				A463F7FA217E008100EE055A /* Models */,
 				A463F7F9217E007800EE055A /* Extensions */,
-				A463F7F8217E006C00EE055A /* Application */,
 				A463F7F7217E006500EE055A /* Common */,
 				A463F7F5217DF59100EE055A /* Manager */,
 				A463F7EC217DF42400EE055A /* Resources */,
-				A463F7BD217DE9F900EE055A /* AppDelegate.swift */,
-				A463F7BF217DE9F900EE055A /* ViewController.swift */,
-				A463F7C1217DE9F900EE055A /* Main.storyboard */,
-				A463F7F1217DF55400EE055A /* LaunchScreen.storyboard */,
-				A463F7C4217DE9FB00EE055A /* Assets.xcassets */,
-				A463F7C9217DE9FB00EE055A /* Info.plist */,
 			);
 			path = DreamClock;
 			sourceTree = "<group>";
@@ -181,7 +201,11 @@
 		A463F7EC217DF42400EE055A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A463F7C4217DE9FB00EE055A /* Assets.xcassets */,
 				A463F7ED217DF48C00EE055A /* R.generated.swift */,
+				A463F7C9217DE9FB00EE055A /* Info.plist */,
+				A463F820217E153600EE055A /* Image.xcassets */,
+				A42F0E45217E29CB00009369 /* Launch Screen.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -190,6 +214,8 @@
 			isa = PBXGroup;
 			children = (
 				A463F7F3217DF58C00EE055A /* LibsManager.swift */,
+				A463F817217E100800EE055A /* LogManager.swift */,
+				A463F822217E160200EE055A /* ThemeManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -197,6 +223,8 @@
 		A463F7F7217E006500EE055A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				A463F813217E0F6300EE055A /* ViewModelType.swift */,
+				A463F81E217E118900EE055A /* NavigationController.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -204,6 +232,9 @@
 		A463F7F8217E006C00EE055A /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				A463F7FE217E0B9200EE055A /* AppDelegate.swift */,
+				A463F80A217E0CC100EE055A /* Navigator.swift */,
+				A463F80C217E0D8800EE055A /* Application.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -232,6 +263,8 @@
 		A463F7FC217E009400EE055A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				A463F819217E106D00EE055A /* Clock */,
+				A463F80E217E0F0E00EE055A /* Main */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -239,8 +272,28 @@
 		A463F7FD217E00A500EE055A /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				A463F815217E0FCE00EE055A /* DreamAPI.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		A463F80E217E0F0E00EE055A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				A463F80F217E0F2000EE055A /* MainTabBarController.swift */,
+				A463F811217E0F3C00EE055A /* MainTabBarViewModel.swift */,
+				A463F7C1217DE9F900EE055A /* Main.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		A463F819217E106D00EE055A /* Clock */ = {
+			isa = PBXGroup;
+			children = (
+				A463F81A217E107B00EE055A /* ClockViewModel.swift */,
+				A463F81C217E108700EE055A /* ClockViewController.swift */,
+			);
+			path = Clock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,6 +387,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = A463F7B1217DE9F900EE055A;
 			productRefGroup = A463F7BB217DE9F900EE055A /* Products */;
@@ -352,8 +406,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A463F7F2217DF55400EE055A /* LaunchScreen.storyboard in Resources */,
+				A463F821217E153600EE055A /* Image.xcassets in Resources */,
 				A463F7C5217DE9FB00EE055A /* Assets.xcassets in Resources */,
+				A42F0E43217E29CB00009369 /* Launch Screen.storyboard in Resources */,
 				A463F7C3217DE9F900EE055A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -560,10 +615,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A463F7C0217DE9F900EE055A /* ViewController.swift in Sources */,
+				A463F814217E0F6300EE055A /* ViewModelType.swift in Sources */,
+				A463F818217E100800EE055A /* LogManager.swift in Sources */,
+				A463F823217E160200EE055A /* ThemeManager.swift in Sources */,
+				A463F80D217E0D8800EE055A /* Application.swift in Sources */,
+				A463F812217E0F3C00EE055A /* MainTabBarViewModel.swift in Sources */,
+				A463F7FF217E0B9200EE055A /* AppDelegate.swift in Sources */,
+				A463F81F217E118900EE055A /* NavigationController.swift in Sources */,
+				A463F80B217E0CC100EE055A /* Navigator.swift in Sources */,
+				A463F810217E0F2000EE055A /* MainTabBarController.swift in Sources */,
+				A463F81D217E108700EE055A /* ClockViewController.swift in Sources */,
 				A463F7F4217DF58C00EE055A /* LibsManager.swift in Sources */,
-				A463F7BE217DE9F900EE055A /* AppDelegate.swift in Sources */,
+				A463F816217E0FCE00EE055A /* DreamAPI.swift in Sources */,
 				A463F7EE217DF48C00EE055A /* R.generated.swift in Sources */,
+				A463F81B217E107B00EE055A /* ClockViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,10 +664,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		A42F0E45217E29CB00009369 /* Launch Screen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A42F0E44217E29CB00009369 /* Base */,
+				A42F0E47217E29CC00009369 /* en */,
+				A42F0E49217E29CD00009369 /* zh-Hans */,
+			);
+			name = "Launch Screen.storyboard";
+			sourceTree = "<group>";
+		};
 		A463F7C1217DE9F900EE055A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A463F7C2217DE9F900EE055A /* Base */,
+				A463F800217E0C8B00EE055A /* zh-Hans */,
+				A463F809217E0C9F00EE055A /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -614,6 +691,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -661,7 +739,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -675,6 +753,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -716,7 +795,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -733,7 +812,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HU7XTQSZ6Z;
-				INFOPLIST_FILE = DreamClock/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/DreamClock/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -752,7 +832,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HU7XTQSZ6Z;
-				INFOPLIST_FILE = DreamClock/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/DreamClock/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
