@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A463F7BE217DE9F900EE055A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463F7BD217DE9F900EE055A /* AppDelegate.swift */; };
+		A463F7C0217DE9F900EE055A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463F7BF217DE9F900EE055A /* ViewController.swift */; };
+		A463F7C3217DE9F900EE055A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A463F7C1217DE9F900EE055A /* Main.storyboard */; };
+		A463F7C5217DE9FB00EE055A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A463F7C4217DE9FB00EE055A /* Assets.xcassets */; };
+		A463F7C8217DE9FB00EE055A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A463F7C6217DE9FB00EE055A /* LaunchScreen.storyboard */; };
+		A463F7D3217DE9FB00EE055A /* DreamClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463F7D2217DE9FB00EE055A /* DreamClockTests.swift */; };
+		A463F7DE217DE9FB00EE055A /* DreamClockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463F7DD217DE9FB00EE055A /* DreamClockUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A463F7CF217DE9FB00EE055A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A463F7B2217DE9F900EE055A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A463F7B9217DE9F900EE055A;
+			remoteInfo = DreamClock;
+		};
+		A463F7DA217DE9FB00EE055A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A463F7B2217DE9F900EE055A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A463F7B9217DE9F900EE055A;
+			remoteInfo = DreamClock;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A463F7BA217DE9F900EE055A /* DreamClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DreamClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A463F7BD217DE9F900EE055A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A463F7BF217DE9F900EE055A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A463F7C2217DE9F900EE055A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A463F7C4217DE9FB00EE055A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A463F7C7217DE9FB00EE055A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A463F7C9217DE9FB00EE055A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A463F7CE217DE9FB00EE055A /* DreamClockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DreamClockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A463F7D2217DE9FB00EE055A /* DreamClockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamClockTests.swift; sourceTree = "<group>"; };
+		A463F7D4217DE9FB00EE055A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A463F7D9217DE9FB00EE055A /* DreamClockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DreamClockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A463F7DD217DE9FB00EE055A /* DreamClockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamClockUITests.swift; sourceTree = "<group>"; };
+		A463F7DF217DE9FB00EE055A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A463F7B7217DE9F900EE055A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A463F7CB217DE9FB00EE055A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A463F7D6217DE9FB00EE055A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A463F7B1217DE9F900EE055A = {
+			isa = PBXGroup;
+			children = (
+				A463F7BC217DE9F900EE055A /* DreamClock */,
+				A463F7D1217DE9FB00EE055A /* DreamClockTests */,
+				A463F7DC217DE9FB00EE055A /* DreamClockUITests */,
+				A463F7BB217DE9F900EE055A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A463F7BB217DE9F900EE055A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A463F7BA217DE9F900EE055A /* DreamClock.app */,
+				A463F7CE217DE9FB00EE055A /* DreamClockTests.xctest */,
+				A463F7D9217DE9FB00EE055A /* DreamClockUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A463F7BC217DE9F900EE055A /* DreamClock */ = {
+			isa = PBXGroup;
+			children = (
+				A463F7BD217DE9F900EE055A /* AppDelegate.swift */,
+				A463F7BF217DE9F900EE055A /* ViewController.swift */,
+				A463F7C1217DE9F900EE055A /* Main.storyboard */,
+				A463F7C4217DE9FB00EE055A /* Assets.xcassets */,
+				A463F7C6217DE9FB00EE055A /* LaunchScreen.storyboard */,
+				A463F7C9217DE9FB00EE055A /* Info.plist */,
+			);
+			path = DreamClock;
+			sourceTree = "<group>";
+		};
+		A463F7D1217DE9FB00EE055A /* DreamClockTests */ = {
+			isa = PBXGroup;
+			children = (
+				A463F7D2217DE9FB00EE055A /* DreamClockTests.swift */,
+				A463F7D4217DE9FB00EE055A /* Info.plist */,
+			);
+			path = DreamClockTests;
+			sourceTree = "<group>";
+		};
+		A463F7DC217DE9FB00EE055A /* DreamClockUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A463F7DD217DE9FB00EE055A /* DreamClockUITests.swift */,
+				A463F7DF217DE9FB00EE055A /* Info.plist */,
+			);
+			path = DreamClockUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A463F7B9217DE9F900EE055A /* DreamClock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A463F7E2217DE9FB00EE055A /* Build configuration list for PBXNativeTarget "DreamClock" */;
+			buildPhases = (
+				A463F7B6217DE9F900EE055A /* Sources */,
+				A463F7B7217DE9F900EE055A /* Frameworks */,
+				A463F7B8217DE9F900EE055A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DreamClock;
+			productName = DreamClock;
+			productReference = A463F7BA217DE9F900EE055A /* DreamClock.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A463F7CD217DE9FB00EE055A /* DreamClockTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A463F7E5217DE9FB00EE055A /* Build configuration list for PBXNativeTarget "DreamClockTests" */;
+			buildPhases = (
+				A463F7CA217DE9FB00EE055A /* Sources */,
+				A463F7CB217DE9FB00EE055A /* Frameworks */,
+				A463F7CC217DE9FB00EE055A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A463F7D0217DE9FB00EE055A /* PBXTargetDependency */,
+			);
+			name = DreamClockTests;
+			productName = DreamClockTests;
+			productReference = A463F7CE217DE9FB00EE055A /* DreamClockTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A463F7D8217DE9FB00EE055A /* DreamClockUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A463F7E8217DE9FB00EE055A /* Build configuration list for PBXNativeTarget "DreamClockUITests" */;
+			buildPhases = (
+				A463F7D5217DE9FB00EE055A /* Sources */,
+				A463F7D6217DE9FB00EE055A /* Frameworks */,
+				A463F7D7217DE9FB00EE055A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A463F7DB217DE9FB00EE055A /* PBXTargetDependency */,
+			);
+			name = DreamClockUITests;
+			productName = DreamClockUITests;
+			productReference = A463F7D9217DE9FB00EE055A /* DreamClockUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A463F7B2217DE9F900EE055A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "FlyWake Studio";
+				TargetAttributes = {
+					A463F7B9217DE9F900EE055A = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					A463F7CD217DE9FB00EE055A = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = A463F7B9217DE9F900EE055A;
+					};
+					A463F7D8217DE9FB00EE055A = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = A463F7B9217DE9F900EE055A;
+					};
+				};
+			};
+			buildConfigurationList = A463F7B5217DE9F900EE055A /* Build configuration list for PBXProject "DreamClock" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A463F7B1217DE9F900EE055A;
+			productRefGroup = A463F7BB217DE9F900EE055A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A463F7B9217DE9F900EE055A /* DreamClock */,
+				A463F7CD217DE9FB00EE055A /* DreamClockTests */,
+				A463F7D8217DE9FB00EE055A /* DreamClockUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A463F7B8217DE9F900EE055A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A463F7C8217DE9FB00EE055A /* LaunchScreen.storyboard in Resources */,
+				A463F7C5217DE9FB00EE055A /* Assets.xcassets in Resources */,
+				A463F7C3217DE9F900EE055A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A463F7CC217DE9FB00EE055A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A463F7D7217DE9FB00EE055A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A463F7B6217DE9F900EE055A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A463F7C0217DE9F900EE055A /* ViewController.swift in Sources */,
+				A463F7BE217DE9F900EE055A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A463F7CA217DE9FB00EE055A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A463F7D3217DE9FB00EE055A /* DreamClockTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A463F7D5217DE9FB00EE055A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A463F7DE217DE9FB00EE055A /* DreamClockUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A463F7D0217DE9FB00EE055A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A463F7B9217DE9F900EE055A /* DreamClock */;
+			targetProxy = A463F7CF217DE9FB00EE055A /* PBXContainerItemProxy */;
+		};
+		A463F7DB217DE9FB00EE055A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A463F7B9217DE9F900EE055A /* DreamClock */;
+			targetProxy = A463F7DA217DE9FB00EE055A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A463F7C1217DE9F900EE055A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A463F7C2217DE9F900EE055A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A463F7C6217DE9FB00EE055A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A463F7C7217DE9FB00EE055A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A463F7E0217DE9FB00EE055A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A463F7E1217DE9FB00EE055A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A463F7E3217DE9FB00EE055A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HU7XTQSZ6Z;
+				INFOPLIST_FILE = DreamClock/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.flywake.dreamclock.DreamClock;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A463F7E4217DE9FB00EE055A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HU7XTQSZ6Z;
+				INFOPLIST_FILE = DreamClock/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.flywake.dreamclock.DreamClock;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A463F7E6217DE9FB00EE055A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HU7XTQSZ6Z;
+				INFOPLIST_FILE = DreamClockTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.flywake.dreamclock.DreamClockTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DreamClock.app/DreamClock";
+			};
+			name = Debug;
+		};
+		A463F7E7217DE9FB00EE055A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HU7XTQSZ6Z;
+				INFOPLIST_FILE = DreamClockTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.flywake.dreamclock.DreamClockTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DreamClock.app/DreamClock";
+			};
+			name = Release;
+		};
+		A463F7E9217DE9FB00EE055A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HU7XTQSZ6Z;
+				INFOPLIST_FILE = DreamClockUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.flywake.dreamclock.DreamClockUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DreamClock;
+			};
+			name = Debug;
+		};
+		A463F7EA217DE9FB00EE055A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HU7XTQSZ6Z;
+				INFOPLIST_FILE = DreamClockUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.flywake.dreamclock.DreamClockUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DreamClock;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A463F7B5217DE9F900EE055A /* Build configuration list for PBXProject "DreamClock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A463F7E0217DE9FB00EE055A /* Debug */,
+				A463F7E1217DE9FB00EE055A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A463F7E2217DE9FB00EE055A /* Build configuration list for PBXNativeTarget "DreamClock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A463F7E3217DE9FB00EE055A /* Debug */,
+				A463F7E4217DE9FB00EE055A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A463F7E5217DE9FB00EE055A /* Build configuration list for PBXNativeTarget "DreamClockTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A463F7E6217DE9FB00EE055A /* Debug */,
+				A463F7E7217DE9FB00EE055A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A463F7E8217DE9FB00EE055A /* Build configuration list for PBXNativeTarget "DreamClockUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A463F7E9217DE9FB00EE055A /* Debug */,
+				A463F7EA217DE9FB00EE055A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A463F7B2217DE9F900EE055A /* Project object */;
+}
