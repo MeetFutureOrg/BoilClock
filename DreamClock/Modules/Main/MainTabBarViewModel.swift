@@ -42,3 +42,4 @@ class MainTabBarViewModel: ViewModel, ViewModelType {
         }
     }
 }
+

@@ -107,8 +107,8 @@ struct _R: Rswift.Validatable {
   
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
-      try main.validate()
       try launchScreen.validate()
+      try main.validate()
     }
     
     struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
@@ -142,8 +142,8 @@ struct _R: Rswift.Validatable {
       static func validate() throws {
         if #available(iOS 11.0, *) {
         }
-        if _R.storyboard.main().clockViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'clockViewController' could not be loaded from storyboard 'Main' as 'ClockViewController'.") }
         if _R.storyboard.main().mainTabBarController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'mainTabBarController' could not be loaded from storyboard 'Main' as 'MainTabBarController'.") }
+        if _R.storyboard.main().clockViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'clockViewController' could not be loaded from storyboard 'Main' as 'ClockViewController'.") }
       }
       
       fileprivate init() {}

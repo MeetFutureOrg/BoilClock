@@ -12,8 +12,6 @@ import RxSwift
 
 let provider = API.shared
 
-var disposeBag = DisposeBag()
-
 enum MainTabBarItem: Int {
     case clock
     
@@ -30,9 +28,9 @@ enum MainTabBarItem: Int {
         let vc = controller(with: viewModel)
         let item = UITabBarItem(title: nil, image: image, tag: rawValue)
         
-        themeService.rx
+        _ = themeService.rx
             .bind({ $0.text }, to: item.rx.titleColor)
-            .bind({ $0.secondary }, to: item.rx.titleSelectedColor).disposed(by: disposeBag)
+            .bind({ $0.secondary }, to: item.rx.titleSelectedColor)
         
         vc.tabBarItem = item
         return vc
@@ -82,4 +80,3 @@ class MainTabBarController: UITabBarController, Navigatable {
         }).disposed(by: rx.disposeBag)
     }
 }
-
