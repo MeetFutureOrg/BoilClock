@@ -7,13 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CF5EF9E2E874BAF62BD522A /* Pods_DreamClockTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 668E924B65372536E809AE1F /* Pods_DreamClockTests.framework */; };
+		3A0B3C8BCE0A99BF5CB41C60 /* Pods_DreamClock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6992769CB7C46056A5673451 /* Pods_DreamClock.framework */; };
+		610ECCB0C4DAB1BCACD16F6B /* Pods_DreamClockUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DE615ED0D42B6BC26A24F35 /* Pods_DreamClockUITests.framework */; };
 		A463F7BE217DE9F900EE055A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463F7BD217DE9F900EE055A /* AppDelegate.swift */; };
 		A463F7C0217DE9F900EE055A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463F7BF217DE9F900EE055A /* ViewController.swift */; };
 		A463F7C3217DE9F900EE055A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A463F7C1217DE9F900EE055A /* Main.storyboard */; };
 		A463F7C5217DE9FB00EE055A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A463F7C4217DE9FB00EE055A /* Assets.xcassets */; };
-		A463F7C8217DE9FB00EE055A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A463F7C6217DE9FB00EE055A /* LaunchScreen.storyboard */; };
 		A463F7D3217DE9FB00EE055A /* DreamClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463F7D2217DE9FB00EE055A /* DreamClockTests.swift */; };
 		A463F7DE217DE9FB00EE055A /* DreamClockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463F7DD217DE9FB00EE055A /* DreamClockUITests.swift */; };
+		A463F7EE217DF48C00EE055A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463F7ED217DF48C00EE055A /* R.generated.swift */; };
+		A463F7F2217DF55400EE055A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A463F7F1217DF55400EE055A /* LaunchScreen.storyboard */; };
+		A463F7F4217DF58C00EE055A /* LibsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463F7F3217DF58C00EE055A /* LibsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,12 +39,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1DE615ED0D42B6BC26A24F35 /* Pods_DreamClockUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DreamClockUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A254640EC4D9130964EB9E4 /* Pods-DreamClockTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamClockTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DreamClockTests/Pods-DreamClockTests.debug.xcconfig"; sourceTree = "<group>"; };
+		593B7E3C24C5053FC9AD697E /* Pods-DreamClock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamClock.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DreamClock/Pods-DreamClock.debug.xcconfig"; sourceTree = "<group>"; };
+		668E924B65372536E809AE1F /* Pods_DreamClockTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DreamClockTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6992769CB7C46056A5673451 /* Pods_DreamClock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DreamClock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		775A0E2953C49A855F0D4CD1 /* Pods-DreamClockTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamClockTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DreamClockTests/Pods-DreamClockTests.release.xcconfig"; sourceTree = "<group>"; };
 		A463F7BA217DE9F900EE055A /* DreamClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DreamClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A463F7BD217DE9F900EE055A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A463F7BF217DE9F900EE055A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A463F7C2217DE9F900EE055A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A463F7C4217DE9FB00EE055A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A463F7C7217DE9FB00EE055A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A463F7C9217DE9FB00EE055A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A463F7CE217DE9FB00EE055A /* DreamClockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DreamClockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A463F7D2217DE9FB00EE055A /* DreamClockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamClockTests.swift; sourceTree = "<group>"; };
@@ -47,6 +57,12 @@
 		A463F7D9217DE9FB00EE055A /* DreamClockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DreamClockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A463F7DD217DE9FB00EE055A /* DreamClockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamClockUITests.swift; sourceTree = "<group>"; };
 		A463F7DF217DE9FB00EE055A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A463F7ED217DF48C00EE055A /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		A463F7F1217DF55400EE055A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A463F7F3217DF58C00EE055A /* LibsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibsManager.swift; sourceTree = "<group>"; };
+		A70F96F035A4086457C6F90A /* Pods-DreamClockUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamClockUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DreamClockUITests/Pods-DreamClockUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D5B94BB28E44BA37BA709025 /* Pods-DreamClockUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamClockUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DreamClockUITests/Pods-DreamClockUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E5286670B6BE0A195F6A25B5 /* Pods-DreamClock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamClock.release.xcconfig"; path = "Pods/Target Support Files/Pods-DreamClock/Pods-DreamClock.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A0B3C8BCE0A99BF5CB41C60 /* Pods_DreamClock.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CF5EF9E2E874BAF62BD522A /* Pods_DreamClockTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +86,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				610ECCB0C4DAB1BCACD16F6B /* Pods_DreamClockUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		517B839461A7081A72AE72C5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				593B7E3C24C5053FC9AD697E /* Pods-DreamClock.debug.xcconfig */,
+				E5286670B6BE0A195F6A25B5 /* Pods-DreamClock.release.xcconfig */,
+				4A254640EC4D9130964EB9E4 /* Pods-DreamClockTests.debug.xcconfig */,
+				775A0E2953C49A855F0D4CD1 /* Pods-DreamClockTests.release.xcconfig */,
+				D5B94BB28E44BA37BA709025 /* Pods-DreamClockUITests.debug.xcconfig */,
+				A70F96F035A4086457C6F90A /* Pods-DreamClockUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7C603E6DC04A4021ACD5484E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6992769CB7C46056A5673451 /* Pods_DreamClock.framework */,
+				668E924B65372536E809AE1F /* Pods_DreamClockTests.framework */,
+				1DE615ED0D42B6BC26A24F35 /* Pods_DreamClockUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A463F7B1217DE9F900EE055A = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +123,8 @@
 				A463F7D1217DE9FB00EE055A /* DreamClockTests */,
 				A463F7DC217DE9FB00EE055A /* DreamClockUITests */,
 				A463F7BB217DE9F900EE055A /* Products */,
+				517B839461A7081A72AE72C5 /* Pods */,
+				7C603E6DC04A4021ACD5484E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,11 +141,13 @@
 		A463F7BC217DE9F900EE055A /* DreamClock */ = {
 			isa = PBXGroup;
 			children = (
+				A463F7F5217DF59100EE055A /* Manager */,
+				A463F7EC217DF42400EE055A /* Resources */,
 				A463F7BD217DE9F900EE055A /* AppDelegate.swift */,
 				A463F7BF217DE9F900EE055A /* ViewController.swift */,
 				A463F7C1217DE9F900EE055A /* Main.storyboard */,
+				A463F7F1217DF55400EE055A /* LaunchScreen.storyboard */,
 				A463F7C4217DE9FB00EE055A /* Assets.xcassets */,
-				A463F7C6217DE9FB00EE055A /* LaunchScreen.storyboard */,
 				A463F7C9217DE9FB00EE055A /* Info.plist */,
 			);
 			path = DreamClock;
@@ -125,6 +171,22 @@
 			path = DreamClockUITests;
 			sourceTree = "<group>";
 		};
+		A463F7EC217DF42400EE055A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A463F7ED217DF48C00EE055A /* R.generated.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A463F7F5217DF59100EE055A /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				A463F7F3217DF58C00EE055A /* LibsManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +194,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A463F7E2217DE9FB00EE055A /* Build configuration list for PBXNativeTarget "DreamClock" */;
 			buildPhases = (
+				13D716DBF905F1EA90FA6AB1 /* [CP] Check Pods Manifest.lock */,
 				A463F7B6217DE9F900EE055A /* Sources */,
 				A463F7B7217DE9F900EE055A /* Frameworks */,
 				A463F7B8217DE9F900EE055A /* Resources */,
+				E9FA873591652A64F0D14E61 /* [CP] Embed Pods Frameworks */,
+				A463F7EB217DF3AE00EE055A /* R.swift */,
 			);
 			buildRules = (
 			);
@@ -149,6 +214,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A463F7E5217DE9FB00EE055A /* Build configuration list for PBXNativeTarget "DreamClockTests" */;
 			buildPhases = (
+				0A03444C5CD01011CED595C1 /* [CP] Check Pods Manifest.lock */,
 				A463F7CA217DE9FB00EE055A /* Sources */,
 				A463F7CB217DE9FB00EE055A /* Frameworks */,
 				A463F7CC217DE9FB00EE055A /* Resources */,
@@ -167,6 +233,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A463F7E8217DE9FB00EE055A /* Build configuration list for PBXNativeTarget "DreamClockUITests" */;
 			buildPhases = (
+				7EBFC7ACC769E8CAF8C20C07 /* [CP] Check Pods Manifest.lock */,
 				A463F7D5217DE9FB00EE055A /* Sources */,
 				A463F7D6217DE9FB00EE055A /* Frameworks */,
 				A463F7D7217DE9FB00EE055A /* Resources */,
@@ -229,7 +296,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A463F7C8217DE9FB00EE055A /* LaunchScreen.storyboard in Resources */,
+				A463F7F2217DF55400EE055A /* LaunchScreen.storyboard in Resources */,
 				A463F7C5217DE9FB00EE055A /* Assets.xcassets in Resources */,
 				A463F7C3217DE9F900EE055A /* Main.storyboard in Resources */,
 			);
@@ -251,13 +318,196 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0A03444C5CD01011CED595C1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DreamClockTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		13D716DBF905F1EA90FA6AB1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DreamClock-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7EBFC7ACC769E8CAF8C20C07 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DreamClockUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A463F7EB217DF3AE00EE055A /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/DreamClock/Resources\"\n";
+		};
+		E9FA873591652A64F0D14E61 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DreamClock/Pods-DreamClock-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaDebug/CocoaDebug.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
+				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
+				"${BUILT_PRODUCTS_DIR}/DateToolsSwift/DateToolsSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/DeviceKit/DeviceKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/FLEX/FLEX.framework",
+				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Localize-Swift/Localize_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya-ObjectMapper/Moya_ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/NSObject+Rx/NSObject_Rx.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/QuickLayout/QuickLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
+				"${BUILT_PRODUCTS_DIR}/RxGesture/RxGesture.framework",
+				"${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwiftExt/RxSwiftExt.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTheme/RxTheme.framework",
+				"${BUILT_PRODUCTS_DIR}/RxViewController/RxViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftEntryKit/SwiftEntryKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftRichString/SwiftRichString.framework",
+				"${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/netfox/netfox.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaDebug.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DateToolsSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DeviceKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLEX.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Localize_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NSObject_Rx.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QuickLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxGesture.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxOptional.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwiftExt.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTheme.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftDate.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftEntryKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftRichString.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwifterSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/netfox.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DreamClock/Pods-DreamClock-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A463F7B6217DE9F900EE055A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A463F7C0217DE9F900EE055A /* ViewController.swift in Sources */,
+				A463F7F4217DF58C00EE055A /* LibsManager.swift in Sources */,
 				A463F7BE217DE9F900EE055A /* AppDelegate.swift in Sources */,
+				A463F7EE217DF48C00EE055A /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,14 +549,6 @@
 				A463F7C2217DE9F900EE055A /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A463F7C6217DE9FB00EE055A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A463F7C7217DE9FB00EE055A /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -430,6 +672,7 @@
 		};
 		A463F7E3217DE9FB00EE055A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 593B7E3C24C5053FC9AD697E /* Pods-DreamClock.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -442,12 +685,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.flywake.dreamclock.DreamClock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		A463F7E4217DE9FB00EE055A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5286670B6BE0A195F6A25B5 /* Pods-DreamClock.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -460,12 +704,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.flywake.dreamclock.DreamClock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		A463F7E6217DE9FB00EE055A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A254640EC4D9130964EB9E4 /* Pods-DreamClockTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -487,6 +732,7 @@
 		};
 		A463F7E7217DE9FB00EE055A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 775A0E2953C49A855F0D4CD1 /* Pods-DreamClockTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +754,7 @@
 		};
 		A463F7E9217DE9FB00EE055A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5B94BB28E44BA37BA709025 /* Pods-DreamClockUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -528,6 +775,7 @@
 		};
 		A463F7EA217DE9FB00EE055A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A70F96F035A4086457C6F90A /* Pods-DreamClockUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
