@@ -9,7 +9,6 @@
 import UIKit
 import RxSwift
 
-
 let provider = API.shared
 
 enum MainTabBarItem: Int {
