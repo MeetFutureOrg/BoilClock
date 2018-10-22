@@ -13,7 +13,6 @@ let provider = API.shared
 
 enum MainTabBarItem: Int {
     case clock
-    
     func controller(with viewModel: ViewModel) -> UIViewController {
         switch self {
         case .clock:
