@@ -141,6 +141,13 @@
 		A463F7BC217DE9F900EE055A /* DreamClock */ = {
 			isa = PBXGroup;
 			children = (
+				A463F7FD217E00A500EE055A /* Networking */,
+				A463F7FC217E009400EE055A /* Modules */,
+				A463F7FB217E008A00EE055A /* Vendor */,
+				A463F7FA217E008100EE055A /* Models */,
+				A463F7F9217E007800EE055A /* Extensions */,
+				A463F7F8217E006C00EE055A /* Application */,
+				A463F7F7217E006500EE055A /* Common */,
 				A463F7F5217DF59100EE055A /* Manager */,
 				A463F7EC217DF42400EE055A /* Resources */,
 				A463F7BD217DE9F900EE055A /* AppDelegate.swift */,
@@ -185,6 +192,55 @@
 				A463F7F3217DF58C00EE055A /* LibsManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		A463F7F7217E006500EE055A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		A463F7F8217E006C00EE055A /* Application */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		A463F7F9217E007800EE055A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A463F7FA217E008100EE055A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A463F7FB217E008A00EE055A /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		A463F7FC217E009400EE055A /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		A463F7FD217E00A500EE055A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
