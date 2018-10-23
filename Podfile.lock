@@ -28,7 +28,6 @@ PODS:
   - Moya/RxSwift (11.0.2):
     - Moya/Core
     - RxSwift (~> 4.0)
-  - netfox (1.12.1)
   - "NSObject+Rx (4.4.1)":
     - RxSwift (~> 4.3)
   - NVActivityIndicatorView (4.4.0):
@@ -104,7 +103,6 @@ DEPENDENCIES:
   - Localize-Swift
   - Moya-ObjectMapper/RxSwift
   - Moya/RxSwift
-  - netfox
   - "NSObject+Rx"
   - NVActivityIndicatorView
   - R.swift (= 5.0.0.alpha.2)
@@ -141,7 +139,6 @@ SPEC REPOS:
     - Localize-Swift
     - Moya
     - Moya-ObjectMapper
-    - netfox
     - "NSObject+Rx"
     - NVActivityIndicatorView
     - ObjectMapper
@@ -181,7 +178,6 @@ SPEC CHECKSUMS:
   Localize-Swift: c798ec9286494866f7068f85f7c71283ac5bdab4
   Moya: a725035953bc1c0eb1be505ab903984501d82440
   Moya-ObjectMapper: 441caa307b527331fde59e2577adc632a16f1255
-  netfox: 21a2a441f64bdb6c611d1b7417d27d4abb424d5c
   "NSObject+Rx": 9884a92f19b610795c431e10b4e601913b59c9e9
   NVActivityIndicatorView: ec7440a57af2450319d3a4181cca7da6fc127064
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
@@ -205,6 +201,6 @@ SPEC CHECKSUMS:
   SwiftMessages: da7c981256a65b3e58022d9027a36584cf4eccf5
   SwiftRichString: a3ebe72b13db2e1b917cdbb6b44d817254a7ff73
 
-PODFILE CHECKSUM: d7292a571ebc7d9ebab5e261ae61514625421553
+PODFILE CHECKSUM: 94483ad2566dd7a2105ceac0aa2cd79aebd6b955
 
 COCOAPODS: 1.5.3

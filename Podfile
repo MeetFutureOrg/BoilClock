@@ -69,7 +69,7 @@ target 'DreamClock' do
 
   # DEBUG
   pod 'CocoaDebug', :configurations => ['Debug']
-  pod 'netfox'
+  # pod 'netfox'
 
   # Logging
   pod 'CocoaLumberjack/Swift'
