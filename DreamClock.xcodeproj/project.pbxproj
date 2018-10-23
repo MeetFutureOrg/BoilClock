@@ -34,8 +34,8 @@
 		A463F814217E0F6300EE055A /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463F813217E0F6300EE055A /* ViewModelType.swift */; };
 		A463F816217E0FCE00EE055A /* DreamAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463F815217E0FCE00EE055A /* DreamAPI.swift */; };
 		A463F818217E100800EE055A /* LogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463F817217E100800EE055A /* LogManager.swift */; };
-		A463F81B217E107B00EE055A /* ClockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463F81A217E107B00EE055A /* ClockViewModel.swift */; };
-		A463F81D217E108700EE055A /* ClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463F81C217E108700EE055A /* ClockViewController.swift */; };
+		A463F81B217E107B00EE055A /* AlarmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463F81A217E107B00EE055A /* AlarmViewModel.swift */; };
+		A463F81D217E108700EE055A /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463F81C217E108700EE055A /* AlarmViewController.swift */; };
 		A463F81F217E118900EE055A /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463F81E217E118900EE055A /* NavigationController.swift */; };
 		A463F821217E153600EE055A /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A463F820217E153600EE055A /* Image.xcassets */; };
 		A463F823217E160200EE055A /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463F822217E160200EE055A /* ThemeManager.swift */; };
@@ -99,8 +99,8 @@
 		A463F813217E0F6300EE055A /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		A463F815217E0FCE00EE055A /* DreamAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamAPI.swift; sourceTree = "<group>"; };
 		A463F817217E100800EE055A /* LogManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogManager.swift; sourceTree = "<group>"; };
-		A463F81A217E107B00EE055A /* ClockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockViewModel.swift; sourceTree = "<group>"; };
-		A463F81C217E108700EE055A /* ClockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockViewController.swift; sourceTree = "<group>"; };
+		A463F81A217E107B00EE055A /* AlarmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewModel.swift; sourceTree = "<group>"; };
+		A463F81C217E108700EE055A /* AlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
 		A463F81E217E118900EE055A /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		A463F820217E153600EE055A /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
 		A463F822217E160200EE055A /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
@@ -313,7 +313,7 @@
 			isa = PBXGroup;
 			children = (
 				A42F0E50217F161F00009369 /* Events */,
-				A463F819217E106D00EE055A /* Clock */,
+				A463F819217E106D00EE055A /* Alarm */,
 				A42F0E4A217F123C00009369 /* Settings */,
 				A463F80E217E0F0E00EE055A /* Main */,
 			);
@@ -338,13 +338,13 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		A463F819217E106D00EE055A /* Clock */ = {
+		A463F819217E106D00EE055A /* Alarm */ = {
 			isa = PBXGroup;
 			children = (
-				A463F81C217E108700EE055A /* ClockViewController.swift */,
-				A463F81A217E107B00EE055A /* ClockViewModel.swift */,
+				A463F81C217E108700EE055A /* AlarmViewController.swift */,
+				A463F81A217E107B00EE055A /* AlarmViewModel.swift */,
 			);
-			path = Clock;
+			path = Alarm;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -680,12 +680,12 @@
 				A42F0E52217F1DFD00009369 /* SettingsViewController.swift in Sources */,
 				A463F810217E0F2000EE055A /* MainTabBarController.swift in Sources */,
 				A42F0E56217F1E1E00009369 /* EventsViewController.swift in Sources */,
-				A463F81D217E108700EE055A /* ClockViewController.swift in Sources */,
+				A463F81D217E108700EE055A /* AlarmViewController.swift in Sources */,
 				A463F7F4217DF58C00EE055A /* LibsManager.swift in Sources */,
 				A463F816217E0FCE00EE055A /* DreamAPI.swift in Sources */,
 				A463F7EE217DF48C00EE055A /* R.generated.swift in Sources */,
 				A42F0E58217F1E2A00009369 /* EventsViewModel.swift in Sources */,
-				A463F81B217E107B00EE055A /* ClockViewModel.swift in Sources */,
+				A463F81B217E107B00EE055A /* AlarmViewModel.swift in Sources */,
 				A42F0E54217F1E0900009369 /* SettingsViewModel.swift in Sources */,
 				A42F0E5C217F251800009369 /* StackView.swift in Sources */,
 				A42F0E5F217F25F300009369 /* Configs.swift in Sources */,

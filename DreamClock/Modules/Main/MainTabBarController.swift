@@ -24,7 +24,7 @@ enum MainTabBarItem: Int {
             vc.viewModel = viewModel as? EventsViewModel
             return NavigationController(rootViewController: vc)
         case .clock:
-            let vc = R.storyboard.main.clockViewController()!
+            let vc = R.storyboard.main.alarmViewController()!
             vc.viewModel = viewModel as? ClockViewModel
             return NavigationController(rootViewController: vc)
         case .settings:

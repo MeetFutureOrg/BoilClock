@@ -1,5 +1,5 @@
 //
-//  ClockViewController.swift
+//  AlarmViewController.swift
 //  DreamClock
 //
 //  Created by Sun on 2018/10/22.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ClockViewController: ViewController {
+class AlarmViewController: ViewController {
     
     var viewModel: ClockViewModel!
     

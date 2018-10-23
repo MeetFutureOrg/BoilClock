@@ -24,10 +24,10 @@
             </objects>
             <point key="canvasLocation" x="-860" y="-389"/>
         </scene>
-        <!--Clock View Controller-->
+        <!--Alarm View Controller-->
         <scene sceneID="Hr6-Ms-xNC">
             <objects>
-                <viewController storyboardIdentifier="ClockViewController" id="VTK-jf-5v6" customClass="ClockViewController" customModule="DreamClock" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AlarmViewController" id="VTK-jf-5v6" customClass="AlarmViewController" customModule="DreamClock" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="of9-aL-oHy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
