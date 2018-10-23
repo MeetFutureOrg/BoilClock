@@ -1,5 +1,5 @@
 //
-//  ClockViewModel.swift
+//  AlarmViewModel.swift
 //  DreamClock
 //
 //  Created by Sun on 2018/10/22.
@@ -10,7 +10,7 @@ import RxCocoa
 import RxSwift
 import RxDataSources
 
-class ClockViewModel: ViewModel, ViewModelType  {
+class AlarmViewModel: ViewModel, ViewModelType  {
     
     struct Input {
         

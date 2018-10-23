@@ -10,12 +10,12 @@ import UIKit
 
 class AlarmViewController: ViewController {
     
-    var viewModel: ClockViewModel!
+    var viewModel: AlarmViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = Color.FlatUI.sunFlower
-        navigationItem.title = "Clock"
+        navigationItem.title = "Alarm"
         // Do any additional setup after loading the view.
     }
 

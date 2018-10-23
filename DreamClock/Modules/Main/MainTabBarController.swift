@@ -14,7 +14,7 @@ let provider = API.shared
 enum MainTabBarItem: Int {
 
     case events
-    case clock
+    case alarm
     case settings
     
     func controller(with viewModel: ViewModel) -> UIViewController {
@@ -23,9 +23,9 @@ enum MainTabBarItem: Int {
             let vc = R.storyboard.main.eventsViewController()!
             vc.viewModel = viewModel as? EventsViewModel
             return NavigationController(rootViewController: vc)
-        case .clock:
+        case .alarm:
             let vc = R.storyboard.main.alarmViewController()!
-            vc.viewModel = viewModel as? ClockViewModel
+            vc.viewModel = viewModel as? AlarmViewModel
             return NavigationController(rootViewController: vc)
         case .settings:
             let vc = R.storyboard.main.settingsViewController()!
@@ -50,7 +50,7 @@ enum MainTabBarItem: Int {
     var image: UIImage? {
         switch self {
         case .events:   return R.image.dc_ic_calendar_add_outline_24_24x24_()
-        case .clock:    return R.image.dc_ic_clock_outline_24_24x24_()
+        case .alarm:    return R.image.dc_ic_clock_outline_24_24x24_()
         case .settings: return R.image.dc_ic_settings_outline_24_24x24_()
         }
     }
@@ -58,7 +58,7 @@ enum MainTabBarItem: Int {
     var selectedImage: UIImage? {
         switch self {
         case .events:   return R.image.dc_ic_calendar_add_filled_24_24x24_()
-        case .clock:    return R.image.dc_ic_clock_filled_24_24x24_()
+        case .alarm:    return R.image.dc_ic_clock_filled_24_24x24_()
         case .settings: return R.image.dc_ic_settings_internal_filled_24_24x24_()
         }
     }
