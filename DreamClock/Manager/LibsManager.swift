@@ -20,6 +20,7 @@ import SwifterSwift
 import SwiftDate
 import Hero
 import SwiftMessages
+import Wormholy
 
 struct LibsManager {
     
@@ -72,6 +73,10 @@ struct LibsManager {
     
     func setupFLEX() {
         FLEXManager.shared().isNetworkDebuggingEnabled = true
+    }
+    
+    func setupWormholy() {
+        Wormholy.shakeEnabled = true
     }
 }
 

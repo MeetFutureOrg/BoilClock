@@ -16,6 +16,7 @@ class ClockViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = Color.Social.facebook
+        
         // Do any additional setup after loading the view.
     }
     
