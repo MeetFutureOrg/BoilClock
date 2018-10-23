@@ -6,6 +6,7 @@
 //  Copyright © 2018 FlyWake Studio. All rights reserved.
 //
 
+import Foundation
 import RxCocoa
 import RxSwift
 
@@ -28,7 +29,7 @@ class MainTabBarViewModel: ViewModel, ViewModelType {
         
         
         let tabBarItems = loggedIn.map { (loggedIn) -> [MainTabBarItem] in
-            return [.clock]
+            return [.events, .clock, .settings]
             }.asDriver(onErrorJustReturn: [])
         
         return Output(tabBarItems: tabBarItems)
@@ -36,9 +37,10 @@ class MainTabBarViewModel: ViewModel, ViewModelType {
     
     func viewModel(for tabBarItem: MainTabBarItem) -> ViewModel {
         switch tabBarItem {
-        case .clock:
-            let viewModel = ClockViewModel(provider: provider)
-            return viewModel
+        case .events:   return EventsViewModel(provider: provider)
+        case .clock:    return ClockViewModel(provider: provider)
+        case .settings: return SettingsViewModel(provider: provider)
+            
         }
     }
 }

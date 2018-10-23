@@ -16,14 +16,49 @@ struct R: Rswift.Validatable {
     try intern.validate()
   }
   
-  /// This `R.image` struct is generated, and contains static references to 1 images.
+  /// This `R.image` struct is generated, and contains static references to 6 images.
   struct image {
-    /// Image `icon_tabbar_clock`.
-    static let icon_tabbar_clock = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_tabbar_clock")
+    /// Image `dc_ic_calendar_add_filled_24_24x24_`.
+    static let dc_ic_calendar_add_filled_24_24x24_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_calendar_add_filled_24_24x24_")
+    /// Image `dc_ic_calendar_add_outline_24_24x24_`.
+    static let dc_ic_calendar_add_outline_24_24x24_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_calendar_add_outline_24_24x24_")
+    /// Image `dc_ic_clock_filled_24_24x24_`.
+    static let dc_ic_clock_filled_24_24x24_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_clock_filled_24_24x24_")
+    /// Image `dc_ic_clock_outline_24_24x24_`.
+    static let dc_ic_clock_outline_24_24x24_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_clock_outline_24_24x24_")
+    /// Image `dc_ic_settings_internal_filled_24_24x24_`.
+    static let dc_ic_settings_internal_filled_24_24x24_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_settings_internal_filled_24_24x24_")
+    /// Image `dc_ic_settings_outline_24_24x24_`.
+    static let dc_ic_settings_outline_24_24x24_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_settings_outline_24_24x24_")
     
-    /// `UIImage(named: "icon_tabbar_clock", bundle: ..., traitCollection: ...)`
-    static func icon_tabbar_clock(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.icon_tabbar_clock, compatibleWith: traitCollection)
+    /// `UIImage(named: "dc_ic_calendar_add_filled_24_24x24_", bundle: ..., traitCollection: ...)`
+    static func dc_ic_calendar_add_filled_24_24x24_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.dc_ic_calendar_add_filled_24_24x24_, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "dc_ic_calendar_add_outline_24_24x24_", bundle: ..., traitCollection: ...)`
+    static func dc_ic_calendar_add_outline_24_24x24_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.dc_ic_calendar_add_outline_24_24x24_, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "dc_ic_clock_filled_24_24x24_", bundle: ..., traitCollection: ...)`
+    static func dc_ic_clock_filled_24_24x24_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.dc_ic_clock_filled_24_24x24_, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "dc_ic_clock_outline_24_24x24_", bundle: ..., traitCollection: ...)`
+    static func dc_ic_clock_outline_24_24x24_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.dc_ic_clock_outline_24_24x24_, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "dc_ic_settings_internal_filled_24_24x24_", bundle: ..., traitCollection: ...)`
+    static func dc_ic_settings_internal_filled_24_24x24_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.dc_ic_settings_internal_filled_24_24x24_, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "dc_ic_settings_outline_24_24x24_", bundle: ..., traitCollection: ...)`
+    static func dc_ic_settings_outline_24_24x24_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.dc_ic_settings_outline_24_24x24_, compatibleWith: traitCollection)
     }
     
     fileprivate init() {}
@@ -107,8 +142,8 @@ struct _R: Rswift.Validatable {
   
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
-      try launchScreen.validate()
       try main.validate()
+      try launchScreen.validate()
     }
     
     struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
@@ -128,22 +163,34 @@ struct _R: Rswift.Validatable {
     struct main: Rswift.StoryboardResourceType, Rswift.Validatable {
       let bundle = R.hostingBundle
       let clockViewController = StoryboardViewControllerResource<ClockViewController>(identifier: "ClockViewController")
+      let eventsViewController = StoryboardViewControllerResource<EventsViewController>(identifier: "EventsViewController")
       let mainTabBarController = StoryboardViewControllerResource<MainTabBarController>(identifier: "MainTabBarController")
       let name = "Main"
+      let settingsViewController = StoryboardViewControllerResource<SettingsViewController>(identifier: "SettingsViewController")
       
       func clockViewController(_: Void = ()) -> ClockViewController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: clockViewController)
+      }
+      
+      func eventsViewController(_: Void = ()) -> EventsViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: eventsViewController)
       }
       
       func mainTabBarController(_: Void = ()) -> MainTabBarController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: mainTabBarController)
       }
       
+      func settingsViewController(_: Void = ()) -> SettingsViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: settingsViewController)
+      }
+      
       static func validate() throws {
         if #available(iOS 11.0, *) {
         }
-        if _R.storyboard.main().mainTabBarController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'mainTabBarController' could not be loaded from storyboard 'Main' as 'MainTabBarController'.") }
         if _R.storyboard.main().clockViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'clockViewController' could not be loaded from storyboard 'Main' as 'ClockViewController'.") }
+        if _R.storyboard.main().settingsViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'settingsViewController' could not be loaded from storyboard 'Main' as 'SettingsViewController'.") }
+        if _R.storyboard.main().mainTabBarController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'mainTabBarController' could not be loaded from storyboard 'Main' as 'MainTabBarController'.") }
+        if _R.storyboard.main().eventsViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'eventsViewController' could not be loaded from storyboard 'Main' as 'EventsViewController'.") }
       }
       
       fileprivate init() {}

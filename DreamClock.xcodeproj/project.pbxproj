@@ -11,6 +11,15 @@
 		3A0B3C8BCE0A99BF5CB41C60 /* Pods_DreamClock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6992769CB7C46056A5673451 /* Pods_DreamClock.framework */; };
 		610ECCB0C4DAB1BCACD16F6B /* Pods_DreamClockUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DE615ED0D42B6BC26A24F35 /* Pods_DreamClockUITests.framework */; };
 		A42F0E43217E29CB00009369 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A42F0E45217E29CB00009369 /* Launch Screen.storyboard */; };
+		A42F0E52217F1DFD00009369 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42F0E51217F1DFD00009369 /* SettingsViewController.swift */; };
+		A42F0E54217F1E0900009369 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42F0E53217F1E0900009369 /* SettingsViewModel.swift */; };
+		A42F0E56217F1E1E00009369 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42F0E55217F1E1E00009369 /* EventsViewController.swift */; };
+		A42F0E58217F1E2A00009369 /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42F0E57217F1E2A00009369 /* EventsViewModel.swift */; };
+		A42F0E5A217F247200009369 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42F0E59217F247200009369 /* ViewController.swift */; };
+		A42F0E5C217F251800009369 /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42F0E5B217F251800009369 /* StackView.swift */; };
+		A42F0E5F217F25F300009369 /* Configs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42F0E5E217F25F300009369 /* Configs.swift */; };
+		A42F0E61217F267900009369 /* UIFont+Dream.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42F0E60217F267900009369 /* UIFont+Dream.swift */; };
+		A42F0E63217F272700009369 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42F0E62217F272700009369 /* View.swift */; };
 		A463F7C3217DE9F900EE055A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A463F7C1217DE9F900EE055A /* Main.storyboard */; };
 		A463F7C5217DE9FB00EE055A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A463F7C4217DE9FB00EE055A /* Assets.xcassets */; };
 		A463F7D3217DE9FB00EE055A /* DreamClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463F7D2217DE9FB00EE055A /* DreamClockTests.swift */; };
@@ -59,6 +68,15 @@
 		A42F0E44217E29CB00009369 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		A42F0E47217E29CC00009369 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "en.lproj/Launch Screen.strings"; sourceTree = "<group>"; };
 		A42F0E49217E29CD00009369 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Launch Screen.strings"; sourceTree = "<group>"; };
+		A42F0E51217F1DFD00009369 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		A42F0E53217F1E0900009369 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		A42F0E55217F1E1E00009369 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		A42F0E57217F1E2A00009369 /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
+		A42F0E59217F247200009369 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A42F0E5B217F251800009369 /* StackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackView.swift; sourceTree = "<group>"; };
+		A42F0E5E217F25F300009369 /* Configs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configs.swift; sourceTree = "<group>"; };
+		A42F0E60217F267900009369 /* UIFont+Dream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Dream.swift"; sourceTree = "<group>"; };
+		A42F0E62217F272700009369 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		A463F7BA217DE9F900EE055A /* DreamClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DreamClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A463F7C2217DE9F900EE055A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A463F7C4217DE9FB00EE055A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -142,6 +160,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A42F0E4A217F123C00009369 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				A42F0E51217F1DFD00009369 /* SettingsViewController.swift */,
+				A42F0E53217F1E0900009369 /* SettingsViewModel.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		A42F0E50217F161F00009369 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				A42F0E55217F1E1E00009369 /* EventsViewController.swift */,
+				A42F0E57217F1E2A00009369 /* EventsViewModel.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		A42F0E5D217F25D000009369 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				A42F0E5E217F25F300009369 /* Configs.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		A463F7B1217DE9F900EE055A = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +217,7 @@
 				A463F7FB217E008A00EE055A /* Vendor */,
 				A463F7FA217E008100EE055A /* Models */,
 				A463F7F9217E007800EE055A /* Extensions */,
+				A42F0E5D217F25D000009369 /* Config */,
 				A463F7F7217E006500EE055A /* Common */,
 				A463F7F5217DF59100EE055A /* Manager */,
 				A463F7EC217DF42400EE055A /* Resources */,
@@ -225,6 +270,9 @@
 			children = (
 				A463F813217E0F6300EE055A /* ViewModelType.swift */,
 				A463F81E217E118900EE055A /* NavigationController.swift */,
+				A42F0E59217F247200009369 /* ViewController.swift */,
+				A42F0E5B217F251800009369 /* StackView.swift */,
+				A42F0E62217F272700009369 /* View.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -242,6 +290,7 @@
 		A463F7F9217E007800EE055A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				A42F0E60217F267900009369 /* UIFont+Dream.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -263,7 +312,9 @@
 		A463F7FC217E009400EE055A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				A42F0E50217F161F00009369 /* Events */,
 				A463F819217E106D00EE055A /* Clock */,
+				A42F0E4A217F123C00009369 /* Settings */,
 				A463F80E217E0F0E00EE055A /* Main */,
 			);
 			path = Modules;
@@ -290,8 +341,8 @@
 		A463F819217E106D00EE055A /* Clock */ = {
 			isa = PBXGroup;
 			children = (
-				A463F81A217E107B00EE055A /* ClockViewModel.swift */,
 				A463F81C217E108700EE055A /* ClockViewController.swift */,
+				A463F81A217E107B00EE055A /* ClockViewModel.swift */,
 			);
 			path = Clock;
 			sourceTree = "<group>";
@@ -615,20 +666,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A42F0E61217F267900009369 /* UIFont+Dream.swift in Sources */,
 				A463F814217E0F6300EE055A /* ViewModelType.swift in Sources */,
+				A42F0E5A217F247200009369 /* ViewController.swift in Sources */,
 				A463F818217E100800EE055A /* LogManager.swift in Sources */,
 				A463F823217E160200EE055A /* ThemeManager.swift in Sources */,
 				A463F80D217E0D8800EE055A /* Application.swift in Sources */,
 				A463F812217E0F3C00EE055A /* MainTabBarViewModel.swift in Sources */,
 				A463F7FF217E0B9200EE055A /* AppDelegate.swift in Sources */,
 				A463F81F217E118900EE055A /* NavigationController.swift in Sources */,
+				A42F0E63217F272700009369 /* View.swift in Sources */,
 				A463F80B217E0CC100EE055A /* Navigator.swift in Sources */,
+				A42F0E52217F1DFD00009369 /* SettingsViewController.swift in Sources */,
 				A463F810217E0F2000EE055A /* MainTabBarController.swift in Sources */,
+				A42F0E56217F1E1E00009369 /* EventsViewController.swift in Sources */,
 				A463F81D217E108700EE055A /* ClockViewController.swift in Sources */,
 				A463F7F4217DF58C00EE055A /* LibsManager.swift in Sources */,
 				A463F816217E0FCE00EE055A /* DreamAPI.swift in Sources */,
 				A463F7EE217DF48C00EE055A /* R.generated.swift in Sources */,
+				A42F0E58217F1E2A00009369 /* EventsViewModel.swift in Sources */,
 				A463F81B217E107B00EE055A /* ClockViewModel.swift in Sources */,
+				A42F0E54217F1E0900009369 /* SettingsViewModel.swift in Sources */,
+				A42F0E5C217F251800009369 /* StackView.swift in Sources */,
+				A42F0E5F217F25F300009369 /* Configs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

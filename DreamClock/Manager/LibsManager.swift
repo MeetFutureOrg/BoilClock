@@ -33,6 +33,7 @@ struct LibsManager {
         libsManager.setupFLEX()
         libsManager.setupKeyboardManager()
         libsManager.setupActivityView()
+        libsManager.setupWormholy()
     }
     
     func setupTheme() {

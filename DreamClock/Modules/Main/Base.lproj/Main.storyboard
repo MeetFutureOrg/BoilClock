@@ -37,7 +37,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cdJ-n4-sDQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-207" y="-390"/>
+            <point key="canvasLocation" x="474" y="-393"/>
+        </scene>
+        <!--Events View Controller-->
+        <scene sceneID="vfS-jJ-mjp">
+            <objects>
+                <viewController storyboardIdentifier="EventsViewController" id="Hif-JB-Irw" customClass="EventsViewController" customModule="DreamClock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qZx-iE-jrb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="gYk-wW-2vf"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5hw-Dc-EfW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-194" y="-389"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="RcW-fK-Cpe">
+            <objects>
+                <viewController storyboardIdentifier="SettingsViewController" id="88k-ej-XKS" customClass="SettingsViewController" customModule="DreamClock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BVM-3a-FfO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="D5I-S0-ZvG"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HoL-2L-eYq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1140" y="-394"/>
         </scene>
     </scenes>
 </document>
