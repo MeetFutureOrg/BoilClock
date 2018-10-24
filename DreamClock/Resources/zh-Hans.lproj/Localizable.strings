@@ -1,0 +1,31 @@
+/* 
+  Localizable.strings
+  DreamClock
+
+  Created by Sun on 2018/10/24.
+  Copyright © 2018 FlyWake Studio. All rights reserved.
+*/
+
+
+/// 全局
+"application.view.emptyData.title" = "什么都没有";
+
+/// 导航标题
+"navigation.title.events"   = "事件";
+"navigation.title.alarm"    = "闹钟";
+"navigation.title.settings" = "设置";
+
+/// 设置
+"settings.preferences.section.title"      = "偏好";
+"settings.preferences.nightMode"         = "夜间模式";
+"settings.preferences.theme"             = "主题";
+"settings.preferences.hapticFeedback"    = "触觉反馈";
+"settings.preferences.tapicEngine"       = "Tapic 引擎";
+"settings.preferences.sound"             = "音效";
+"settings.preferences.language"          = "语言";
+
+/// 设置 > 主题
+"settings.preferences.theme.navigation.title" = "选择主题";
+
+/// 设置 > 语言
+"settings.preferences.language.navigation.title" = "选择语言";

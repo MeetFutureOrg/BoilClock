@@ -7,17 +7,26 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+import RxDataSources
 
-class AlarmViewController: ViewController {
+class AlarmViewController: TableViewController {
     
     var viewModel: AlarmViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = Color.FlatUI.sunFlower
-        navigationItem.title = "Alarm"
-        // Do any additional setup after loading the view.
     }
 
+    override func makeUI() {
+        super.makeUI()
+        navigationTitle = "navigation.title.alarm".localized()
+    }
+    
+    override func bindViewModel() {
+        super.bindViewModel()
+        
+    }
     
 }

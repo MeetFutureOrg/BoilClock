@@ -7,17 +7,74 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+import RxDataSources
 
-class SettingsViewController: ViewController {
+class SettingsViewController: TableViewController {
     
     var viewModel: SettingsViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = Color.FlatUI.greenSea
-        navigationItem.title = "Settings"
     }
     
+    override func makeUI() {
+        super.makeUI()
+        navigationTitle = "navigation.title.settings".localized()
+        tableView.register(SettingsSwitchCell.self, forCellReuseIdentifier: Identifier.switchCellIdentifier)
+        tableView.register(SettingsDisclosureCell.self, forCellReuseIdentifier: Identifier.disclosureCellIdentifier)
+    }
+
     
+    override func bindViewModel() {
+        super.bindViewModel()
+    
+        let input = SettingsViewModel.Input(trigger: Observable.just(()),
+                                            selection: tableView.rx.modelSelected(SettingsSectionItem.self).asDriver())
+        let output = viewModel.transform(input: input)
+        
+        /// configure cell
+        let dataSource = RxTableViewSectionedReloadDataSource<SettingsSection>(configureCell: { dataSource, tableView, indexPath, item in
+            switch item {
+            case .settingsDisclosureItem(let viewModel):
+                let cell = (tableView.dequeueReusableCell(withIdentifier: Identifier.disclosureCellIdentifier, for: indexPath) as? SettingsDisclosureCell)!
+                cell.bind(to: viewModel)
+                return cell
+            case .settingsSwitchItem(let viewModel):
+                let cell = (tableView.dequeueReusableCell(withIdentifier: Identifier.switchCellIdentifier, for: indexPath) as? SettingsSwitchCell)!
+                cell.bind(to: viewModel)
+                return cell
+            }
+        }, titleForHeaderInSection: { dataSource, index in
+            let section = dataSource[index]
+            return section.title
+        })
+        
+        output.items.asObservable()
+            .bind(to: tableView.rx.items(dataSource: dataSource))
+            .disposed(by: rx.disposeBag)
+        
+        output.selectedEvent.drive(onNext: { [weak self] (item) in
+            self?.tableView.deselectRow(at: (self?.tableView.indexPathForSelectedRow)!, animated: true)
+            switch item {
+            case .settingsDisclosureItem(let viewModel):
+                switch viewModel.type {
+                case .theme:
+                    if let destinationViewModel = viewModel.destinationViewModel as? ThemeViewModel {
+                        self?.navigator.show(segue: .theme(viewModel: destinationViewModel), sender: self, transition: .navigation(type: .auto))
+                    }
+                case .language:
+                    if let destinationViewModel = viewModel.destinationViewModel as? LanguageViewModel {
+                        self?.navigator.show(segue: .language(viewModel: destinationViewModel), sender: self, transition: .navigation(type: .auto))
+                    }
+                    
+
+                default: break
+                }
+            default: break
+            }
+        }).disposed(by: rx.disposeBag)
+    }
 }
 

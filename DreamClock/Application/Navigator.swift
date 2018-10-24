@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import RxSwift
-import RxCocoa
 import Hero
 
 
@@ -18,10 +16,11 @@ protocol Navigatable {
 
 class Navigator {
     static var `default` = Navigator()
-    
     // MARK: - scene list, all app scenes
     enum Scene {
         case tabs(viewModel: MainTabBarViewModel)
+        case theme(viewModel: ThemeViewModel)
+        case language(viewModel: LanguageViewModel)
     }
     
     enum Transition {
@@ -42,6 +41,16 @@ class Navigator {
             tabRootVC.navigator = self
             tabRootVC.viewModel = viewModel
             return tabRootVC
+        case .theme(let viewModel):
+            let themeVC = R.storyboard.main.themeViewController()!
+            themeVC.navigator = self
+            themeVC.viewModel = viewModel
+            return themeVC
+        case .language(let viewModel):
+            let languageVC = R.storyboard.main.languageViewController()!
+            languageVC.navigator = self
+            languageVC.viewModel = viewModel
+            return languageVC
         }
     }
     
@@ -68,7 +77,6 @@ class Navigator {
     // MARK: - invoke a single scene
     func show(segue: Scene, sender: UIViewController?, transition: Transition = .navigation(type: .cover(direction: .left))) {
         let target = get(segue: segue)
-        
         show(target: target, sender: sender, transition: transition)
     }
     
@@ -138,11 +146,6 @@ class Navigator {
         
         // navigation controller
         if let target = target as? UINavigationController, let root = target.viewControllers.first {
-            injectNavigator(in: root)
-        }
-        
-        // split controller
-        if let target = target as? UISplitViewController, let root = target.viewControllers.first {
             injectNavigator(in: root)
         }
     }

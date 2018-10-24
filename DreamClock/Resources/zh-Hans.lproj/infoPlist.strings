@@ -1,0 +1,10 @@
+/* 
+  infoPlist.strings
+  DreamClock
+
+  Created by Sun on 2018/10/24.
+  Copyright © 2018 FlyWake Studio. All rights reserved.
+*/
+
+/// 应用名字
+"CFBundleDisplayName" = "梦想闹钟";

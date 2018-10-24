@@ -16,12 +16,24 @@ struct R: Rswift.Validatable {
     try intern.validate()
   }
   
-  /// This `R.image` struct is generated, and contains static references to 6 images.
+  /// This `R.image` struct is generated, and contains static references to 12 images.
   struct image {
     /// Image `dc_ic_calendar_add_filled_24_24x24_`.
     static let dc_ic_calendar_add_filled_24_24x24_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_calendar_add_filled_24_24x24_")
     /// Image `dc_ic_calendar_add_outline_24_24x24_`.
     static let dc_ic_calendar_add_outline_24_24x24_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_calendar_add_outline_24_24x24_")
+    /// Image `dc_ic_cell_disclosure`.
+    static let dc_ic_cell_disclosure = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_cell_disclosure")
+    /// Image `dc_ic_cell_language`.
+    static let dc_ic_cell_language = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_cell_language")
+    /// Image `dc_ic_cell_night_mode`.
+    static let dc_ic_cell_night_mode = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_cell_night_mode")
+    /// Image `dc_ic_cell_sound`.
+    static let dc_ic_cell_sound = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_cell_sound")
+    /// Image `dc_ic_cell_tapic_engine`.
+    static let dc_ic_cell_tapic_engine = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_cell_tapic_engine")
+    /// Image `dc_ic_cell_theme`.
+    static let dc_ic_cell_theme = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_cell_theme")
     /// Image `dc_ic_clock_filled_24_24x24_`.
     static let dc_ic_clock_filled_24_24x24_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_clock_filled_24_24x24_")
     /// Image `dc_ic_clock_outline_24_24x24_`.
@@ -39,6 +51,36 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "dc_ic_calendar_add_outline_24_24x24_", bundle: ..., traitCollection: ...)`
     static func dc_ic_calendar_add_outline_24_24x24_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.dc_ic_calendar_add_outline_24_24x24_, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "dc_ic_cell_disclosure", bundle: ..., traitCollection: ...)`
+    static func dc_ic_cell_disclosure(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.dc_ic_cell_disclosure, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "dc_ic_cell_language", bundle: ..., traitCollection: ...)`
+    static func dc_ic_cell_language(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.dc_ic_cell_language, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "dc_ic_cell_night_mode", bundle: ..., traitCollection: ...)`
+    static func dc_ic_cell_night_mode(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.dc_ic_cell_night_mode, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "dc_ic_cell_sound", bundle: ..., traitCollection: ...)`
+    static func dc_ic_cell_sound(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.dc_ic_cell_sound, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "dc_ic_cell_tapic_engine", bundle: ..., traitCollection: ...)`
+    static func dc_ic_cell_tapic_engine(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.dc_ic_cell_tapic_engine, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "dc_ic_cell_theme", bundle: ..., traitCollection: ...)`
+    static func dc_ic_cell_theme(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.dc_ic_cell_theme, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "dc_ic_clock_filled_24_24x24_", bundle: ..., traitCollection: ...)`
@@ -84,31 +126,197 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.string` struct is generated, and contains static references to 2 localization tables.
+  /// This `R.string` struct is generated, and contains static references to 4 localization tables.
   struct string {
+    /// This `R.string.infoPlist` struct is generated, and contains static references to 1 localization keys.
+    struct infoPlist {
+      /// en translation: Dream Clock
+      /// 
+      /// Locales: en, zh-Hans
+      static let cfBundleDisplayName = Rswift.StringResource(key: "CFBundleDisplayName", tableName: "infoPlist", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      
+      /// en translation: Dream Clock
+      /// 
+      /// Locales: en, zh-Hans
+      static func cfBundleDisplayName(_: Void = ()) -> String {
+        return NSLocalizedString("CFBundleDisplayName", tableName: "infoPlist", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
     /// This `R.string.launchScreen` struct is generated, and contains static references to 2 localization keys.
     struct launchScreen {
-      /// en translation: Copyright © 2018 FlyWake Studio. All rights reserved.
+      /// en translation: Copyright © 2018 FlyWake Studio.
       /// 
       /// Locales: en, zh-Hans
       static let obGY5KRdText = Rswift.StringResource(key: "obG-Y5-kRd.text", tableName: "Launch Screen", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
-      /// en translation: DreamClock
+      /// en translation: Dream Clock
       /// 
       /// Locales: en, zh-Hans
       static let gJdYhRWbText = Rswift.StringResource(key: "GJd-Yh-RWb.text", tableName: "Launch Screen", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
       
-      /// en translation: Copyright © 2018 FlyWake Studio. All rights reserved.
+      /// en translation: Copyright © 2018 FlyWake Studio.
       /// 
       /// Locales: en, zh-Hans
       static func obGY5KRdText(_: Void = ()) -> String {
         return NSLocalizedString("obG-Y5-kRd.text", tableName: "Launch Screen", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: DreamClock
+      /// en translation: Dream Clock
       /// 
       /// Locales: en, zh-Hans
       static func gJdYhRWbText(_: Void = ()) -> String {
         return NSLocalizedString("GJd-Yh-RWb.text", tableName: "Launch Screen", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
+    /// This `R.string.localizable` struct is generated, and contains static references to 13 localization keys.
+    struct localizable {
+      /// en translation: Alarm
+      /// 
+      /// Locales: en, zh-Hans
+      static let navigationTitleAlarm = Rswift.StringResource(key: "navigation.title.alarm", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// en translation: Choose Language
+      /// 
+      /// Locales: en, zh-Hans
+      static let settingsPreferencesLanguageNavigationTitle = Rswift.StringResource(key: "settings.preferences.language.navigation.title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// en translation: Choose Theme
+      /// 
+      /// Locales: en, zh-Hans
+      static let settingsPreferencesThemeNavigationTitle = Rswift.StringResource(key: "settings.preferences.theme.navigation.title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// en translation: Events
+      /// 
+      /// Locales: en, zh-Hans
+      static let navigationTitleEvents = Rswift.StringResource(key: "navigation.title.events", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// en translation: Haptic Feedback
+      /// 
+      /// Locales: en, zh-Hans
+      static let settingsPreferencesHapticFeedback = Rswift.StringResource(key: "settings.preferences.hapticFeedback", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// en translation: Language
+      /// 
+      /// Locales: en, zh-Hans
+      static let settingsPreferencesLanguage = Rswift.StringResource(key: "settings.preferences.language", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// en translation: Night Mode
+      /// 
+      /// Locales: en, zh-Hans
+      static let settingsPreferencesNightMode = Rswift.StringResource(key: "settings.preferences.nightMode", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// en translation: Nothing In Here
+      /// 
+      /// Locales: en, zh-Hans
+      static let applicationViewEmptyDataTitle = Rswift.StringResource(key: "application.view.emptyData.title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// en translation: Preferences
+      /// 
+      /// Locales: en, zh-Hans
+      static let settingsPreferencesSectionTitle = Rswift.StringResource(key: "settings.preferences.section.title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// en translation: Settings
+      /// 
+      /// Locales: en, zh-Hans
+      static let navigationTitleSettings = Rswift.StringResource(key: "navigation.title.settings", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// en translation: Sound
+      /// 
+      /// Locales: en, zh-Hans
+      static let settingsPreferencesSound = Rswift.StringResource(key: "settings.preferences.sound", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// en translation: Tapic Engine
+      /// 
+      /// Locales: en, zh-Hans
+      static let settingsPreferencesTapicEngine = Rswift.StringResource(key: "settings.preferences.tapicEngine", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// en translation: Theme
+      /// 
+      /// Locales: en, zh-Hans
+      static let settingsPreferencesTheme = Rswift.StringResource(key: "settings.preferences.theme", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      
+      /// en translation: Alarm
+      /// 
+      /// Locales: en, zh-Hans
+      static func navigationTitleAlarm(_: Void = ()) -> String {
+        return NSLocalizedString("navigation.title.alarm", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Choose Language
+      /// 
+      /// Locales: en, zh-Hans
+      static func settingsPreferencesLanguageNavigationTitle(_: Void = ()) -> String {
+        return NSLocalizedString("settings.preferences.language.navigation.title", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Choose Theme
+      /// 
+      /// Locales: en, zh-Hans
+      static func settingsPreferencesThemeNavigationTitle(_: Void = ()) -> String {
+        return NSLocalizedString("settings.preferences.theme.navigation.title", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Events
+      /// 
+      /// Locales: en, zh-Hans
+      static func navigationTitleEvents(_: Void = ()) -> String {
+        return NSLocalizedString("navigation.title.events", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Haptic Feedback
+      /// 
+      /// Locales: en, zh-Hans
+      static func settingsPreferencesHapticFeedback(_: Void = ()) -> String {
+        return NSLocalizedString("settings.preferences.hapticFeedback", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Language
+      /// 
+      /// Locales: en, zh-Hans
+      static func settingsPreferencesLanguage(_: Void = ()) -> String {
+        return NSLocalizedString("settings.preferences.language", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Night Mode
+      /// 
+      /// Locales: en, zh-Hans
+      static func settingsPreferencesNightMode(_: Void = ()) -> String {
+        return NSLocalizedString("settings.preferences.nightMode", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Nothing In Here
+      /// 
+      /// Locales: en, zh-Hans
+      static func applicationViewEmptyDataTitle(_: Void = ()) -> String {
+        return NSLocalizedString("application.view.emptyData.title", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Preferences
+      /// 
+      /// Locales: en, zh-Hans
+      static func settingsPreferencesSectionTitle(_: Void = ()) -> String {
+        return NSLocalizedString("settings.preferences.section.title", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Settings
+      /// 
+      /// Locales: en, zh-Hans
+      static func navigationTitleSettings(_: Void = ()) -> String {
+        return NSLocalizedString("navigation.title.settings", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Sound
+      /// 
+      /// Locales: en, zh-Hans
+      static func settingsPreferencesSound(_: Void = ()) -> String {
+        return NSLocalizedString("settings.preferences.sound", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Tapic Engine
+      /// 
+      /// Locales: en, zh-Hans
+      static func settingsPreferencesTapicEngine(_: Void = ()) -> String {
+        return NSLocalizedString("settings.preferences.tapicEngine", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Theme
+      /// 
+      /// Locales: en, zh-Hans
+      static func settingsPreferencesTheme(_: Void = ()) -> String {
+        return NSLocalizedString("settings.preferences.theme", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}
@@ -142,8 +350,8 @@ struct _R: Rswift.Validatable {
   
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
-      try launchScreen.validate()
       try main.validate()
+      try launchScreen.validate()
     }
     
     struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
@@ -164,9 +372,11 @@ struct _R: Rswift.Validatable {
       let alarmViewController = StoryboardViewControllerResource<AlarmViewController>(identifier: "AlarmViewController")
       let bundle = R.hostingBundle
       let eventsViewController = StoryboardViewControllerResource<EventsViewController>(identifier: "EventsViewController")
+      let languageViewController = StoryboardViewControllerResource<LanguageViewController>(identifier: "LanguageViewController")
       let mainTabBarController = StoryboardViewControllerResource<MainTabBarController>(identifier: "MainTabBarController")
       let name = "Main"
       let settingsViewController = StoryboardViewControllerResource<SettingsViewController>(identifier: "SettingsViewController")
+      let themeViewController = StoryboardViewControllerResource<ThemeViewController>(identifier: "ThemeViewController")
       
       func alarmViewController(_: Void = ()) -> AlarmViewController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: alarmViewController)
@@ -174,6 +384,10 @@ struct _R: Rswift.Validatable {
       
       func eventsViewController(_: Void = ()) -> EventsViewController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: eventsViewController)
+      }
+      
+      func languageViewController(_: Void = ()) -> LanguageViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: languageViewController)
       }
       
       func mainTabBarController(_: Void = ()) -> MainTabBarController? {
@@ -184,13 +398,19 @@ struct _R: Rswift.Validatable {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: settingsViewController)
       }
       
+      func themeViewController(_: Void = ()) -> ThemeViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: themeViewController)
+      }
+      
       static func validate() throws {
         if #available(iOS 11.0, *) {
         }
-        if _R.storyboard.main().settingsViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'settingsViewController' could not be loaded from storyboard 'Main' as 'SettingsViewController'.") }
-        if _R.storyboard.main().mainTabBarController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'mainTabBarController' could not be loaded from storyboard 'Main' as 'MainTabBarController'.") }
         if _R.storyboard.main().alarmViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'alarmViewController' could not be loaded from storyboard 'Main' as 'AlarmViewController'.") }
         if _R.storyboard.main().eventsViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'eventsViewController' could not be loaded from storyboard 'Main' as 'EventsViewController'.") }
+        if _R.storyboard.main().mainTabBarController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'mainTabBarController' could not be loaded from storyboard 'Main' as 'MainTabBarController'.") }
+        if _R.storyboard.main().settingsViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'settingsViewController' could not be loaded from storyboard 'Main' as 'SettingsViewController'.") }
+        if _R.storyboard.main().themeViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'themeViewController' could not be loaded from storyboard 'Main' as 'ThemeViewController'.") }
+        if _R.storyboard.main().languageViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'languageViewController' could not be loaded from storyboard 'Main' as 'LanguageViewController'.") }
       }
       
       fileprivate init() {}

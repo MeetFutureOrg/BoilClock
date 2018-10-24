@@ -6,6 +6,7 @@
 //  Copyright © 2018 FlyWake Studio. All rights reserved.
 //
 
+import Foundation
 import RxCocoa
 import RxSwift
 import RxDataSources

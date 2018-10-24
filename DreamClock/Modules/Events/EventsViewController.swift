@@ -8,15 +8,16 @@
 
 import UIKit
 
-class EventsViewController: ViewController {
+class EventsViewController: TableViewController {
     
     var viewModel: EventsViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = Color.FlatUI.belizeHole
-        navigationItem.title = "Events"
     }
     
-    
+    override func makeUI() {
+        super.makeUI()
+        navigationTitle = "navigation.title.events".localized()
+    }
 }

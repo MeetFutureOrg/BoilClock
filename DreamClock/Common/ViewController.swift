@@ -13,7 +13,6 @@ import Kingfisher
 import DZNEmptyDataSet
 import NVActivityIndicatorView
 import Hero
-@_exported import SwifterSwift
 
 class ViewController: UIViewController, Navigatable, NVActivityIndicatorViewable {
     
@@ -29,7 +28,7 @@ class ViewController: UIViewController, Navigatable, NVActivityIndicatorViewable
         }
     }
     
-    var emptyDataSetTitle = "No Results"
+    var emptyDataSetTitle = "application.view.emptyData.title".localized()
     var emptyDataSetImage = UIImage(named: "")
     var emptyDataSetImageTintColor = BehaviorRelay<UIColor?>(value: nil)
     
@@ -78,7 +77,7 @@ class ViewController: UIViewController, Navigatable, NVActivityIndicatorViewable
     override public func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        setup()
+        makeUI()
         bindViewModel()
         
         closeBarButton.rx.tap.asObservable().subscribe(onNext: { [weak self] () in
@@ -105,15 +104,6 @@ class ViewController: UIViewController, Navigatable, NVActivityIndicatorViewable
                 logDebug("Motion Status changed")
             }).disposed(by: rx.disposeBag)
         
-        // Two finger swipe gesture for opening Flex
-        let twoSwipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(handleTwoFingerSwipe(swipeRecognizer:)))
-        twoSwipeGesture.numberOfTouchesRequired = 1
-        self.view.addGestureRecognizer(twoSwipeGesture)
-        
-        // Three finger swipe gesture for opening Flex and Hero debug
-        let threeSwipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(handleThreeFingerSwipe(swipeRecognizer:)))
-        threeSwipeGesture.numberOfTouchesRequired = 2
-        self.view.addGestureRecognizer(threeSwipeGesture)
     }
     
     public override func viewWillAppear(_ animated: Bool) {
@@ -132,6 +122,7 @@ class ViewController: UIViewController, Navigatable, NVActivityIndicatorViewable
     
     deinit {
         logDebug("\(type(of: self)): Deinited")
+    
     }
     
     override public func didReceiveMemoryWarning() {
@@ -140,9 +131,15 @@ class ViewController: UIViewController, Navigatable, NVActivityIndicatorViewable
         logDebug("\(type(of: self)): Received Memory Warning")
     }
     
-    func setup() {
+    func makeUI() {
         hero.isEnabled = true
-        navigationItem.backBarButtonItem = backBarButton
+        
+//        navigationItem.backBarButtonItem = backBarButton
+        themeService.rx
+            .bind({ $0.primary }, to: view.rx.backgroundColor)
+            .bind({ $0.secondary }, to: [backBarButton.rx.tintColor, closeBarButton.rx.tintColor])
+            .bind({ $0.text }, to: self.rx.emptyDataSetImageTintColorBinder)
+            .disposed(by: rx.disposeBag)
         updateUI()
     }
     
@@ -176,9 +173,6 @@ class ViewController: UIViewController, Navigatable, NVActivityIndicatorViewable
         }
     }
     
-    @objc func closeAction(sender: AnyObject) {
-        self.dismiss(animated: true, completion: nil)
-    }
 }
 
 extension ViewController {
@@ -195,18 +189,18 @@ extension ViewController {
         return view
     }
     
-    @objc func handleTwoFingerSwipe(swipeRecognizer: UISwipeGestureRecognizer) {
-        if swipeRecognizer.state == .recognized {
-            LibsManager.shared.showFlex()
-        }
-    }
-    
-    @objc func handleThreeFingerSwipe(swipeRecognizer: UISwipeGestureRecognizer) {
-        if swipeRecognizer.state == .recognized {
-            LibsManager.shared.showFlex()
-            HeroDebugPlugin.isEnabled = !HeroDebugPlugin.isEnabled
-        }
-    }
+//    @objc func handleTwoFingerSwipe(swipeRecognizer: UISwipeGestureRecognizer) {
+//        if swipeRecognizer.state == .recognized {
+//            LibsManager.shared.showFlex()
+//        }
+//    }
+//
+//    @objc func handleThreeFingerSwipe(swipeRecognizer: UISwipeGestureRecognizer) {
+//        if swipeRecognizer.state == .recognized {
+//            LibsManager.shared.showFlex()
+//            HeroDebugPlugin.isEnabled = !HeroDebugPlugin.isEnabled
+//        }
+//    }
 }
 
 extension Reactive where Base: ViewController {

@@ -1,0 +1,32 @@
+/* 
+  Localizable.strings
+  DreamClock
+
+  Created by Sun on 2018/10/24.
+  Copyright © 2018 FlyWake Studio. All rights reserved.
+*/
+
+
+/// global
+"application.view.emptyData.title" = "Nothing In Here";
+
+/// navigation title
+"navigation.title.events"   = "Events";
+"navigation.title.alarm"    = "Alarm";
+"navigation.title.settings" = "Settings";
+
+
+/// settings
+"settings.preferences.section.title"      = "Preferences";
+"settings.preferences.nightMode"         = "Night Mode";
+"settings.preferences.theme"             = "Theme";
+"settings.preferences.hapticFeedback"    = "Haptic Feedback";
+"settings.preferences.tapicEngine"       = "Tapic Engine";
+"settings.preferences.sound"             = "Sound";
+"settings.preferences.language"          = "Language";
+
+/// settings > theme
+"settings.preferences.theme.navigation.title" = "Choose Theme";
+
+/// settings > language
+"settings.preferences.language.navigation.title" = "Choose Language";

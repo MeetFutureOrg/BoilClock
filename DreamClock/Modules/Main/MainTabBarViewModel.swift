@@ -28,7 +28,7 @@ class MainTabBarViewModel: ViewModel, ViewModelType {
     func transform(input: Input) -> Output {
         
         
-        let tabBarItems = loggedIn.map { (loggedIn) -> [MainTabBarItem] in
+        let tabBarItems = loggedIn.map { _ -> [MainTabBarItem] in
             return [.events, .alarm, .settings]
             }.asDriver(onErrorJustReturn: [])
         

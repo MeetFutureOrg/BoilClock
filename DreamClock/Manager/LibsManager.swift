@@ -14,37 +14,41 @@ import FLEX
 import NVActivityIndicatorView
 import NSObject_Rx
 import RxViewController
+import RxSwift
 import RxOptional
 import RxGesture
 import SwifterSwift
 import SwiftDate
 import Hero
 import SwiftMessages
-import Wormholy
+import netfox
 
 struct LibsManager {
     
     static let shared = LibsManager()
+    private let disposeBag = DisposeBag()
     
     func setupLibs(with window: UIWindow? = nil) {
         let libsManager = LibsManager.shared
         libsManager.setupCocoaLumberjack()
         libsManager.setupTheme()
-        libsManager.setupFLEX()
         libsManager.setupKeyboardManager()
         libsManager.setupActivityView()
-        libsManager.setupWormholy()
+#if DEBUG
+        libsManager.setupFLEX()
+        libsManager.setupNetfox()
+#endif
     }
     
     func setupTheme() {
-        //        themeService.rx
-        //            .bind({ $0.statusBarStyle }, to: UIApplication.shared.rx.statusBarStyle)
-        //            .disposed(by: rx.disposeBag)
+        themeService.rx
+            .bind({ $0.statusBarStyle }, to: UIApplication.shared.rx.statusBarStyle)
+            .disposed(by: disposeBag)
     }
     
     func setupActivityView() {
         NVActivityIndicatorView.DEFAULT_TYPE = .ballRotateChase
-        //        NVActivityIndicatorView.DEFAULT_COLOR = .secondary()
+        NVActivityIndicatorView.DEFAULT_COLOR = .secondary()
     }
     
     func setupKeyboardManager() {
@@ -76,9 +80,10 @@ struct LibsManager {
         FLEXManager.shared().isNetworkDebuggingEnabled = true
     }
     
-    func setupWormholy() {
-        Wormholy.shakeEnabled = true
+    func setupNetfox() {
+        NFX.sharedInstance().start()
     }
+   
 }
 
 extension LibsManager {

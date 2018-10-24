@@ -39,9 +39,9 @@ enum MainTabBarItem: Int {
         let vc = controller(with: viewModel)
         let item = UITabBarItem(title: nil, image: image, selectedImage: selectedImage)
         
-//        _ = themeService.rx
-//            .bind({ $0.text }, to: item.rx.titleColor)
-//            .bind({ $0.secondary }, to: item.rx.titleSelectedColor)
+        _ = themeService.rx
+            .bind({ $0.text }, to: item.rx.titleColor)
+            .bind({ $0.text }, to: item.rx.titleSelectedColor)
         
         vc.tabBarItem = item
         return vc
@@ -73,17 +73,19 @@ class MainTabBarController: UITabBarController, Navigatable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
+        makeUI()
         bindViewModel()
     }
     
-    func setup() {
+    func makeUI() {
         // Configure tab bar
         hero.isEnabled = true
-        hero.tabBarAnimationType = .zoomOut
+        hero.tabBarAnimationType = .fade
         tabBar.hero.id = "TabBarID"
+
 //        tabBar.isTranslucent = false
         themeService.rx
+            .bind({ $0.primaryDark }, to: tabBar.rx.barTintColor)
             .bind({ $0.secondary }, to: tabBar.rx.tintColor)
             .disposed(by: rx.disposeBag)
     }
@@ -98,6 +100,7 @@ class MainTabBarController: UITabBarController, Navigatable {
                     item.getController(with: strongSelf.viewModel.viewModel(for: item))
                 })
                 strongSelf.setViewControllers(controllers, animated: false)
+                strongSelf.navigator.injectTabBarControllers(in: strongSelf)
             }
         }).disposed(by: rx.disposeBag)
     }
