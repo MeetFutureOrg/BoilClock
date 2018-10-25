@@ -103,15 +103,15 @@ enum ColorTheme: Int {
     
     var title: String {
         switch self {
-        case .red: return "Red"
-        case .green: return "Green"
-        case .blue: return "Blue"
-        case .skyBlue: return "Sky Blue"
-        case .magenta: return "Magenta"
-        case .purple: return "Purple"
-        case .watermelon: return "Watermelon"
-        case .lime: return "Lime"
-        case .pink: return "Pink"
+        case .red: return "settings.preferences.theme.color.red".localized()
+        case .green: return "settings.preferences.theme.color.green".localized()
+        case .blue: return "settings.preferences.theme.color.blue".localized()
+        case .skyBlue: return "settings.preferences.theme.color.skyBlue".localized()
+        case .magenta: return "settings.preferences.theme.color.magenta".localized()
+        case .purple: return "settings.preferences.theme.color.purple".localized()
+        case .watermelon: return "settings.preferences.theme.color.watermelon".localized()
+        case .lime: return "settings.preferences.theme.color.lime".localized()
+        case .pink: return "settings.preferences.theme.color.pink".localized()
         }
     }
 }

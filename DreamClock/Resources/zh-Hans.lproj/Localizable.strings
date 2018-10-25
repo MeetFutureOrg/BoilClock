@@ -20,12 +20,23 @@
 "settings.preferences.nightMode"         = "夜间模式";
 "settings.preferences.theme"             = "主题";
 "settings.preferences.hapticFeedback"    = "触觉反馈";
-"settings.preferences.tapicEngine"       = "Tapic 引擎";
+"settings.preferences.tapicEngine"       = "(Tapic Engine)";
 "settings.preferences.sound"             = "音效";
 "settings.preferences.language"          = "语言";
 
 /// 设置 > 主题
-"settings.preferences.theme.navigation.title" = "选择主题";
+"settings.preferences.theme.navigation.title" = "选择主题颜色";
+
+/// 设置 > 主题 > 主题颜色
+"settings.preferences.theme.color.red"        = "红色";
+"settings.preferences.theme.color.green"      = "绿色";
+"settings.preferences.theme.color.blue"       = "蓝色";
+"settings.preferences.theme.color.skyBlue"    = "天蓝";
+"settings.preferences.theme.color.magenta"    = "品红";
+"settings.preferences.theme.color.purple"     = "紫色";
+"settings.preferences.theme.color.watermelon" = "西瓜红";
+"settings.preferences.theme.color.lime"       = "绿黄";
+"settings.preferences.theme.color.pink"       = "粉色";
 
 /// 设置 > 语言
 "settings.preferences.language.navigation.title" = "选择语言";

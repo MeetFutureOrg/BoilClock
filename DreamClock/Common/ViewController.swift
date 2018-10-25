@@ -13,6 +13,7 @@ import Kingfisher
 import DZNEmptyDataSet
 import NVActivityIndicatorView
 import Hero
+import Localize_Swift
 
 class ViewController: UIViewController, Navigatable, NVActivityIndicatorViewable {
     
@@ -79,6 +80,8 @@ class ViewController: UIViewController, Navigatable, NVActivityIndicatorViewable
         // Do any additional setup after loading the view.
         makeUI()
         bindViewModel()
+        
+        observeLanguageChange()
         
         closeBarButton.rx.tap.asObservable().subscribe(onNext: { [weak self] () in
             self?.navigator.dismiss(sender: self)
@@ -244,5 +247,17 @@ extension ViewController: DZNEmptyDataSetDelegate {
     
     func emptyDataSetShouldAllowScroll(_ scrollView: UIScrollView!) -> Bool {
         return true
+    }
+}
+
+extension ViewController {
+    fileprivate func observeLanguageChange() {
+        NotificationCenter.default.rx
+            .notification(Notification.Name(rawValue: LCLLanguageChangeNotification))
+            .subscribe(onNext: { (notification) in
+                print("Language Changed")
+                self.view.layoutIfNeeded()
+            })
+            .disposed(by: rx.disposeBag)
     }
 }

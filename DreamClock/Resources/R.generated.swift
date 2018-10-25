@@ -173,17 +173,25 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    /// This `R.string.localizable` struct is generated, and contains static references to 13 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 22 localization keys.
     struct localizable {
+      /// en translation: (Tapic Engine)
+      /// 
+      /// Locales: en, zh-Hans
+      static let settingsPreferencesTapicEngine = Rswift.StringResource(key: "settings.preferences.tapicEngine", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
       /// en translation: Alarm
       /// 
       /// Locales: en, zh-Hans
       static let navigationTitleAlarm = Rswift.StringResource(key: "navigation.title.alarm", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// en translation: Blue
+      /// 
+      /// Locales: en, zh-Hans
+      static let settingsPreferencesThemeColorBlue = Rswift.StringResource(key: "settings.preferences.theme.color.blue", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
       /// en translation: Choose Language
       /// 
       /// Locales: en, zh-Hans
       static let settingsPreferencesLanguageNavigationTitle = Rswift.StringResource(key: "settings.preferences.language.navigation.title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
-      /// en translation: Choose Theme
+      /// en translation: Choose Theme Color
       /// 
       /// Locales: en, zh-Hans
       static let settingsPreferencesThemeNavigationTitle = Rswift.StringResource(key: "settings.preferences.theme.navigation.title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
@@ -191,6 +199,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, zh-Hans
       static let navigationTitleEvents = Rswift.StringResource(key: "navigation.title.events", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// en translation: Green
+      /// 
+      /// Locales: en, zh-Hans
+      static let settingsPreferencesThemeColorGreen = Rswift.StringResource(key: "settings.preferences.theme.color.green", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
       /// en translation: Haptic Feedback
       /// 
       /// Locales: en, zh-Hans
@@ -199,6 +211,14 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, zh-Hans
       static let settingsPreferencesLanguage = Rswift.StringResource(key: "settings.preferences.language", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// en translation: Lime
+      /// 
+      /// Locales: en, zh-Hans
+      static let settingsPreferencesThemeColorLime = Rswift.StringResource(key: "settings.preferences.theme.color.lime", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// en translation: Magenta
+      /// 
+      /// Locales: en, zh-Hans
+      static let settingsPreferencesThemeColorMagenta = Rswift.StringResource(key: "settings.preferences.theme.color.magenta", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
       /// en translation: Night Mode
       /// 
       /// Locales: en, zh-Hans
@@ -207,32 +227,62 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, zh-Hans
       static let applicationViewEmptyDataTitle = Rswift.StringResource(key: "application.view.emptyData.title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// en translation: Pink
+      /// 
+      /// Locales: en, zh-Hans
+      static let settingsPreferencesThemeColorPink = Rswift.StringResource(key: "settings.preferences.theme.color.pink", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
       /// en translation: Preferences
       /// 
       /// Locales: en, zh-Hans
       static let settingsPreferencesSectionTitle = Rswift.StringResource(key: "settings.preferences.section.title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// en translation: Purple
+      /// 
+      /// Locales: en, zh-Hans
+      static let settingsPreferencesThemeColorPurple = Rswift.StringResource(key: "settings.preferences.theme.color.purple", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// en translation: Red
+      /// 
+      /// Locales: en, zh-Hans
+      static let settingsPreferencesThemeColorRed = Rswift.StringResource(key: "settings.preferences.theme.color.red", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
       /// en translation: Settings
       /// 
       /// Locales: en, zh-Hans
       static let navigationTitleSettings = Rswift.StringResource(key: "navigation.title.settings", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// en translation: Sky Blue
+      /// 
+      /// Locales: en, zh-Hans
+      static let settingsPreferencesThemeColorSkyBlue = Rswift.StringResource(key: "settings.preferences.theme.color.skyBlue", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
       /// en translation: Sound
       /// 
       /// Locales: en, zh-Hans
       static let settingsPreferencesSound = Rswift.StringResource(key: "settings.preferences.sound", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
-      /// en translation: Tapic Engine
-      /// 
-      /// Locales: en, zh-Hans
-      static let settingsPreferencesTapicEngine = Rswift.StringResource(key: "settings.preferences.tapicEngine", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
       /// en translation: Theme
       /// 
       /// Locales: en, zh-Hans
       static let settingsPreferencesTheme = Rswift.StringResource(key: "settings.preferences.theme", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// en translation: Watermelon
+      /// 
+      /// Locales: en, zh-Hans
+      static let settingsPreferencesThemeColorWatermelon = Rswift.StringResource(key: "settings.preferences.theme.color.watermelon", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      
+      /// en translation: (Tapic Engine)
+      /// 
+      /// Locales: en, zh-Hans
+      static func settingsPreferencesTapicEngine(_: Void = ()) -> String {
+        return NSLocalizedString("settings.preferences.tapicEngine", bundle: R.hostingBundle, comment: "")
+      }
       
       /// en translation: Alarm
       /// 
       /// Locales: en, zh-Hans
       static func navigationTitleAlarm(_: Void = ()) -> String {
         return NSLocalizedString("navigation.title.alarm", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Blue
+      /// 
+      /// Locales: en, zh-Hans
+      static func settingsPreferencesThemeColorBlue(_: Void = ()) -> String {
+        return NSLocalizedString("settings.preferences.theme.color.blue", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Choose Language
@@ -242,7 +292,7 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("settings.preferences.language.navigation.title", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: Choose Theme
+      /// en translation: Choose Theme Color
       /// 
       /// Locales: en, zh-Hans
       static func settingsPreferencesThemeNavigationTitle(_: Void = ()) -> String {
@@ -254,6 +304,13 @@ struct R: Rswift.Validatable {
       /// Locales: en, zh-Hans
       static func navigationTitleEvents(_: Void = ()) -> String {
         return NSLocalizedString("navigation.title.events", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Green
+      /// 
+      /// Locales: en, zh-Hans
+      static func settingsPreferencesThemeColorGreen(_: Void = ()) -> String {
+        return NSLocalizedString("settings.preferences.theme.color.green", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Haptic Feedback
@@ -270,6 +327,20 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("settings.preferences.language", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: Lime
+      /// 
+      /// Locales: en, zh-Hans
+      static func settingsPreferencesThemeColorLime(_: Void = ()) -> String {
+        return NSLocalizedString("settings.preferences.theme.color.lime", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Magenta
+      /// 
+      /// Locales: en, zh-Hans
+      static func settingsPreferencesThemeColorMagenta(_: Void = ()) -> String {
+        return NSLocalizedString("settings.preferences.theme.color.magenta", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: Night Mode
       /// 
       /// Locales: en, zh-Hans
@@ -284,11 +355,32 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("application.view.emptyData.title", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: Pink
+      /// 
+      /// Locales: en, zh-Hans
+      static func settingsPreferencesThemeColorPink(_: Void = ()) -> String {
+        return NSLocalizedString("settings.preferences.theme.color.pink", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: Preferences
       /// 
       /// Locales: en, zh-Hans
       static func settingsPreferencesSectionTitle(_: Void = ()) -> String {
         return NSLocalizedString("settings.preferences.section.title", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Purple
+      /// 
+      /// Locales: en, zh-Hans
+      static func settingsPreferencesThemeColorPurple(_: Void = ()) -> String {
+        return NSLocalizedString("settings.preferences.theme.color.purple", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Red
+      /// 
+      /// Locales: en, zh-Hans
+      static func settingsPreferencesThemeColorRed(_: Void = ()) -> String {
+        return NSLocalizedString("settings.preferences.theme.color.red", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Settings
@@ -298,6 +390,13 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("navigation.title.settings", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: Sky Blue
+      /// 
+      /// Locales: en, zh-Hans
+      static func settingsPreferencesThemeColorSkyBlue(_: Void = ()) -> String {
+        return NSLocalizedString("settings.preferences.theme.color.skyBlue", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: Sound
       /// 
       /// Locales: en, zh-Hans
@@ -305,18 +404,18 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("settings.preferences.sound", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: Tapic Engine
-      /// 
-      /// Locales: en, zh-Hans
-      static func settingsPreferencesTapicEngine(_: Void = ()) -> String {
-        return NSLocalizedString("settings.preferences.tapicEngine", bundle: R.hostingBundle, comment: "")
-      }
-      
       /// en translation: Theme
       /// 
       /// Locales: en, zh-Hans
       static func settingsPreferencesTheme(_: Void = ()) -> String {
         return NSLocalizedString("settings.preferences.theme", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Watermelon
+      /// 
+      /// Locales: en, zh-Hans
+      static func settingsPreferencesThemeColorWatermelon(_: Void = ()) -> String {
+        return NSLocalizedString("settings.preferences.theme.color.watermelon", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}
@@ -350,8 +449,8 @@ struct _R: Rswift.Validatable {
   
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
-      try main.validate()
       try launchScreen.validate()
+      try main.validate()
     }
     
     struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
@@ -405,12 +504,12 @@ struct _R: Rswift.Validatable {
       static func validate() throws {
         if #available(iOS 11.0, *) {
         }
-        if _R.storyboard.main().alarmViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'alarmViewController' could not be loaded from storyboard 'Main' as 'AlarmViewController'.") }
-        if _R.storyboard.main().eventsViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'eventsViewController' could not be loaded from storyboard 'Main' as 'EventsViewController'.") }
-        if _R.storyboard.main().mainTabBarController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'mainTabBarController' could not be loaded from storyboard 'Main' as 'MainTabBarController'.") }
-        if _R.storyboard.main().settingsViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'settingsViewController' could not be loaded from storyboard 'Main' as 'SettingsViewController'.") }
         if _R.storyboard.main().themeViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'themeViewController' could not be loaded from storyboard 'Main' as 'ThemeViewController'.") }
+        if _R.storyboard.main().settingsViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'settingsViewController' could not be loaded from storyboard 'Main' as 'SettingsViewController'.") }
+        if _R.storyboard.main().alarmViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'alarmViewController' could not be loaded from storyboard 'Main' as 'AlarmViewController'.") }
         if _R.storyboard.main().languageViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'languageViewController' could not be loaded from storyboard 'Main' as 'LanguageViewController'.") }
+        if _R.storyboard.main().mainTabBarController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'mainTabBarController' could not be loaded from storyboard 'Main' as 'MainTabBarController'.") }
+        if _R.storyboard.main().eventsViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'eventsViewController' could not be loaded from storyboard 'Main' as 'EventsViewController'.") }
       }
       
       fileprivate init() {}

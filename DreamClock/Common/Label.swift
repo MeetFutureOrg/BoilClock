@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 /*
  Fonts
  System Font - 1, Bold System Font - 2
