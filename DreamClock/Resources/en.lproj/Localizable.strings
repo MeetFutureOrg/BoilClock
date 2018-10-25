@@ -10,6 +10,17 @@
 /// global
 "application.view.emptyData.title" = "Nothing In Here";
 
+/// default hud messages
+"application.hud.default.title.info"    = "INFO!";
+"application.hud.default.title.success" = "SUCCESS!";
+"application.hud.default.title.warning" = "WARNING!";
+"application.hud.default.title.error"   = "ERROR!";
+
+"application.hud.default.body.info"     = "Your operation already submitted.";
+"application.hud.default.body.success"  = "Your operation has been completed.";
+"application.hud.default.body.warning"  = "Your operation may exist or cause problems.";
+"application.hud.default.body.error"    = "Your operation has been failed.";
+
 /// navigation title
 "navigation.title.events"   = "Events";
 "navigation.title.alarm"    = "Alarm";
@@ -27,6 +38,8 @@
 
 /// settings > theme
 "settings.preferences.theme.navigation.title" = "Choose Theme Color";
+"settings.preferences.theme.choose.hud.title" = "Theme Changed";
+"settings.preferences.theme.choose.hud.body"  = "Your app theme has been change to:  ";
 
 /// settings > theme > theme color
 "settings.preferences.theme.color.red"        = "Red";
@@ -41,3 +54,5 @@
 
 /// settings > language
 "settings.preferences.language.navigation.title" = "Choose Language";
+"settings.preferences.language.choose.hud.title" = "Language Changed";
+"settings.preferences.language.choose.hud.body"  = "Your app language has been change to:  ";

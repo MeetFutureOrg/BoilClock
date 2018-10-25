@@ -79,9 +79,8 @@ class MainTabBarController: UITabBarController, Navigatable {
     
     func makeUI() {
         // Configure tab bar
-        hero.isEnabled = true
-        hero.tabBarAnimationType = .fade
-        tabBar.hero.id = "TabBarID"
+//        hero.isEnabled = true
+//        tabBar.hero.id = "TabBarID"
 
 //        tabBar.isTranslucent = false
         themeService.rx

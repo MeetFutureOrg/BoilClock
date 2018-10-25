@@ -10,6 +10,17 @@
 /// 全局
 "application.view.emptyData.title" = "什么都没有";
 
+/// 默认 hud 信息
+"application.hud.default.title.info"    = "提示!";
+"application.hud.default.title.success" = "成功!";
+"application.hud.default.title.warning" = "警告!";
+"application.hud.default.title.error"   = "错误!";
+
+"application.hud.default.body.info"     = "您的操作已提交.";
+"application.hud.default.body.success"  = "您的操作已完成.";
+"application.hud.default.body.warning"  = "您的操作可能存在或引起问题.";
+"application.hud.default.body.error"    = "操作失败.";
+
 /// 导航标题
 "navigation.title.events"   = "事件";
 "navigation.title.alarm"    = "闹钟";
@@ -26,6 +37,8 @@
 
 /// 设置 > 主题
 "settings.preferences.theme.navigation.title" = "选择主题颜色";
+"settings.preferences.theme.choose.hud.title" = "主题已更改";
+"settings.preferences.theme.choose.hud.body"  = "您的应用主题已改为:  ";
 
 /// 设置 > 主题 > 主题颜色
 "settings.preferences.theme.color.red"        = "红色";
@@ -40,3 +53,5 @@
 
 /// 设置 > 语言
 "settings.preferences.language.navigation.title" = "选择语言";
+"settings.preferences.language.choose.hud.title" = "语言已更改";
+"settings.preferences.language.choose.hud.body"  = "您的应用语言已改为:  ";

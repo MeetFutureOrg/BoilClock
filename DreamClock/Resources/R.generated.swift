@@ -173,7 +173,7 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    /// This `R.string.localizable` struct is generated, and contains static references to 22 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 34 localization keys.
     struct localizable {
       /// en translation: (Tapic Engine)
       /// 
@@ -195,6 +195,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, zh-Hans
       static let settingsPreferencesThemeNavigationTitle = Rswift.StringResource(key: "settings.preferences.theme.navigation.title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// en translation: ERROR!
+      /// 
+      /// Locales: en, zh-Hans
+      static let applicationHudDefaultTitleError = Rswift.StringResource(key: "application.hud.default.title.error", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
       /// en translation: Events
       /// 
       /// Locales: en, zh-Hans
@@ -207,10 +211,18 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, zh-Hans
       static let settingsPreferencesHapticFeedback = Rswift.StringResource(key: "settings.preferences.hapticFeedback", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// en translation: INFO!
+      /// 
+      /// Locales: en, zh-Hans
+      static let applicationHudDefaultTitleInfo = Rswift.StringResource(key: "application.hud.default.title.info", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
       /// en translation: Language
       /// 
       /// Locales: en, zh-Hans
       static let settingsPreferencesLanguage = Rswift.StringResource(key: "settings.preferences.language", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// en translation: Language Changed
+      /// 
+      /// Locales: en, zh-Hans
+      static let settingsPreferencesLanguageChooseHudTitle = Rswift.StringResource(key: "settings.preferences.language.choose.hud.title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
       /// en translation: Lime
       /// 
       /// Locales: en, zh-Hans
@@ -243,6 +255,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, zh-Hans
       static let settingsPreferencesThemeColorRed = Rswift.StringResource(key: "settings.preferences.theme.color.red", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// en translation: SUCCESS!
+      /// 
+      /// Locales: en, zh-Hans
+      static let applicationHudDefaultTitleSuccess = Rswift.StringResource(key: "application.hud.default.title.success", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
       /// en translation: Settings
       /// 
       /// Locales: en, zh-Hans
@@ -259,10 +275,42 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, zh-Hans
       static let settingsPreferencesTheme = Rswift.StringResource(key: "settings.preferences.theme", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// en translation: Theme Changed
+      /// 
+      /// Locales: en, zh-Hans
+      static let settingsPreferencesThemeChooseHudTitle = Rswift.StringResource(key: "settings.preferences.theme.choose.hud.title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// en translation: WARNING!
+      /// 
+      /// Locales: en, zh-Hans
+      static let applicationHudDefaultTitleWarning = Rswift.StringResource(key: "application.hud.default.title.warning", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
       /// en translation: Watermelon
       /// 
       /// Locales: en, zh-Hans
       static let settingsPreferencesThemeColorWatermelon = Rswift.StringResource(key: "settings.preferences.theme.color.watermelon", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// en translation: Your app language has been change to:  
+      /// 
+      /// Locales: en, zh-Hans
+      static let settingsPreferencesLanguageChooseHudBody = Rswift.StringResource(key: "settings.preferences.language.choose.hud.body", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// en translation: Your app theme has been change to:  
+      /// 
+      /// Locales: en, zh-Hans
+      static let settingsPreferencesThemeChooseHudBody = Rswift.StringResource(key: "settings.preferences.theme.choose.hud.body", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// en translation: Your operation already submitted.
+      /// 
+      /// Locales: en, zh-Hans
+      static let applicationHudDefaultBodyInfo = Rswift.StringResource(key: "application.hud.default.body.info", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// en translation: Your operation has been completed.
+      /// 
+      /// Locales: en, zh-Hans
+      static let applicationHudDefaultBodySuccess = Rswift.StringResource(key: "application.hud.default.body.success", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// en translation: Your operation has been failed.
+      /// 
+      /// Locales: en, zh-Hans
+      static let applicationHudDefaultBodyError = Rswift.StringResource(key: "application.hud.default.body.error", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// en translation: Your operation may exist or cause problems.
+      /// 
+      /// Locales: en, zh-Hans
+      static let applicationHudDefaultBodyWarning = Rswift.StringResource(key: "application.hud.default.body.warning", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
       
       /// en translation: (Tapic Engine)
       /// 
@@ -299,6 +347,13 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("settings.preferences.theme.navigation.title", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: ERROR!
+      /// 
+      /// Locales: en, zh-Hans
+      static func applicationHudDefaultTitleError(_: Void = ()) -> String {
+        return NSLocalizedString("application.hud.default.title.error", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: Events
       /// 
       /// Locales: en, zh-Hans
@@ -320,11 +375,25 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("settings.preferences.hapticFeedback", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: INFO!
+      /// 
+      /// Locales: en, zh-Hans
+      static func applicationHudDefaultTitleInfo(_: Void = ()) -> String {
+        return NSLocalizedString("application.hud.default.title.info", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: Language
       /// 
       /// Locales: en, zh-Hans
       static func settingsPreferencesLanguage(_: Void = ()) -> String {
         return NSLocalizedString("settings.preferences.language", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Language Changed
+      /// 
+      /// Locales: en, zh-Hans
+      static func settingsPreferencesLanguageChooseHudTitle(_: Void = ()) -> String {
+        return NSLocalizedString("settings.preferences.language.choose.hud.title", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Lime
@@ -383,6 +452,13 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("settings.preferences.theme.color.red", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: SUCCESS!
+      /// 
+      /// Locales: en, zh-Hans
+      static func applicationHudDefaultTitleSuccess(_: Void = ()) -> String {
+        return NSLocalizedString("application.hud.default.title.success", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: Settings
       /// 
       /// Locales: en, zh-Hans
@@ -411,11 +487,67 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("settings.preferences.theme", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: Theme Changed
+      /// 
+      /// Locales: en, zh-Hans
+      static func settingsPreferencesThemeChooseHudTitle(_: Void = ()) -> String {
+        return NSLocalizedString("settings.preferences.theme.choose.hud.title", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: WARNING!
+      /// 
+      /// Locales: en, zh-Hans
+      static func applicationHudDefaultTitleWarning(_: Void = ()) -> String {
+        return NSLocalizedString("application.hud.default.title.warning", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: Watermelon
       /// 
       /// Locales: en, zh-Hans
       static func settingsPreferencesThemeColorWatermelon(_: Void = ()) -> String {
         return NSLocalizedString("settings.preferences.theme.color.watermelon", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Your app language has been change to:  
+      /// 
+      /// Locales: en, zh-Hans
+      static func settingsPreferencesLanguageChooseHudBody(_: Void = ()) -> String {
+        return NSLocalizedString("settings.preferences.language.choose.hud.body", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Your app theme has been change to:  
+      /// 
+      /// Locales: en, zh-Hans
+      static func settingsPreferencesThemeChooseHudBody(_: Void = ()) -> String {
+        return NSLocalizedString("settings.preferences.theme.choose.hud.body", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Your operation already submitted.
+      /// 
+      /// Locales: en, zh-Hans
+      static func applicationHudDefaultBodyInfo(_: Void = ()) -> String {
+        return NSLocalizedString("application.hud.default.body.info", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Your operation has been completed.
+      /// 
+      /// Locales: en, zh-Hans
+      static func applicationHudDefaultBodySuccess(_: Void = ()) -> String {
+        return NSLocalizedString("application.hud.default.body.success", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Your operation has been failed.
+      /// 
+      /// Locales: en, zh-Hans
+      static func applicationHudDefaultBodyError(_: Void = ()) -> String {
+        return NSLocalizedString("application.hud.default.body.error", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Your operation may exist or cause problems.
+      /// 
+      /// Locales: en, zh-Hans
+      static func applicationHudDefaultBodyWarning(_: Void = ()) -> String {
+        return NSLocalizedString("application.hud.default.body.warning", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}
@@ -449,8 +581,8 @@ struct _R: Rswift.Validatable {
   
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
-      try launchScreen.validate()
       try main.validate()
+      try launchScreen.validate()
     }
     
     struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
@@ -504,10 +636,10 @@ struct _R: Rswift.Validatable {
       static func validate() throws {
         if #available(iOS 11.0, *) {
         }
-        if _R.storyboard.main().themeViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'themeViewController' could not be loaded from storyboard 'Main' as 'ThemeViewController'.") }
         if _R.storyboard.main().settingsViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'settingsViewController' could not be loaded from storyboard 'Main' as 'SettingsViewController'.") }
-        if _R.storyboard.main().alarmViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'alarmViewController' could not be loaded from storyboard 'Main' as 'AlarmViewController'.") }
+        if _R.storyboard.main().themeViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'themeViewController' could not be loaded from storyboard 'Main' as 'ThemeViewController'.") }
         if _R.storyboard.main().languageViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'languageViewController' could not be loaded from storyboard 'Main' as 'LanguageViewController'.") }
+        if _R.storyboard.main().alarmViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'alarmViewController' could not be loaded from storyboard 'Main' as 'AlarmViewController'.") }
         if _R.storyboard.main().mainTabBarController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'mainTabBarController' could not be loaded from storyboard 'Main' as 'MainTabBarController'.") }
         if _R.storyboard.main().eventsViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'eventsViewController' could not be loaded from storyboard 'Main' as 'EventsViewController'.") }
       }

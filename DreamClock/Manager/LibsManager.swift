@@ -34,10 +34,15 @@ struct LibsManager {
         libsManager.setupTheme()
         libsManager.setupKeyboardManager()
         libsManager.setupActivityView()
+        libsManager.setupLanguageService()
 #if DEBUG
         libsManager.setupFLEX()
         libsManager.setupNetfox()
 #endif
+    }
+    
+    func setupLanguageService() {
+//        Language.languageService.observeLanguageChange()
     }
     
     func setupTheme() {

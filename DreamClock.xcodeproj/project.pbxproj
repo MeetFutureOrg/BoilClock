@@ -49,6 +49,7 @@
 		A42F0EA32180732500009369 /* LanguageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42F0EA22180732500009369 /* LanguageModel.swift */; };
 		A42F0EAB21808A5B00009369 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A42F0EAD21808A5B00009369 /* Localizable.strings */; };
 		A42F0EB32180925B00009369 /* infoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A42F0EB52180925B00009369 /* infoPlist.strings */; };
+		A42F0EC32181B75E00009369 /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42F0EC22181B75E00009369 /* LanguageManager.swift */; };
 		A463F7C3217DE9F900EE055A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A463F7C1217DE9F900EE055A /* Main.storyboard */; };
 		A463F7C5217DE9FB00EE055A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A463F7C4217DE9FB00EE055A /* Assets.xcassets */; };
 		A463F7D3217DE9FB00EE055A /* DreamClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463F7D2217DE9FB00EE055A /* DreamClockTests.swift */; };
@@ -138,6 +139,7 @@
 		A42F0EB42180925B00009369 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/infoPlist.strings; sourceTree = "<group>"; };
 		A42F0EB62180925C00009369 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/infoPlist.strings"; sourceTree = "<group>"; };
 		A42F0EBF2180969600009369 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A42F0EC22181B75E00009369 /* LanguageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
 		A463F7BA217DE9F900EE055A /* DreamClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DreamClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A463F7C2217DE9F900EE055A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A463F7C4217DE9FB00EE055A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -403,6 +405,7 @@
 				A463F7F3217DF58C00EE055A /* LibsManager.swift */,
 				A463F817217E100800EE055A /* LogManager.swift */,
 				A463F822217E160200EE055A /* ThemeManager.swift */,
+				A42F0EC22181B75E00009369 /* LanguageManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -838,6 +841,7 @@
 				A42F0E7B217F6A6400009369 /* ImageView.swift in Sources */,
 				A42F0E87217F725F00009369 /* SettingsModel.swift in Sources */,
 				A42F0E942180075800009369 /* ThemeViewController.swift in Sources */,
+				A42F0EC32181B75E00009369 /* LanguageManager.swift in Sources */,
 				A42F0E9D21801EB300009369 /* LanguageViewModel.swift in Sources */,
 				A42F0E89217F743000009369 /* SettingsSection.swift in Sources */,
 				A463F80D217E0D8800EE055A /* Application.swift in Sources */,
