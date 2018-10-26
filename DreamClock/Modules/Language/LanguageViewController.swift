@@ -10,6 +10,8 @@ import UIKit
 import RxSwift
 import RxCocoa
 import RxDataSources
+import SwifterSwift
+import Localize_Swift
 
 class LanguageViewController: TableViewController {
 
@@ -17,15 +19,14 @@ class LanguageViewController: TableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        NotificationCenter.default.addObserver(self, selector: #selector(setText), name: NSNotification.Name(LCLLanguageChangeNotification), object: nil)
     }
-    
+
     
     override func makeUI() {
         super.makeUI()
         navigationTitle = "settings.preferences.language.navigation.title".localized()
         tableView.register(LanguageCell.self, forCellReuseIdentifier: Identifier.languageCellIdentifier)
+        
     }
     
     override func bindViewModel() {
@@ -41,9 +42,31 @@ class LanguageViewController: TableViewController {
             }.disposed(by: rx.disposeBag)
         
         output.selected.drive(onNext: { [weak self] (cellViewModel) in
-            self?.navigator.pop(sender: self)
+//            self?.startAnimating()
+//            SwifterSwift.delay(milliseconds: 3000, completion: {
+//                self?.stopAnimating()
+                self?.navigationController?.popViewController(animated: true, {
+                    let viewModel = MainTabBarViewModel(loggedIn: true, provider: provider)
+                    self?.navigator.show(segue: .tabs(viewModel: viewModel), sender: nil, transition: .root(in: Application.shared.window!))
+                    if let tabBarVC = Application.shared.window?.rootViewController as? MainTabBarController {
+                        tabBarVC.selectedIndex = 2
+                        if let strong = self {
+//                            SwifterSwift.delay(milliseconds: 3000, completion: {
+                            
+                                strong.showInfo(title: "settings.preferences.language.choose.hud.title".localized(), body: "settings.preferences.language.choose.hud.body".localized() + Localize.displayNameForLanguage(Localize.currentLanguage()))
+//                            })
+                        }
+                    }
+//                })
+            })
+            
         }).disposed(by: rx.disposeBag)
     }
-    
+}
 
+extension LanguageViewController {
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+    }
 }

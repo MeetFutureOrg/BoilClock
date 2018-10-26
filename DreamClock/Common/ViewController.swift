@@ -13,8 +13,17 @@ import Kingfisher
 import DZNEmptyDataSet
 import NVActivityIndicatorView
 import Hero
+import SwiftMessages
+@_exported import Localize_Swift
 
 class ViewController: UIViewController, Navigatable, NVActivityIndicatorViewable {
+    
+    enum MessageType {
+        case info
+        case success
+        case warning
+        case error
+    }
     
     var navigator: Navigator!
     
@@ -80,6 +89,7 @@ class ViewController: UIViewController, Navigatable, NVActivityIndicatorViewable
         makeUI()
         bindViewModel()
         
+        
         closeBarButton.rx.tap.asObservable().subscribe(onNext: { [weak self] () in
             self?.navigator.dismiss(sender: self)
         }).disposed(by: rx.disposeBag)
@@ -118,6 +128,11 @@ class ViewController: UIViewController, Navigatable, NVActivityIndicatorViewable
     public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         updateUI()
+    }
+    
+    public override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        hideAllMessage()
     }
     
     deinit {
@@ -244,5 +259,49 @@ extension ViewController: DZNEmptyDataSetDelegate {
     
     func emptyDataSetShouldAllowScroll(_ scrollView: UIScrollView!) -> Bool {
         return true
+    }
+}
+
+extension ViewController {
+    
+    func hideAllMessage() {
+        SwiftMessages.hideAll()
+    }
+    
+    func showInfo(title: String?, body: String?, layout: MessageView.Layout = .tabView, position: SwiftMessages.PresentationStyle = .top) {
+        show(title: title ?? "application.hud.default.title.info".localized(), body: body ?? "application.hud.default.body.info".localized(), type: .info, layout: layout, position: position)
+    }
+    
+    func showSuccess(title: String?, body: String?, layout: MessageView.Layout = .tabView, position: SwiftMessages.PresentationStyle = .top) {
+        show(title: title ?? "application.hud.default.title.success".localized(), body: body ?? "application.hud.default.body.success".localized(), type: .success, layout: layout, position: position)
+    }
+    
+    func showWarning(title: String?, body: String?, layout: MessageView.Layout = .tabView, position: SwiftMessages.PresentationStyle = .top) {
+        show(title: title ?? "application.hud.default.title.warning".localized(), body: body ?? "application.hud.default.body.warning".localized(), type: .warning, layout: layout, position: position)
+    }
+    
+    func showError(title: String?, body: String?, layout: MessageView.Layout = .tabView, position: SwiftMessages.PresentationStyle = .top) {
+        show(title: title ?? "application.hud.default.title.error".localized(), body: body ?? "application.hud.default.body.error".localized(), type: .error, layout: layout, position: position)
+    }
+    
+    
+    private func show(title: String, body: String, type: MessageType, layout: MessageView.Layout, position: SwiftMessages.PresentationStyle) {
+        let message = MessageView.viewFromNib(layout: layout)
+        switch type {
+        case .info:
+            message.configureTheme(.info)
+        case .success:
+            message.configureTheme(.success)
+        case .warning:
+            message.configureTheme(.warning)
+        case .error:
+            message.configureTheme(.error)
+        }
+        message.configureContent(title: title, body: body)
+        message.button?.isHidden = true
+        var config = SwiftMessages.defaultConfig
+        config.presentationStyle = position
+        config.duration = .seconds(seconds: Configs.BaseDuration.hudDuration)
+        SwiftMessages.show(config: config, view: message)
     }
 }

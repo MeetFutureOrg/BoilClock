@@ -11,7 +11,7 @@ import UIKit
 class LanguageCell: TableViewCell {
 
     lazy var titleLabel: Label = {
-        let view = Label(style: .style141)
+        let view = Label(style: .style111)
         view.textAlignment = .center
         return view
     }()

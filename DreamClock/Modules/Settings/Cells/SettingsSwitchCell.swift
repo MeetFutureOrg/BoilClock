@@ -39,3 +39,4 @@ class SettingsSwitchCell: SimpleTableViewCell {
         nightSwitch.rx.isOn.bind(to: viewModel.nightModeEnabled).disposed(by: rx.disposeBag)
     }
 }
+

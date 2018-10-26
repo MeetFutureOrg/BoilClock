@@ -85,9 +85,10 @@ class Navigator {
         
         switch transition {
         case .root(in: let window):
-            UIView.transition(with: window, duration: 0.5, options: .transitionFlipFromLeft, animations: {
-                window.rootViewController = target
-            }, completion: nil)
+            window.rootViewController = target
+//            UIView.transition(with: window, duration: 0.5, options: .transitionFlipFromLeft, animations: {
+
+//            }, completion: nil)
             return
         case .custom: return
         default: break

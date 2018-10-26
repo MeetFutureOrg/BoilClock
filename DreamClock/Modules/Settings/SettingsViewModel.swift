@@ -60,7 +60,6 @@ class SettingsViewModel: ViewModel, ViewModelType  {
             /// 语言
             let languageModel = SettingsModel(type: .language, leftImage: R.image.dc_ic_cell_language.name, title: "settings.preferences.language".localized(), detail: "", showDisclosure: true)
             let languageViewModel = LanguageViewModel(provider: self.provider)
-            // TODO: pass destinationViewModel
             let languageCellViewModel = SettingsDisclosureCellViewModel(with: languageModel, destinationViewModel: languageViewModel)
             
             return [

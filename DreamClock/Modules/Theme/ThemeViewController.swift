@@ -40,7 +40,9 @@ class ThemeViewController: TableViewController {
             }.disposed(by: rx.disposeBag)
         
         output.selected.drive(onNext: { [weak self] (cellViewModel) in
-            self?.navigator.pop(sender: self)
+            self?.navigationController?.popViewController(animated: true, {
+                self?.showInfo(title: "settings.preferences.theme.choose.hud.title".localized(), body: "settings.preferences.theme.choose.hud.body".localized() + cellViewModel.theme.title)
+            })
         }).disposed(by: rx.disposeBag)
     }
 

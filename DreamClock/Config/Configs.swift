@@ -57,6 +57,10 @@ struct Configs {
         static let segmentedControlHeight: CGFloat = 30
     }
     
+    struct BaseDuration {
+        static let hudDuration: TimeInterval = 2
+    }
+    
     struct Path {
         static let Documents = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
         static let Tmp = NSTemporaryDirectory()
