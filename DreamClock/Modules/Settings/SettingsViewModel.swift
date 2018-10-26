@@ -40,7 +40,7 @@ class SettingsViewModel: ViewModel, ViewModelType  {
             let isNightMode = ThemeType.currentTheme().isDark
             let nightModeModel = SettingsModel(type: .nightMode, leftImage: R.image.dc_ic_cell_night_mode.name, title: "settings.preferences.nightMode".localized(), detail: "", showDisclosure: false)
             let nightModeCellViewModel = SettingsSwitchCellViewModel(with: nightModeModel, isEnabled: isNightMode)
-            nightModeCellViewModel.nightModeEnabled.bind(to: self.nightModeEnabled).disposed(by: self.rx.disposeBag)
+            nightModeCellViewModel.nightModeEnabled.debug("abc").bind(to: self.nightModeEnabled).disposed(by: self.rx.disposeBag)
             
             
             /// 主题
@@ -77,8 +77,11 @@ class SettingsViewModel: ViewModel, ViewModelType  {
         /// cell 点击事件
         let selectedEvent = input.selection
         
-        nightModeEnabled.subscribe(onNext: { isEnabled in
+        nightModeEnabled.debug("kjahsdj").subscribe(onNext: { isEnabled in
             var theme = ThemeType.currentTheme()
+            //TODO:
+            print("theme:   " + "\(theme.isDark)")
+            print("isEnabled:   " + "\(isEnabled)")
             if theme.isDark != isEnabled {
                 theme = theme.toggled()
                 themeService.set(theme)

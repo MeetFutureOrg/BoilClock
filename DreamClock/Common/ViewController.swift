@@ -137,7 +137,6 @@ class ViewController: UIViewController, Navigatable, NVActivityIndicatorViewable
     
     deinit {
         logDebug("\(type(of: self)): Deinited")
-    
     }
     
     override public func didReceiveMemoryWarning() {

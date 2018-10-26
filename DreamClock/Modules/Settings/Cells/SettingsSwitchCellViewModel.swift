@@ -33,5 +33,6 @@ class SettingsSwitchCellViewModel {
         imageName = Driver.just("\(settingsModel.leftImage ?? "")")
         showDisclosure = Driver.just(settingsModel.showDisclosure)
         self.isEnabled = Driver.just(isEnabled)
+//        nightModeEnabled = PublishSubjec
     }
 }
