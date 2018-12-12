@@ -581,8 +581,8 @@ struct _R: Rswift.Validatable {
   
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
-      try main.validate()
       try launchScreen.validate()
+      try main.validate()
     }
     
     struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
@@ -637,11 +637,11 @@ struct _R: Rswift.Validatable {
         if #available(iOS 11.0, *) {
         }
         if _R.storyboard.main().settingsViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'settingsViewController' could not be loaded from storyboard 'Main' as 'SettingsViewController'.") }
+        if _R.storyboard.main().alarmViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'alarmViewController' could not be loaded from storyboard 'Main' as 'AlarmViewController'.") }
+        if _R.storyboard.main().eventsViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'eventsViewController' could not be loaded from storyboard 'Main' as 'EventsViewController'.") }
         if _R.storyboard.main().themeViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'themeViewController' could not be loaded from storyboard 'Main' as 'ThemeViewController'.") }
         if _R.storyboard.main().languageViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'languageViewController' could not be loaded from storyboard 'Main' as 'LanguageViewController'.") }
         if _R.storyboard.main().mainTabBarController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'mainTabBarController' could not be loaded from storyboard 'Main' as 'MainTabBarController'.") }
-        if _R.storyboard.main().eventsViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'eventsViewController' could not be loaded from storyboard 'Main' as 'EventsViewController'.") }
-        if _R.storyboard.main().alarmViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'alarmViewController' could not be loaded from storyboard 'Main' as 'AlarmViewController'.") }
       }
       
       fileprivate init() {}

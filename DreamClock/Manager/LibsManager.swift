@@ -28,10 +28,10 @@ struct LibsManager {
     static let shared = LibsManager()
     private let disposeBag = DisposeBag()
     
-    func setupLibs(with window: UIWindow? = nil) {
+    func setupLibs(with window: UIWindow) {
         let libsManager = LibsManager.shared
         libsManager.setupCocoaLumberjack()
-        libsManager.setupTheme()
+        libsManager.setupTheme(with: window)
         libsManager.setupKeyboardManager()
         libsManager.setupActivityView()
         libsManager.setupLanguageService()
@@ -45,10 +45,12 @@ struct LibsManager {
 //        Language.languageService.observeLanguageChange()
     }
     
-    func setupTheme() {
+    func setupTheme(with window: UIWindow) {
+        
         themeService.rx
             .bind({ $0.statusBarStyle }, to: UIApplication.shared.rx.statusBarStyle)
             .disposed(by: disposeBag)
+   
     }
     
     func setupActivityView() {

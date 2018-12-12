@@ -18,7 +18,7 @@ enum SettingsType {
 
 struct SettingsModel {
     var type: SettingsType
-    var leftImage: String?
+    var leftImage: String
     var title: String?
     var detail: String?
     var showDisclosure = false

@@ -26,7 +26,7 @@ class SettingsViewModel: ViewModel, ViewModelType  {
     }
     
     /// 夜晚模式
-    let nightModeEnabled = PublishSubject<Bool>()
+    let nightModeEnabled = BehaviorSubject(value: ThemeType.currentTheme().isDark)
     
     /// 主要逻辑
     func transform(input: Input) -> Output {
@@ -37,11 +37,10 @@ class SettingsViewModel: ViewModel, ViewModelType  {
         input.trigger.map { () -> [SettingsSection] in
             
             /// 夜晚模式
-            let isNightMode = ThemeType.currentTheme().isDark
             let nightModeModel = SettingsModel(type: .nightMode, leftImage: R.image.dc_ic_cell_night_mode.name, title: "settings.preferences.nightMode".localized(), detail: "", showDisclosure: false)
-            let nightModeCellViewModel = SettingsSwitchCellViewModel(with: nightModeModel, isEnabled: isNightMode)
-            nightModeCellViewModel.nightModeEnabled.debug("abc").bind(to: self.nightModeEnabled).disposed(by: self.rx.disposeBag)
+            let nightModeCellViewModel = SettingsSwitchCellViewModel(with: nightModeModel, isEnabled: self.nightModeEnabled.asDriver(onErrorJustReturn: false))
             
+            nightModeCellViewModel.nightModeEnabled.bind(to: self.nightModeEnabled).disposed(by: self.rx.disposeBag)
             
             /// 主题
             let themeModel = SettingsModel(type: .theme, leftImage: R.image.dc_ic_cell_theme.name, title: "settings.preferences.theme".localized(), detail: "", showDisclosure: true)
@@ -51,11 +50,11 @@ class SettingsViewModel: ViewModel, ViewModelType  {
             
             /// 触觉反馈
             let tapicEngineModel = SettingsModel(type: .tapicEngine, leftImage: R.image.dc_ic_cell_tapic_engine.name, title: "settings.preferences.hapticFeedback".localized(), detail: "settings.preferences.tapicEngine".localized(), showDisclosure: false)
-            let tapicEngineCellViewModel = SettingsSwitchCellViewModel(with: tapicEngineModel, isEnabled: true)
+            let tapicEngineCellViewModel = SettingsSwitchCellViewModel(with: tapicEngineModel, isEnabled: Driver.just(false))
             
             /// 音效
             let soundModel = SettingsModel(type: .sound, leftImage: R.image.dc_ic_cell_sound.name, title: "settings.preferences.sound".localized(), detail: "", showDisclosure: false)
-            let soundCellViewModel = SettingsSwitchCellViewModel(with: soundModel, isEnabled: true)
+            let soundCellViewModel = SettingsSwitchCellViewModel(with: soundModel, isEnabled: Driver.just(false))
             
             /// 语言
             let languageModel = SettingsModel(type: .language, leftImage: R.image.dc_ic_cell_language.name, title: "settings.preferences.language".localized(), detail: "", showDisclosure: true)
@@ -77,11 +76,8 @@ class SettingsViewModel: ViewModel, ViewModelType  {
         /// cell 点击事件
         let selectedEvent = input.selection
         
-        nightModeEnabled.debug("kjahsdj").subscribe(onNext: { isEnabled in
+        nightModeEnabled.subscribe(onNext: { isEnabled in
             var theme = ThemeType.currentTheme()
-            //TODO:
-            print("theme:   " + "\(theme.isDark)")
-            print("isEnabled:   " + "\(isEnabled)")
             if theme.isDark != isEnabled {
                 theme = theme.toggled()
                 themeService.set(theme)

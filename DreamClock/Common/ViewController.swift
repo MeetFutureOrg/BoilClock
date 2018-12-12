@@ -85,7 +85,7 @@ class ViewController: UIViewController, Navigatable, NVActivityIndicatorViewable
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
         makeUI()
         bindViewModel()
         

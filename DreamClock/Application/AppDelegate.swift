@@ -23,20 +23,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
+        guard let window = window else { return false }
+        
         let libsManager = LibsManager.shared
         libsManager.setupLibs(with: window)
         
         // Show initial screen
         
-        Application.shared.presentInitialScreen(in: window!)
-        window?.makeKeyAndVisible()
-        
-        #if DEBUG
-        _ = Observable<Int>.interval(1, scheduler: MainScheduler.instance)
-            .subscribe(onNext: { _ in
-                print("Resource count \(RxSwift.Resources.total)")
-            })
-        #endif
+        Application.shared.presentInitialScreen(in: window)
+        window.makeKeyAndVisible()
         
         return true
     }
