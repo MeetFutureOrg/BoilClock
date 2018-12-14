@@ -71,7 +71,7 @@ class AlarmMainViewController: ViewController {
         }
         
         func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
-            return AlarmAddEditController()
+            return AlarmListController()
         }
         
         func emptyView(for listAdapter: ListAdapter) -> UIView? {

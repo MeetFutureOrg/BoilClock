@@ -1,15 +1,21 @@
 //
-//  AlarmAddEditController.swift
+//  AlarmAddEditViewController.swift
 //  DreamClock
 //
-//  Created by Sun on 2018/12/13.
+//  Created by Sun on 2018/12/14.
 //  Copyright © 2018 FlyWake Studio. All rights reserved.
 //
 
-import IGListKit
+import UIKit
 
-class AlarmAddEditController: ListSectionController {
+class AlarmAddEditViewController: ViewController {
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+    }
+    
 
     /*
     // MARK: - Navigation

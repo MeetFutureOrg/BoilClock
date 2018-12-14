@@ -14,10 +14,11 @@
 		A40D03EB21C1FA7A00EAB2B1 /* AlarmScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D03EA21C1FA7A00EAB2B1 /* AlarmScheduler.swift */; };
 		A40D03ED21C20D3F00EAB2B1 /* Calendar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D03EC21C20D3F00EAB2B1 /* Calendar+Extension.swift */; };
 		A40D03EF21C2410C00EAB2B1 /* RxIGListKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D03EE21C2410C00EAB2B1 /* RxIGListKit.swift */; };
-		A40D03F121C2485500EAB2B1 /* AlarmAddEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D03F021C2485500EAB2B1 /* AlarmAddEditController.swift */; };
+		A40D03F121C2485500EAB2B1 /* AlarmListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D03F021C2485500EAB2B1 /* AlarmListController.swift */; };
 		A40D03F721C263EC00EAB2B1 /* FeedbackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D03F621C263EC00EAB2B1 /* FeedbackManager.swift */; };
 		A40D03FB21C2877C00EAB2B1 /* bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A40D03F921C2877C00EAB2B1 /* bell.mp3 */; };
 		A40D03FC21C2877C00EAB2B1 /* tickle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A40D03FA21C2877C00EAB2B1 /* tickle.mp3 */; };
+		A40D03FE21C34BB600EAB2B1 /* AlarmAddEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D03FD21C34BB600EAB2B1 /* AlarmAddEditViewController.swift */; };
 		A42F0E43217E29CB00009369 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A42F0E45217E29CB00009369 /* Launch Screen.storyboard */; };
 		A42F0E52217F1DFD00009369 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42F0E51217F1DFD00009369 /* SettingsViewController.swift */; };
 		A42F0E54217F1E0900009369 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42F0E53217F1E0900009369 /* SettingsViewModel.swift */; };
@@ -111,10 +112,11 @@
 		A40D03EA21C1FA7A00EAB2B1 /* AlarmScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmScheduler.swift; sourceTree = "<group>"; };
 		A40D03EC21C20D3F00EAB2B1 /* Calendar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar+Extension.swift"; sourceTree = "<group>"; };
 		A40D03EE21C2410C00EAB2B1 /* RxIGListKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxIGListKit.swift; sourceTree = "<group>"; };
-		A40D03F021C2485500EAB2B1 /* AlarmAddEditController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmAddEditController.swift; sourceTree = "<group>"; };
+		A40D03F021C2485500EAB2B1 /* AlarmListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmListController.swift; sourceTree = "<group>"; };
 		A40D03F621C263EC00EAB2B1 /* FeedbackManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackManager.swift; sourceTree = "<group>"; };
 		A40D03F921C2877C00EAB2B1 /* bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bell.mp3; sourceTree = "<group>"; };
 		A40D03FA21C2877C00EAB2B1 /* tickle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tickle.mp3; sourceTree = "<group>"; };
+		A40D03FD21C34BB600EAB2B1 /* AlarmAddEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmAddEditViewController.swift; sourceTree = "<group>"; };
 		A42F0E44217E29CB00009369 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		A42F0E47217E29CC00009369 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "en.lproj/Launch Screen.strings"; sourceTree = "<group>"; };
 		A42F0E49217E29CD00009369 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Launch Screen.strings"; sourceTree = "<group>"; };
@@ -538,7 +540,8 @@
 			isa = PBXGroup;
 			children = (
 				A463F81C217E108700EE055A /* AlarmMainViewController.swift */,
-				A40D03F021C2485500EAB2B1 /* AlarmAddEditController.swift */,
+				A40D03F021C2485500EAB2B1 /* AlarmListController.swift */,
+				A40D03FD21C34BB600EAB2B1 /* AlarmAddEditViewController.swift */,
 				A463F81A217E107B00EE055A /* AlarmViewModel.swift */,
 				A42F0E6A217F60E900009369 /* AlarmModel.swift */,
 				A40D03EA21C1FA7A00EAB2B1 /* AlarmScheduler.swift */,
@@ -907,7 +910,7 @@
 				A463F81F217E118900EE055A /* NavigationController.swift in Sources */,
 				A42F0E63217F272700009369 /* View.swift in Sources */,
 				A42F0E83217F71C700009369 /* SettingsDisclosureCell.swift in Sources */,
-				A40D03F121C2485500EAB2B1 /* AlarmAddEditController.swift in Sources */,
+				A40D03F121C2485500EAB2B1 /* AlarmListController.swift in Sources */,
 				A42F0E80217F6C8500009369 /* Label.swift in Sources */,
 				A4D7B81421C1339800CC7177 /* Defaults.swift in Sources */,
 				A42F0E7E217F6AE500009369 /* UIColor+Dream.swift in Sources */,
@@ -916,6 +919,7 @@
 				A42F0E85217F71E100009369 /* SettingsDisclosureCellViewModel.swift in Sources */,
 				A42F0E72217F658900009369 /* Identifier.swift in Sources */,
 				A42F0E75217F69C600009369 /* TableViewCell.swift in Sources */,
+				A40D03FE21C34BB600EAB2B1 /* AlarmAddEditViewController.swift in Sources */,
 				A42F0E52217F1DFD00009369 /* SettingsViewController.swift in Sources */,
 				A4D7B81821C13FA400CC7177 /* DispatchQueue+Extension.swift in Sources */,
 				A463F810217E0F2000EE055A /* MainTabBarController.swift in Sources */,
