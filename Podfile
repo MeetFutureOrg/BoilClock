@@ -37,7 +37,7 @@ target 'DreamClock' do
   # Tools
   pod 'Localize-Swift'
   pod 'DeviceKit'
-  pod 'R.swift', '5.0.0.alpha.2'
+  pod 'R.swift', '5.0.0.rc.1'
   # pod 'SwiftyUserDefaults'
   pod 'KeychainAccess'
 
@@ -50,7 +50,7 @@ target 'DreamClock' do
 
   # UI
   pod 'Hero'
-  # pod 'PMAlertController'
+  pod 'IGListKit'
   pod 'DZNEmptyDataSet'
   pod 'NVActivityIndicatorView'
   pod 'SwiftMessages'
@@ -92,11 +92,11 @@ end
 # Cocoapods optimization, always clean project after pod updating
 post_install do |installer|
     installer.pods_project.targets.each do |target|
-        if target.name == 'ChameleonFramework' || target.name == 'netfox'
+#        if target.name == 'ChameleonFramework' || target.name == 'netfox'
             target.build_configurations.each do |config|
-                config.build_settings['SWIFT_VERSION'] = '4.0'
+                config.build_settings['SWIFT_VERSION'] = '4.2'
             end
-        end
+#        end
     end
 end
 #    Dir.glob(installer.sandbox.target_support_files_root + "Pods-*/*.sh").each do |script|

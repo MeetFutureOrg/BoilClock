@@ -1,0 +1,240 @@
+PODS:
+  - Alamofire (4.8.0)
+  - ChameleonFramework/Default (2.1.0)
+  - ChameleonFramework/Swift (2.1.0):
+    - ChameleonFramework/Default
+  - CocoaDebug (0.1.5)
+  - CocoaLumberjack/Default (3.4.2)
+  - CocoaLumberjack/Swift (3.4.2):
+    - CocoaLumberjack/Default
+  - DateToolsSwift (4.0.0)
+  - DeviceKit (1.11.0)
+  - Differentiator (3.1.0)
+  - DZNEmptyDataSet (1.8.1)
+  - FLEX (2.4.0)
+  - Hero (1.4.0)
+  - IGListKit (3.4.0):
+    - IGListKit/Default (= 3.4.0)
+  - IGListKit/Default (3.4.0):
+    - IGListKit/Diffing
+  - IGListKit/Diffing (3.4.0)
+  - IQKeyboardManagerSwift (6.2.0)
+  - KeychainAccess (3.1.2)
+  - Kingfisher (5.0.0)
+  - Localize-Swift (2.0.0)
+  - Moya (11.0.2):
+    - Moya/Core (= 11.0.2)
+  - Moya-ObjectMapper/Core (2.7):
+    - Moya (~> 11)
+    - ObjectMapper (~> 3.3)
+  - Moya-ObjectMapper/RxSwift (2.7):
+    - Moya-ObjectMapper/Core
+    - RxSwift (~> 4.1)
+  - Moya/Core (11.0.2):
+    - Alamofire (~> 4.1)
+    - Result (~> 3.0)
+  - Moya/RxSwift (11.0.2):
+    - Moya/Core
+    - RxSwift (~> 4.0)
+  - netfox (1.14.0)
+  - "NSObject+Rx (4.4.1)":
+    - RxSwift (~> 4.3)
+  - NVActivityIndicatorView (4.4.1):
+    - NVActivityIndicatorView/Presenter (= 4.4.1)
+  - NVActivityIndicatorView/Presenter (4.4.1)
+  - ObjectMapper (3.4.1)
+  - QuickLayout (2.1.1)
+  - R.swift (5.0.0.rc.1):
+    - R.swift.Library (~> 5.0.0)
+  - R.swift.Library (5.0.0)
+  - ReachabilitySwift (4.3.0)
+  - Result (3.2.4)
+  - RxAtomic (4.4.0)
+  - RxCocoa (4.4.0):
+    - RxSwift (~> 4.0)
+  - RxDataSources (3.1.0):
+    - Differentiator (~> 3.0)
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+  - RxGesture (2.1.0):
+    - RxCocoa (~> 4.4.0)
+    - RxSwift (~> 4.4.0)
+  - RxOptional (3.6.2):
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+  - RxSwift (4.4.0):
+    - RxAtomic (~> 4.4)
+  - RxSwiftExt (3.4.0):
+    - RxSwiftExt/Core (= 3.4.0)
+    - RxSwiftExt/RxCocoa (= 3.4.0)
+  - RxSwiftExt/Core (3.4.0):
+    - RxSwift (~> 4.0)
+  - RxSwiftExt/RxCocoa (3.4.0):
+    - RxCocoa (~> 4.0)
+    - RxSwiftExt/Core
+  - RxTheme (2.2.1):
+    - RxCocoa (~> 4.3)
+    - RxSwift (~> 4.3)
+  - RxViewController (0.4.0):
+    - RxCocoa (>= 4.0.0)
+    - RxSwift (>= 4.0.0)
+  - SnapKit (4.2.0)
+  - SwiftDate (5.0.13)
+  - SwiftEntryKit (0.8.6):
+    - QuickLayout (= 2.1.1)
+  - SwifterSwift (4.6.0):
+    - SwifterSwift/AppKit (= 4.6.0)
+    - SwifterSwift/CoreGraphics (= 4.6.0)
+    - SwifterSwift/CoreLocation (= 4.6.0)
+    - SwifterSwift/Foundation (= 4.6.0)
+    - SwifterSwift/MapKit (= 4.6.0)
+    - SwifterSwift/SpriteKit (= 4.6.0)
+    - SwifterSwift/SwiftStdlib (= 4.6.0)
+    - SwifterSwift/UIKit (= 4.6.0)
+  - SwifterSwift/AppKit (4.6.0)
+  - SwifterSwift/CoreGraphics (4.6.0)
+  - SwifterSwift/CoreLocation (4.6.0)
+  - SwifterSwift/Foundation (4.6.0)
+  - SwifterSwift/MapKit (4.6.0)
+  - SwifterSwift/SpriteKit (4.6.0)
+  - SwifterSwift/SwiftStdlib (4.6.0)
+  - SwifterSwift/UIKit (4.6.0)
+  - SwiftMessages (6.0.1):
+    - SwiftMessages/App (= 6.0.1)
+  - SwiftMessages/App (6.0.1)
+  - SwiftRichString (2.0.5)
+
+DEPENDENCIES:
+  - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
+  - CocoaDebug
+  - CocoaLumberjack/Swift
+  - DateToolsSwift
+  - DeviceKit
+  - DZNEmptyDataSet
+  - FLEX
+  - Hero
+  - IGListKit
+  - IQKeyboardManagerSwift
+  - KeychainAccess
+  - Kingfisher
+  - Localize-Swift
+  - Moya-ObjectMapper/RxSwift
+  - Moya/RxSwift
+  - netfox
+  - "NSObject+Rx"
+  - NVActivityIndicatorView
+  - R.swift (= 5.0.0.rc.1)
+  - ReachabilitySwift
+  - RxCocoa
+  - RxDataSources
+  - RxGesture
+  - RxOptional
+  - RxSwift
+  - RxSwiftExt
+  - RxTheme
+  - RxViewController
+  - SnapKit
+  - SwiftDate
+  - SwiftEntryKit
+  - SwifterSwift
+  - SwiftMessages
+  - SwiftRichString
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - CocoaDebug
+    - CocoaLumberjack
+    - DateToolsSwift
+    - DeviceKit
+    - Differentiator
+    - DZNEmptyDataSet
+    - FLEX
+    - Hero
+    - IGListKit
+    - IQKeyboardManagerSwift
+    - KeychainAccess
+    - Kingfisher
+    - Localize-Swift
+    - Moya
+    - Moya-ObjectMapper
+    - netfox
+    - "NSObject+Rx"
+    - NVActivityIndicatorView
+    - ObjectMapper
+    - QuickLayout
+    - R.swift
+    - R.swift.Library
+    - ReachabilitySwift
+    - Result
+    - RxAtomic
+    - RxCocoa
+    - RxDataSources
+    - RxGesture
+    - RxOptional
+    - RxSwift
+    - RxSwiftExt
+    - RxTheme
+    - RxViewController
+    - SnapKit
+    - SwiftDate
+    - SwiftEntryKit
+    - SwifterSwift
+    - SwiftMessages
+    - SwiftRichString
+
+EXTERNAL SOURCES:
+  ChameleonFramework:
+    :git: https://github.com/ViccAlexander/Chameleon.git
+
+CHECKOUT OPTIONS:
+  ChameleonFramework:
+    :commit: 6dd284bde21ea2e7f9fd89bc36f40df16e16369d
+    :git: https://github.com/ViccAlexander/Chameleon.git
+
+SPEC CHECKSUMS:
+  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  CocoaDebug: e3531fc0dfd6f32e6f9cacaecc88b10123b58dec
+  CocoaLumberjack: db7cc9e464771f12054c22ff6947c5a58d43a0fd
+  DateToolsSwift: 875d97ff9e3a5d54abdd67a269b3f51c757b71ab
+  DeviceKit: a3a86f8dddbe1317a9a243cdf9646858bf135dce
+  Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  FLEX: bd1a39e55b56bb413b6f1b34b3c10a0dc44ef079
+  Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
+  IGListKit: 7a5d788e9fb746bcd402baa8e8b24bc3bd2a5a07
+  IQKeyboardManagerSwift: b07ccf9d8cafe993dcd6cb794eb4ba34611a0c4e
+  KeychainAccess: b3816fddcf28aa29d94b10ec305cd52be14c472b
+  Kingfisher: 2b0dd651e4fe5a07305b8242fde56f8e2d410f58
+  Localize-Swift: c798ec9286494866f7068f85f7c71283ac5bdab4
+  Moya: a725035953bc1c0eb1be505ab903984501d82440
+  Moya-ObjectMapper: 441caa307b527331fde59e2577adc632a16f1255
+  netfox: 184c9c5dcb6d9ba3347641fe470341bee57f684c
+  "NSObject+Rx": 9884a92f19b610795c431e10b4e601913b59c9e9
+  NVActivityIndicatorView: f0a6b0ed2973d9544da268f4eb76696f0a9577b0
+  ObjectMapper: 5311bd50ca732930959e7ca1a2de43ab823a5ced
+  QuickLayout: 9af2b7fd89a6552828f51a5aba28d1bcdb8b340c
+  R.swift: 955ff62be636bd61102ea12792fefe7e99d8805e
+  R.swift.Library: 0bf390e729bc10bb2c9e4fb78bd043164a7be4ff
+  ReachabilitySwift: 408477d1b6ed9779dba301953171e017c31241f3
+  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
+  RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
+  RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
+  RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
+  RxGesture: 7f6dfb45dbde06e618c24442d38493e3144f2c95
+  RxOptional: 80426a0ddbd092573e4c482d8cc13302078c4d5e
+  RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
+  RxSwiftExt: 01f8ecbeeb355698e9c75365ebe908b00dacf45d
+  RxTheme: eda0b738169766e96b91c8cb685788fe9b8b6722
+  RxViewController: 359bbc2fda373a78605b2735afb0f9f4f3f6c3e4
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  SwiftDate: f4aea5fa9dee812485f34041121a4cbde01b0dee
+  SwiftEntryKit: cb0e8d6b61552e374813a304a29b7ba51ea53128
+  SwifterSwift: 812ffec6f301922f5430e75be3f2939ea3a80024
+  SwiftMessages: 42ed7b6e1f2f1ead9ee667dc61a0ae87e4f49570
+  SwiftRichString: a3ebe72b13db2e1b917cdbb6b44d817254a7ff73
+
+PODFILE CHECKSUM: 32479c3f9f28c558ea4c3bd839608262724e72d7
+
+COCOAPODS: 1.6.0.beta.2

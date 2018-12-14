@@ -8,8 +8,9 @@
 
 import Foundation
 import MediaPlayer
+import IGListKit
 
-struct Alarm: PropertyReflectable {
+final class Alarm: PropertyReflectable {
     var date: Date = Date()
     var enabled: Bool = false
     var snoozeEnabled: Bool = false
@@ -57,8 +58,34 @@ extension Alarm {
     }
 }
 
+extension Alarm: ListDiffable {
+    
+    func diffIdentifier() -> NSObjectProtocol {
+        return date as NSObjectProtocol
+    }
+    
+    func isEqual(toDiffableObject object: ListDiffable?) -> Bool {
+        guard object !== self else {
+            return true
+        }
+        
+        guard let alarm = object as? Alarm else {
+            return false
+        }
+        
+        let isEqualDate = alarm.date == date
+        let isEqualEnabled = alarm.enabled == enabled
+        let isEqualUuid = alarm.uuid == uuid
+        
+        return isEqualDate && isEqualEnabled && isEqualUuid
+    }
+    
+    
+}
+
+
 //This can be considered as a viewModel
-class Alarms: Persistable {
+final class Alarms: Persistable {
     let ud: UserDefaults = UserDefaults.standard
     let persistKey: String = Identifier.persistKey
     var alarms: [Alarm] = [] {
@@ -106,3 +133,4 @@ class Alarms: Persistable {
         return [Alarm]()
     }
 }
+

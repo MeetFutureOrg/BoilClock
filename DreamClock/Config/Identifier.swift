@@ -10,8 +10,12 @@ import Foundation
 
 struct Identifier {
     
+    /// 夜晚模式
     static let nightMode = Configs.App.bundleIdentifier + ".nightMode"
     static let themeKey = Configs.App.bundleIdentifier + ".theme"
+    
+    /// 震动反馈开关
+    static let feedbackTrigger = Configs.App.bundleIdentifier + ".feedbackTrigger"
     
     static let persistKey = Configs.App.bundleIdentifier + ".persister"
     static let stopIdentifier = Configs.App.bundleIdentifier + ".stop"
@@ -24,3 +28,5 @@ struct Identifier {
     static let themeCellIdentifier = Configs.App.bundleIdentifier + ".themeCellIdentifier"
     static let languageCellIdentifier = Configs.App.bundleIdentifier + ".languageCellIdentifier"
 }
+
+

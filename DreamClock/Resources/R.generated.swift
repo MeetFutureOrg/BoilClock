@@ -16,7 +16,29 @@ struct R: Rswift.Validatable {
     try intern.validate()
   }
   
-  /// This `R.image` struct is generated, and contains static references to 12 images.
+  /// This `R.file` struct is generated, and contains static references to 2 files.
+  struct file {
+    /// Resource file `bell.mp3`.
+    static let bellMp3 = Rswift.FileResource(bundle: R.hostingBundle, name: "bell", pathExtension: "mp3")
+    /// Resource file `tickle.mp3`.
+    static let tickleMp3 = Rswift.FileResource(bundle: R.hostingBundle, name: "tickle", pathExtension: "mp3")
+    
+    /// `bundle.url(forResource: "bell", withExtension: "mp3")`
+    static func bellMp3(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.bellMp3
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+    
+    /// `bundle.url(forResource: "tickle", withExtension: "mp3")`
+    static func tickleMp3(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.tickleMp3
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+    
+    fileprivate init() {}
+  }
+  
+  /// This `R.image` struct is generated, and contains static references to 13 images.
   struct image {
     /// Image `dc_ic_calendar_add_filled_24_24x24_`.
     static let dc_ic_calendar_add_filled_24_24x24_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_calendar_add_filled_24_24x24_")
@@ -30,8 +52,8 @@ struct R: Rswift.Validatable {
     static let dc_ic_cell_night_mode = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_cell_night_mode")
     /// Image `dc_ic_cell_sound`.
     static let dc_ic_cell_sound = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_cell_sound")
-    /// Image `dc_ic_cell_tapic_engine`.
-    static let dc_ic_cell_tapic_engine = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_cell_tapic_engine")
+    /// Image `dc_ic_cell_taptic_engine`.
+    static let dc_ic_cell_taptic_engine = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_cell_taptic_engine")
     /// Image `dc_ic_cell_theme`.
     static let dc_ic_cell_theme = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_cell_theme")
     /// Image `dc_ic_clock_filled_24_24x24_`.
@@ -42,6 +64,8 @@ struct R: Rswift.Validatable {
     static let dc_ic_settings_internal_filled_24_24x24_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_settings_internal_filled_24_24x24_")
     /// Image `dc_ic_settings_outline_24_24x24_`.
     static let dc_ic_settings_outline_24_24x24_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_settings_outline_24_24x24_")
+    /// Image `fb_ic_alarm_clock_outline_24_24x24_`.
+    static let fb_ic_alarm_clock_outline_24_24x24_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "fb_ic_alarm_clock_outline_24_24x24_")
     
     /// `UIImage(named: "dc_ic_calendar_add_filled_24_24x24_", bundle: ..., traitCollection: ...)`
     static func dc_ic_calendar_add_filled_24_24x24_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
@@ -73,9 +97,9 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.dc_ic_cell_sound, compatibleWith: traitCollection)
     }
     
-    /// `UIImage(named: "dc_ic_cell_tapic_engine", bundle: ..., traitCollection: ...)`
-    static func dc_ic_cell_tapic_engine(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.dc_ic_cell_tapic_engine, compatibleWith: traitCollection)
+    /// `UIImage(named: "dc_ic_cell_taptic_engine", bundle: ..., traitCollection: ...)`
+    static func dc_ic_cell_taptic_engine(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.dc_ic_cell_taptic_engine, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "dc_ic_cell_theme", bundle: ..., traitCollection: ...)`
@@ -101,6 +125,11 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "dc_ic_settings_outline_24_24x24_", bundle: ..., traitCollection: ...)`
     static func dc_ic_settings_outline_24_24x24_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.dc_ic_settings_outline_24_24x24_, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "fb_ic_alarm_clock_outline_24_24x24_", bundle: ..., traitCollection: ...)`
+    static func fb_ic_alarm_clock_outline_24_24x24_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.fb_ic_alarm_clock_outline_24_24x24_, compatibleWith: traitCollection)
     }
     
     fileprivate init() {}
@@ -173,12 +202,12 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    /// This `R.string.localizable` struct is generated, and contains static references to 34 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 39 localization keys.
     struct localizable {
-      /// en translation: (Tapic Engine)
+      /// en translation: (Taptic Engine)
       /// 
       /// Locales: en, zh-Hans
-      static let settingsPreferencesTapicEngine = Rswift.StringResource(key: "settings.preferences.tapicEngine", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      static let settingsPreferencesTapticEngine = Rswift.StringResource(key: "settings.preferences.tapticEngine", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
       /// en translation: Alarm
       /// 
       /// Locales: en, zh-Hans
@@ -195,6 +224,14 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, zh-Hans
       static let settingsPreferencesThemeNavigationTitle = Rswift.StringResource(key: "settings.preferences.theme.navigation.title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// en translation: DreamClock could send you notifications now!
+      /// 
+      /// Locales: en, zh-Hans
+      static let applicationNotificationPermissionAllowedHudBody = Rswift.StringResource(key: "application.notification.permission.allowed.hud.body", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// en translation: DreamClock has no permission to send you notifications
+      /// 
+      /// Locales: en, zh-Hans
+      static let applicationNotificationPermissionDenyHudBody = Rswift.StringResource(key: "application.notification.permission.deny.hud.body", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
       /// en translation: ERROR!
       /// 
       /// Locales: en, zh-Hans
@@ -203,6 +240,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, zh-Hans
       static let navigationTitleEvents = Rswift.StringResource(key: "navigation.title.events", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// en translation: Go Settings
+      /// 
+      /// Locales: en, zh-Hans
+      static let applicationNotificationPermissionDenyHudRedirectionTitle = Rswift.StringResource(key: "application.notification.permission.deny.hud.redirectionTitle", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
       /// en translation: Green
       /// 
       /// Locales: en, zh-Hans
@@ -235,10 +276,18 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, zh-Hans
       static let settingsPreferencesNightMode = Rswift.StringResource(key: "settings.preferences.nightMode", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// en translation: No Notify Permission
+      /// 
+      /// Locales: en, zh-Hans
+      static let applicationNotificationPermissionDenyHudTitle = Rswift.StringResource(key: "application.notification.permission.deny.hud.title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
       /// en translation: Nothing In Here
       /// 
       /// Locales: en, zh-Hans
       static let applicationViewEmptyDataTitle = Rswift.StringResource(key: "application.view.emptyData.title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// en translation: Notify Has Been Normal
+      /// 
+      /// Locales: en, zh-Hans
+      static let applicationNotificationPermissionAllowedHudTitle = Rswift.StringResource(key: "application.notification.permission.allowed.hud.title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
       /// en translation: Pink
       /// 
       /// Locales: en, zh-Hans
@@ -312,11 +361,11 @@ struct R: Rswift.Validatable {
       /// Locales: en, zh-Hans
       static let applicationHudDefaultBodyWarning = Rswift.StringResource(key: "application.hud.default.body.warning", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
       
-      /// en translation: (Tapic Engine)
+      /// en translation: (Taptic Engine)
       /// 
       /// Locales: en, zh-Hans
-      static func settingsPreferencesTapicEngine(_: Void = ()) -> String {
-        return NSLocalizedString("settings.preferences.tapicEngine", bundle: R.hostingBundle, comment: "")
+      static func settingsPreferencesTapticEngine(_: Void = ()) -> String {
+        return NSLocalizedString("settings.preferences.tapticEngine", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Alarm
@@ -347,6 +396,20 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("settings.preferences.theme.navigation.title", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: DreamClock could send you notifications now!
+      /// 
+      /// Locales: en, zh-Hans
+      static func applicationNotificationPermissionAllowedHudBody(_: Void = ()) -> String {
+        return NSLocalizedString("application.notification.permission.allowed.hud.body", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: DreamClock has no permission to send you notifications
+      /// 
+      /// Locales: en, zh-Hans
+      static func applicationNotificationPermissionDenyHudBody(_: Void = ()) -> String {
+        return NSLocalizedString("application.notification.permission.deny.hud.body", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: ERROR!
       /// 
       /// Locales: en, zh-Hans
@@ -359,6 +422,13 @@ struct R: Rswift.Validatable {
       /// Locales: en, zh-Hans
       static func navigationTitleEvents(_: Void = ()) -> String {
         return NSLocalizedString("navigation.title.events", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Go Settings
+      /// 
+      /// Locales: en, zh-Hans
+      static func applicationNotificationPermissionDenyHudRedirectionTitle(_: Void = ()) -> String {
+        return NSLocalizedString("application.notification.permission.deny.hud.redirectionTitle", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Green
@@ -417,11 +487,25 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("settings.preferences.nightMode", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: No Notify Permission
+      /// 
+      /// Locales: en, zh-Hans
+      static func applicationNotificationPermissionDenyHudTitle(_: Void = ()) -> String {
+        return NSLocalizedString("application.notification.permission.deny.hud.title", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: Nothing In Here
       /// 
       /// Locales: en, zh-Hans
       static func applicationViewEmptyDataTitle(_: Void = ()) -> String {
         return NSLocalizedString("application.view.emptyData.title", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Notify Has Been Normal
+      /// 
+      /// Locales: en, zh-Hans
+      static func applicationNotificationPermissionAllowedHudTitle(_: Void = ()) -> String {
+        return NSLocalizedString("application.notification.permission.allowed.hud.title", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Pink
@@ -581,8 +665,8 @@ struct _R: Rswift.Validatable {
   
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
-      try main.validate()
       try launchScreen.validate()
+      try main.validate()
     }
     
     struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
@@ -600,7 +684,7 @@ struct _R: Rswift.Validatable {
     }
     
     struct main: Rswift.StoryboardResourceType, Rswift.Validatable {
-      let alarmViewController = StoryboardViewControllerResource<AlarmViewController>(identifier: "AlarmViewController")
+      let alarmViewController = StoryboardViewControllerResource<AlarmMainViewController>(identifier: "AlarmViewController")
       let bundle = R.hostingBundle
       let eventsViewController = StoryboardViewControllerResource<EventsViewController>(identifier: "EventsViewController")
       let languageViewController = StoryboardViewControllerResource<LanguageViewController>(identifier: "LanguageViewController")
@@ -609,7 +693,7 @@ struct _R: Rswift.Validatable {
       let settingsViewController = StoryboardViewControllerResource<SettingsViewController>(identifier: "SettingsViewController")
       let themeViewController = StoryboardViewControllerResource<ThemeViewController>(identifier: "ThemeViewController")
       
-      func alarmViewController(_: Void = ()) -> AlarmViewController? {
+      func alarmViewController(_: Void = ()) -> AlarmMainViewController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: alarmViewController)
       }
       
@@ -636,21 +720,18 @@ struct _R: Rswift.Validatable {
       static func validate() throws {
         if #available(iOS 11.0, *) {
         }
-//<<<<<<< HEAD
-//
-//        if _R.storyboard.main().mainTabBarController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'mainTabBarController' could not be loaded from storyboard 'Main' as 'MainTabBarController'.") }
-//        if _R.storyboard.main().alarmViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'alarmViewController' could not be loaded from storyboard 'Main' as 'AlarmViewController'.") }
-//        if _R.storyboard.main().settingsViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'settingsViewController' could not be loaded from storyboard 'Main' as 'SettingsViewController'.") }
-//        if _R.storyboard.main().eventsViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'eventsViewController' could not be loaded from storyboard 'Main' as 'EventsViewController'.") }
-//        if _R.storyboard.main().mainTabBarController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'mainTabBarController' could not be loaded from storyboard 'Main' as 'MainTabBarController'.") }
-//=======
-//>>>>>>> master
+
+
         if _R.storyboard.main().settingsViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'settingsViewController' could not be loaded from storyboard 'Main' as 'SettingsViewController'.") }
         if _R.storyboard.main().themeViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'themeViewController' could not be loaded from storyboard 'Main' as 'ThemeViewController'.") }
-        if _R.storyboard.main().languageViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'languageViewController' could not be loaded from storyboard 'Main' as 'LanguageViewController'.") }
-        if _R.storyboard.main().alarmViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'alarmViewController' could not be loaded from storyboard 'Main' as 'AlarmViewController'.") }
-        if _R.storyboard.main().mainTabBarController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'mainTabBarController' could not be loaded from storyboard 'Main' as 'MainTabBarController'.") }
+
+        if _R.storyboard.main().alarmViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'alarmViewController' could not be loaded from storyboard 'Main' as 'AlarmMainViewController'.") }
         if _R.storyboard.main().eventsViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'eventsViewController' could not be loaded from storyboard 'Main' as 'EventsViewController'.") }
+
+        if _R.storyboard.main().languageViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'languageViewController' could not be loaded from storyboard 'Main' as 'LanguageViewController'.") }
+        if _R.storyboard.main().mainTabBarController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'mainTabBarController' could not be loaded from storyboard 'Main' as 'MainTabBarController'.") }
+        if _R.storyboard.main().settingsViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'settingsViewController' could not be loaded from storyboard 'Main' as 'SettingsViewController'.") }
+        if _R.storyboard.main().themeViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'themeViewController' could not be loaded from storyboard 'Main' as 'ThemeViewController'.") }
       }
       
       fileprivate init() {}

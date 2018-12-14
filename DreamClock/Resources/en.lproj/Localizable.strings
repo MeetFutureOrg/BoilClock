@@ -32,7 +32,7 @@
 "settings.preferences.nightMode"         = "Night Mode";
 "settings.preferences.theme"             = "Theme";
 "settings.preferences.hapticFeedback"    = "Haptic Feedback";
-"settings.preferences.tapicEngine"       = "(Tapic Engine)";
+"settings.preferences.tapticEngine"       = "(Taptic Engine)";
 "settings.preferences.sound"             = "Sound";
 "settings.preferences.language"          = "Language";
 
@@ -56,3 +56,12 @@
 "settings.preferences.language.navigation.title" = "Choose Language";
 "settings.preferences.language.choose.hud.title" = "Language Changed";
 "settings.preferences.language.choose.hud.body"  = "Your app language has been change to:  ";
+
+/// no notification permission
+"application.notification.permission.deny.hud.title" = "No Notify Permission";
+"application.notification.permission.deny.hud.body"  = "DreamClock has no permission to send you notifications";
+"application.notification.permission.deny.hud.redirectionTitle" = "Go Settings";
+
+/// notification authorize succeed
+"application.notification.permission.allowed.hud.title" = "Notify Has Been Normal";
+"application.notification.permission.allowed.hud.body"  = "DreamClock could send you notifications now!";

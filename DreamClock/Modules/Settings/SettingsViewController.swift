@@ -23,10 +23,11 @@ class SettingsViewController: TableViewController {
         super.makeUI()
 
         
-        navigationTitle = "navigation.title.settings".localized()
+        navigationTitle = R.string.localizable.navigationTitleSettings().localized()
         tableView.register(SettingsSwitchCell.self, forCellReuseIdentifier: Identifier.switchCellIdentifier)
         tableView.register(SettingsDisclosureCell.self, forCellReuseIdentifier: Identifier.disclosureCellIdentifier)
     }
+
 
     
     override func bindViewModel() {
@@ -36,10 +37,13 @@ class SettingsViewController: TableViewController {
                                             selection: tableView.rx.modelSelected(SettingsSectionItem.self).asDriver())
         let output = viewModel.transform(input: input)
         
+        
+        
         /// configure cell
         let dataSource = RxTableViewSectionedReloadDataSource<SettingsSection>(configureCell: { dataSource, tableView, indexPath, item in
             switch item {
             case .settingsDisclosureItem(let viewModel):
+                
                 let cell = (tableView.dequeueReusableCell(withIdentifier: Identifier.disclosureCellIdentifier, for: indexPath) as? SettingsDisclosureCell)!
                 cell.bind(to: viewModel)
                 return cell
@@ -78,5 +82,6 @@ class SettingsViewController: TableViewController {
             }
         }).disposed(by: rx.disposeBag)
     }
+    
 }
 

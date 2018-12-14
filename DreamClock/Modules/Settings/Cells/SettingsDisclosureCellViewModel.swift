@@ -24,8 +24,8 @@ class SettingsDisclosureCellViewModel {
         self.destinationViewModel = destinationViewModel
         self.settingModel = settingModel
         type = settingModel.type
-        title = Driver.just("\(settingModel.title ?? "")")
-        imageName = Driver.just("\(settingModel.leftImage ?? "")")
+        title = Driver.just(settingModel.title ?? "")
+        imageName = Driver.just(settingModel.leftImage)
         showDisclosure = Driver.just(settingModel.showDisclosure)
     }
 }

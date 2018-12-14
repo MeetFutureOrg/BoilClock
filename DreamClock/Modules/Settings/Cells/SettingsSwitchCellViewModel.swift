@@ -24,14 +24,17 @@ class SettingsSwitchCellViewModel {
     
     let nightModeEnabled = PublishSubject<Bool>()
     
-    init(with settingsModel: SettingsModel, isEnabled: Bool, destinationViewModel: ViewModel? = nil) {
+    
+    
+    init(with settingsModel: SettingsModel, isEnabled: Driver<Bool>, destinationViewModel: ViewModel? = nil) {
         self.destinationViewModel = destinationViewModel
         self.settingModel = settingsModel
         type = settingsModel.type
         title = Driver.just("\(settingsModel.title ?? "")")
         detail = Driver.just("\(settingsModel.detail ?? "")")
-        imageName = Driver.just("\(settingsModel.leftImage ?? "")")
+        imageName = Driver.just(settingsModel.leftImage)
         showDisclosure = Driver.just(settingsModel.showDisclosure)
-        self.isEnabled = Driver.just(isEnabled)
+        self.isEnabled = isEnabled
+//        nightModeEnabled = PublishSubjec
     }
 }
