@@ -26,7 +26,7 @@ class AlarmMainViewController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        print(UIDevice.current.value(forKey: "_feedbackSupportLevel"))
     }
 
     override func makeUI() {

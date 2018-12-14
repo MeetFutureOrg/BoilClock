@@ -10,14 +10,14 @@ import UIKit
 
 class SettingsSwitchCell: SimpleTableViewCell {
     
-    lazy var  nightSwitch: Switch = {
+    lazy var trigger: Switch = {
         let view = Switch()
         return view
     }()
     
     override func makeUI() {
         super.makeUI()
-        stackView.insertArrangedSubview(nightSwitch, at: 2)
+        stackView.insertArrangedSubview(trigger, at: 2)
         themeService.rx
             .bind({ $0.secondary }, to: leftImageView.rx.tintColor)
             .disposed(by: rx.disposeBag)
@@ -27,9 +27,9 @@ class SettingsSwitchCell: SimpleTableViewCell {
         viewModel.title.drive(titleLabel.rx.text).disposed(by: rx.disposeBag)
         viewModel.detail.drive(detailLabel.rx.text).disposed(by: rx.disposeBag)
         
-        viewModel.isEnabled.drive(nightSwitch.rx.isOn).disposed(by: rx.disposeBag)
+        viewModel.isEnabled.drive(trigger.rx.isOn).disposed(by: rx.disposeBag)
+        trigger.rx.isOn.bind(to: viewModel.featureTrigger).disposed(by: rx.disposeBag)
         
-        nightSwitch.rx.isOn.bind(to: viewModel.nightModeEnabled).disposed(by: rx.disposeBag)
         
         viewModel.showDisclosure.drive(onNext: { [weak self] (isHidden) in
             self?.rightImageView.isHidden = !isHidden

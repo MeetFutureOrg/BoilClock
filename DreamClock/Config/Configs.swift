@@ -75,8 +75,18 @@ struct Configs {
     }
     
     struct UserDefaultsKeys {
+        
         static let hasBeenLaunched = "hasBeenLaunched"
         static let hasBeenLaunchedOfNewVersion = "hasBeenLaunchedOfNewVersion"
         static let mojorVersion = "CFBundleShortVersionString"
+        
+        /// 夜晚模式
+        static let nightMode = Configs.App.bundleIdentifier + ".nightMode"
+        static let themeKey = Configs.App.bundleIdentifier + ".theme"
+        
+        /// 震动反馈开关
+        static let feedbackTrigger = Configs.App.bundleIdentifier + ".feedbackTrigger"
+        
+        static let persistKey = Configs.App.bundleIdentifier + ".persister"
     }
 }

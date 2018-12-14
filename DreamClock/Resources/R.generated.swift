@@ -38,7 +38,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 13 images.
+  /// This `R.image` struct is generated, and contains static references to 12 images.
   struct image {
     /// Image `dc_ic_calendar_add_filled_24_24x24_`.
     static let dc_ic_calendar_add_filled_24_24x24_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_calendar_add_filled_24_24x24_")
@@ -46,14 +46,14 @@ struct R: Rswift.Validatable {
     static let dc_ic_calendar_add_outline_24_24x24_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_calendar_add_outline_24_24x24_")
     /// Image `dc_ic_cell_disclosure`.
     static let dc_ic_cell_disclosure = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_cell_disclosure")
+    /// Image `dc_ic_cell_haptic_feedback`.
+    static let dc_ic_cell_haptic_feedback = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_cell_haptic_feedback")
     /// Image `dc_ic_cell_language`.
     static let dc_ic_cell_language = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_cell_language")
     /// Image `dc_ic_cell_night_mode`.
     static let dc_ic_cell_night_mode = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_cell_night_mode")
     /// Image `dc_ic_cell_sound`.
     static let dc_ic_cell_sound = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_cell_sound")
-    /// Image `dc_ic_cell_taptic_engine`.
-    static let dc_ic_cell_taptic_engine = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_cell_taptic_engine")
     /// Image `dc_ic_cell_theme`.
     static let dc_ic_cell_theme = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_cell_theme")
     /// Image `dc_ic_clock_filled_24_24x24_`.
@@ -64,8 +64,6 @@ struct R: Rswift.Validatable {
     static let dc_ic_settings_internal_filled_24_24x24_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_settings_internal_filled_24_24x24_")
     /// Image `dc_ic_settings_outline_24_24x24_`.
     static let dc_ic_settings_outline_24_24x24_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_settings_outline_24_24x24_")
-    /// Image `fb_ic_alarm_clock_outline_24_24x24_`.
-    static let fb_ic_alarm_clock_outline_24_24x24_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "fb_ic_alarm_clock_outline_24_24x24_")
     
     /// `UIImage(named: "dc_ic_calendar_add_filled_24_24x24_", bundle: ..., traitCollection: ...)`
     static func dc_ic_calendar_add_filled_24_24x24_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
@@ -82,6 +80,11 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.dc_ic_cell_disclosure, compatibleWith: traitCollection)
     }
     
+    /// `UIImage(named: "dc_ic_cell_haptic_feedback", bundle: ..., traitCollection: ...)`
+    static func dc_ic_cell_haptic_feedback(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.dc_ic_cell_haptic_feedback, compatibleWith: traitCollection)
+    }
+    
     /// `UIImage(named: "dc_ic_cell_language", bundle: ..., traitCollection: ...)`
     static func dc_ic_cell_language(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.dc_ic_cell_language, compatibleWith: traitCollection)
@@ -95,11 +98,6 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "dc_ic_cell_sound", bundle: ..., traitCollection: ...)`
     static func dc_ic_cell_sound(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.dc_ic_cell_sound, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "dc_ic_cell_taptic_engine", bundle: ..., traitCollection: ...)`
-    static func dc_ic_cell_taptic_engine(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.dc_ic_cell_taptic_engine, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "dc_ic_cell_theme", bundle: ..., traitCollection: ...)`
@@ -125,11 +123,6 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "dc_ic_settings_outline_24_24x24_", bundle: ..., traitCollection: ...)`
     static func dc_ic_settings_outline_24_24x24_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.dc_ic_settings_outline_24_24x24_, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "fb_ic_alarm_clock_outline_24_24x24_", bundle: ..., traitCollection: ...)`
-    static func fb_ic_alarm_clock_outline_24_24x24_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.fb_ic_alarm_clock_outline_24_24x24_, compatibleWith: traitCollection)
     }
     
     fileprivate init() {}

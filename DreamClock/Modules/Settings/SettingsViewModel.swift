@@ -28,6 +28,9 @@ class SettingsViewModel: ViewModel, ViewModelType  {
     /// 夜晚模式
     let nightModeEnabled = BehaviorSubject(value: ThemeType.currentTheme().isDark)
     
+    /// 触觉反馈开关
+    let hapticTrigger = BehaviorSubject(value: TapticEngine.isEnabled)
+    
     /// 主要逻辑
     func transform(input: Input) -> Output {
         
@@ -40,7 +43,7 @@ class SettingsViewModel: ViewModel, ViewModelType  {
             let nightModeModel = SettingsModel(type: .nightMode, leftImage: R.image.dc_ic_cell_night_mode.name, title: R.string.localizable.settingsPreferencesNightMode().localized(), detail: "", showDisclosure: false)
             let nightModeCellViewModel = SettingsSwitchCellViewModel(with: nightModeModel, isEnabled: self.nightModeEnabled.asDriver(onErrorJustReturn: false))
             
-            nightModeCellViewModel.nightModeEnabled.bind(to: self.nightModeEnabled).disposed(by: self.rx.disposeBag)
+            nightModeCellViewModel.featureTrigger.bind(to: self.nightModeEnabled).disposed(by: self.rx.disposeBag)
             
             /// 主题
             let themeModel = SettingsModel(type: .theme, leftImage: R.image.dc_ic_cell_theme.name, title: R.string.localizable.settingsPreferencesTheme().localized(), detail: "", showDisclosure: true)
@@ -49,8 +52,10 @@ class SettingsViewModel: ViewModel, ViewModelType  {
             
             
             /// 触觉反馈
-            let tapticEngineModel = SettingsModel(type: .tapticEngine, leftImage: R.image.dc_ic_cell_taptic_engine.name, title: R.string.localizable.settingsPreferencesHapticFeedback().localized(), detail: R.string.localizable.settingsPreferencesTapticEngine().localized(), showDisclosure: false)
-            let tapticEngineCellViewModel = SettingsSwitchCellViewModel(with: tapticEngineModel, isEnabled: Driver.just(false))
+            
+            let hapticFeedbackModel = SettingsModel(type: .haptic, leftImage: R.image.dc_ic_cell_haptic_feedback.name, title: R.string.localizable.settingsPreferencesHapticFeedback().localized(), detail: R.string.localizable.settingsPreferencesTapticEngine().localized(), showDisclosure: false)
+            let hapticFeedbackCellViewModel = SettingsSwitchCellViewModel(with: hapticFeedbackModel, isEnabled: self.hapticTrigger.debug("11111").asDriver(onErrorJustReturn: false))
+            hapticFeedbackCellViewModel.featureTrigger.bind(to: self.hapticTrigger).disposed(by: self.rx.disposeBag)
             
             /// 音效
             let soundModel = SettingsModel(type: .sound, leftImage: R.image.dc_ic_cell_sound.name, title: R.string.localizable.settingsPreferencesSound().localized(), detail: "", showDisclosure: false)
@@ -65,7 +70,7 @@ class SettingsViewModel: ViewModel, ViewModelType  {
                 SettingsSection.settings(title: R.string.localizable.settingsPreferencesSectionTitle().localized(), items: [
                     SettingsSectionItem.settingsSwitchItem(viewModel: nightModeCellViewModel),
                     SettingsSectionItem.settingsDisclosureItem(viewModel: themeCellViewModel),
-                    SettingsSectionItem.settingsSwitchItem(viewModel: tapticEngineCellViewModel),
+                    SettingsSectionItem.settingsSwitchItem(viewModel: hapticFeedbackCellViewModel),
                     SettingsSectionItem.settingsSwitchItem(viewModel: soundCellViewModel),
                     SettingsSectionItem.settingsDisclosureItem(viewModel: languageCellViewModel)
                     ])
@@ -76,7 +81,9 @@ class SettingsViewModel: ViewModel, ViewModelType  {
         /// cell 点击事件
         let selectedEvent = input.selection
         
+        /// 夜晚模式开关逻辑
         nightModeEnabled.subscribe(onNext: { isEnabled in
+            TapticEngine.impact.feedback(.medium)
             var theme = ThemeType.currentTheme()
             if theme.isDark != isEnabled {
                 theme = theme.toggled()
@@ -84,6 +91,14 @@ class SettingsViewModel: ViewModel, ViewModelType  {
             }
         }).disposed(by: rx.disposeBag)
 
+        /// 触觉反馈开关逻辑
+        hapticTrigger.subscribe(onNext: { (trigger) in
+            TapticEngine.impact.feedback(.medium)
+            if TapticEngine.isEnabled != trigger {
+                TapticEngine.toggle()
+            }
+        }).disposed(by: rx.disposeBag)
+        
         return Output(items: elements, selectedEvent: selectedEvent)
     }
     
