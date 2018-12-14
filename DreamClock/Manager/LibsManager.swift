@@ -63,13 +63,14 @@ struct LibsManager {
     }
     
     func setupKingfisher() {
-        // Set maximum disk cache size for default cache. Default value is 0, which means no limit.
-        ImageCache.default.maxDiskCacheSize = UInt(500 * 1024 * 1024) // 500 MB
         
-        // Set longest time duration of the cache being stored in disk. Default value is 1 week
-        ImageCache.default.maxCachePeriodInSecond = TimeInterval(60 * 60 * 24 * 7) // 1 week
+        /// 设置最大磁盘缓存大小, 默认是0, 表示无限制
+        ImageCache.default.diskStorage.config.sizeLimit = UInt(1000 * 1024 * 1024) // 1000 MB
         
-        // Set timeout duration for default image downloader. Default value is 15 sec.
+        /// 设置磁盘最长缓存时间, 默认是1周
+        ImageCache.default.diskStorage.config.expiration = .days(7) // 1 week
+        
+        /// 设置图片下载超时时间, 默认15秒
         ImageDownloader.default.downloadTimeout = 15.0 // 15 sec
     }
     
