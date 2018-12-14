@@ -18,12 +18,7 @@ import SwiftMessages
 
 class ViewController: UIViewController, Navigatable, NVActivityIndicatorViewable {
     
-    enum MessageType {
-        case info
-        case success
-        case warning
-        case error
-    }
+    
     
     var navigator: Navigator!
     
@@ -261,30 +256,38 @@ extension ViewController: DZNEmptyDataSetDelegate {
     }
 }
 
-extension ViewController {
+
+extension UIViewController {
+    
+    enum MessageType {
+        case info
+        case success
+        case warning
+        case error
+    }
     
     func hideAllMessage() {
         SwiftMessages.hideAll()
     }
     
-    func showInfo(title: String?, body: String?, layout: MessageView.Layout = .tabView, position: SwiftMessages.PresentationStyle = .top) {
-        show(title: title ?? "application.hud.default.title.info".localized(), body: body ?? "application.hud.default.body.info".localized(), type: .info, layout: layout, position: position)
+    func showInfo(title: String?, body: String?, layout: MessageView.Layout = .tabView, position: SwiftMessages.PresentationStyle = .top, duration: SwiftMessages.Duration = .seconds(seconds: Configs.BaseDuration.hudDuration), buttonTitle: String? = nil, buttonTapHandler: ((_ button: UIButton) -> Void)? = nil) {
+        show(title: title ?? "application.hud.default.title.info".localized(), body: body ?? "application.hud.default.body.info".localized(), type: .info, layout: layout, position: position, duration: duration, buttonTitle: buttonTitle, buttonTapHandler: buttonTapHandler)
     }
     
-    func showSuccess(title: String?, body: String?, layout: MessageView.Layout = .tabView, position: SwiftMessages.PresentationStyle = .top) {
-        show(title: title ?? "application.hud.default.title.success".localized(), body: body ?? "application.hud.default.body.success".localized(), type: .success, layout: layout, position: position)
+    func showSuccess(title: String?, body: String?, layout: MessageView.Layout = .tabView, position: SwiftMessages.PresentationStyle = .top, duration: SwiftMessages.Duration = .seconds(seconds: Configs.BaseDuration.hudDuration), buttonTitle: String? = nil, buttonTapHandler: ((_ button: UIButton) -> Void)? = nil) {
+        show(title: title ?? "application.hud.default.title.success".localized(), body: body ?? "application.hud.default.body.success".localized(), type: .success, layout: layout, position: position, duration: duration, buttonTitle: buttonTitle, buttonTapHandler: buttonTapHandler)
     }
     
-    func showWarning(title: String?, body: String?, layout: MessageView.Layout = .tabView, position: SwiftMessages.PresentationStyle = .top) {
-        show(title: title ?? "application.hud.default.title.warning".localized(), body: body ?? "application.hud.default.body.warning".localized(), type: .warning, layout: layout, position: position)
+    func showWarning(title: String?, body: String?, layout: MessageView.Layout = .tabView, position: SwiftMessages.PresentationStyle = .top, duration: SwiftMessages.Duration = .seconds(seconds: Configs.BaseDuration.hudDuration), buttonTitle: String? = nil, buttonTapHandler: ((_ button: UIButton) -> Void)? = nil) {
+        show(title: title ?? "application.hud.default.title.warning".localized(), body: body ?? "application.hud.default.body.warning".localized(), type: .warning, layout: layout, position: position,duration: duration, buttonTitle: buttonTitle, buttonTapHandler: buttonTapHandler)
     }
     
-    func showError(title: String?, body: String?, layout: MessageView.Layout = .tabView, position: SwiftMessages.PresentationStyle = .top) {
-        show(title: title ?? "application.hud.default.title.error".localized(), body: body ?? "application.hud.default.body.error".localized(), type: .error, layout: layout, position: position)
+    func showError(title: String?, body: String?, layout: MessageView.Layout = .tabView, position: SwiftMessages.PresentationStyle = .top, duration: SwiftMessages.Duration = .seconds(seconds: Configs.BaseDuration.hudDuration), buttonTitle: String? = nil, buttonTapHandler: ((_ button: UIButton) -> Void)? = nil) {
+        show(title: title ?? "application.hud.default.title.error".localized(), body: body ?? "application.hud.default.body.error".localized(), type: .error, layout: layout, position: position, duration: duration, buttonTitle: buttonTitle, buttonTapHandler: buttonTapHandler)
     }
     
     
-    private func show(title: String, body: String, type: MessageType, layout: MessageView.Layout, position: SwiftMessages.PresentationStyle) {
+    private func show(title: String, body: String, type: MessageType, layout: MessageView.Layout, position: SwiftMessages.PresentationStyle, duration: SwiftMessages.Duration, buttonTitle: String?, buttonTapHandler: ((_ button: UIButton) -> Void)?) {
         let message = MessageView.viewFromNib(layout: layout)
         switch type {
         case .info:
@@ -297,10 +300,14 @@ extension ViewController {
             message.configureTheme(.error)
         }
         message.configureContent(title: title, body: body)
-        message.button?.isHidden = true
+        if let buttonTitle = buttonTitle {
+            message.button?.isHidden = buttonTitle.isEmpty
+            message.button?.setTitle(buttonTitle, for: .normal)
+            message.buttonTapHandler = buttonTapHandler
+        }
         var config = SwiftMessages.defaultConfig
         config.presentationStyle = position
-        config.duration = .seconds(seconds: Configs.BaseDuration.hudDuration)
+        config.duration = duration
         SwiftMessages.show(config: config, view: message)
     }
 }

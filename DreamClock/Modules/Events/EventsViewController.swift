@@ -18,6 +18,6 @@ class EventsViewController: TableViewController {
     
     override func makeUI() {
         super.makeUI()
-        navigationTitle = "navigation.title.events".localized()
+        navigationTitle = R.string.localizable.navigationTitleEvents().localized()
     }
 }

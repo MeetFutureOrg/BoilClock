@@ -15,7 +15,7 @@ class Application {
     let navigator: Navigator
     
     private init() {
-        navigator = Navigator.default
+        navigator = Navigator.default 
     }
     
     func presentInitialScreen(in window: UIWindow) {

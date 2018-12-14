@@ -11,7 +11,7 @@ import Foundation
 enum SettingsType {
     case nightMode
     case theme
-    case tapicEngine
+    case tapticEngine
     case sound
     case language
 }

@@ -31,7 +31,7 @@
 "settings.preferences.nightMode"         = "夜间模式";
 "settings.preferences.theme"             = "主题";
 "settings.preferences.hapticFeedback"    = "触觉反馈";
-"settings.preferences.tapicEngine"       = "(Tapic Engine)";
+"settings.preferences.tapticEngine"       = "(Taptic Engine)";
 "settings.preferences.sound"             = "音效";
 "settings.preferences.language"          = "语言";
 
@@ -55,3 +55,12 @@
 "settings.preferences.language.navigation.title" = "选择语言";
 "settings.preferences.language.choose.hud.title" = "语言已更改";
 "settings.preferences.language.choose.hud.body"  = "您的应用语言已改为:  ";
+
+/// 无通知权限
+"application.notification.permission.deny.hud.title" = "无通知权限";
+"application.notification.permission.deny.hud.body"  = "梦想闹钟没有通知权限";
+"application.notification.permission.deny.hud.redirectionTitle" = "去设置";
+
+/// 通知恢复
+"application.notification.permission.allowed.hud.title" = "通知权限已回复";
+"application.notification.permission.allowed.hud.body"  = "梦想闹钟现在可以给你发送通知了!";

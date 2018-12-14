@@ -13,6 +13,11 @@ PODS:
   - DZNEmptyDataSet (1.8.1)
   - FLEX (2.4.0)
   - Hero (1.4.0)
+  - IGListKit (3.4.0):
+    - IGListKit/Default (= 3.4.0)
+  - IGListKit/Default (3.4.0):
+    - IGListKit/Diffing
+  - IGListKit/Diffing (3.4.0)
   - IQKeyboardManagerSwift (6.2.0)
   - KeychainAccess (3.1.2)
   - Kingfisher (4.10.1)
@@ -108,6 +113,7 @@ DEPENDENCIES:
   - DZNEmptyDataSet
   - FLEX
   - Hero
+  - IGListKit
   - IQKeyboardManagerSwift
   - KeychainAccess
   - Kingfisher
@@ -145,6 +151,7 @@ SPEC REPOS:
     - DZNEmptyDataSet
     - FLEX
     - Hero
+    - IGListKit
     - IQKeyboardManagerSwift
     - KeychainAccess
     - Kingfisher
@@ -196,6 +203,7 @@ SPEC CHECKSUMS:
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   FLEX: bd1a39e55b56bb413b6f1b34b3c10a0dc44ef079
   Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
+  IGListKit: 7a5d788e9fb746bcd402baa8e8b24bc3bd2a5a07
   IQKeyboardManagerSwift: b07ccf9d8cafe993dcd6cb794eb4ba34611a0c4e
   KeychainAccess: b3816fddcf28aa29d94b10ec305cd52be14c472b
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
@@ -227,6 +235,6 @@ SPEC CHECKSUMS:
   SwiftMessages: 42ed7b6e1f2f1ead9ee667dc61a0ae87e4f49570
   SwiftRichString: a3ebe72b13db2e1b917cdbb6b44d817254a7ff73
 
-PODFILE CHECKSUM: 8c6d88af50044eb82b27e75ecb54507eb330cf45
+PODFILE CHECKSUM: 6fdc646558085b915c6e707e8b9672cea6357ade
 
 COCOAPODS: 1.6.0.beta.2

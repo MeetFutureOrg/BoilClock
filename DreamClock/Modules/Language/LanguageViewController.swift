@@ -24,7 +24,7 @@ class LanguageViewController: TableViewController {
     
     override func makeUI() {
         super.makeUI()
-        navigationTitle = "settings.preferences.language.navigation.title".localized()
+        navigationTitle = R.string.localizable.settingsPreferencesLanguageNavigationTitle().localized()
         tableView.register(LanguageCell.self, forCellReuseIdentifier: Identifier.languageCellIdentifier)
         
     }
@@ -53,7 +53,7 @@ class LanguageViewController: TableViewController {
                         if let strong = self {
 //                            SwifterSwift.delay(milliseconds: 3000, completion: {
                             
-                                strong.showInfo(title: "settings.preferences.language.choose.hud.title".localized(), body: "settings.preferences.language.choose.hud.body".localized() + Localize.displayNameForLanguage(Localize.currentLanguage()))
+                                strong.showInfo(title: R.string.localizable.settingsPreferencesLanguageChooseHudTitle().localized(), body: R.string.localizable.settingsPreferencesLanguageChooseHudBody().localized() + Localize.displayNameForLanguage(Localize.currentLanguage()))
 //                            })
                         }
                     }

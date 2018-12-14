@@ -50,7 +50,7 @@ target 'DreamClock' do
 
   # UI
   pod 'Hero'
-  # pod 'PMAlertController'
+  pod 'IGListKit'
   pod 'DZNEmptyDataSet'
   pod 'NVActivityIndicatorView'
   pod 'SwiftMessages'

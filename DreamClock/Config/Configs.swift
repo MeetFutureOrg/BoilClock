@@ -33,6 +33,14 @@ struct Configs {
         static let NavigationTitleFont = UIFont.navigationTitleFont()
     }
     
+    struct Notification {
+        static let defaultBody = "Wake Up!"
+        static let alarmNotificationRequestIdentifier = Configs.App.bundleIdentifier + ".alarmNotificationRequestIdentifier"
+        static let alarmCategoryIdentifier = Configs.App.bundleIdentifier + ".alarmCategoryIdentifier"
+        static let alarmStopActionIdentifier = Configs.App.bundleIdentifier + ".alarmStopActionIdentifier"
+        static let alarmSnoozeActionIdentifier = Configs.App.bundleIdentifier + ".alarmSnoozeActionIdentifier"
+    }
+    
     struct Network {
         static let useStaging = false
         static let loggingEnabled = false
@@ -67,6 +75,8 @@ struct Configs {
     }
     
     struct UserDefaultsKeys {
-        
+        static let hasBeenLaunched = "hasBeenLaunched"
+        static let hasBeenLaunchedOfNewVersion = "hasBeenLaunchedOfNewVersion"
+        static let mojorVersion = "CFBundleShortVersionString"
     }
 }
