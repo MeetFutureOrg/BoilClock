@@ -31,6 +31,9 @@ class SettingsViewModel: ViewModel, ViewModelType  {
     /// 触觉反馈开关
     let hapticTrigger = BehaviorSubject(value: TapticEngine.isEnabled)
     
+    /// 音效开关
+    let soundTrigger = BehaviorSubject(value: TapticEngine.isEnabled)
+    
     /// 主要逻辑
     func transform(input: Input) -> Output {
         
@@ -52,14 +55,14 @@ class SettingsViewModel: ViewModel, ViewModelType  {
             
             
             /// 触觉反馈
-            
             let hapticFeedbackModel = SettingsModel(type: .haptic, leftImage: R.image.dc_ic_cell_haptic_feedback.name, title: R.string.localizable.settingsPreferencesHapticFeedback().localized(), detail: R.string.localizable.settingsPreferencesTapticEngine().localized(), showDisclosure: false)
-            let hapticFeedbackCellViewModel = SettingsSwitchCellViewModel(with: hapticFeedbackModel, isEnabled: self.hapticTrigger.debug("11111").asDriver(onErrorJustReturn: false))
+            let hapticFeedbackCellViewModel = SettingsSwitchCellViewModel(with: hapticFeedbackModel, isEnabled: self.hapticTrigger.asDriver(onErrorJustReturn: false))
             hapticFeedbackCellViewModel.featureTrigger.bind(to: self.hapticTrigger).disposed(by: self.rx.disposeBag)
             
             /// 音效
             let soundModel = SettingsModel(type: .sound, leftImage: R.image.dc_ic_cell_sound.name, title: R.string.localizable.settingsPreferencesSound().localized(), detail: "", showDisclosure: false)
-            let soundCellViewModel = SettingsSwitchCellViewModel(with: soundModel, isEnabled: Driver.just(false))
+            let soundCellViewModel = SettingsSwitchCellViewModel(with: soundModel, isEnabled: self.soundTrigger.asDriver(onErrorJustReturn: false))
+            soundCellViewModel.featureTrigger.bind(to: self.soundTrigger).disposed(by: self.rx.disposeBag)
             
             /// 语言
             let languageModel = SettingsModel(type: .language, leftImage: R.image.dc_ic_cell_language.name, title: R.string.localizable.settingsPreferencesLanguage().localized(), detail: "", showDisclosure: true)
@@ -92,11 +95,15 @@ class SettingsViewModel: ViewModel, ViewModelType  {
         }).disposed(by: rx.disposeBag)
 
         /// 触觉反馈开关逻辑
-        hapticTrigger.subscribe(onNext: { (trigger) in
+        hapticTrigger.subscribe(onNext: { trigger in
             TapticEngine.impact.feedback(.medium)
             if TapticEngine.isEnabled != trigger {
                 TapticEngine.toggle()
             }
+        }).disposed(by: rx.disposeBag)
+        
+        soundTrigger.subscribe(onNext: { trigger in
+            
         }).disposed(by: rx.disposeBag)
         
         return Output(items: elements, selectedEvent: selectedEvent)

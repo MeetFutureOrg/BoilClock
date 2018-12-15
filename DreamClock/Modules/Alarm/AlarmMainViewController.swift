@@ -26,12 +26,12 @@ class AlarmMainViewController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(UIDevice.current.value(forKey: "_feedbackSupportLevel"))
+        
     }
 
     override func makeUI() {
         super.makeUI()
-        navigationTitle = R.string.localizable.navigationTitleAlarm().localized()
+        navigationTitle = R.string.localizable.navigationTitleAlarm()
         view.addSubview(collectionView)
         adapter.collectionView = collectionView
         

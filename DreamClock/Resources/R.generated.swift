@@ -197,7 +197,7 @@ struct R: Rswift.Validatable {
     
     /// This `R.string.localizable` struct is generated, and contains static references to 39 localization keys.
     struct localizable {
-      /// en translation: (Taptic Engine)
+      /// en translation: (iPhone 6s/Plus and above)
       /// 
       /// Locales: en, zh-Hans
       static let settingsPreferencesTapticEngine = Rswift.StringResource(key: "settings.preferences.tapticEngine", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
@@ -354,7 +354,7 @@ struct R: Rswift.Validatable {
       /// Locales: en, zh-Hans
       static let applicationHudDefaultBodyWarning = Rswift.StringResource(key: "application.hud.default.body.warning", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
       
-      /// en translation: (Taptic Engine)
+      /// en translation: (iPhone 6s/Plus and above)
       /// 
       /// Locales: en, zh-Hans
       static func settingsPreferencesTapticEngine(_: Void = ()) -> String {

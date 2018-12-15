@@ -31,7 +31,7 @@
 "settings.preferences.nightMode"         = "夜间模式";
 "settings.preferences.theme"             = "主题";
 "settings.preferences.hapticFeedback"    = "触觉反馈";
-"settings.preferences.tapticEngine"       = "(Taptic Engine)";
+"settings.preferences.tapticEngine"       = "(iPhone 6s/Plus 及以上)";
 "settings.preferences.sound"             = "音效";
 "settings.preferences.language"          = "语言";
 

@@ -10,7 +10,6 @@ import Foundation
 import RxCocoa
 import RxSwift
 import RxDataSources
-import Localize_Swift
 
 class LanguageViewModel: ViewModel, ViewModelType  {
     
@@ -29,8 +28,8 @@ class LanguageViewModel: ViewModel, ViewModelType  {
     
     /// 逻辑验证
     func transform(input: Input) -> Output {
-        let availableLanguage = Localize.availableLanguages()
-        let allItems = availableLanguage.map { LanguageModel(title: Localize.displayNameForLanguage($0), language: $0) }
+        let availableLanguage = Language.availableLanguages()
+        let allItems = availableLanguage.map { LanguageModel(title: Language.displayNameForLanguage($0), language: $0) }
         let elements = input.trigger
             .map { allItems }
             .map { $0.map { LanguageCellViewModel(with: $0) } }
@@ -41,10 +40,11 @@ class LanguageViewModel: ViewModel, ViewModelType  {
         // TODO: 切换语言后切换根控制器或在Label等控件监听通知
         selected.drive(onNext: { (cellViewModel) in
             guard let language = cellViewModel.languageModel.language else {
-                Localize.resetCurrentLanguageToDefault()
+                Language.resetCurrentLanguageToDefault()
                 return
             }
-            Localize.setCurrentLanguage(language)
+            print(language)
+            Language.setCurrentLanguage(language)
             
         }).disposed(by: rx.disposeBag)
         

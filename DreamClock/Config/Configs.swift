@@ -87,6 +87,9 @@ struct Configs {
         /// 震动反馈开关
         static let feedbackTrigger = Configs.App.bundleIdentifier + ".feedbackTrigger"
         
+        /// 音效开关
+        static let soundTrigger = Configs.App.bundleIdentifier + ".soundTrigger"
+        
         static let persistKey = Configs.App.bundleIdentifier + ".persister"
     }
 }

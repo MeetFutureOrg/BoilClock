@@ -20,6 +20,7 @@
 		A40D03FC21C2877C00EAB2B1 /* tickle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A40D03FA21C2877C00EAB2B1 /* tickle.mp3 */; };
 		A40D03FE21C34BB600EAB2B1 /* AlarmAddEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D03FD21C34BB600EAB2B1 /* AlarmAddEditViewController.swift */; };
 		A40D040021C36EF800EAB2B1 /* Device+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D03FF21C36EF800EAB2B1 /* Device+Extension.swift */; };
+		A40D040221C3871200EAB2B1 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D040121C3871200EAB2B1 /* SoundManager.swift */; };
 		A42F0E43217E29CB00009369 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A42F0E45217E29CB00009369 /* Launch Screen.storyboard */; };
 		A42F0E52217F1DFD00009369 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42F0E51217F1DFD00009369 /* SettingsViewController.swift */; };
 		A42F0E54217F1E0900009369 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42F0E53217F1E0900009369 /* SettingsViewModel.swift */; };
@@ -119,6 +120,7 @@
 		A40D03FA21C2877C00EAB2B1 /* tickle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tickle.mp3; sourceTree = "<group>"; };
 		A40D03FD21C34BB600EAB2B1 /* AlarmAddEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmAddEditViewController.swift; sourceTree = "<group>"; };
 		A40D03FF21C36EF800EAB2B1 /* Device+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Device+Extension.swift"; sourceTree = "<group>"; };
+		A40D040121C3871200EAB2B1 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		A42F0E44217E29CB00009369 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		A42F0E47217E29CC00009369 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "en.lproj/Launch Screen.strings"; sourceTree = "<group>"; };
 		A42F0E49217E29CD00009369 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Launch Screen.strings"; sourceTree = "<group>"; };
@@ -449,6 +451,7 @@
 				A40D03F621C263EC00EAB2B1 /* FeedbackManager.swift */,
 				A463F822217E160200EE055A /* ThemeManager.swift */,
 				A42F0EC22181B75E00009369 /* LanguageManager.swift */,
+				A40D040121C3871200EAB2B1 /* SoundManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -771,7 +774,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				$SRCROOT/DreamClock/Resources/R.generated.swift,
+				"$SRCROOT/DreamClock/Resources/R.generated.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -800,7 +803,6 @@
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/Localize-Swift/Localize_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya-ObjectMapper/Moya_ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/NSObject+Rx/NSObject_Rx.framework",
@@ -845,7 +847,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Localize_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NSObject_Rx.framework",
@@ -933,6 +934,7 @@
 				A463F7F4217DF58C00EE055A /* LibsManager.swift in Sources */,
 				A463F816217E0FCE00EE055A /* DreamAPI.swift in Sources */,
 				A463F7EE217DF48C00EE055A /* R.generated.swift in Sources */,
+				A40D040221C3871200EAB2B1 /* SoundManager.swift in Sources */,
 				A42F0EA32180732500009369 /* LanguageModel.swift in Sources */,
 				A42F0E58217F1E2A00009369 /* EventsViewModel.swift in Sources */,
 				A42F0E8D217F79A100009369 /* SettingsSwitchCellViewModel.swift in Sources */,

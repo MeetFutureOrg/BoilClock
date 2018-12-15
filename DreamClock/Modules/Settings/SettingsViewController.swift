@@ -23,7 +23,7 @@ class SettingsViewController: TableViewController {
         super.makeUI()
 
         
-        navigationTitle = R.string.localizable.navigationTitleSettings().localized()
+        navigationTitle = R.string.localizable.navigationTitleSettings()
         tableView.register(SettingsSwitchCell.self, forCellReuseIdentifier: Identifier.switchCellIdentifier)
         tableView.register(SettingsDisclosureCell.self, forCellReuseIdentifier: Identifier.disclosureCellIdentifier)
     }

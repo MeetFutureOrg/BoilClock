@@ -13,7 +13,6 @@ import AVFoundation
 import UserNotifications
 import UserNotificationsUI
 import SwifterSwift
-import Localize_Swift
 import SwiftMessages
 
 @UIApplicationMain

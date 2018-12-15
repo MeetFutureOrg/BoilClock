@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import AudioToolbox.AudioServices
+import AudioToolbox
 import DeviceKit
 
 /// 根据 https://github.com/WorldDownTown/TapticEngine 修改而来
@@ -31,7 +31,7 @@ public class TapticEngine {
         }
     }
     
-    private static let device = Device()
+    private static let device = UIDevice.current
     
     /// 封装 `UIImpactFeedbackGenerator` 类型
     public class Impact {
@@ -190,6 +190,61 @@ public class TapticEngine {
 extension TapticEngine {
     static func toggle() {
         isEnabled.toggle()
+    }
+}
+
+extension UIDevice {
+    /// device support feedback level
+    public enum Level {
+        /// include iPhone6s and iPhone6s Plus
+        case early
+        /// after iPhone7, iPhone7 Plus....
+        case improved
+        /// before iPhone6s/iPhone6s Plus, and iPad ...
+        case unsupported
+    }
+
+    /// Returns whether or not the device has Taptic Engine
+    public var isTapticEngineCapable: Bool {
+        return feedbackLevel == .early || feedbackLevel == .improved
+    }
+
+    public var feedbackLevel: Level {
+        if let level = UIDevice.current.value(forKey: "_feedbackSupportLevel") as? Int {
+            switch level {
+            case 1:
+                return .early
+            case 2:
+                return .improved
+            default:
+                return .unsupported
+            }
+        }
+        return .unsupported
+    }
+}
+
+extension UIDevice.Level: Equatable {
+    
+    /// Compares two devices feedback level
+    ///
+    /// - parameter lhs: A Level.
+    /// - parameter rhs: Another Level.
+    ///
+    /// - returns: `true` iff the underlying identifier is the same.
+    public static func == (lhs: UIDevice.Level, rhs: UIDevice.Level) -> Bool {
+        return lhs.description == rhs.description
+    }
+}
+
+extension UIDevice.Level: CustomStringConvertible {
+    /// A textual representation of the device.
+    public var description: String {
+        switch self {
+        case .early: return "early"
+        case .improved: return "improved"
+        case .unsupported: return "unsupported"
+        }
     }
 }
 

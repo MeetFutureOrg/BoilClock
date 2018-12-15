@@ -14,7 +14,6 @@ import DZNEmptyDataSet
 import NVActivityIndicatorView
 import Hero
 import SwiftMessages
-@_exported import Localize_Swift
 
 class ViewController: UIViewController, Navigatable, NVActivityIndicatorViewable {
     
@@ -300,8 +299,8 @@ extension UIViewController {
             message.configureTheme(.error)
         }
         message.configureContent(title: title, body: body)
+        message.button?.isHidden = (buttonTitle?.isEmpty ?? true) || buttonTitle == nil
         if let buttonTitle = buttonTitle {
-            message.button?.isHidden = buttonTitle.isEmpty
             message.button?.setTitle(buttonTitle, for: .normal)
             message.buttonTapHandler = buttonTapHandler
         }

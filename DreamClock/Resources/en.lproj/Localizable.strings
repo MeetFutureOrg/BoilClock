@@ -32,7 +32,7 @@
 "settings.preferences.nightMode"         = "Night Mode";
 "settings.preferences.theme"             = "Theme";
 "settings.preferences.hapticFeedback"    = "Haptic Feedback";
-"settings.preferences.tapticEngine"       = "(Taptic Engine)";
+"settings.preferences.tapticEngine"       = "(iPhone 6s/Plus and above)";
 "settings.preferences.sound"             = "Sound";
 "settings.preferences.language"          = "Language";
 

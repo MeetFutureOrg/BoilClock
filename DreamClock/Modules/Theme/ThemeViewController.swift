@@ -23,7 +23,7 @@ class ThemeViewController: TableViewController {
     override func makeUI() {
         super.makeUI()
         
-        navigationTitle = R.string.localizable.settingsPreferencesThemeNavigationTitle().localized()
+        navigationTitle = R.string.localizable.settingsPreferencesThemeNavigationTitle()
         tableView.register(ThemeCell.self, forCellReuseIdentifier: Identifier.themeCellIdentifier)
     }
     
