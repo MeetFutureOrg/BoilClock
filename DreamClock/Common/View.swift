@@ -51,6 +51,10 @@ class View: UIView {
 
 extension UIView {
     
+    var spacing: CGFloat {
+        return Configs.BaseDimensions.spacing
+    }
+    
     var inset: CGFloat {
         return Configs.BaseDimensions.inset
     }

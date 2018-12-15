@@ -28,6 +28,7 @@ public class TapticEngine {
         }
         set {
             UserDefaults.standard.set(newValue, forKey: Configs.UserDefaultsKeys.feedbackTrigger)
+            UserDefaults.standard.synchronize()
         }
     }
     

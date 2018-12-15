@@ -48,6 +48,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             fatalError("could not active session. err:\(error!.localizedDescription)")
         }
         
+        Language.setLanguage(Language.current())
+        
         window = UIWindow(frame: UIScreen.main.bounds)
         
         guard let window = window else { return false }
@@ -236,3 +238,4 @@ extension AppDelegate {
         }
     }
 }
+

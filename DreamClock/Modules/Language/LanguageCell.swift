@@ -8,24 +8,25 @@
 
 import UIKit
 
-class LanguageCell: TableViewCell {
-
-    lazy var titleLabel: Label = {
-        let view = Label(style: .style111)
-        view.textAlignment = .center
-        return view
-    }()
+class LanguageCell: SimpleTableViewCell {
     
     override func makeUI() {
         super.makeUI()
-        stackView.addArrangedSubview(titleLabel)
+        leftImageView.isHidden = true
+        titleLabel.style = .style111
+        detailLabel.style = .style122
         themeService.rx
             .bind({ $0.text }, to: titleLabel.rx.textColor)
             .disposed(by: rx.disposeBag)
     }
     
     func bind(to viewModel: LanguageCellViewModel) {
-        viewModel.title.drive(titleLabel.rx.text).disposed(by: rx.disposeBag)
+        viewModel.name.drive(titleLabel.rx.text).disposed(by: rx.disposeBag)
+        viewModel.localeName.drive(detailLabel.rx.text).disposed(by: rx.disposeBag)
+        viewModel.isCurrent.drive(onNext: { [weak self] (isCurrent) in
+//            self?.isSelection = isCurrent
+            self?.rightImageView.image = isCurrent ? R.image.dc_ic_cell_checked()?.withRenderingMode(.alwaysTemplate) : nil
+        }).disposed(by: rx.disposeBag)
     }
 
 }

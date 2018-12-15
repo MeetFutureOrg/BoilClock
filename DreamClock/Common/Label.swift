@@ -9,7 +9,7 @@
 import UIKit
 /*
  Fonts
- System Font - 1, Bold System Font - 2
+ Regular System Font - 1, Semibold System Font - 2
  
  Sizes
  17 - 1, 14 - 2, 12 - 3, 36 - 4,
@@ -18,56 +18,56 @@ import UIKit
  Black - 1, Gray - 2, White - 3, Secondary - 4
  */
 enum LabelStyle {
-    case style111  // PingFang-Medium, 17, Black
-    case style112  // PingFang-Medium, 17, Gray
-    case style113  // PingFang-Medium, 17, White
-    case style114  // PingFang-Medium, 17, Secondary
+    case style111  // PingFang-regular, 17, Black
+    case style112  // PingFang-regular, 17, Gray
+    case style113  // PingFang-regular, 17, White
+    case style114  // PingFang-regular, 17, Secondary
     
-    case style211  // PingFang-Bold, 17, Black
-    case style212  // PingFang-Bold, 17, Gray
-    case style213  // PingFang-Bold, 17, White
-    case style214  // PingFang-Bold, 17, Secondary
+    case style211  // PingFang-semibold, 17, Black
+    case style212  // PingFang-semibold, 17, Gray
+    case style213  // PingFang-semibold, 17, White
+    case style214  // PingFang-semibold, 17, Secondary
     
-    case style121  // PingFang-Medium, 14, Black
-    case style122  // PingFang-Medium, 14, Gray
-    case style123  // PingFang-Medium, 14, White
-    case style124  // PingFang-Medium, 14, Secondary
+    case style121  // PingFang-regular, 14, Black
+    case style122  // PingFang-regular, 14, Gray
+    case style123  // PingFang-regular, 14, White
+    case style124  // PingFang-regular, 14, Secondary
     
-    case style221  // PingFang-Bold, 14, Black
-    case style222  // PingFang-Bold, 14, Gray
-    case style223  // PingFang-Bold, 14, White
-    case style224  // PingFang-Bold, 14, Secondary
+    case style221  // PingFang-semibold, 14, Black
+    case style222  // PingFang-semibold, 14, Gray
+    case style223  // PingFang-semibold, 14, White
+    case style224  // PingFang-semibold, 14, Secondary
     
-    case style131  // PingFang-Medium, 12, Black
-    case style132  // PingFang-Medium, 12, Gray
-    case style133  // PingFang-Medium, 12, White
-    case style134  // PingFang-Medium, 12, Secondary
+    case style131  // PingFang-regular, 12, Black
+    case style132  // PingFang-regular, 12, Gray
+    case style133  // PingFang-regular, 12, White
+    case style134  // PingFang-regular, 12, Secondary
     
-    case style231  // PingFang-Bold, 12, Black
-    case style232  // PingFang-Bold, 12, Gray
-    case style233  // PingFang-Bold, 12, White
-    case style234  // PingFang-Bold, 12, Secondary
+    case style231  // PingFang-semibold, 12, Black
+    case style232  // PingFang-semibold, 12, Gray
+    case style233  // PingFang-semibold, 12, White
+    case style234  // PingFang-semibold, 12, Secondary
     
-    case style141  // PingFang-Medium, 20, Black
-    case style142  // PingFang-Medium, 20, Gray
-    case style143  // PingFang-Medium, 20, White
-    case style144  // PingFang-Medium, 20, Secondary
+    case style141  // PingFang-regular, 20, Black
+    case style142  // PingFang-regular, 20, Gray
+    case style143  // PingFang-regular, 20, White
+    case style144  // PingFang-regular, 20, Secondary
     
-    case style241  // PingFang-Bold, 20, Black
-    case style242  // PingFang-Bold, 20, Gray
-    case style243  // PingFang-Bold, 20, White
-    case style244  // PingFang-Bold, 20, Secondary
+    case style241  // PingFang-semibold, 20, Black
+    case style242  // PingFang-semibold, 20, Gray
+    case style243  // PingFang-semibold, 20, White
+    case style244  // PingFang-semibold, 20, Secondary
     
     var font: UIFont {
         switch self {
-        case .style111, .style112, .style113, .style114: return UIFont.systemFont(ofSize: 17.0, weight: .medium)
-        case .style211, .style212, .style213, .style214: return UIFont.systemFont(ofSize: 17.0, weight: .bold)
-        case .style121, .style122, .style123, .style124: return UIFont.systemFont(ofSize: 14.0, weight: .medium)
-        case .style221, .style222, .style223, .style224: return UIFont.systemFont(ofSize: 14.0, weight: .bold)
-        case .style131, .style132, .style133, .style134: return UIFont.systemFont(ofSize: 12.0, weight: .medium)
-        case .style231, .style232, .style233, .style234: return UIFont.systemFont(ofSize: 12.0, weight: .bold)
-        case .style141, .style142, .style143, .style144: return UIFont.systemFont(ofSize: 20.0, weight: .medium)
-        case .style241, .style242, .style243, .style244: return UIFont.systemFont(ofSize: 20.0, weight: .bold)
+        case .style111, .style112, .style113, .style114: return UIFont.systemFont(ofSize: 17.0, weight: .regular)
+        case .style211, .style212, .style213, .style214: return UIFont.systemFont(ofSize: 17.0, weight: .semibold)
+        case .style121, .style122, .style123, .style124: return UIFont.systemFont(ofSize: 14.0, weight: .regular)
+        case .style221, .style222, .style223, .style224: return UIFont.systemFont(ofSize: 14.0, weight: .semibold)
+        case .style131, .style132, .style133, .style134: return UIFont.systemFont(ofSize: 12.0, weight: .regular)
+        case .style231, .style232, .style233, .style234: return UIFont.systemFont(ofSize: 12.0, weight: .semibold)
+        case .style141, .style142, .style143, .style144: return UIFont.systemFont(ofSize: 20.0, weight: .regular)
+        case .style241, .style242, .style243, .style244: return UIFont.systemFont(ofSize: 20.0, weight: .semibold)
         }
     }
     

@@ -27,11 +27,12 @@ class AlarmMainViewController: ViewController {
         super.viewDidLoad()
         
         
+        
     }
 
     override func makeUI() {
         super.makeUI()
-        navigationTitle = R.string.localizable.navigationTitleAlarm()
+        navigationTitle = R.string.localizable.navigationTitleAlarm().localized()
         view.addSubview(collectionView)
         adapter.collectionView = collectionView
         
@@ -50,7 +51,10 @@ class AlarmMainViewController: ViewController {
         
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationTitle = "navigation.title.alarm".localized()
+    }
     
     
     final class DataSource: NSObject, ListAdapterDataSource, RxListAdapterDataSource {

@@ -54,6 +54,7 @@ struct Configs {
     
     struct BaseDimensions {
         static let inset: CGFloat = 10
+        static let spacing: CGFloat = 6
         static let tabBarHeight: CGFloat = 58
         static let toolBarHeight: CGFloat = 66
         static let navBarWithStatusBarHeight: CGFloat = 64

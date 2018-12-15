@@ -41,7 +41,7 @@ class SimpleTableViewCell: TableViewCell {
     lazy var textsStackView: StackView = {
         let views: [UIView] = [self.titleLabel, self.detailLabel]
         let view = StackView(arrangedSubviews: views)
-        view.spacing = 0
+        view.spacing = self.spacing
         return view
     }()
     
@@ -50,7 +50,7 @@ class SimpleTableViewCell: TableViewCell {
         
         // Configure the view for the selected state
         if isSelection {
-            //            rightImageView.image = selected ? R.image.icon_selected() : R.image.icon_unselected()
+//            rightImageView.image = selected ? R.image.dc_ic_cell_checked() : nil
         }
     }
     

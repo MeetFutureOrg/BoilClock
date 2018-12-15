@@ -50,8 +50,7 @@ class LanguageViewController: TableViewController {
                     if let tabBarVC = Application.shared.window?.rootViewController as? MainTabBarController {
                         tabBarVC.selectedIndex = 2
                         if let strong = self {
-                            
-                                strong.showInfo(title: R.string.localizable.settingsPreferencesLanguageChooseHudTitle(), body: R.string.localizable.settingsPreferencesLanguageChooseHudBody() + Language.displayNameForLanguage(Language.currentLanguage()))
+                            strong.showInfo(title: R.string.localizable.settingsPreferencesLanguageChooseHudTitle(), body: R.string.localizable.settingsPreferencesLanguageChooseHudBody() + Language.displayName(for: Language.current()))
 
                         }
                     }

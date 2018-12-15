@@ -12,12 +12,19 @@ import RxCocoa
 
 class LanguageCellViewModel {
     
-    let title: Driver<String>
+    let name: Driver<String>
+    let localeName: Driver<String>
+    let isCurrent: Driver<Bool>
     
-    let languageModel: LanguageModel
+//    let languageModel: LanguageModel
+    let language: LanguageInfo
     
-    init(with languageModel: LanguageModel) {
-        self.languageModel = languageModel
-        title = Driver.just("\(languageModel.title ?? "")")
+    
+    init(with language: LanguageInfo) {
+        self.language = language
+        
+        name = Driver.just(language.name)
+        localeName = Driver.just(language.localeName)
+        isCurrent = Driver.just(language.isCurrent)
     }
 }
