@@ -11,7 +11,6 @@ import RxSwift
 import RxCocoa
 import RxDataSources
 import SwifterSwift
-import Localize_Swift
 
 class LanguageViewController: TableViewController {
 
@@ -24,7 +23,8 @@ class LanguageViewController: TableViewController {
     
     override func makeUI() {
         super.makeUI()
-        navigationTitle = R.string.localizable.settingsPreferencesLanguageNavigationTitle().localized()
+        
+        navigationTitle = "settings.preferences.language.navigation.title".localized()
         tableView.register(LanguageCell.self, forCellReuseIdentifier: Identifier.languageCellIdentifier)
         
     }
@@ -42,31 +42,20 @@ class LanguageViewController: TableViewController {
             }.disposed(by: rx.disposeBag)
         
         output.selected.drive(onNext: { [weak self] (cellViewModel) in
-//            self?.startAnimating()
-//            SwifterSwift.delay(milliseconds: 3000, completion: {
-//                self?.stopAnimating()
+
                 self?.navigationController?.popViewController(animated: true, {
                     let viewModel = MainTabBarViewModel(loggedIn: true, provider: provider)
                     self?.navigator.show(segue: .tabs(viewModel: viewModel), sender: nil, transition: .root(in: Application.shared.window!))
                     if let tabBarVC = Application.shared.window?.rootViewController as? MainTabBarController {
                         tabBarVC.selectedIndex = 2
                         if let strong = self {
-//                            SwifterSwift.delay(milliseconds: 3000, completion: {
-                            
-                                strong.showInfo(title: R.string.localizable.settingsPreferencesLanguageChooseHudTitle().localized(), body: R.string.localizable.settingsPreferencesLanguageChooseHudBody().localized() + Localize.displayNameForLanguage(Localize.currentLanguage()))
-//                            })
+                            strong.showInfo(title: "settings.preferences.language.choose.hud.title".localized(), body: "settings.preferences.language.choose.hud.body".localized() + Language.displayName(for: Language.current()))
+
                         }
                     }
-//                })
             })
             
         }).disposed(by: rx.disposeBag)
     }
 }
 
-extension LanguageViewController {
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-    }
-}

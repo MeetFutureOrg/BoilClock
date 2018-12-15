@@ -22,8 +22,7 @@ class SettingsSwitchCellViewModel {
     let settingModel: SettingsModel
     let destinationViewModel: ViewModel?
     
-    let nightModeEnabled = PublishSubject<Bool>()
-    
+    let featureTrigger = PublishSubject<Bool>()
     
     
     init(with settingsModel: SettingsModel, isEnabled: Driver<Bool>, destinationViewModel: ViewModel? = nil) {

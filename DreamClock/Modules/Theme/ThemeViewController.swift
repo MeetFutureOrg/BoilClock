@@ -23,7 +23,7 @@ class ThemeViewController: TableViewController {
     override func makeUI() {
         super.makeUI()
         
-        navigationTitle = R.string.localizable.settingsPreferencesThemeNavigationTitle().localized()
+        navigationTitle = "settings.preferences.theme.navigation.title".localized()
         tableView.register(ThemeCell.self, forCellReuseIdentifier: Identifier.themeCellIdentifier)
     }
     
@@ -41,7 +41,7 @@ class ThemeViewController: TableViewController {
         
         output.selected.drive(onNext: { [weak self] (cellViewModel) in
             self?.navigationController?.popViewController(animated: true, {
-                self?.showInfo(title: R.string.localizable.settingsPreferencesThemeChooseHudTitle().localized(), body: R.string.localizable.settingsPreferencesThemeChooseHudBody().localized() + cellViewModel.theme.title)
+                self?.showInfo(title: "settings.preferences.theme.choose.hud.title".localized(), body: "settings.preferences.theme.choose.hud.body".localized() + cellViewModel.theme.title)
             })
         }).disposed(by: rx.disposeBag)
     }

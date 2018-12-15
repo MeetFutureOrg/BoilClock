@@ -13,7 +13,7 @@ import RxCocoa
 class TableViewController: ViewController, UIScrollViewDelegate {
 
     lazy var tableView: UITableView = {
-        let view = UITableView(frame: CGRect(), style: .grouped)
+        let view = UITableView(frame: .zero, style: .grouped)
         view.emptyDataSetSource = self
         view.emptyDataSetDelegate = self
         view.rx.setDelegate(self).disposed(by: rx.disposeBag)
@@ -71,7 +71,7 @@ extension TableViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         if let view = view as? UITableViewHeaderFooterView {
-            view.textLabel?.font = UIFont(name: ".SFUIText-Bold", size: 15.0)!
+            view.textLabel?.font = .systemFont(ofSize: 16, weight: .bold)
             themeService.rx
                 .bind({ $0.text }, to: view.textLabel!.rx.textColor)
                 .disposed(by: rx.disposeBag)

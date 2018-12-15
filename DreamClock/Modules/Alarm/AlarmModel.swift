@@ -87,7 +87,7 @@ extension Alarm: ListDiffable {
 //This can be considered as a viewModel
 final class Alarms: Persistable {
     let ud: UserDefaults = UserDefaults.standard
-    let persistKey: String = Identifier.persistKey
+    let persistKey: String = Configs.UserDefaultsKeys.persistKey
     var alarms: [Alarm] = [] {
         //observer, sync with UserDefaults
         didSet{

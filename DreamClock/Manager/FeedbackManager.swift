@@ -7,10 +7,10 @@
 //
 
 import UIKit
-import AudioToolbox.AudioServices
+import AudioToolbox
+import DeviceKit
 
-
-/// 来源 https://github.com/WorldDownTown/TapticEngine
+/// 根据 https://github.com/WorldDownTown/TapticEngine 修改而来
 
 public class TapticEngine {
     
@@ -22,15 +22,17 @@ public class TapticEngine {
         return isEnabled
     }
     
-    public static var isEnabled = false {
-        didSet {
-            if isEnabled && !oldValue {
-                
-            } else if !isEnabled && oldValue {
-                
-            }
+    public static var isEnabled: Bool {
+        get {
+            return UserDefaults.standard.bool(forKey:  Configs.UserDefaultsKeys.feedbackTrigger)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: Configs.UserDefaultsKeys.feedbackTrigger)
+            UserDefaults.standard.synchronize()
         }
     }
+    
+    private static let device = UIDevice.current
     
     /// 封装 `UIImpactFeedbackGenerator` 类型
     public class Impact {
@@ -51,7 +53,8 @@ public class TapticEngine {
         
         private static func make(_ style: Style) -> Any? {
             guard _enabled else { return nil }
-            if #available(iOS 10.0, *) {
+            if device.feedbackLevel == .improved  {
+                guard #available(iOS 10.0, *) else { return nil }
                 let feedbackStyle: UIImpactFeedbackGenerator.FeedbackStyle
                 switch style {
                 case .light:
@@ -70,15 +73,13 @@ public class TapticEngine {
             }
         }
         
-        private func updateGeneratorIfNeeded(_ style: Style) {
-            guard self.style != style else { return }
-            
+        private func updateFeedback(_ style: Style) {
             generator = Impact.make(style)
             self.style = style
         }
         
         public func feedback(_ style: Style) {
-            updateGeneratorIfNeeded(style)
+            updateFeedback(style)
             if #available(iOS 10.0, *) {
                 guard let generator = generator as? UIImpactFeedbackGenerator else { return }
                 generator.impactOccurred()
@@ -87,7 +88,7 @@ public class TapticEngine {
         }
         
         public func prepare(_ style: Style) {
-            updateGeneratorIfNeeded(style)
+            updateFeedback(style)
             if #available(iOS 10.0, *) {
                 guard let generator = generator as? UIImpactFeedbackGenerator else { return }
                 generator.prepare()
@@ -99,6 +100,7 @@ public class TapticEngine {
     /// 封装 `UISelectionFeedbackGenerator`
     public class Selection {
         private var generator: Any? = {
+            guard #available(iOS 10.0, *) else { return nil }
             let generator: UISelectionFeedbackGenerator = UISelectionFeedbackGenerator()
             generator.prepare()
             return generator
@@ -106,18 +108,20 @@ public class TapticEngine {
         
         public func feedback() {
             guard _enabled else { return }
-            if #available(iOS 10.0, *) {
+            if device.feedbackLevel == .improved {
+                guard #available(iOS 10.0, *) else { return }
                 guard let generator = generator as? UISelectionFeedbackGenerator else { return }
                 generator.selectionChanged()
                 generator.prepare()
             } else {
-                AudioServicesPlaySystemSound(SystemSoundID(Impact.Style.medium.rawValue))
+                AudioServicesPlaySystemSound(SystemSoundID(Impact.Style.light.rawValue))
             }
         }
         
         public func prepare() {
             guard _enabled else { return }
-            if #available(iOS 10.0, *) {
+            if device.feedbackLevel == .improved {
+                guard #available(iOS 10.0, *) else { return }
                 guard let generator = generator as? UISelectionFeedbackGenerator else { return }
                 generator.prepare()
             } else {
@@ -143,7 +147,6 @@ public class TapticEngine {
         
         private var generator: Any? = {
             guard #available(iOS 10.0, *) else { return nil }
-            
             let generator: UINotificationFeedbackGenerator = UINotificationFeedbackGenerator()
             generator.prepare()
             return generator
@@ -152,7 +155,8 @@ public class TapticEngine {
         public func feedback(_ type: Type) {
             guard _enabled else { return }
             
-            if #available(iOS 10.0, *) {
+            if device.feedbackLevel == .improved {
+                guard #available(iOS 10.0, *) else { return }
                 guard let generator = generator as? UINotificationFeedbackGenerator else { return }
                 let feedbackType: UINotificationFeedbackGenerator.FeedbackType
                 switch type {
@@ -172,7 +176,8 @@ public class TapticEngine {
         
         public func prepare() {
             guard _enabled else { return }
-            if #available(iOS 10.0, *) {
+            if device.feedbackLevel == .improved {
+                guard #available(iOS 10.0, *) else { return }
                 guard let generator = generator as? UINotificationFeedbackGenerator else { return }
                 generator.prepare()
             } else {
@@ -184,45 +189,63 @@ public class TapticEngine {
 
 
 extension TapticEngine {
-    
-    
-    func toggled() -> Bool {
-        TapticEngine.isEnabled.toggle()
-        save()
-        return TapticEngine._enabled
-    }
-    
-    func save() {
-        let defaults = UserDefaults.standard
-        defaults.set(TapticEngine._enabled, forKey: Identifier.feedbackTrigger)
+    static func toggle() {
+        isEnabled.toggle()
     }
 }
 
-//#if canImport(RxCocoa)
-//import RxSwift
-//import RxCocoa
-//
-//public extension Reactive where Base: TapticEngine {
-//
-//    /// Reactive wrapper for `isOn` property.
-//    public var isOn: ControlProperty<Bool> {
-//        return value
-//    }
-//
-//    /// Reactive wrapper for `isOn` property.
-//    ///
-//    /// ⚠️ Versions prior to iOS 10.2 were leaking `UISwitch`'s, so on those versions
-//    /// underlying observable sequence won't complete when nothing holds a strong reference
-//    /// to `UISwitch`.
-//    public var value: ControlProperty<Bool> {
-//        return base.rx.controlPropertyWithDefaultEvents(
-//            getter: { uiSwitch in
-//                uiSwitch.isOn
-//        }, setter: { uiSwitch, value in
-//            uiSwitch.isOn = value
-//        }
-//        )
-//    }
-//}
-//
-//#endif
+extension UIDevice {
+    /// device support feedback level
+    public enum Level {
+        /// include iPhone6s and iPhone6s Plus
+        case early
+        /// after iPhone7, iPhone7 Plus....
+        case improved
+        /// before iPhone6s/iPhone6s Plus, and iPad ...
+        case unsupported
+    }
+
+    /// Returns whether or not the device has Taptic Engine
+    public var isTapticEngineCapable: Bool {
+        return feedbackLevel == .early || feedbackLevel == .improved
+    }
+
+    public var feedbackLevel: Level {
+        if let level = UIDevice.current.value(forKey: "_feedbackSupportLevel") as? Int {
+            switch level {
+            case 1:
+                return .early
+            case 2:
+                return .improved
+            default:
+                return .unsupported
+            }
+        }
+        return .unsupported
+    }
+}
+
+extension UIDevice.Level: Equatable {
+    
+    /// Compares two devices feedback level
+    ///
+    /// - parameter lhs: A Level.
+    /// - parameter rhs: Another Level.
+    ///
+    /// - returns: `true` iff the underlying identifier is the same.
+    public static func == (lhs: UIDevice.Level, rhs: UIDevice.Level) -> Bool {
+        return lhs.description == rhs.description
+    }
+}
+
+extension UIDevice.Level: CustomStringConvertible {
+    /// A textual representation of the device.
+    public var description: String {
+        switch self {
+        case .early: return "early"
+        case .improved: return "improved"
+        case .unsupported: return "unsupported"
+        }
+    }
+}
+

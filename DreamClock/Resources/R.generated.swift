@@ -44,16 +44,18 @@ struct R: Rswift.Validatable {
     static let dc_ic_calendar_add_filled_24_24x24_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_calendar_add_filled_24_24x24_")
     /// Image `dc_ic_calendar_add_outline_24_24x24_`.
     static let dc_ic_calendar_add_outline_24_24x24_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_calendar_add_outline_24_24x24_")
+    /// Image `dc_ic_cell_checked`.
+    static let dc_ic_cell_checked = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_cell_checked")
     /// Image `dc_ic_cell_disclosure`.
     static let dc_ic_cell_disclosure = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_cell_disclosure")
+    /// Image `dc_ic_cell_haptic_feedback`.
+    static let dc_ic_cell_haptic_feedback = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_cell_haptic_feedback")
     /// Image `dc_ic_cell_language`.
     static let dc_ic_cell_language = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_cell_language")
     /// Image `dc_ic_cell_night_mode`.
     static let dc_ic_cell_night_mode = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_cell_night_mode")
     /// Image `dc_ic_cell_sound`.
     static let dc_ic_cell_sound = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_cell_sound")
-    /// Image `dc_ic_cell_taptic_engine`.
-    static let dc_ic_cell_taptic_engine = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_cell_taptic_engine")
     /// Image `dc_ic_cell_theme`.
     static let dc_ic_cell_theme = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_cell_theme")
     /// Image `dc_ic_clock_filled_24_24x24_`.
@@ -64,8 +66,6 @@ struct R: Rswift.Validatable {
     static let dc_ic_settings_internal_filled_24_24x24_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_settings_internal_filled_24_24x24_")
     /// Image `dc_ic_settings_outline_24_24x24_`.
     static let dc_ic_settings_outline_24_24x24_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_settings_outline_24_24x24_")
-    /// Image `fb_ic_alarm_clock_outline_24_24x24_`.
-    static let fb_ic_alarm_clock_outline_24_24x24_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "fb_ic_alarm_clock_outline_24_24x24_")
     
     /// `UIImage(named: "dc_ic_calendar_add_filled_24_24x24_", bundle: ..., traitCollection: ...)`
     static func dc_ic_calendar_add_filled_24_24x24_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
@@ -77,9 +77,19 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.dc_ic_calendar_add_outline_24_24x24_, compatibleWith: traitCollection)
     }
     
+    /// `UIImage(named: "dc_ic_cell_checked", bundle: ..., traitCollection: ...)`
+    static func dc_ic_cell_checked(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.dc_ic_cell_checked, compatibleWith: traitCollection)
+    }
+    
     /// `UIImage(named: "dc_ic_cell_disclosure", bundle: ..., traitCollection: ...)`
     static func dc_ic_cell_disclosure(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.dc_ic_cell_disclosure, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "dc_ic_cell_haptic_feedback", bundle: ..., traitCollection: ...)`
+    static func dc_ic_cell_haptic_feedback(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.dc_ic_cell_haptic_feedback, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "dc_ic_cell_language", bundle: ..., traitCollection: ...)`
@@ -95,11 +105,6 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "dc_ic_cell_sound", bundle: ..., traitCollection: ...)`
     static func dc_ic_cell_sound(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.dc_ic_cell_sound, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "dc_ic_cell_taptic_engine", bundle: ..., traitCollection: ...)`
-    static func dc_ic_cell_taptic_engine(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.dc_ic_cell_taptic_engine, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "dc_ic_cell_theme", bundle: ..., traitCollection: ...)`
@@ -125,11 +130,6 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "dc_ic_settings_outline_24_24x24_", bundle: ..., traitCollection: ...)`
     static func dc_ic_settings_outline_24_24x24_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.dc_ic_settings_outline_24_24x24_, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "fb_ic_alarm_clock_outline_24_24x24_", bundle: ..., traitCollection: ...)`
-    static func fb_ic_alarm_clock_outline_24_24x24_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.fb_ic_alarm_clock_outline_24_24x24_, compatibleWith: traitCollection)
     }
     
     fileprivate init() {}
@@ -161,12 +161,12 @@ struct R: Rswift.Validatable {
     struct infoPlist {
       /// en translation: Dream Clock
       /// 
-      /// Locales: en, zh-Hans
-      static let cfBundleDisplayName = Rswift.StringResource(key: "CFBundleDisplayName", tableName: "infoPlist", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
+      static let cfBundleDisplayName = Rswift.StringResource(key: "CFBundleDisplayName", tableName: "infoPlist", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "ja", "ko", "es", "it", "fr", "zh-Hant", "zh-HK", "ru", "de", "en-GB", "en-AU", "en-IN"], comment: nil)
       
       /// en translation: Dream Clock
       /// 
-      /// Locales: en, zh-Hans
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
       static func cfBundleDisplayName(_: Void = ()) -> String {
         return NSLocalizedString("CFBundleDisplayName", tableName: "infoPlist", bundle: R.hostingBundle, comment: "")
       }
@@ -178,23 +178,23 @@ struct R: Rswift.Validatable {
     struct launchScreen {
       /// en translation: Copyright © 2018 FlyWake Studio.
       /// 
-      /// Locales: en, zh-Hans
-      static let obGY5KRdText = Rswift.StringResource(key: "obG-Y5-kRd.text", tableName: "Launch Screen", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
+      static let obGY5KRdText = Rswift.StringResource(key: "obG-Y5-kRd.text", tableName: "Launch Screen", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "ja", "ko", "es", "it", "fr", "zh-Hant", "zh-HK", "ru", "de", "en-GB", "en-AU", "en-IN"], comment: nil)
       /// en translation: Dream Clock
       /// 
-      /// Locales: en, zh-Hans
-      static let gJdYhRWbText = Rswift.StringResource(key: "GJd-Yh-RWb.text", tableName: "Launch Screen", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
+      static let gJdYhRWbText = Rswift.StringResource(key: "GJd-Yh-RWb.text", tableName: "Launch Screen", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "ja", "ko", "es", "it", "fr", "zh-Hant", "zh-HK", "ru", "de", "en-GB", "en-AU", "en-IN"], comment: nil)
       
       /// en translation: Copyright © 2018 FlyWake Studio.
       /// 
-      /// Locales: en, zh-Hans
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
       static func obGY5KRdText(_: Void = ()) -> String {
         return NSLocalizedString("obG-Y5-kRd.text", tableName: "Launch Screen", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Dream Clock
       /// 
-      /// Locales: en, zh-Hans
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
       static func gJdYhRWbText(_: Void = ()) -> String {
         return NSLocalizedString("GJd-Yh-RWb.text", tableName: "Launch Screen", bundle: R.hostingBundle, comment: "")
       }
@@ -204,432 +204,432 @@ struct R: Rswift.Validatable {
     
     /// This `R.string.localizable` struct is generated, and contains static references to 39 localization keys.
     struct localizable {
-      /// en translation: (Taptic Engine)
+      /// en translation: (iPhone 6s/Plus and above)
       /// 
-      /// Locales: en, zh-Hans
-      static let settingsPreferencesTapticEngine = Rswift.StringResource(key: "settings.preferences.tapticEngine", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
+      static let settingsPreferencesTapticEngine = Rswift.StringResource(key: "settings.preferences.tapticEngine", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "ja", "ko", "es", "it", "fr", "zh-Hant", "zh-HK", "ru", "de", "en-GB", "en-AU", "en-IN"], comment: nil)
       /// en translation: Alarm
       /// 
-      /// Locales: en, zh-Hans
-      static let navigationTitleAlarm = Rswift.StringResource(key: "navigation.title.alarm", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
+      static let navigationTitleAlarm = Rswift.StringResource(key: "navigation.title.alarm", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "ja", "ko", "es", "it", "fr", "zh-Hant", "zh-HK", "ru", "de", "en-GB", "en-AU", "en-IN"], comment: nil)
       /// en translation: Blue
       /// 
-      /// Locales: en, zh-Hans
-      static let settingsPreferencesThemeColorBlue = Rswift.StringResource(key: "settings.preferences.theme.color.blue", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
+      static let settingsPreferencesThemeColorBlue = Rswift.StringResource(key: "settings.preferences.theme.color.blue", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "ja", "ko", "es", "it", "fr", "zh-Hant", "zh-HK", "ru", "de", "en-GB", "en-AU", "en-IN"], comment: nil)
       /// en translation: Choose Language
       /// 
-      /// Locales: en, zh-Hans
-      static let settingsPreferencesLanguageNavigationTitle = Rswift.StringResource(key: "settings.preferences.language.navigation.title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
+      static let settingsPreferencesLanguageNavigationTitle = Rswift.StringResource(key: "settings.preferences.language.navigation.title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "ja", "ko", "es", "it", "fr", "zh-Hant", "zh-HK", "ru", "de", "en-GB", "en-AU", "en-IN"], comment: nil)
       /// en translation: Choose Theme Color
       /// 
-      /// Locales: en, zh-Hans
-      static let settingsPreferencesThemeNavigationTitle = Rswift.StringResource(key: "settings.preferences.theme.navigation.title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
+      static let settingsPreferencesThemeNavigationTitle = Rswift.StringResource(key: "settings.preferences.theme.navigation.title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "ja", "ko", "es", "it", "fr", "zh-Hant", "zh-HK", "ru", "de", "en-GB", "en-AU", "en-IN"], comment: nil)
       /// en translation: DreamClock could send you notifications now!
       /// 
-      /// Locales: en, zh-Hans
-      static let applicationNotificationPermissionAllowedHudBody = Rswift.StringResource(key: "application.notification.permission.allowed.hud.body", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
+      static let applicationNotificationPermissionAllowedHudBody = Rswift.StringResource(key: "application.notification.permission.allowed.hud.body", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "ja", "ko", "es", "it", "fr", "zh-Hant", "zh-HK", "ru", "de", "en-GB", "en-AU", "en-IN"], comment: nil)
       /// en translation: DreamClock has no permission to send you notifications
       /// 
-      /// Locales: en, zh-Hans
-      static let applicationNotificationPermissionDenyHudBody = Rswift.StringResource(key: "application.notification.permission.deny.hud.body", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
+      static let applicationNotificationPermissionDenyHudBody = Rswift.StringResource(key: "application.notification.permission.deny.hud.body", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "ja", "ko", "es", "it", "fr", "zh-Hant", "zh-HK", "ru", "de", "en-GB", "en-AU", "en-IN"], comment: nil)
       /// en translation: ERROR!
       /// 
-      /// Locales: en, zh-Hans
-      static let applicationHudDefaultTitleError = Rswift.StringResource(key: "application.hud.default.title.error", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
+      static let applicationHudDefaultTitleError = Rswift.StringResource(key: "application.hud.default.title.error", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "ja", "ko", "es", "it", "fr", "zh-Hant", "zh-HK", "ru", "de", "en-GB", "en-AU", "en-IN"], comment: nil)
       /// en translation: Events
       /// 
-      /// Locales: en, zh-Hans
-      static let navigationTitleEvents = Rswift.StringResource(key: "navigation.title.events", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
+      static let navigationTitleEvents = Rswift.StringResource(key: "navigation.title.events", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "ja", "ko", "es", "it", "fr", "zh-Hant", "zh-HK", "ru", "de", "en-GB", "en-AU", "en-IN"], comment: nil)
       /// en translation: Go Settings
       /// 
-      /// Locales: en, zh-Hans
-      static let applicationNotificationPermissionDenyHudRedirectionTitle = Rswift.StringResource(key: "application.notification.permission.deny.hud.redirectionTitle", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
+      static let applicationNotificationPermissionDenyHudRedirectionTitle = Rswift.StringResource(key: "application.notification.permission.deny.hud.redirectionTitle", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "ja", "ko", "es", "it", "fr", "zh-Hant", "zh-HK", "ru", "de", "en-GB", "en-AU", "en-IN"], comment: nil)
       /// en translation: Green
       /// 
-      /// Locales: en, zh-Hans
-      static let settingsPreferencesThemeColorGreen = Rswift.StringResource(key: "settings.preferences.theme.color.green", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
+      static let settingsPreferencesThemeColorGreen = Rswift.StringResource(key: "settings.preferences.theme.color.green", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "ja", "ko", "es", "it", "fr", "zh-Hant", "zh-HK", "ru", "de", "en-GB", "en-AU", "en-IN"], comment: nil)
       /// en translation: Haptic Feedback
       /// 
-      /// Locales: en, zh-Hans
-      static let settingsPreferencesHapticFeedback = Rswift.StringResource(key: "settings.preferences.hapticFeedback", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
+      static let settingsPreferencesHapticFeedback = Rswift.StringResource(key: "settings.preferences.hapticFeedback", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "ja", "ko", "es", "it", "fr", "zh-Hant", "zh-HK", "ru", "de", "en-GB", "en-AU", "en-IN"], comment: nil)
       /// en translation: INFO!
       /// 
-      /// Locales: en, zh-Hans
-      static let applicationHudDefaultTitleInfo = Rswift.StringResource(key: "application.hud.default.title.info", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
+      static let applicationHudDefaultTitleInfo = Rswift.StringResource(key: "application.hud.default.title.info", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "ja", "ko", "es", "it", "fr", "zh-Hant", "zh-HK", "ru", "de", "en-GB", "en-AU", "en-IN"], comment: nil)
       /// en translation: Language
       /// 
-      /// Locales: en, zh-Hans
-      static let settingsPreferencesLanguage = Rswift.StringResource(key: "settings.preferences.language", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
+      static let settingsPreferencesLanguage = Rswift.StringResource(key: "settings.preferences.language", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "ja", "ko", "es", "it", "fr", "zh-Hant", "zh-HK", "ru", "de", "en-GB", "en-AU", "en-IN"], comment: nil)
       /// en translation: Language Changed
       /// 
-      /// Locales: en, zh-Hans
-      static let settingsPreferencesLanguageChooseHudTitle = Rswift.StringResource(key: "settings.preferences.language.choose.hud.title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
+      static let settingsPreferencesLanguageChooseHudTitle = Rswift.StringResource(key: "settings.preferences.language.choose.hud.title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "ja", "ko", "es", "it", "fr", "zh-Hant", "zh-HK", "ru", "de", "en-GB", "en-AU", "en-IN"], comment: nil)
       /// en translation: Lime
       /// 
-      /// Locales: en, zh-Hans
-      static let settingsPreferencesThemeColorLime = Rswift.StringResource(key: "settings.preferences.theme.color.lime", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
+      static let settingsPreferencesThemeColorLime = Rswift.StringResource(key: "settings.preferences.theme.color.lime", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "ja", "ko", "es", "it", "fr", "zh-Hant", "zh-HK", "ru", "de", "en-GB", "en-AU", "en-IN"], comment: nil)
       /// en translation: Magenta
       /// 
-      /// Locales: en, zh-Hans
-      static let settingsPreferencesThemeColorMagenta = Rswift.StringResource(key: "settings.preferences.theme.color.magenta", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
+      static let settingsPreferencesThemeColorMagenta = Rswift.StringResource(key: "settings.preferences.theme.color.magenta", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "ja", "ko", "es", "it", "fr", "zh-Hant", "zh-HK", "ru", "de", "en-GB", "en-AU", "en-IN"], comment: nil)
       /// en translation: Night Mode
       /// 
-      /// Locales: en, zh-Hans
-      static let settingsPreferencesNightMode = Rswift.StringResource(key: "settings.preferences.nightMode", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
+      static let settingsPreferencesNightMode = Rswift.StringResource(key: "settings.preferences.nightMode", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "ja", "ko", "es", "it", "fr", "zh-Hant", "zh-HK", "ru", "de", "en-GB", "en-AU", "en-IN"], comment: nil)
       /// en translation: No Notify Permission
       /// 
-      /// Locales: en, zh-Hans
-      static let applicationNotificationPermissionDenyHudTitle = Rswift.StringResource(key: "application.notification.permission.deny.hud.title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
+      static let applicationNotificationPermissionDenyHudTitle = Rswift.StringResource(key: "application.notification.permission.deny.hud.title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "ja", "ko", "es", "it", "fr", "zh-Hant", "zh-HK", "ru", "de", "en-GB", "en-AU", "en-IN"], comment: nil)
       /// en translation: Nothing In Here
       /// 
-      /// Locales: en, zh-Hans
-      static let applicationViewEmptyDataTitle = Rswift.StringResource(key: "application.view.emptyData.title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
+      static let applicationViewEmptyDataTitle = Rswift.StringResource(key: "application.view.emptyData.title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "ja", "ko", "es", "it", "fr", "zh-Hant", "zh-HK", "ru", "de", "en-GB", "en-AU", "en-IN"], comment: nil)
       /// en translation: Notify Has Been Normal
       /// 
-      /// Locales: en, zh-Hans
-      static let applicationNotificationPermissionAllowedHudTitle = Rswift.StringResource(key: "application.notification.permission.allowed.hud.title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
+      static let applicationNotificationPermissionAllowedHudTitle = Rswift.StringResource(key: "application.notification.permission.allowed.hud.title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "ja", "ko", "es", "it", "fr", "zh-Hant", "zh-HK", "ru", "de", "en-GB", "en-AU", "en-IN"], comment: nil)
       /// en translation: Pink
       /// 
-      /// Locales: en, zh-Hans
-      static let settingsPreferencesThemeColorPink = Rswift.StringResource(key: "settings.preferences.theme.color.pink", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
+      static let settingsPreferencesThemeColorPink = Rswift.StringResource(key: "settings.preferences.theme.color.pink", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "ja", "ko", "es", "it", "fr", "zh-Hant", "zh-HK", "ru", "de", "en-GB", "en-AU", "en-IN"], comment: nil)
       /// en translation: Preferences
       /// 
-      /// Locales: en, zh-Hans
-      static let settingsPreferencesSectionTitle = Rswift.StringResource(key: "settings.preferences.section.title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
+      static let settingsPreferencesSectionTitle = Rswift.StringResource(key: "settings.preferences.section.title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "ja", "ko", "es", "it", "fr", "zh-Hant", "zh-HK", "ru", "de", "en-GB", "en-AU", "en-IN"], comment: nil)
       /// en translation: Purple
       /// 
-      /// Locales: en, zh-Hans
-      static let settingsPreferencesThemeColorPurple = Rswift.StringResource(key: "settings.preferences.theme.color.purple", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
+      static let settingsPreferencesThemeColorPurple = Rswift.StringResource(key: "settings.preferences.theme.color.purple", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "ja", "ko", "es", "it", "fr", "zh-Hant", "zh-HK", "ru", "de", "en-GB", "en-AU", "en-IN"], comment: nil)
       /// en translation: Red
       /// 
-      /// Locales: en, zh-Hans
-      static let settingsPreferencesThemeColorRed = Rswift.StringResource(key: "settings.preferences.theme.color.red", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
+      static let settingsPreferencesThemeColorRed = Rswift.StringResource(key: "settings.preferences.theme.color.red", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "ja", "ko", "es", "it", "fr", "zh-Hant", "zh-HK", "ru", "de", "en-GB", "en-AU", "en-IN"], comment: nil)
       /// en translation: SUCCESS!
       /// 
-      /// Locales: en, zh-Hans
-      static let applicationHudDefaultTitleSuccess = Rswift.StringResource(key: "application.hud.default.title.success", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
+      static let applicationHudDefaultTitleSuccess = Rswift.StringResource(key: "application.hud.default.title.success", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "ja", "ko", "es", "it", "fr", "zh-Hant", "zh-HK", "ru", "de", "en-GB", "en-AU", "en-IN"], comment: nil)
       /// en translation: Settings
       /// 
-      /// Locales: en, zh-Hans
-      static let navigationTitleSettings = Rswift.StringResource(key: "navigation.title.settings", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
+      static let navigationTitleSettings = Rswift.StringResource(key: "navigation.title.settings", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "ja", "ko", "es", "it", "fr", "zh-Hant", "zh-HK", "ru", "de", "en-GB", "en-AU", "en-IN"], comment: nil)
       /// en translation: Sky Blue
       /// 
-      /// Locales: en, zh-Hans
-      static let settingsPreferencesThemeColorSkyBlue = Rswift.StringResource(key: "settings.preferences.theme.color.skyBlue", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
+      static let settingsPreferencesThemeColorSkyBlue = Rswift.StringResource(key: "settings.preferences.theme.color.skyBlue", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "ja", "ko", "es", "it", "fr", "zh-Hant", "zh-HK", "ru", "de", "en-GB", "en-AU", "en-IN"], comment: nil)
       /// en translation: Sound
       /// 
-      /// Locales: en, zh-Hans
-      static let settingsPreferencesSound = Rswift.StringResource(key: "settings.preferences.sound", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
+      static let settingsPreferencesSound = Rswift.StringResource(key: "settings.preferences.sound", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "ja", "ko", "es", "it", "fr", "zh-Hant", "zh-HK", "ru", "de", "en-GB", "en-AU", "en-IN"], comment: nil)
       /// en translation: Theme
       /// 
-      /// Locales: en, zh-Hans
-      static let settingsPreferencesTheme = Rswift.StringResource(key: "settings.preferences.theme", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
+      static let settingsPreferencesTheme = Rswift.StringResource(key: "settings.preferences.theme", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "ja", "ko", "es", "it", "fr", "zh-Hant", "zh-HK", "ru", "de", "en-GB", "en-AU", "en-IN"], comment: nil)
       /// en translation: Theme Changed
       /// 
-      /// Locales: en, zh-Hans
-      static let settingsPreferencesThemeChooseHudTitle = Rswift.StringResource(key: "settings.preferences.theme.choose.hud.title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
+      static let settingsPreferencesThemeChooseHudTitle = Rswift.StringResource(key: "settings.preferences.theme.choose.hud.title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "ja", "ko", "es", "it", "fr", "zh-Hant", "zh-HK", "ru", "de", "en-GB", "en-AU", "en-IN"], comment: nil)
       /// en translation: WARNING!
       /// 
-      /// Locales: en, zh-Hans
-      static let applicationHudDefaultTitleWarning = Rswift.StringResource(key: "application.hud.default.title.warning", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
+      static let applicationHudDefaultTitleWarning = Rswift.StringResource(key: "application.hud.default.title.warning", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "ja", "ko", "es", "it", "fr", "zh-Hant", "zh-HK", "ru", "de", "en-GB", "en-AU", "en-IN"], comment: nil)
       /// en translation: Watermelon
       /// 
-      /// Locales: en, zh-Hans
-      static let settingsPreferencesThemeColorWatermelon = Rswift.StringResource(key: "settings.preferences.theme.color.watermelon", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
+      static let settingsPreferencesThemeColorWatermelon = Rswift.StringResource(key: "settings.preferences.theme.color.watermelon", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "ja", "ko", "es", "it", "fr", "zh-Hant", "zh-HK", "ru", "de", "en-GB", "en-AU", "en-IN"], comment: nil)
       /// en translation: Your app language has been change to:  
       /// 
-      /// Locales: en, zh-Hans
-      static let settingsPreferencesLanguageChooseHudBody = Rswift.StringResource(key: "settings.preferences.language.choose.hud.body", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
+      static let settingsPreferencesLanguageChooseHudBody = Rswift.StringResource(key: "settings.preferences.language.choose.hud.body", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "ja", "ko", "es", "it", "fr", "zh-Hant", "zh-HK", "ru", "de", "en-GB", "en-AU", "en-IN"], comment: nil)
       /// en translation: Your app theme has been change to:  
       /// 
-      /// Locales: en, zh-Hans
-      static let settingsPreferencesThemeChooseHudBody = Rswift.StringResource(key: "settings.preferences.theme.choose.hud.body", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
+      static let settingsPreferencesThemeChooseHudBody = Rswift.StringResource(key: "settings.preferences.theme.choose.hud.body", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "ja", "ko", "es", "it", "fr", "zh-Hant", "zh-HK", "ru", "de", "en-GB", "en-AU", "en-IN"], comment: nil)
       /// en translation: Your operation already submitted.
       /// 
-      /// Locales: en, zh-Hans
-      static let applicationHudDefaultBodyInfo = Rswift.StringResource(key: "application.hud.default.body.info", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
+      static let applicationHudDefaultBodyInfo = Rswift.StringResource(key: "application.hud.default.body.info", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "ja", "ko", "es", "it", "fr", "zh-Hant", "zh-HK", "ru", "de", "en-GB", "en-AU", "en-IN"], comment: nil)
       /// en translation: Your operation has been completed.
       /// 
-      /// Locales: en, zh-Hans
-      static let applicationHudDefaultBodySuccess = Rswift.StringResource(key: "application.hud.default.body.success", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
+      static let applicationHudDefaultBodySuccess = Rswift.StringResource(key: "application.hud.default.body.success", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "ja", "ko", "es", "it", "fr", "zh-Hant", "zh-HK", "ru", "de", "en-GB", "en-AU", "en-IN"], comment: nil)
       /// en translation: Your operation has been failed.
       /// 
-      /// Locales: en, zh-Hans
-      static let applicationHudDefaultBodyError = Rswift.StringResource(key: "application.hud.default.body.error", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
+      static let applicationHudDefaultBodyError = Rswift.StringResource(key: "application.hud.default.body.error", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "ja", "ko", "es", "it", "fr", "zh-Hant", "zh-HK", "ru", "de", "en-GB", "en-AU", "en-IN"], comment: nil)
       /// en translation: Your operation may exist or cause problems.
       /// 
-      /// Locales: en, zh-Hans
-      static let applicationHudDefaultBodyWarning = Rswift.StringResource(key: "application.hud.default.body.warning", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
+      static let applicationHudDefaultBodyWarning = Rswift.StringResource(key: "application.hud.default.body.warning", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "ja", "ko", "es", "it", "fr", "zh-Hant", "zh-HK", "ru", "de", "en-GB", "en-AU", "en-IN"], comment: nil)
       
-      /// en translation: (Taptic Engine)
+      /// en translation: (iPhone 6s/Plus and above)
       /// 
-      /// Locales: en, zh-Hans
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
       static func settingsPreferencesTapticEngine(_: Void = ()) -> String {
         return NSLocalizedString("settings.preferences.tapticEngine", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Alarm
       /// 
-      /// Locales: en, zh-Hans
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
       static func navigationTitleAlarm(_: Void = ()) -> String {
         return NSLocalizedString("navigation.title.alarm", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Blue
       /// 
-      /// Locales: en, zh-Hans
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
       static func settingsPreferencesThemeColorBlue(_: Void = ()) -> String {
         return NSLocalizedString("settings.preferences.theme.color.blue", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Choose Language
       /// 
-      /// Locales: en, zh-Hans
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
       static func settingsPreferencesLanguageNavigationTitle(_: Void = ()) -> String {
         return NSLocalizedString("settings.preferences.language.navigation.title", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Choose Theme Color
       /// 
-      /// Locales: en, zh-Hans
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
       static func settingsPreferencesThemeNavigationTitle(_: Void = ()) -> String {
         return NSLocalizedString("settings.preferences.theme.navigation.title", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: DreamClock could send you notifications now!
       /// 
-      /// Locales: en, zh-Hans
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
       static func applicationNotificationPermissionAllowedHudBody(_: Void = ()) -> String {
         return NSLocalizedString("application.notification.permission.allowed.hud.body", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: DreamClock has no permission to send you notifications
       /// 
-      /// Locales: en, zh-Hans
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
       static func applicationNotificationPermissionDenyHudBody(_: Void = ()) -> String {
         return NSLocalizedString("application.notification.permission.deny.hud.body", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: ERROR!
       /// 
-      /// Locales: en, zh-Hans
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
       static func applicationHudDefaultTitleError(_: Void = ()) -> String {
         return NSLocalizedString("application.hud.default.title.error", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Events
       /// 
-      /// Locales: en, zh-Hans
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
       static func navigationTitleEvents(_: Void = ()) -> String {
         return NSLocalizedString("navigation.title.events", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Go Settings
       /// 
-      /// Locales: en, zh-Hans
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
       static func applicationNotificationPermissionDenyHudRedirectionTitle(_: Void = ()) -> String {
         return NSLocalizedString("application.notification.permission.deny.hud.redirectionTitle", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Green
       /// 
-      /// Locales: en, zh-Hans
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
       static func settingsPreferencesThemeColorGreen(_: Void = ()) -> String {
         return NSLocalizedString("settings.preferences.theme.color.green", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Haptic Feedback
       /// 
-      /// Locales: en, zh-Hans
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
       static func settingsPreferencesHapticFeedback(_: Void = ()) -> String {
         return NSLocalizedString("settings.preferences.hapticFeedback", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: INFO!
       /// 
-      /// Locales: en, zh-Hans
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
       static func applicationHudDefaultTitleInfo(_: Void = ()) -> String {
         return NSLocalizedString("application.hud.default.title.info", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Language
       /// 
-      /// Locales: en, zh-Hans
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
       static func settingsPreferencesLanguage(_: Void = ()) -> String {
         return NSLocalizedString("settings.preferences.language", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Language Changed
       /// 
-      /// Locales: en, zh-Hans
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
       static func settingsPreferencesLanguageChooseHudTitle(_: Void = ()) -> String {
         return NSLocalizedString("settings.preferences.language.choose.hud.title", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Lime
       /// 
-      /// Locales: en, zh-Hans
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
       static func settingsPreferencesThemeColorLime(_: Void = ()) -> String {
         return NSLocalizedString("settings.preferences.theme.color.lime", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Magenta
       /// 
-      /// Locales: en, zh-Hans
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
       static func settingsPreferencesThemeColorMagenta(_: Void = ()) -> String {
         return NSLocalizedString("settings.preferences.theme.color.magenta", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Night Mode
       /// 
-      /// Locales: en, zh-Hans
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
       static func settingsPreferencesNightMode(_: Void = ()) -> String {
         return NSLocalizedString("settings.preferences.nightMode", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: No Notify Permission
       /// 
-      /// Locales: en, zh-Hans
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
       static func applicationNotificationPermissionDenyHudTitle(_: Void = ()) -> String {
         return NSLocalizedString("application.notification.permission.deny.hud.title", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Nothing In Here
       /// 
-      /// Locales: en, zh-Hans
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
       static func applicationViewEmptyDataTitle(_: Void = ()) -> String {
         return NSLocalizedString("application.view.emptyData.title", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Notify Has Been Normal
       /// 
-      /// Locales: en, zh-Hans
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
       static func applicationNotificationPermissionAllowedHudTitle(_: Void = ()) -> String {
         return NSLocalizedString("application.notification.permission.allowed.hud.title", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Pink
       /// 
-      /// Locales: en, zh-Hans
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
       static func settingsPreferencesThemeColorPink(_: Void = ()) -> String {
         return NSLocalizedString("settings.preferences.theme.color.pink", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Preferences
       /// 
-      /// Locales: en, zh-Hans
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
       static func settingsPreferencesSectionTitle(_: Void = ()) -> String {
         return NSLocalizedString("settings.preferences.section.title", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Purple
       /// 
-      /// Locales: en, zh-Hans
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
       static func settingsPreferencesThemeColorPurple(_: Void = ()) -> String {
         return NSLocalizedString("settings.preferences.theme.color.purple", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Red
       /// 
-      /// Locales: en, zh-Hans
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
       static func settingsPreferencesThemeColorRed(_: Void = ()) -> String {
         return NSLocalizedString("settings.preferences.theme.color.red", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: SUCCESS!
       /// 
-      /// Locales: en, zh-Hans
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
       static func applicationHudDefaultTitleSuccess(_: Void = ()) -> String {
         return NSLocalizedString("application.hud.default.title.success", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Settings
       /// 
-      /// Locales: en, zh-Hans
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
       static func navigationTitleSettings(_: Void = ()) -> String {
         return NSLocalizedString("navigation.title.settings", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Sky Blue
       /// 
-      /// Locales: en, zh-Hans
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
       static func settingsPreferencesThemeColorSkyBlue(_: Void = ()) -> String {
         return NSLocalizedString("settings.preferences.theme.color.skyBlue", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Sound
       /// 
-      /// Locales: en, zh-Hans
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
       static func settingsPreferencesSound(_: Void = ()) -> String {
         return NSLocalizedString("settings.preferences.sound", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Theme
       /// 
-      /// Locales: en, zh-Hans
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
       static func settingsPreferencesTheme(_: Void = ()) -> String {
         return NSLocalizedString("settings.preferences.theme", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Theme Changed
       /// 
-      /// Locales: en, zh-Hans
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
       static func settingsPreferencesThemeChooseHudTitle(_: Void = ()) -> String {
         return NSLocalizedString("settings.preferences.theme.choose.hud.title", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: WARNING!
       /// 
-      /// Locales: en, zh-Hans
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
       static func applicationHudDefaultTitleWarning(_: Void = ()) -> String {
         return NSLocalizedString("application.hud.default.title.warning", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Watermelon
       /// 
-      /// Locales: en, zh-Hans
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
       static func settingsPreferencesThemeColorWatermelon(_: Void = ()) -> String {
         return NSLocalizedString("settings.preferences.theme.color.watermelon", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Your app language has been change to:  
       /// 
-      /// Locales: en, zh-Hans
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
       static func settingsPreferencesLanguageChooseHudBody(_: Void = ()) -> String {
         return NSLocalizedString("settings.preferences.language.choose.hud.body", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Your app theme has been change to:  
       /// 
-      /// Locales: en, zh-Hans
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
       static func settingsPreferencesThemeChooseHudBody(_: Void = ()) -> String {
         return NSLocalizedString("settings.preferences.theme.choose.hud.body", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Your operation already submitted.
       /// 
-      /// Locales: en, zh-Hans
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
       static func applicationHudDefaultBodyInfo(_: Void = ()) -> String {
         return NSLocalizedString("application.hud.default.body.info", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Your operation has been completed.
       /// 
-      /// Locales: en, zh-Hans
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
       static func applicationHudDefaultBodySuccess(_: Void = ()) -> String {
         return NSLocalizedString("application.hud.default.body.success", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Your operation has been failed.
       /// 
-      /// Locales: en, zh-Hans
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
       static func applicationHudDefaultBodyError(_: Void = ()) -> String {
         return NSLocalizedString("application.hud.default.body.error", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Your operation may exist or cause problems.
       /// 
-      /// Locales: en, zh-Hans
+      /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN
       static func applicationHudDefaultBodyWarning(_: Void = ()) -> String {
         return NSLocalizedString("application.hud.default.body.warning", bundle: R.hostingBundle, comment: "")
       }

@@ -54,6 +54,7 @@ struct Configs {
     
     struct BaseDimensions {
         static let inset: CGFloat = 10
+        static let spacing: CGFloat = 6
         static let tabBarHeight: CGFloat = 58
         static let toolBarHeight: CGFloat = 66
         static let navBarWithStatusBarHeight: CGFloat = 64
@@ -75,8 +76,21 @@ struct Configs {
     }
     
     struct UserDefaultsKeys {
+        
         static let hasBeenLaunched = "hasBeenLaunched"
         static let hasBeenLaunchedOfNewVersion = "hasBeenLaunchedOfNewVersion"
         static let mojorVersion = "CFBundleShortVersionString"
+        
+        /// 夜晚模式
+        static let nightMode = Configs.App.bundleIdentifier + ".nightMode"
+        static let themeKey = Configs.App.bundleIdentifier + ".theme"
+        
+        /// 震动反馈开关
+        static let feedbackTrigger = Configs.App.bundleIdentifier + ".feedbackTrigger"
+        
+        /// 音效开关
+        static let soundTrigger = Configs.App.bundleIdentifier + ".soundTrigger"
+        
+        static let persistKey = Configs.App.bundleIdentifier + ".persister"
     }
 }

@@ -158,8 +158,8 @@ enum ThemeType: ThemeProvider {
 extension ThemeType {
     static func currentTheme() -> ThemeType {
         let defaults = UserDefaults.standard
-        let isDark = defaults.bool(forKey: Identifier.nightMode)
-        let colorTheme = ColorTheme(rawValue: defaults.integer(forKey: Identifier.themeKey)) ?? ColorTheme.red
+        let isDark = defaults.bool(forKey: Configs.UserDefaultsKeys.nightMode)
+        let colorTheme = ColorTheme(rawValue: defaults.integer(forKey:  Configs.UserDefaultsKeys.themeKey)) ?? ColorTheme.red
         let theme = isDark ? ThemeType.dark(color: colorTheme) : ThemeType.light(color: colorTheme)
         theme.save()
         return theme
@@ -167,10 +167,10 @@ extension ThemeType {
     
     func save() {
         let defaults = UserDefaults.standard
-        defaults.set(self.isDark, forKey: Identifier.nightMode)
+        defaults.set(self.isDark, forKey:  Configs.UserDefaultsKeys.nightMode)
         switch self {
-        case .light(let color): defaults.set(color.rawValue, forKey: Identifier.themeKey)
-        case .dark(let color): defaults.set(color.rawValue, forKey: Identifier.themeKey)
+        case .light(let color): defaults.set(color.rawValue, forKey:  Configs.UserDefaultsKeys.themeKey)
+        case .dark(let color): defaults.set(color.rawValue, forKey:  Configs.UserDefaultsKeys.themeKey)
         }
     }
 }

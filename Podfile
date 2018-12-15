@@ -35,7 +35,6 @@ target 'DreamClock' do
   pod 'DateToolsSwift'
 
   # Tools
-  pod 'Localize-Swift'
   pod 'DeviceKit'
   pod 'R.swift', '5.0.0.rc.1'
   # pod 'SwiftyUserDefaults'

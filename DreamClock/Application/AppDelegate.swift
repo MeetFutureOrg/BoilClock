@@ -13,7 +13,6 @@ import AVFoundation
 import UserNotifications
 import UserNotificationsUI
 import SwifterSwift
-import Localize_Swift
 import SwiftMessages
 
 @UIApplicationMain
@@ -48,6 +47,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             error = error1
             fatalError("could not active session. err:\(error!.localizedDescription)")
         }
+        
+        Language.setLanguage(Language.current())
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
@@ -193,9 +194,9 @@ extension AppDelegate {
             if !granted {
                 DispatchQueue.mainSafeAsync {
                     if let rootVC = self.window?.rootViewController {
-                        let title = R.string.localizable.applicationNotificationPermissionDenyHudTitle().localized()
-                        let body = R.string.localizable.applicationNotificationPermissionDenyHudBody().localized()
-                        let buttonTitle = R.string.localizable.applicationNotificationPermissionDenyHudRedirectionTitle().localized()
+                        let title = "application.notification.permission.deny.hud.title".localized()
+                        let body = "application.notification.permission.deny.hud.body".localized()
+                        let buttonTitle = "application.notification.permission.deny.hud.redirectionTitle".localized()
                         rootVC.showError(title: title, body: body, duration: .forever, buttonTitle: buttonTitle, buttonTapHandler: { [weak self] _ in
                             self?.openAppSettings()
                         })
@@ -230,10 +231,11 @@ extension AppDelegate {
     private func authorizeSucceed() {
         DispatchQueue.mainSafeAsync {
             if let rootVC = self.window?.rootViewController {
-                let title = R.string.localizable.applicationNotificationPermissionAllowedHudTitle().localized()
-                let body = R.string.localizable.applicationNotificationPermissionAllowedHudTitle().localized()
+                let title = "application.notification.permission.allowed.hud.title".localized()
+                let body = "application.notification.permission.allowed.hud.body".localized()
                 rootVC.showSuccess(title: title, body: body)
             }
         }
     }
 }
+
