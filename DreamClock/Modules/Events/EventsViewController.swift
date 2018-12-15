@@ -14,13 +14,10 @@ class EventsViewController: TableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [unowned self] in
-            self.showInfo(title: Language.current(), body: nil)
-        }
     }
     
     override func makeUI() {
         super.makeUI()
-        navigationTitle = R.string.localizable.navigationTitleEvents()
+        navigationTitle = "navigation.title.events".localized()
     }
 }

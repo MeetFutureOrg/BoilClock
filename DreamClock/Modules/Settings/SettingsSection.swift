@@ -23,7 +23,8 @@ extension SettingsSection: SectionModelType {
     
     var title: String {
         switch self {
-        case .settings(let title, _): return title
+        case .settings(let title, _):
+            return title
         }
     }
     

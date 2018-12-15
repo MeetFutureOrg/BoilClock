@@ -154,6 +154,14 @@ class Language {
 
 /// 语言本地化的扩展
 public extension String {
+  
+    /// 替换 NSLocalizedString
+    ///
+    /// - Returns: 本地化后的字符串
+    func localized() -> String {
+        return localized(using: nil, in: .main)
+    }
+    
     /**
      用于替换 NSLocalizedString 的语法
      

@@ -23,7 +23,7 @@ class SettingsViewController: TableViewController {
         super.makeUI()
 
         
-        navigationTitle = R.string.localizable.navigationTitleSettings()
+        navigationTitle = "navigation.title.settings".localized()
         tableView.register(SettingsSwitchCell.self, forCellReuseIdentifier: Identifier.switchCellIdentifier)
         tableView.register(SettingsDisclosureCell.self, forCellReuseIdentifier: Identifier.disclosureCellIdentifier)
     }
@@ -62,7 +62,6 @@ class SettingsViewController: TableViewController {
             .disposed(by: rx.disposeBag)
         
         output.selectedEvent.drive(onNext: { [weak self] (item) in
-            self?.tableView.deselectRow(at: (self?.tableView.indexPathForSelectedRow)!, animated: true)
             switch item {
             case .settingsDisclosureItem(let viewModel):
                 switch viewModel.type {

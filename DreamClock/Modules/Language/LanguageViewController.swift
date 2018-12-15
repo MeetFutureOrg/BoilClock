@@ -24,8 +24,7 @@ class LanguageViewController: TableViewController {
     override func makeUI() {
         super.makeUI()
         
-        print(R.string.localizable.settingsPreferencesLanguageNavigationTitle())
-        navigationTitle = R.string.localizable.settingsPreferencesLanguageNavigationTitle()
+        navigationTitle = "settings.preferences.language.navigation.title".localized()
         tableView.register(LanguageCell.self, forCellReuseIdentifier: Identifier.languageCellIdentifier)
         
     }
@@ -50,7 +49,7 @@ class LanguageViewController: TableViewController {
                     if let tabBarVC = Application.shared.window?.rootViewController as? MainTabBarController {
                         tabBarVC.selectedIndex = 2
                         if let strong = self {
-                            strong.showInfo(title: R.string.localizable.settingsPreferencesLanguageChooseHudTitle(), body: R.string.localizable.settingsPreferencesLanguageChooseHudBody() + Language.displayName(for: Language.current()))
+                            strong.showInfo(title: "settings.preferences.language.choose.hud.title".localized(), body: "settings.preferences.language.choose.hud.body".localized() + Language.displayName(for: Language.current()))
 
                         }
                     }

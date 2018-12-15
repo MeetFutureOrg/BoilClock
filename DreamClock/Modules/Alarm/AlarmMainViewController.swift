@@ -32,7 +32,7 @@ class AlarmMainViewController: ViewController {
 
     override func makeUI() {
         super.makeUI()
-        navigationTitle = R.string.localizable.navigationTitleAlarm().localized()
+        navigationTitle = "navigation.title.alarm".localized()
         view.addSubview(collectionView)
         adapter.collectionView = collectionView
         

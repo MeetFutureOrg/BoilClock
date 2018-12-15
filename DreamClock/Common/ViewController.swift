@@ -162,7 +162,7 @@ class ViewController: UIViewController, Navigatable, NVActivityIndicatorViewable
     }
     
     func orientationChanged() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             self.updateUI()
         }
     }
