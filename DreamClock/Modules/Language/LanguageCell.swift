@@ -10,8 +10,16 @@ import UIKit
 
 class LanguageCell: SimpleTableViewCell {
     
+    lazy var ensignLabel: Label = {
+        let label = Label()
+        return label
+    }()
+    
     override func makeUI() {
         super.makeUI()
+        
+        stackView.insertArrangedSubview(ensignLabel, at: 0)
+        
         leftImageView.isHidden = true
         titleLabel.style = .style111
         detailLabel.style = .style122
@@ -21,6 +29,7 @@ class LanguageCell: SimpleTableViewCell {
     }
     
     func bind(to viewModel: LanguageCellViewModel) {
+        viewModel.ensignName.drive(ensignLabel.rx.text).disposed(by: rx.disposeBag)
         viewModel.name.drive(titleLabel.rx.text).disposed(by: rx.disposeBag)
         viewModel.localeName.drive(detailLabel.rx.text).disposed(by: rx.disposeBag)
         viewModel.isCurrent.drive(onNext: { [weak self] (isCurrent) in

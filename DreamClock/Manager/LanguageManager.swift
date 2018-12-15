@@ -22,12 +22,14 @@ private let DefaultLanguage = "en"
 private let BaseBundle = "Base"
 
 struct LanguageInfo {
+    let ensignName: String
     let languageCode: String
     let name: String
     let localeName: String
     let isCurrent: Bool
     //        var country: String?
-    init(code languageCode: String, name: String, localeName: String, isCurrent: Bool) {
+    init(code languageCode: String, ensignName: String, name: String, localeName: String, isCurrent: Bool) {
+        self.ensignName = ensignName
         self.languageCode = languageCode
         self.name = name
         self.localeName = localeName
@@ -128,13 +130,30 @@ class Language {
         var localeName = ""
         let languageLocale = NSLocale(localeIdentifier: language)
         let currentLocale = NSLocale(localeIdentifier: self.current())
+        
+        let ensignName = getEnsignName(byCode: language)
+        
         if let lName = languageLocale.displayName(forKey: .identifier, value: language) {
             languageName = lName
         }
         if let name = currentLocale.displayName(forKey: .identifier, value: language) {
             localeName = name
         }
-        return LanguageInfo(code: language, name: languageName, localeName: localeName, isCurrent: isCurrent)
+        return LanguageInfo(code: language, ensignName: ensignName, name: languageName, localeName: localeName, isCurrent: isCurrent)
+    }
+    
+    static func getEnsignName(byCode code : String) -> String {
+        assert(code.count>0, "must have a code")
+        let ensignListPath:String = Bundle.main.path(forResource: "EnsignList", ofType:"plist")!
+        let ensignList = NSArray(contentsOfFile:ensignListPath) as! [Dictionary<String, String>]
+
+        for dic in ensignList {
+            if dic.keys.contains(code) {
+                return dic[code] ?? "🇺🇳"
+            }
+        }
+        
+        return "🇺🇳"
     }
     
     

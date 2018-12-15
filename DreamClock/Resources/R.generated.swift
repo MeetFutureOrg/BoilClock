@@ -16,12 +16,20 @@ struct R: Rswift.Validatable {
     try intern.validate()
   }
   
-  /// This `R.file` struct is generated, and contains static references to 2 files.
+  /// This `R.file` struct is generated, and contains static references to 3 files.
   struct file {
+    /// Resource file `EnsignList.plist`.
+    static let ensignListPlist = Rswift.FileResource(bundle: R.hostingBundle, name: "EnsignList", pathExtension: "plist")
     /// Resource file `bell.mp3`.
     static let bellMp3 = Rswift.FileResource(bundle: R.hostingBundle, name: "bell", pathExtension: "mp3")
     /// Resource file `tickle.mp3`.
     static let tickleMp3 = Rswift.FileResource(bundle: R.hostingBundle, name: "tickle", pathExtension: "mp3")
+    
+    /// `bundle.url(forResource: "EnsignList", withExtension: "plist")`
+    static func ensignListPlist(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.ensignListPlist
+      return fileResource.bundle.url(forResource: fileResource)
+    }
     
     /// `bundle.url(forResource: "bell", withExtension: "mp3")`
     static func bellMp3(_: Void = ()) -> Foundation.URL? {
@@ -720,14 +728,8 @@ struct _R: Rswift.Validatable {
       static func validate() throws {
         if #available(iOS 11.0, *) {
         }
-
-
-        if _R.storyboard.main().settingsViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'settingsViewController' could not be loaded from storyboard 'Main' as 'SettingsViewController'.") }
-        if _R.storyboard.main().themeViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'themeViewController' could not be loaded from storyboard 'Main' as 'ThemeViewController'.") }
-
         if _R.storyboard.main().alarmViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'alarmViewController' could not be loaded from storyboard 'Main' as 'AlarmMainViewController'.") }
         if _R.storyboard.main().eventsViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'eventsViewController' could not be loaded from storyboard 'Main' as 'EventsViewController'.") }
-
         if _R.storyboard.main().languageViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'languageViewController' could not be loaded from storyboard 'Main' as 'LanguageViewController'.") }
         if _R.storyboard.main().mainTabBarController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'mainTabBarController' could not be loaded from storyboard 'Main' as 'MainTabBarController'.") }
         if _R.storyboard.main().settingsViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'settingsViewController' could not be loaded from storyboard 'Main' as 'SettingsViewController'.") }
