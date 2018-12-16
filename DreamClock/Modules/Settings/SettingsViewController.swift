@@ -11,18 +11,6 @@ import RxSwift
 import RxCocoa
 import RxDataSources
 
-//tableView代理实现
-extension SettingsViewController {
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        guard let _ = dataSource?[section] 
-            else {
-                return 0.0
-        }
-        
-        return 40
-    }
-}
-
 class SettingsViewController: TableViewController {
     
     var viewModel: SettingsViewModel!
@@ -37,7 +25,7 @@ class SettingsViewController: TableViewController {
 
         print("\(self.automaticallyAdjustsScrollViewInsets)");
 //        self.automaticallyAdjustsScrollViewInsets = false;
-        self.tableView.sectionHeaderHeight = 0.001
+        self.tableView.sectionHeaderHeight = 40
         navigationTitle = "navigation.title.settings".localized()
         tableView.register(SettingsSwitchCell.self, forCellReuseIdentifier: Identifier.switchCellIdentifier)
         tableView.register(SettingsDisclosureCell.self, forCellReuseIdentifier: Identifier.disclosureCellIdentifier)
