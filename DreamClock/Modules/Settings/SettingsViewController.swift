@@ -11,9 +11,22 @@ import RxSwift
 import RxCocoa
 import RxDataSources
 
+//tableView代理实现
+extension SettingsViewController {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        guard let _ = dataSource?[section] 
+            else {
+                return 0.0
+        }
+        
+        return 40
+    }
+}
+
 class SettingsViewController: TableViewController {
     
     var viewModel: SettingsViewModel!
+    var dataSource:RxTableViewSectionedReloadDataSource<SettingsSection>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,13 +35,13 @@ class SettingsViewController: TableViewController {
     override func makeUI() {
         super.makeUI()
 
-        
+        print("\(self.automaticallyAdjustsScrollViewInsets)");
+//        self.automaticallyAdjustsScrollViewInsets = false;
+        self.tableView.sectionHeaderHeight = 0.001
         navigationTitle = "navigation.title.settings".localized()
         tableView.register(SettingsSwitchCell.self, forCellReuseIdentifier: Identifier.switchCellIdentifier)
         tableView.register(SettingsDisclosureCell.self, forCellReuseIdentifier: Identifier.disclosureCellIdentifier)
     }
-
-
     
     override func bindViewModel() {
         super.bindViewModel()
@@ -57,6 +70,7 @@ class SettingsViewController: TableViewController {
             return section.title
         })
         
+        self.dataSource = dataSource
         output.items.asObservable()
             .bind(to: tableView.rx.items(dataSource: dataSource))
             .disposed(by: rx.disposeBag)
