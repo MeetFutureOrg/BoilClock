@@ -14,6 +14,7 @@ enum SettingsType {
     case haptic
     case sound
     case language
+    case icon
 }
 
 struct SettingsModel {

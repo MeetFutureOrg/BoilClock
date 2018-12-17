@@ -10,7 +10,8 @@ import Foundation
 import RxDataSources
 
 enum SettingsSection {
-    case settings(title: String, items: [SettingsSectionItem])
+    case preferences(title: String, items: [SettingsSectionItem])
+    case personalization(title: String, items: [SettingsSectionItem])
 }
 
 enum SettingsSectionItem {
@@ -23,20 +24,26 @@ extension SettingsSection: SectionModelType {
     
     var title: String {
         switch self {
-        case .settings(let title, _):
+        case let .preferences(title, _):
+            fallthrough
+        case let .personalization(title, _):
             return title
         }
     }
     
     var items: [SettingsSectionItem] {
         switch  self {
-        case .settings(_, let items): return items.map {$0}
+        case .preferences(_, let items): return items.map { $0 }
+        case .personalization(_,let items): return items.map { $0 }
         }
     }
     
     init(original: SettingsSection, items: [Item]) {
         switch original {
-        case .settings(let title, let items): self = .settings(title: title, items: items)
+        case .preferences(let title, let items):
+            self = .preferences(title: title, items: items)
+        case .personalization(let title, let items):
+            self = .personalization(title: title, items: items)
         }
     }
 }

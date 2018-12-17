@@ -42,6 +42,7 @@ class SettingsViewModel: ViewModel, ViewModelType  {
         ///
         input.trigger.map { () -> [SettingsSection] in
             
+            // MARK: - 偏好
             /// 夜晚模式
             let nightModeModel = SettingsModel(type: .nightMode, leftImage: R.image.dc_ic_cell_night_mode.name, title: "settings.preferences.nightMode".localized(), detail: "", showDisclosure: false)
             let nightModeCellViewModel = SettingsSwitchCellViewModel(with: nightModeModel, isEnabled: self.nightModeEnabled.asDriver(onErrorJustReturn: false))
@@ -69,14 +70,19 @@ class SettingsViewModel: ViewModel, ViewModelType  {
             let languageViewModel = LanguageViewModel(provider: self.provider)
             let languageCellViewModel = SettingsDisclosureCellViewModel(with: languageModel, destinationViewModel: languageViewModel)
             
+            // MARK: - 个性化
+            /// 图标
+            let iconModel = SettingsModel(type: .icon, leftImage: <#T##String#>, title: <#T##String?#>, detail: <#T##String?#>, showDisclosure: <#T##Bool#>)
+            
             return [
-                SettingsSection.settings(title: "settings.preferences.section.title".localized(), items: [
+                SettingsSection.preferences(title: "settings.preferences.section.title".localized(), items: [
                     SettingsSectionItem.settingsSwitchItem(viewModel: nightModeCellViewModel),
                     SettingsSectionItem.settingsDisclosureItem(viewModel: themeCellViewModel),
                     SettingsSectionItem.settingsSwitchItem(viewModel: hapticFeedbackCellViewModel),
                     SettingsSectionItem.settingsSwitchItem(viewModel: soundCellViewModel),
                     SettingsSectionItem.settingsDisclosureItem(viewModel: languageCellViewModel)
-                    ])
+                    ]),
+                SettingsSection.personalization(title: <#T##String#>, items: <#T##[SettingsSectionItem]#>)
             ]
             
             }.bind(to: elements).disposed(by: rx.disposeBag)
