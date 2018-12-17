@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -9,7 +13,7 @@
         <!--Main Tab Bar Controller-->
         <scene sceneID="TCk-67-rXY">
             <objects>
-                <tabBarController storyboardIdentifier="MainTabBarController" id="QzU-eJ-VjQ" customClass="MainTabBarController" customModule="DreamClock" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="QzU-eJ-VjQ" customClass="MainTabBarController" customModule="DreamClock" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rbx-Qd-DIx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -23,9 +27,9 @@
         <!--Alarm Main View Controller-->
         <scene sceneID="Hr6-Ms-xNC">
             <objects>
-                <viewController storyboardIdentifier="AlarmViewController" id="VTK-jf-5v6" customClass="AlarmMainViewController" customModule="DreamClock" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AlarmViewController" automaticallyAdjustsScrollViewInsets="NO" id="VTK-jf-5v6" customClass="AlarmMainViewController" customModule="DreamClock" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="of9-aL-oHy">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="9lk-yp-NXb"/>
@@ -38,9 +42,9 @@
         <!--Events View Controller-->
         <scene sceneID="vfS-jJ-mjp">
             <objects>
-                <viewController storyboardIdentifier="EventsViewController" id="Hif-JB-Irw" customClass="EventsViewController" customModule="DreamClock" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EventsViewController" automaticallyAdjustsScrollViewInsets="NO" id="Hif-JB-Irw" customClass="EventsViewController" customModule="DreamClock" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qZx-iE-jrb">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="gYk-wW-2vf"/>
@@ -53,9 +57,9 @@
         <!--Settings View Controller-->
         <scene sceneID="RcW-fK-Cpe">
             <objects>
-                <viewController storyboardIdentifier="SettingsViewController" id="88k-ej-XKS" customClass="SettingsViewController" customModule="DreamClock" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingsViewController" automaticallyAdjustsScrollViewInsets="NO" id="88k-ej-XKS" customClass="SettingsViewController" customModule="DreamClock" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BVM-3a-FfO">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="D5I-S0-ZvG"/>
@@ -68,9 +72,9 @@
         <!--Theme View Controller-->
         <scene sceneID="x7i-uk-ANz">
             <objects>
-                <viewController storyboardIdentifier="ThemeViewController" id="sSc-GK-g8H" customClass="ThemeViewController" customModule="DreamClock" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ThemeViewController" automaticallyAdjustsScrollViewInsets="NO" id="sSc-GK-g8H" customClass="ThemeViewController" customModule="DreamClock" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dTA-uX-FwA">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="3uI-6J-Uc1"/>
@@ -83,9 +87,9 @@
         <!--Language View Controller-->
         <scene sceneID="nDo-VJ-aaw">
             <objects>
-                <viewController storyboardIdentifier="LanguageViewController" id="b5Z-1P-l4a" customClass="LanguageViewController" customModule="DreamClock" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LanguageViewController" automaticallyAdjustsScrollViewInsets="NO" id="b5Z-1P-l4a" customClass="LanguageViewController" customModule="DreamClock" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nbD-Va-tzE">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="deo-ko-uQf"/>

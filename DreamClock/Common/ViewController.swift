@@ -265,6 +265,10 @@ extension UIViewController {
         case error
     }
     
+    func hideCurrent() {
+        SwiftMessages.hide()
+    }
+    
     func hideAllMessage() {
         SwiftMessages.hideAll()
     }

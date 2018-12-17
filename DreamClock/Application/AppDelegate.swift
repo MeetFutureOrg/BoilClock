@@ -219,7 +219,7 @@ extension AppDelegate {
             case .authorized:
                 DispatchQueue.main.async {
                     if let rootVC = self.window?.rootViewController {
-                        rootVC.hideAllMessage()
+                        rootVC.hideCurrent()
                     }
                 }
             default:
