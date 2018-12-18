@@ -11,13 +11,23 @@ import RxCocoa
 import RxSwift
 import RxDataSources
 
+extension ThemeViewController {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 0.01
+    }
+
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return UIView()
+    }
+    
+}
+
 class ThemeViewController: TableViewController {
     
     var viewModel: ThemeViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     override func makeUI() {

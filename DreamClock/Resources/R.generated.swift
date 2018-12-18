@@ -399,7 +399,7 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, zh-Hans, ja, ko, es, it, fr, zh-Hant, zh-HK, ru, de, en-GB, en-AU, en-IN, nl
       static let settingsPreferencesThemeColorBlue = Rswift.StringResource(key: "settings.preferences.theme.color.blue", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "ja", "ko", "es", "it", "fr", "zh-Hant", "zh-HK", "ru", "de", "en-GB", "en-AU", "en-IN", "nl"], comment: nil)
-      /// en translation: Change Icon
+      /// en translation: Choose Icon
       /// 
       /// Locales: en, zh-Hans, nl
       static let settingsPersonalizationIcon = Rswift.StringResource(key: "settings.personalization.icon", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "nl"], comment: nil)
@@ -593,7 +593,7 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("settings.preferences.theme.color.blue", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: Change Icon
+      /// en translation: Choose Icon
       /// 
       /// Locales: en, zh-Hans, nl
       static func settingsPersonalizationIcon(_: Void = ()) -> String {

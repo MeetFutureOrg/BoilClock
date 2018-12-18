@@ -12,6 +12,18 @@ import RxCocoa
 import RxDataSources
 import SwifterSwift
 
+//tableView代理实现
+extension LanguageViewController {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 0.01
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return UIView()
+    }
+    
+}
+
 class LanguageViewController: TableViewController {
 
     var viewModel: LanguageViewModel!
