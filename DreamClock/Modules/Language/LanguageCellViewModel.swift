@@ -17,13 +17,12 @@ class LanguageCellViewModel {
     let localeName: Driver<String>
     let isCurrent: Driver<Bool>
     
-//    let languageModel: LanguageModel
     let language: LanguageInfo
     
     
     init(with language: LanguageInfo) {
         self.language = language
-        ensignName = Driver.just(language.ensignName)
+        ensignName = Driver.just(language.ensign.name)
         name = Driver.just(language.name)
         localeName = Driver.just(language.localeName)
         isCurrent = Driver.just(language.isCurrent)

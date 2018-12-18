@@ -23,6 +23,7 @@ class LanguageViewController: TableViewController {
     
     override func makeUI() {
         super.makeUI()
+    
         navigationTitle = "settings.preferences.language.navigation.title".localized()
         tableView.register(LanguageCell.self, forCellReuseIdentifier: Identifier.languageCellIdentifier)
     }

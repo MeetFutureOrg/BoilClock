@@ -39,7 +39,7 @@
 
 "settings.personalization.cion.navigation.title" = "Choose a icon";
 "settings.personalization.section.title" = "Personalization";
-"settings.personalization.icon"          = "Choose Icon";
+"settings.personalization.icon"          = "Change Icon";
 "settings.personalization.icon.change.failed.hud.title"     = "Icon Change Failed";
 "settings.personalization.icon.change.failed.hud.retry"     = "Retry";
 "settings.personalization.icon.change.nosupport.hud.title"  = "Sorry!";

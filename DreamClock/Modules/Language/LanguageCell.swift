@@ -10,17 +10,17 @@ import UIKit
 
 class LanguageCell: SimpleTableViewCell {
     
-    lazy var ensignLabel: Label = {
-        let label = Label()
-        return label
-    }()
     
     override func makeUI() {
         super.makeUI()
         
-        stackView.insertArrangedSubview(ensignLabel, at: 0)
+        stackView.snp.updateConstraints { (maker) in
+            maker.left.equalTo(separatorInset.left)
+        }
         
-        leftImageView.isHidden = true
+        leftImageView.snp.makeConstraints { (maker) in
+            maker.height.equalTo(Configs.BaseDimensions.tableRowHeight)
+        }
         titleLabel.style = .style111
         detailLabel.style = .style122
         themeService.rx
@@ -29,11 +29,12 @@ class LanguageCell: SimpleTableViewCell {
     }
     
     func bind(to viewModel: LanguageCellViewModel) {
-        viewModel.ensignName.drive(ensignLabel.rx.text).disposed(by: rx.disposeBag)
+        viewModel.ensignName.drive(onNext: { [weak self] name in
+            self?.leftImageView.image = UIImage(named: name)
+        }).disposed(by: rx.disposeBag)
         viewModel.name.drive(titleLabel.rx.text).disposed(by: rx.disposeBag)
         viewModel.localeName.drive(detailLabel.rx.text).disposed(by: rx.disposeBag)
         viewModel.isCurrent.drive(onNext: { [weak self] (isCurrent) in
-//            self?.isSelection = isCurrent
             self?.rightImageView.image = isCurrent ? R.image.dc_ic_cell_checked()?.withRenderingMode(.alwaysTemplate) : nil
         }).disposed(by: rx.disposeBag)
     }
