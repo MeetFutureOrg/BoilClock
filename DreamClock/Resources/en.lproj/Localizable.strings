@@ -32,9 +32,18 @@
 "settings.preferences.nightMode"         = "Night Mode";
 "settings.preferences.theme"             = "Theme";
 "settings.preferences.hapticFeedback"    = "Haptic Feedback";
-"settings.preferences.tapticEngine"       = "(iPhone 6s/Plus and above)";
+"settings.preferences.tapticEngine"      = "(iPhone 6s/Plus and above)";
 "settings.preferences.sound"             = "Sound";
 "settings.preferences.language"          = "Language";
+
+
+"settings.personalization.cion.navigation.title" = "Choose a icon";
+"settings.personalization.section.title" = "Personalization";
+"settings.personalization.icon"          = "Change Icon";
+"settings.personalization.icon.change.failed.hud.title"     = "Icon Change Failed";
+"settings.personalization.icon.change.failed.hud.retry"     = "Retry";
+"settings.personalization.icon.change.nosupport.hud.title"  = "Sorry!";
+"settings.personalization.icon.change.nosupport.hud.body"   = "Your iOS version not support icon change service!";
 
 /// settings > theme
 "settings.preferences.theme.navigation.title" = "Choose Theme Color";

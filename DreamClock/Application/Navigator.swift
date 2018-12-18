@@ -21,6 +21,7 @@ class Navigator {
         case tabs(viewModel: MainTabBarViewModel)
         case theme(viewModel: ThemeViewModel)
         case language(viewModel: LanguageViewModel)
+        case icon(viewModel: IconViewModel)
     }
     
     enum Transition {
@@ -51,6 +52,11 @@ class Navigator {
             languageVC.navigator = self
             languageVC.viewModel = viewModel
             return languageVC
+        case let .icon(viewModel):
+            let iconVC = R.storyboard.main.iconViewController()!
+            iconVC.navigator = self
+            iconVC.viewModel = viewModel
+            return iconVC
         }
     }
     

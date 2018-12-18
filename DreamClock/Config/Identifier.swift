@@ -19,6 +19,7 @@ struct Identifier {
     static let disclosureCellIdentifier = Configs.App.bundleIdentifier + ".disclosureCellIdentifier"
     static let switchCellIdentifier = Configs.App.bundleIdentifier + ".switchCellIdentifier"
     static let themeCellIdentifier = Configs.App.bundleIdentifier + ".themeCellIdentifier"
+    static let iconCellIdentifier = Configs.App.bundleIdentifier + ".iconCellIdentifier"
     static let languageCellIdentifier = Configs.App.bundleIdentifier + ".languageCellIdentifier"
 }
 

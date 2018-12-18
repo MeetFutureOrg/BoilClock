@@ -72,7 +72,9 @@ class SettingsViewModel: ViewModel, ViewModelType  {
             
             // MARK: - 个性化
             /// 图标
-            let iconModel = SettingsModel(type: .icon, leftImage: <#T##String#>, title: <#T##String?#>, detail: <#T##String?#>, showDisclosure: <#T##Bool#>)
+            let iconModel = SettingsModel(type: .icon, leftImage: R.image.dc_ic_cell_icon.name, title: "settings.personalization.icon".localized(), detail: "", showDisclosure: true)
+            let iconViewModel = IconViewModel(provider: self.provider)
+            let iconCellViewModel = SettingsDisclosureCellViewModel(with: iconModel, destinationViewModel: iconViewModel)
             
             return [
                 SettingsSection.preferences(title: "settings.preferences.section.title".localized(), items: [
@@ -82,7 +84,7 @@ class SettingsViewModel: ViewModel, ViewModelType  {
                     SettingsSectionItem.settingsSwitchItem(viewModel: soundCellViewModel),
                     SettingsSectionItem.settingsDisclosureItem(viewModel: languageCellViewModel)
                     ]),
-                SettingsSection.personalization(title: <#T##String#>, items: <#T##[SettingsSectionItem]#>)
+                SettingsSection.personalization(title: "settings.personalization.section.title".localized(), items: [SettingsSectionItem.settingsDisclosureItem(viewModel: iconCellViewModel)])
             ]
             
             }.bind(to: elements).disposed(by: rx.disposeBag)

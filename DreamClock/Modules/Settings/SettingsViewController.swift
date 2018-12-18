@@ -14,6 +14,7 @@ import RxDataSources
 class SettingsViewController: TableViewController {
     
     var viewModel: SettingsViewModel!
+    var dataSource:RxTableViewSectionedReloadDataSource<SettingsSection>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +27,6 @@ class SettingsViewController: TableViewController {
         tableView.register(SettingsSwitchCell.self, forCellReuseIdentifier: Identifier.switchCellIdentifier)
         tableView.register(SettingsDisclosureCell.self, forCellReuseIdentifier: Identifier.disclosureCellIdentifier)
     }
-
-
     
     override func bindViewModel() {
         super.bindViewModel()
@@ -56,6 +55,7 @@ class SettingsViewController: TableViewController {
             return section.title
         })
         
+        self.dataSource = dataSource
         output.items.asObservable()
             .bind(to: tableView.rx.items(dataSource: dataSource))
             .disposed(by: rx.disposeBag)
@@ -72,7 +72,10 @@ class SettingsViewController: TableViewController {
                     if let destinationViewModel = viewModel.destinationViewModel as? LanguageViewModel {
                         self?.navigator.show(segue: .language(viewModel: destinationViewModel), sender: self, transition: .navigation(type: .auto))
                     }
-                    
+                case .icon:
+                    if let destinationViewModel = viewModel.destinationViewModel as? IconViewModel {
+                        self?.navigator.show(segue: .icon(viewModel: destinationViewModel), sender: self, transition: .navigation(type: .auto))
+                    }
 
                 default: break
                 }

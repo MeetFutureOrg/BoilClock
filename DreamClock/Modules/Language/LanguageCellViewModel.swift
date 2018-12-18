@@ -12,6 +12,7 @@ import RxCocoa
 
 class LanguageCellViewModel {
     
+    let ensignName: Driver<String>
     let name: Driver<String>
     let localeName: Driver<String>
     let isCurrent: Driver<Bool>
@@ -22,7 +23,7 @@ class LanguageCellViewModel {
     
     init(with language: LanguageInfo) {
         self.language = language
-        
+        ensignName = Driver.just(language.ensignName)
         name = Driver.just(language.name)
         localeName = Driver.just(language.localeName)
         isCurrent = Driver.just(language.isCurrent)

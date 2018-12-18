@@ -21,6 +21,27 @@
 		A40D03FE21C34BB600EAB2B1 /* AlarmAddEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D03FD21C34BB600EAB2B1 /* AlarmAddEditViewController.swift */; };
 		A40D040021C36EF800EAB2B1 /* Device+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D03FF21C36EF800EAB2B1 /* Device+Extension.swift */; };
 		A40D040221C3871200EAB2B1 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D040121C3871200EAB2B1 /* SoundManager.swift */; };
+		A40D043621C7862F00EAB2B1 /* IconViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D043521C7862F00EAB2B1 /* IconViewModel.swift */; };
+		A40D043A21C7868600EAB2B1 /* IconCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D043921C7868600EAB2B1 /* IconCellViewModel.swift */; };
+		A40D045F21C7950000EAB2B1 /* IconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D045E21C7950000EAB2B1 /* IconManager.swift */; };
+		A40D046121C88B6100EAB2B1 /* IconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D046021C88B6100EAB2B1 /* IconViewController.swift */; };
+		A40D046321C88BA600EAB2B1 /* IconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D046221C88BA600EAB2B1 /* IconCell.swift */; };
+		A40D047C21C899F900EAB2B1 /* AppIcon-Small-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A40D047421C899F800EAB2B1 /* AppIcon-Small-40@3x.png */; };
+		A40D047D21C899F900EAB2B1 /* AppIcon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A40D047521C899F800EAB2B1 /* AppIcon-60@2x.png */; };
+		A40D047E21C899F900EAB2B1 /* AppIcon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A40D047621C899F900EAB2B1 /* AppIcon-60@3x.png */; };
+		A40D047F21C899F900EAB2B1 /* AppIcon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A40D047721C899F900EAB2B1 /* AppIcon-Small@2x.png */; };
+		A40D048021C899F900EAB2B1 /* AppIcon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A40D047821C899F900EAB2B1 /* AppIcon-Small@3x.png */; };
+		A40D048121C899F900EAB2B1 /* AppIcon-Notification@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A40D047921C899F900EAB2B1 /* AppIcon-Notification@2x.png */; };
+		A40D048221C899F900EAB2B1 /* AppIcon-Notification@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A40D047A21C899F900EAB2B1 /* AppIcon-Notification@3x.png */; };
+		A40D048321C899F900EAB2B1 /* AppIcon-Small-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A40D047B21C899F900EAB2B1 /* AppIcon-Small-40@2x.png */; };
+		A40D048C21C89C2E00EAB2B1 /* DarkMode-AppIcon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A40D048421C89C2D00EAB2B1 /* DarkMode-AppIcon-60@2x.png */; };
+		A40D048D21C89C2E00EAB2B1 /* DarkMode-AppIcon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A40D048521C89C2D00EAB2B1 /* DarkMode-AppIcon-Small@2x.png */; };
+		A40D048E21C89C2E00EAB2B1 /* DarkMode-AppIcon-Small-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A40D048621C89C2D00EAB2B1 /* DarkMode-AppIcon-Small-40@3x.png */; };
+		A40D048F21C89C2E00EAB2B1 /* DarkMode-AppIcon-Notification@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A40D048721C89C2D00EAB2B1 /* DarkMode-AppIcon-Notification@2x.png */; };
+		A40D049021C89C2E00EAB2B1 /* DarkMode-AppIcon-Notification@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A40D048821C89C2D00EAB2B1 /* DarkMode-AppIcon-Notification@3x.png */; };
+		A40D049121C89C2E00EAB2B1 /* DarkMode-AppIcon-Small-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A40D048921C89C2D00EAB2B1 /* DarkMode-AppIcon-Small-40@2x.png */; };
+		A40D049221C89C2E00EAB2B1 /* DarkMode-AppIcon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A40D048A21C89C2E00EAB2B1 /* DarkMode-AppIcon-Small@3x.png */; };
+		A40D049321C89C2E00EAB2B1 /* DarkMode-AppIcon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A40D048B21C89C2E00EAB2B1 /* DarkMode-AppIcon-60@3x.png */; };
 		A42F0E43217E29CB00009369 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A42F0E45217E29CB00009369 /* Launch Screen.storyboard */; };
 		A42F0E52217F1DFD00009369 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42F0E51217F1DFD00009369 /* SettingsViewController.swift */; };
 		A42F0E54217F1E0900009369 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42F0E53217F1E0900009369 /* SettingsViewModel.swift */; };
@@ -83,6 +104,7 @@
 		A4D7B81121C1043600CC7177 /* AlarmApplicationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D7B81021C1043600CC7177 /* AlarmApplicationProtocol.swift */; };
 		A4D7B81421C1339800CC7177 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D7B81321C1339800CC7177 /* Defaults.swift */; };
 		A4D7B81821C13FA400CC7177 /* DispatchQueue+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D7B81721C13FA400CC7177 /* DispatchQueue+Extension.swift */; };
+		EA1745A421C5674300774D72 /* EnsignList.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA1745A321C5674300774D72 /* EnsignList.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,6 +190,27 @@
 		A40D043121C52C9900EAB2B1 /* en-IN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-IN"; path = "en-IN.lproj/Launch Screen.strings"; sourceTree = "<group>"; };
 		A40D043221C52C9A00EAB2B1 /* en-IN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-IN"; path = "en-IN.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		A40D043321C52C9A00EAB2B1 /* en-IN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-IN"; path = "en-IN.lproj/infoPlist.strings"; sourceTree = "<group>"; };
+		A40D043521C7862F00EAB2B1 /* IconViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconViewModel.swift; sourceTree = "<group>"; };
+		A40D043921C7868600EAB2B1 /* IconCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCellViewModel.swift; sourceTree = "<group>"; };
+		A40D045E21C7950000EAB2B1 /* IconManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconManager.swift; sourceTree = "<group>"; };
+		A40D046021C88B6100EAB2B1 /* IconViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconViewController.swift; sourceTree = "<group>"; };
+		A40D046221C88BA600EAB2B1 /* IconCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCell.swift; sourceTree = "<group>"; };
+		A40D047421C899F800EAB2B1 /* AppIcon-Small-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon-Small-40@3x.png"; sourceTree = "<group>"; };
+		A40D047521C899F800EAB2B1 /* AppIcon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon-60@2x.png"; sourceTree = "<group>"; };
+		A40D047621C899F900EAB2B1 /* AppIcon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon-60@3x.png"; sourceTree = "<group>"; };
+		A40D047721C899F900EAB2B1 /* AppIcon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon-Small@2x.png"; sourceTree = "<group>"; };
+		A40D047821C899F900EAB2B1 /* AppIcon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon-Small@3x.png"; sourceTree = "<group>"; };
+		A40D047921C899F900EAB2B1 /* AppIcon-Notification@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon-Notification@2x.png"; sourceTree = "<group>"; };
+		A40D047A21C899F900EAB2B1 /* AppIcon-Notification@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon-Notification@3x.png"; sourceTree = "<group>"; };
+		A40D047B21C899F900EAB2B1 /* AppIcon-Small-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon-Small-40@2x.png"; sourceTree = "<group>"; };
+		A40D048421C89C2D00EAB2B1 /* DarkMode-AppIcon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DarkMode-AppIcon-60@2x.png"; sourceTree = "<group>"; };
+		A40D048521C89C2D00EAB2B1 /* DarkMode-AppIcon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DarkMode-AppIcon-Small@2x.png"; sourceTree = "<group>"; };
+		A40D048621C89C2D00EAB2B1 /* DarkMode-AppIcon-Small-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DarkMode-AppIcon-Small-40@3x.png"; sourceTree = "<group>"; };
+		A40D048721C89C2D00EAB2B1 /* DarkMode-AppIcon-Notification@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DarkMode-AppIcon-Notification@2x.png"; sourceTree = "<group>"; };
+		A40D048821C89C2D00EAB2B1 /* DarkMode-AppIcon-Notification@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DarkMode-AppIcon-Notification@3x.png"; sourceTree = "<group>"; };
+		A40D048921C89C2D00EAB2B1 /* DarkMode-AppIcon-Small-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DarkMode-AppIcon-Small-40@2x.png"; sourceTree = "<group>"; };
+		A40D048A21C89C2E00EAB2B1 /* DarkMode-AppIcon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DarkMode-AppIcon-Small@3x.png"; sourceTree = "<group>"; };
+		A40D048B21C89C2E00EAB2B1 /* DarkMode-AppIcon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DarkMode-AppIcon-60@3x.png"; sourceTree = "<group>"; };
 		A42F0E44217E29CB00009369 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		A42F0E47217E29CC00009369 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "en.lproj/Launch Screen.strings"; sourceTree = "<group>"; };
 		A42F0E49217E29CD00009369 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Launch Screen.strings"; sourceTree = "<group>"; };
@@ -245,6 +288,7 @@
 		A70F96F035A4086457C6F90A /* Pods-DreamClockUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamClockUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DreamClockUITests/Pods-DreamClockUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D5B94BB28E44BA37BA709025 /* Pods-DreamClockUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamClockUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DreamClockUITests/Pods-DreamClockUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E5286670B6BE0A195F6A25B5 /* Pods-DreamClock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamClock.release.xcconfig"; path = "Pods/Target Support Files/Pods-DreamClock/Pods-DreamClock.release.xcconfig"; sourceTree = "<group>"; };
+		EA1745A321C5674300774D72 /* EnsignList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EnsignList.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -307,9 +351,52 @@
 			path = Ringtones;
 			sourceTree = "<group>";
 		};
+		A40D043421C7861C00EAB2B1 /* Change Icon */ = {
+			isa = PBXGroup;
+			children = (
+				A40D043521C7862F00EAB2B1 /* IconViewModel.swift */,
+				A40D043921C7868600EAB2B1 /* IconCellViewModel.swift */,
+				A40D046021C88B6100EAB2B1 /* IconViewController.swift */,
+				A40D046221C88BA600EAB2B1 /* IconCell.swift */,
+			);
+			path = "Change Icon";
+			sourceTree = "<group>";
+		};
+		A40D044C21C7936200EAB2B1 /* Icon */ = {
+			isa = PBXGroup;
+			children = (
+				A40D045D21C794A500EAB2B1 /* DarkMode */,
+			);
+			path = Icon;
+			sourceTree = "<group>";
+		};
+		A40D045D21C794A500EAB2B1 /* DarkMode */ = {
+			isa = PBXGroup;
+			children = (
+				A40D048421C89C2D00EAB2B1 /* DarkMode-AppIcon-60@2x.png */,
+				A40D048B21C89C2E00EAB2B1 /* DarkMode-AppIcon-60@3x.png */,
+				A40D048721C89C2D00EAB2B1 /* DarkMode-AppIcon-Notification@2x.png */,
+				A40D048821C89C2D00EAB2B1 /* DarkMode-AppIcon-Notification@3x.png */,
+				A40D048921C89C2D00EAB2B1 /* DarkMode-AppIcon-Small-40@2x.png */,
+				A40D048621C89C2D00EAB2B1 /* DarkMode-AppIcon-Small-40@3x.png */,
+				A40D048521C89C2D00EAB2B1 /* DarkMode-AppIcon-Small@2x.png */,
+				A40D048A21C89C2E00EAB2B1 /* DarkMode-AppIcon-Small@3x.png */,
+				A40D047521C899F800EAB2B1 /* AppIcon-60@2x.png */,
+				A40D047621C899F900EAB2B1 /* AppIcon-60@3x.png */,
+				A40D047921C899F900EAB2B1 /* AppIcon-Notification@2x.png */,
+				A40D047A21C899F900EAB2B1 /* AppIcon-Notification@3x.png */,
+				A40D047B21C899F900EAB2B1 /* AppIcon-Small-40@2x.png */,
+				A40D047421C899F800EAB2B1 /* AppIcon-Small-40@3x.png */,
+				A40D047721C899F900EAB2B1 /* AppIcon-Small@2x.png */,
+				A40D047821C899F900EAB2B1 /* AppIcon-Small@3x.png */,
+			);
+			path = DarkMode;
+			sourceTree = "<group>";
+		};
 		A42F0E4A217F123C00009369 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				A40D043421C7861C00EAB2B1 /* Change Icon */,
 				A42F0E81217F71A700009369 /* Cells */,
 				A42F0E51217F1DFD00009369 /* SettingsViewController.swift */,
 				A42F0E53217F1E0900009369 /* SettingsViewModel.swift */,
@@ -476,8 +563,10 @@
 		A463F7EC217DF42400EE055A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A40D044C21C7936200EAB2B1 /* Icon */,
 				A40D03F821C2874B00EAB2B1 /* Ringtones */,
 				A42F0EBF2180969600009369 /* Info.plist */,
+				EA1745A321C5674300774D72 /* EnsignList.plist */,
 				A463F7C4217DE9FB00EE055A /* Assets.xcassets */,
 				A463F7ED217DF48C00EE055A /* R.generated.swift */,
 				A463F820217E153600EE055A /* Image.xcassets */,
@@ -497,6 +586,7 @@
 				A463F822217E160200EE055A /* ThemeManager.swift */,
 				A42F0EC22181B75E00009369 /* LanguageManager.swift */,
 				A40D040121C3871200EAB2B1 /* SoundManager.swift */,
+				A40D045E21C7950000EAB2B1 /* IconManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -723,13 +813,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A40D048C21C89C2E00EAB2B1 /* DarkMode-AppIcon-60@2x.png in Resources */,
 				A42F0EAB21808A5B00009369 /* Localizable.strings in Resources */,
+				A40D047C21C899F900EAB2B1 /* AppIcon-Small-40@3x.png in Resources */,
+				A40D048121C899F900EAB2B1 /* AppIcon-Notification@2x.png in Resources */,
 				A463F821217E153600EE055A /* Image.xcassets in Resources */,
 				A42F0EB32180925B00009369 /* infoPlist.strings in Resources */,
+				A40D048F21C89C2E00EAB2B1 /* DarkMode-AppIcon-Notification@2x.png in Resources */,
+				A40D049221C89C2E00EAB2B1 /* DarkMode-AppIcon-Small@3x.png in Resources */,
+				A40D048D21C89C2E00EAB2B1 /* DarkMode-AppIcon-Small@2x.png in Resources */,
+				EA1745A421C5674300774D72 /* EnsignList.plist in Resources */,
+				A40D048021C899F900EAB2B1 /* AppIcon-Small@3x.png in Resources */,
 				A40D03FB21C2877C00EAB2B1 /* bell.mp3 in Resources */,
+				A40D047D21C899F900EAB2B1 /* AppIcon-60@2x.png in Resources */,
 				A40D03FC21C2877C00EAB2B1 /* tickle.mp3 in Resources */,
+				A40D049121C89C2E00EAB2B1 /* DarkMode-AppIcon-Small-40@2x.png in Resources */,
+				A40D048221C899F900EAB2B1 /* AppIcon-Notification@3x.png in Resources */,
+				A40D048321C899F900EAB2B1 /* AppIcon-Small-40@2x.png in Resources */,
+				A40D049321C89C2E00EAB2B1 /* DarkMode-AppIcon-60@3x.png in Resources */,
+				A40D047F21C899F900EAB2B1 /* AppIcon-Small@2x.png in Resources */,
 				A463F7C5217DE9FB00EE055A /* Assets.xcassets in Resources */,
+				A40D047E21C899F900EAB2B1 /* AppIcon-60@3x.png in Resources */,
+				A40D049021C89C2E00EAB2B1 /* DarkMode-AppIcon-Notification@3x.png in Resources */,
 				A42F0E43217E29CB00009369 /* Launch Screen.storyboard in Resources */,
+				A40D048E21C89C2E00EAB2B1 /* DarkMode-AppIcon-Small-40@3x.png in Resources */,
 				A463F7C3217DE9F900EE055A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -957,9 +1064,12 @@
 				A42F0E8F217F79E700009369 /* Switch.swift in Sources */,
 				A42F0E68217F5BFA00009369 /* Observable+Operators.swift in Sources */,
 				A42F0E7B217F6A6400009369 /* ImageView.swift in Sources */,
+				A40D043621C7862F00EAB2B1 /* IconViewModel.swift in Sources */,
+				A40D043A21C7868600EAB2B1 /* IconCellViewModel.swift in Sources */,
 				A42F0E87217F725F00009369 /* SettingsModel.swift in Sources */,
 				A42F0E942180075800009369 /* ThemeViewController.swift in Sources */,
 				A42F0EC32181B75E00009369 /* LanguageManager.swift in Sources */,
+				A40D045F21C7950000EAB2B1 /* IconManager.swift in Sources */,
 				A42F0E9D21801EB300009369 /* LanguageViewModel.swift in Sources */,
 				A42F0E89217F743000009369 /* SettingsSection.swift in Sources */,
 				A463F80D217E0D8800EE055A /* Application.swift in Sources */,
@@ -992,6 +1102,8 @@
 				A463F816217E0FCE00EE055A /* DreamAPI.swift in Sources */,
 				A463F7EE217DF48C00EE055A /* R.generated.swift in Sources */,
 				A40D040221C3871200EAB2B1 /* SoundManager.swift in Sources */,
+				A40D046121C88B6100EAB2B1 /* IconViewController.swift in Sources */,
+				A40D046321C88BA600EAB2B1 /* IconCell.swift in Sources */,
 				A42F0E58217F1E2A00009369 /* EventsViewModel.swift in Sources */,
 				A42F0E8D217F79A100009369 /* SettingsSwitchCellViewModel.swift in Sources */,
 				A42F0E65217F594200009369 /* TableViewController.swift in Sources */,
@@ -1253,7 +1365,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ZX35RMK248;
 				INFOPLIST_FILE = "$(SRCROOT)/DreamClock/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1274,7 +1386,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ZX35RMK248;
 				INFOPLIST_FILE = "$(SRCROOT)/DreamClock/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
