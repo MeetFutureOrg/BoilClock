@@ -23,6 +23,7 @@ class SettingsViewController: TableViewController {
     override func makeUI() {
         super.makeUI()
 
+        
         navigationTitle = "navigation.title.settings".localized()
         tableView.register(SettingsSwitchCell.self, forCellReuseIdentifier: Identifier.switchCellIdentifier)
         tableView.register(SettingsDisclosureCell.self, forCellReuseIdentifier: Identifier.disclosureCellIdentifier)

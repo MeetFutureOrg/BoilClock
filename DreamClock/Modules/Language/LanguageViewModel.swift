@@ -27,7 +27,7 @@ class LanguageViewModel: ViewModel, ViewModelType  {
     
     /// 逻辑验证
     func transform(input: Input) -> Output {
-        let languagesInfo = Language.availableLanguagesInfo(true)
+        let languagesInfo = Language.availableLanguagesInfo()
         let elements = input.trigger.map { languagesInfo }.map { $0.map { LanguageCellViewModel(with: $0) } }.asDriver(onErrorJustReturn: [])
         
         let selected = input.selection

@@ -10,7 +10,7 @@ import Foundation
 
 struct Identifier {
     
-    
+    static let onceToken = Configs.App.bundleIdentifier + ".onceToken"
     static let stopIdentifier = Configs.App.bundleIdentifier + ".stop"
     static let snoozeIdentifier = Configs.App.bundleIdentifier + ".snooze"
     static let settingIdentifier = Configs.App.bundleIdentifier + ".setting"

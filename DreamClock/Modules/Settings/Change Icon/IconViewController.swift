@@ -25,7 +25,7 @@ class IconViewController: TableViewController {
     override func makeUI() {
         super.makeUI()
         
-        navigationTitle = "settings.personalization.cion.navigation.title".localized()
+        navigationTitle = "settings.personalization.icon.navigation.title".localized()
         tableView.register(IconCell.self, forCellReuseIdentifier: Identifier.iconCellIdentifier)
     }
     

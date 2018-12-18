@@ -35,7 +35,7 @@
 "settings.preferences.sound"             = "音效";
 "settings.preferences.language"          = "语言";
 
-"settings.personalization.cion.navigation.title" = "选择一个图标";
+"settings.personalization.icon.navigation.title" = "选择一个图标";
 "settings.personalization.section.title" = "个性化";
 "settings.personalization.icon"          = "修改图标";
 "settings.personalization.icon.change.failed.hud.title"  = "图标修改失败";
@@ -63,6 +63,7 @@
 "settings.preferences.language.navigation.title" = "选择语言";
 "settings.preferences.language.choose.hud.title" = "语言已更改";
 "settings.preferences.language.choose.hud.body"  = "您的应用语言已改为:  ";
+"settings.preferences.language.choose.follow.system" = "跟随系统";
 
 /// 无通知权限
 "application.notification.permission.deny.hud.title" = "无通知权限";

@@ -35,6 +35,7 @@ class IconManager {
                         })
                     }
                 }
+
             }
         } else {
             // Fallback on earlier versions
