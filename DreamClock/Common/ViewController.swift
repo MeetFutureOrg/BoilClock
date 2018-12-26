@@ -29,7 +29,9 @@ class ViewController: UIViewController, Navigatable, NVActivityIndicatorViewable
         }
     }
     
-    var emptyDataSetTitle = "application.view.emptyData.title".localized()
+    let languageChanged = BehaviorRelay<Void>(value: ())
+    
+    var emptyDataSetTitle = R.string.localizable.applicationViewEmptyDataTitle.key.localized()
     var emptyDataSetImage = UIImage(named: "")
     var emptyDataSetImageTintColor = BehaviorRelay<UIColor?>(value: nil)
     
@@ -105,6 +107,10 @@ class ViewController: UIViewController, Navigatable, NVActivityIndicatorViewable
                 logDebug("Motion Status changed")
             }).disposed(by: rx.disposeBag)
         
+        NotificationCenter.default.rx.notification(Notification.Name.LanguageChange).subscribe(onNext: { [weak self] (event) in
+            self?.languageChanged.accept(())
+        }).disposed(by: rx.disposeBag)
+        
     }
     
     public override func viewWillAppear(_ animated: Bool) {
@@ -137,6 +143,11 @@ class ViewController: UIViewController, Navigatable, NVActivityIndicatorViewable
     }
     
     func makeUI() {
+        
+        languageChanged.subscribe(onNext: { [weak self] () in
+            self?.emptyDataSetTitle = R.string.localizable.applicationViewEmptyDataTitle.key.localized()
+        }).disposed(by: rx.disposeBag)
+        
         hero.isEnabled = true
 //        navigationItem.backBarButtonItem = backBarButton
         themeService.rx

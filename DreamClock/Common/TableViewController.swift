@@ -41,7 +41,8 @@ class TableViewController: ViewController, UIScrollViewDelegate {
         stackView.addArrangedSubview(tableView)
         tableView.backgroundColor = .clear
         
-        let updateEmptyDataSet = Observable.of(isLoading.mapToVoid().asObservable(), emptyDataSetImageTintColor.mapToVoid()).merge()
+        
+        let updateEmptyDataSet = Observable.of(isLoading.mapToVoid().asObservable(), emptyDataSetImageTintColor.mapToVoid(), languageChanged.asObservable()).merge()
         updateEmptyDataSet.subscribe(onNext: { [weak self] () in
             self?.tableView.reloadEmptyDataSet()
         }).disposed(by: rx.disposeBag)

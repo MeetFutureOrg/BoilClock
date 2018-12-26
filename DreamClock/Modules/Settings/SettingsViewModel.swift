@@ -37,6 +37,7 @@ class SettingsViewModel: ViewModel, ViewModelType  {
     /// 主要逻辑
     func transform(input: Input) -> Output {
         
+        
         /// 组
         let elements = BehaviorRelay<[SettingsSection]>(value: [])
         ///
@@ -44,47 +45,47 @@ class SettingsViewModel: ViewModel, ViewModelType  {
             
             // MARK: - 偏好
             /// 夜晚模式
-            let nightModeModel = SettingsModel(type: .nightMode, leftImage: R.image.dc_ic_cell_night_mode.name, title: "settings.preferences.nightMode".localized(), detail: "", showDisclosure: false)
+            let nightModeModel = SettingsModel(type: .nightMode, leftImage: R.image.dc_ic_cell_night_mode.name, title: R.string.localizable.settingsPreferencesNightMode.key.localized(), detail: "", showDisclosure: false)
             let nightModeCellViewModel = SettingsSwitchCellViewModel(with: nightModeModel, isEnabled: self.nightModeEnabled.asDriver(onErrorJustReturn: false))
             
             nightModeCellViewModel.featureTrigger.bind(to: self.nightModeEnabled).disposed(by: self.rx.disposeBag)
             
             /// 主题
-            let themeModel = SettingsModel(type: .theme, leftImage: R.image.dc_ic_cell_theme.name, title: "settings.preferences.theme".localized(), detail: "", showDisclosure: true)
+            let themeModel = SettingsModel(type: .theme, leftImage: R.image.dc_ic_cell_theme.name, title: R.string.localizable.settingsPreferencesTheme.key.localized(), detail: "", showDisclosure: true)
             let themeViewModel = ThemeViewModel(provider: self.provider)
             let themeCellViewModel = SettingsDisclosureCellViewModel(with: themeModel, destinationViewModel: themeViewModel)
             
             
             /// 触觉反馈
-            let hapticFeedbackModel = SettingsModel(type: .haptic, leftImage: R.image.dc_ic_cell_haptic_feedback.name, title: "settings.preferences.hapticFeedback".localized(), detail: "settings.preferences.tapticEngine".localized(), showDisclosure: false)
+            let hapticFeedbackModel = SettingsModel(type: .haptic, leftImage: R.image.dc_ic_cell_haptic_feedback.name, title: R.string.localizable.settingsPreferencesHapticFeedback.key.localized(), detail: R.string.localizable.settingsPreferencesTapticEngine.key.localized(), showDisclosure: false)
             let hapticFeedbackCellViewModel = SettingsSwitchCellViewModel(with: hapticFeedbackModel, isEnabled: self.hapticTrigger.asDriver(onErrorJustReturn: false))
             hapticFeedbackCellViewModel.featureTrigger.bind(to: self.hapticTrigger).disposed(by: self.rx.disposeBag)
             
             /// 音效
-            let soundModel = SettingsModel(type: .sound, leftImage: R.image.dc_ic_cell_sound.name, title: "settings.preferences.sound".localized(), detail: "", showDisclosure: false)
+            let soundModel = SettingsModel(type: .sound, leftImage: R.image.dc_ic_cell_sound.name, title: R.string.localizable.settingsPreferencesSound.key.localized(), detail: "", showDisclosure: false)
             let soundCellViewModel = SettingsSwitchCellViewModel(with: soundModel, isEnabled: self.soundTrigger.asDriver(onErrorJustReturn: false))
             soundCellViewModel.featureTrigger.bind(to: self.soundTrigger).disposed(by: self.rx.disposeBag)
             
             /// 语言
-            let languageModel = SettingsModel(type: .language, leftImage: R.image.dc_ic_cell_language.name, title: "settings.preferences.language".localized(), detail: "", showDisclosure: true)
+            let languageModel = SettingsModel(type: .language, leftImage: R.image.dc_ic_cell_language.name, title: R.string.localizable.settingsPreferencesLanguage.key.localized(), detail: "", showDisclosure: true)
             let languageViewModel = LanguageViewModel(provider: self.provider)
             let languageCellViewModel = SettingsDisclosureCellViewModel(with: languageModel, destinationViewModel: languageViewModel)
             
             // MARK: - 个性化
             /// 图标
-            let iconModel = SettingsModel(type: .icon, leftImage: R.image.dc_ic_cell_icon.name, title: "settings.personalization.icon".localized(), detail: "", showDisclosure: true)
+            let iconModel = SettingsModel(type: .icon, leftImage: R.image.dc_ic_cell_icon.name, title: R.string.localizable.settingsPersonalizationIcon.key.localized(), detail: "", showDisclosure: true)
             let iconViewModel = IconViewModel(provider: self.provider)
             let iconCellViewModel = SettingsDisclosureCellViewModel(with: iconModel, destinationViewModel: iconViewModel)
             
             return [
-                SettingsSection.preferences(title: "settings.preferences.section.title".localized(), items: [
+                SettingsSection.preferences(title: R.string.localizable.settingsPreferencesSectionTitle.key.localized(), items: [
                     SettingsSectionItem.settingsSwitchItem(viewModel: nightModeCellViewModel),
                     SettingsSectionItem.settingsDisclosureItem(viewModel: themeCellViewModel),
                     SettingsSectionItem.settingsSwitchItem(viewModel: hapticFeedbackCellViewModel),
                     SettingsSectionItem.settingsSwitchItem(viewModel: soundCellViewModel),
                     SettingsSectionItem.settingsDisclosureItem(viewModel: languageCellViewModel)
                     ]),
-                SettingsSection.personalization(title: "settings.personalization.section.title".localized(), items: [SettingsSectionItem.settingsDisclosureItem(viewModel: iconCellViewModel)])
+                SettingsSection.personalization(title: R.string.localizable.settingsPersonalizationSectionTitle.key.localized(), items: [SettingsSectionItem.settingsDisclosureItem(viewModel: iconCellViewModel)])
             ]
             
             }.bind(to: elements).disposed(by: rx.disposeBag)

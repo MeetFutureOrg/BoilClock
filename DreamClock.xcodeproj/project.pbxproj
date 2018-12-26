@@ -43,6 +43,7 @@
 		A40D049221C89C2E00EAB2B1 /* DarkMode-AppIcon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A40D048A21C89C2E00EAB2B1 /* DarkMode-AppIcon-Small@3x.png */; };
 		A40D049321C89C2E00EAB2B1 /* DarkMode-AppIcon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A40D048B21C89C2E00EAB2B1 /* DarkMode-AppIcon-60@3x.png */; };
 		A40D068921C8FC6400EAB2B1 /* CountryEnsign.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A40D068821C8FC6400EAB2B1 /* CountryEnsign.bundle */; };
+		A40D06C621D36F3300EAB2B1 /* LanguageSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D06C521D36F3300EAB2B1 /* LanguageSection.swift */; };
 		A42F0E43217E29CB00009369 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A42F0E45217E29CB00009369 /* Launch Screen.storyboard */; };
 		A42F0E52217F1DFD00009369 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42F0E51217F1DFD00009369 /* SettingsViewController.swift */; };
 		A42F0E54217F1E0900009369 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42F0E53217F1E0900009369 /* SettingsViewModel.swift */; };
@@ -216,6 +217,7 @@
 		A40D05E221C8E9DD00EAB2B1 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A40D05E321C8E9DD00EAB2B1 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/infoPlist.strings; sourceTree = "<group>"; };
 		A40D068821C8FC6400EAB2B1 /* CountryEnsign.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CountryEnsign.bundle; sourceTree = "<group>"; };
+		A40D06C521D36F3300EAB2B1 /* LanguageSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSection.swift; sourceTree = "<group>"; };
 		A42F0E44217E29CB00009369 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		A42F0E47217E29CC00009369 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "en.lproj/Launch Screen.strings"; sourceTree = "<group>"; };
 		A42F0E49217E29CD00009369 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Launch Screen.strings"; sourceTree = "<group>"; };
@@ -551,6 +553,7 @@
 				A42F0E9C21801EB300009369 /* LanguageViewModel.swift */,
 				A42F0E9E21806B5D00009369 /* LanguageCell.swift */,
 				A42F0EA021806B7900009369 /* LanguageCellViewModel.swift */,
+				A40D06C521D36F3300EAB2B1 /* LanguageSection.swift */,
 			);
 			path = Language;
 			sourceTree = "<group>";
@@ -1153,6 +1156,7 @@
 				A463F81D217E108700EE055A /* AlarmMainViewController.swift in Sources */,
 				A463F7F4217DF58C00EE055A /* LibsManager.swift in Sources */,
 				A463F816217E0FCE00EE055A /* DreamAPI.swift in Sources */,
+				A40D06C621D36F3300EAB2B1 /* LanguageSection.swift in Sources */,
 				A463F7EE217DF48C00EE055A /* R.generated.swift in Sources */,
 				A40D040221C3871200EAB2B1 /* SoundManager.swift in Sources */,
 				A40D046121C88B6100EAB2B1 /* IconViewController.swift in Sources */,
