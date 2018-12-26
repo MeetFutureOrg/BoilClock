@@ -194,7 +194,8 @@ extension AppDelegate {
             if !granted {
                 DispatchQueue.mainSafeAsync {
                     if let rootVC = self.window?.rootViewController {
-                        let title = "application.notification.permission.deny.hud.title".localized()
+                        let title = R.string.localizable.applicationNotificationPermissionDenyHudTitle.key.localized()
+//                        let title = "application.notification.permission.deny.hud.title".localized()
                         let body = "application.notification.permission.deny.hud.body".localized()
                         let buttonTitle = "application.notification.permission.deny.hud.redirectionTitle".localized()
                         rootVC.showError(title: title, body: body, duration: .forever, buttonTitle: buttonTitle, buttonTapHandler: { [weak self] _ in
