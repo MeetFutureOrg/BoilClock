@@ -29,7 +29,6 @@ class LanguageViewController: TableViewController {
         }).disposed(by: rx.disposeBag)
         
         tableView.register(LanguageCell.self, forCellReuseIdentifier: Identifier.languageCellIdentifier)
-//        navigationTitle = "settings.preferences.language.navigation.title".localized()
     }
     
     override func bindViewModel() {
@@ -56,27 +55,6 @@ class LanguageViewController: TableViewController {
         output.items.asObservable()
             .bind(to: tableView.rx.items(dataSource: dataSource))
             .disposed(by: rx.disposeBag)
-        
-//        output.items
-//            .drive(tableView.rx.items(cellIdentifier: Identifier.languageCellIdentifier, cellType: LanguageCell.self)) { tableView, viewModel, cell in
-//                cell.bind(to: viewModel)
-//            }.disposed(by: rx.disposeBag)
-        
-//        output.selected.drive(onNext: { [weak self] (cellViewModel) in
-
-//                self?.navigationController?.popViewController(animated: true, {
-//                    let viewModel = MainTabBarViewModel(loggedIn: true, provider: provider)
-//                    self?.navigator.show(segue: .tabs(viewModel: viewModel), sender: nil, transition: .root(in: Application.shared.window!))
-//                    if let tabBarVC = Application.shared.window?.rootViewController as? MainTabBarController {
-//                        tabBarVC.selectedIndex = 2
-//                        if let strong = self {
-//                            strong.showInfo(title: "settings.preferences.language.choose.hud.title".localized(), body: "settings.preferences.language.choose.hud.body".localized() + Language.displayName(for: Language.current()))
-//
-//                        }
-//                    }
-//            })
-            
-//        }).disposed(by: rx.disposeBag)
     }
 }
 
