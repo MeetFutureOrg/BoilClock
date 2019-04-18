@@ -36,7 +36,7 @@ target 'DreamClock' do
 
   # Tools
   pod 'DeviceKit'
-  pod 'R.swift', '5.0.0.rc.1'
+  pod 'R.swift'
   # pod 'SwiftyUserDefaults'
   pod 'KeychainAccess'
 
@@ -74,7 +74,7 @@ target 'DreamClock' do
   pod 'netfox', :configurations => ['Debug']
 
   # Logging
-  pod 'CocoaLumberjack/Swift'
+  pod 'CocoaLumberjack/Swift', '~> 3.5.2'
 
   target 'DreamClockTests' do
     inherit! :search_paths
@@ -89,15 +89,15 @@ target 'DreamClock' do
 end
 
 # Cocoapods optimization, always clean project after pod updating
-post_install do |installer|
-    installer.pods_project.targets.each do |target|
-#        if target.name == 'ChameleonFramework' || target.name == 'netfox'
-            target.build_configurations.each do |config|
-                config.build_settings['SWIFT_VERSION'] = '4.2'
-            end
-#        end
-    end
-end
+#post_install do |installer|
+#    installer.pods_project.targets.each do |target|
+##        if target.name == 'ChameleonFramework' || target.name == 'netfox'
+#            target.build_configurations.each do |config|
+#                config.build_settings['SWIFT_VERSION'] = '5'
+#            end
+##        end
+#    end
+#end
 #    Dir.glob(installer.sandbox.target_support_files_root + "Pods-*/*.sh").each do |script|
 #        flag_name = File.basename(script, ".sh") + "-Installation-Flag"
 #        folder = "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

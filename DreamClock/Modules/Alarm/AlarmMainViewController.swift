@@ -27,7 +27,7 @@ class AlarmMainViewController: ViewController {
         super.viewDidLoad()
         
         
-        
+        print(Language.current())
     }
 
     override func makeUI() {

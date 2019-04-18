@@ -99,7 +99,7 @@ class SettingsViewModel: ViewModel, ViewModelType  {
             var theme = ThemeType.currentTheme()
             if theme.isDark != isEnabled {
                 theme = theme.toggled()
-                themeService.set(theme)
+                themeService.switch(theme)
             }
         }).disposed(by: rx.disposeBag)
 

@@ -65,7 +65,7 @@
 "settings.preferences.language.navigation.title" = "Choose Language";
 "settings.preferences.language.choose.hud.title" = "Language Changed";
 "settings.preferences.language.choose.hud.body"  = "Your app language has been change to:  ";
-"settings.preferences.language.choose.follow.system" = "Follow System";
+"settings.preferences.language.choose.follow.system" = "Folgen Sie Dem System";
 
 /// no notification permission
 "application.notification.permission.deny.hud.title" = "No Notify Permission";

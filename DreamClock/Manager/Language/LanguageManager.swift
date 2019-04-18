@@ -134,9 +134,9 @@ class Language {
     static func available(_ excludeBase: Bool = false) -> [LanguageInfo.Code] {
         var available = Bundle.main.localizations
         // 剔除 base
-        if let indexOfBase = available.index(of: "Base") , excludeBase == true {
-            available.remove(at: indexOfBase)
-        }
+//        if let indexOfBase = available.firstIndex(of: "Base") , excludeBase == true {
+//            available.remove(at: indexOfBase)
+//        }
         available = available.sorted()
         return available.map { LanguageInfo.Code(rawValue: $0)! }
     }
@@ -271,8 +271,12 @@ public extension String {
     func localized(using tableName: String?, in bundle: Bundle?) -> String {
         let bundle: Bundle = bundle ?? .main
         
-        if let path = bundle.path(forResource: Language.current() == .base ? nil : Language.current().rawValue , ofType: "lproj"),
+        let preferredLanguage = Bundle.main.preferredLocalizations.first!
+        
+        if let path = bundle.path(forResource: Language.current() == .base ? preferredLanguage : Language.current().rawValue , ofType: "lproj"),
             let bundle = Bundle(path: path) {
+            
+            print(path)
             return bundle.localizedString(forKey: self, value: nil, table: tableName)
         } else if let path = bundle.path(forResource: BaseBundle, ofType: "lproj"),
             let bundle = Bundle(path: path) {
