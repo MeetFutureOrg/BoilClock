@@ -268,7 +268,8 @@ extension Reactive where Base: UIApplication {
     /// Bindable sink for `statusBarStyle` property
     var statusBarStyle: Binder<UIStatusBarStyle> {
         return Binder(self.base) { view, attr in
-            view.statusBarStyle = attr
+            view.statusBarStyle
+            view.setValue(attr.rawValue, forKey: "statusBarStyle")
         }
     }
 }
