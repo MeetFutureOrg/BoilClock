@@ -12,27 +12,27 @@ import ChameleonFramework
 extension UIColor {
     
     static func primary() -> UIColor {
-        return flatBlack
+        return flatBlack()
     }
     
     static func primaryDark() -> UIColor {
-        return flatBlackDark
+        return flatBlackDark()
     }
     
     static func secondary() -> UIColor {
-        return flatRed
+        return flatRed()
     }
     
     static func secondaryDark() -> UIColor {
-        return flatRedDark
+        return flatRedDark()
     }
     
     static func separator() -> UIColor {
-        return flatBlackDark
+        return flatBlackDark()
     }
     
     static func textBlack() -> UIColor {
-        return flatBlackDark
+        return flatBlackDark()
     }
     
     static func textWhite() -> UIColor {
@@ -58,6 +58,6 @@ extension UIColor {
 extension UIColor {
     
     static func randomColor() -> UIColor {
-        return randomFlat
+        return randomFlat()
     }
 }

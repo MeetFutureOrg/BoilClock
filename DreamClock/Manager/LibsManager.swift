@@ -75,7 +75,6 @@ struct LibsManager {
     }
     
     func setupCocoaLumberjack() {
-        DDLog.add(DDTTYLogger.sharedInstance) // TTY = Xcode console
         DDLog.add(DDOSLogger.sharedInstance) // ASL = Apple System Logs
         
         let fileLogger: DDFileLogger = DDFileLogger() // File Logger
@@ -85,7 +84,7 @@ struct LibsManager {
     }
     
     func setupFLEX() {
-        FLEXManager.shared().isNetworkDebuggingEnabled = true
+        FLEXManager.shared.isNetworkDebuggingEnabled = true
     }
     
     func setupNetfox() {
@@ -97,7 +96,7 @@ struct LibsManager {
 extension LibsManager {
     
     func showFlex() {
-        FLEXManager.shared().showExplorer()
+        FLEXManager.shared.showExplorer()
     }
     
     func removeKingfisherCache(completion handler: (() -> Void)?) {

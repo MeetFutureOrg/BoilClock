@@ -30,17 +30,25 @@ protocol Theme {
 }
 
 struct LightTheme: Theme {
-    let primary = UIColor.white
-    let primaryDark = UIColor.flatWhite
-    var secondary = UIColor.flatRed
-    var secondaryDark = UIColor.flatRedDark
-    let separator = UIColor.flatWhite
-    let text = UIColor.flatBlack
-    let textGray = UIColor.flatGray
-    let background = UIColor.white
-    let statusBarStyle = UIStatusBarStyle.default
-    let barStyle = UIBarStyle.default
-    let keyboardAppearance = UIKeyboardAppearance.light
+    
+    var primary: UIColor = UIColor.white
+    
+    var primaryDark: UIColor = UIColor.flatWhite()
+    
+    var secondary: UIColor = UIColor.flatRed()
+    
+    var secondaryDark: UIColor = UIColor.flatRedDark()
+    
+    var separator: UIColor = UIColor.flatWhite()
+    
+    var text: UIColor = UIColor.flatBlack()
+    
+    var textGray: UIColor = UIColor.flatGray()
+    
+    var background = UIColor.white
+    var statusBarStyle = UIStatusBarStyle.default
+    var barStyle = UIBarStyle.default
+    var keyboardAppearance = UIKeyboardAppearance.light
     
     init(colorTheme: ColorTheme) {
         secondary = colorTheme.color
@@ -49,17 +57,17 @@ struct LightTheme: Theme {
 }
 
 struct DarkTheme: Theme {
-    let primary = UIColor.flatBlack
-    let primaryDark = UIColor.flatBlackDark
-    var secondary = UIColor.flatRed
-    var secondaryDark = UIColor.flatRedDark
-    let separator = UIColor.flatBlackDark
-    let text = UIColor.flatWhite
-    let textGray = UIColor.flatGray
-    let background = UIColor.flatBlack
-    let statusBarStyle = UIStatusBarStyle.lightContent
-    let barStyle = UIBarStyle.black
-    let keyboardAppearance = UIKeyboardAppearance.dark
+    var primary = UIColor.flatBlack()
+    var primaryDark = UIColor.flatBlackDark()
+    var secondary = UIColor.flatRed()
+    var secondaryDark = UIColor.flatRedDark()
+    var separator = UIColor.flatBlackDark()
+    var text = UIColor.flatWhite()
+    var textGray = UIColor.flatGray()
+    var background = UIColor.flatBlack()
+    var statusBarStyle = UIStatusBarStyle.lightContent
+    var barStyle = UIBarStyle.black
+    var keyboardAppearance = UIKeyboardAppearance.dark
     
     init(colorTheme: ColorTheme) {
         secondary = colorTheme.color
@@ -75,29 +83,29 @@ enum ColorTheme: Int {
     
     var color: UIColor {
         switch self {
-        case .red: return UIColor.flatRed
-        case .green: return UIColor.flatGreen
-        case .blue: return UIColor.flatBlue
-        case .skyBlue: return UIColor.flatSkyBlue
-        case .magenta: return UIColor.flatMagenta
-        case .purple: return UIColor.flatPurple
-        case .watermelon: return UIColor.flatWatermelon
-        case .lime: return UIColor.flatLime
-        case .pink: return UIColor.flatPink
+        case .red: return UIColor.flatRed()
+        case .green: return UIColor.flatGreen()
+        case .blue: return UIColor.flatBlue()
+        case .skyBlue: return UIColor.flatSkyBlue()
+        case .magenta: return UIColor.flatMagenta()
+        case .purple: return UIColor.flatPurple()
+        case .watermelon: return UIColor.flatWatermelon()
+        case .lime: return UIColor.flatLime()
+        case .pink: return UIColor.flatPink()
         }
     }
     
     var colorDark: UIColor {
         switch self {
-        case .red: return UIColor.flatRedDark
-        case .green: return UIColor.flatGreenDark
-        case .blue: return UIColor.flatBlueDark
-        case .skyBlue: return UIColor.flatSkyBlueDark
-        case .magenta: return UIColor.flatMagentaDark
-        case .purple: return UIColor.flatPurpleDark
-        case .watermelon: return UIColor.flatWatermelonDark
-        case .lime: return UIColor.flatLimeDark
-        case .pink: return UIColor.flatPinkDark
+        case .red: return UIColor.flatRedDark()
+        case .green: return UIColor.flatGreenDark()
+        case .blue: return UIColor.flatBlueDark()
+        case .skyBlue: return UIColor.flatSkyBlueDark()
+        case .magenta: return UIColor.flatMagentaDark()
+        case .purple: return UIColor.flatPurpleDark()
+        case .watermelon: return UIColor.flatWatermelonDark()
+        case .lime: return UIColor.flatLimeDark()
+        case .pink: return UIColor.flatPinkDark()
         }
     }
     

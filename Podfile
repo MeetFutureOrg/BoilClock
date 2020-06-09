@@ -62,7 +62,7 @@ target 'DreamClock' do
   pod 'IQKeyboardManagerSwift'
   
   # Color
-  pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
+  pod 'ChameleonFramework/Swift', :git => 'https://github.com/wowansm/Chameleon', :branch => 'swift5'
 
   # Code Quality
   pod 'SwifterSwift'
@@ -74,7 +74,7 @@ target 'DreamClock' do
   pod 'netfox', :configurations => ['Debug']
 
   # Logging
-  pod 'CocoaLumberjack/Swift', '~> 3.5.2'
+  pod 'CocoaLumberjack/Swift'
 
   target 'DreamClockTests' do
     inherit! :search_paths

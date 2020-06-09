@@ -75,7 +75,7 @@ enum LabelStyle {
         switch self {
         case .style111, .style211, .style121, .style221, .style131, .style231, .style141, .style241: return .textBlack()
         case .style112, .style212, .style122, .style222, .style132, .style232, .style142, .style242: return .textGray()
-        case .style113, .style213, .style123, .style223, .style133, .style233, .style143, .style243: return .flatWhite
+        case .style113, .style213, .style123, .style223, .style133, .style233, .style143, .style243: return .flatWhite()
         case .style114, .style214, .style124, .style224, .style134, .style234, .style144, .style244: return .secondary()
         }
     }
