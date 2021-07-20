@@ -8,7 +8,6 @@
 
 import RxSwift
 import RxCocoa
-import Moya_ObjectMapper
 
 enum APIError: Error {
     case serverError(title: String, description: String)

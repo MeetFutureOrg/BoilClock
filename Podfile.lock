@@ -1,85 +1,83 @@
 PODS:
-  - Alamofire (5.2.1)
-  - ChameleonFramework/Default (2.1.0)
-  - ChameleonFramework/Swift (2.1.0):
-    - ChameleonFramework/Default
-  - CocoaDebug (1.2.7)
-  - CocoaLumberjack/Core (3.6.1)
-  - CocoaLumberjack/Swift (3.6.1):
-    - CocoaLumberjack/Core
+  - Alamofire (5.4.3)
+  - CocoaLumberjack (3.7.2):
+    - CocoaLumberjack/Core (= 3.7.2)
+  - CocoaLumberjack/Core (3.7.2)
   - DateToolsSwift (5.0.0)
-  - DeviceKit (3.2.0)
-  - Differentiator (4.0.1)
+  - DeviceKit (4.4.0)
+  - Differentiator (5.0.0)
   - DZNEmptyDataSet (1.8.1)
-  - FLEX (4.1.1)
-  - Hero (1.5.0)
+  - FLEX (4.4.1)
+  - Hero (1.6.1)
   - IGListDiffKit (4.0.0)
   - IGListKit (4.0.0):
     - IGListDiffKit (= 4.0.0)
-  - IQKeyboardManagerSwift (6.5.5)
-  - KeychainAccess (4.2.0)
-  - Kingfisher (5.14.0):
-    - Kingfisher/Core (= 5.14.0)
-  - Kingfisher/Core (5.14.0)
-  - Moya (14.0.0):
-    - Moya/Core (= 14.0.0)
-  - Moya-ObjectMapper/Core (2.9):
-    - Moya (~> 14.0.0-beta.6)
-    - ObjectMapper
-  - Moya-ObjectMapper/RxSwift (2.9):
-    - Moya-ObjectMapper/Core
-    - Moya/RxSwift
-    - RxSwift
-  - Moya/Core (14.0.0):
-    - Alamofire (~> 5.0)
-  - Moya/RxSwift (14.0.0):
-    - Moya/Core
-    - RxSwift (~> 5.0)
-  - netfox (1.19.0)
-  - "NSObject+Rx (5.1.0)":
-    - RxSwift (~> 5.1)
-  - NVActivityIndicatorView (4.8.0):
-    - NVActivityIndicatorView/Presenter (= 4.8.0)
-  - NVActivityIndicatorView/Presenter (4.8.0)
+  - KeychainAccess (4.2.2)
+  - Kingfisher (5.15.8):
+    - Kingfisher/Core (= 5.15.8)
+  - Kingfisher/Core (5.15.8)
+  - "NSObject+Rx (5.2.1)":
+    - RxSwift (~> 6.0)
+  - NVActivityIndicatorView/Base (5.1.1)
+  - NVActivityIndicatorView/Extended (5.1.1):
+    - NVActivityIndicatorView/Base
   - ObjectMapper (4.2.0)
   - QuickLayout (3.0.0)
-  - R.swift (5.2.2):
-    - R.swift.Library (~> 5.2.0)
-  - R.swift.Library (5.2.0)
-  - ReachabilitySwift (5.0.0)
-  - RxCocoa (5.1.1):
-    - RxRelay (~> 5)
-    - RxSwift (~> 5)
-  - RxDataSources (4.0.1):
-    - Differentiator (~> 4.0)
-    - RxCocoa (~> 5.0)
-    - RxSwift (~> 5.0)
-  - RxGesture (3.0.2):
-    - RxCocoa (~> 5.1)
-    - RxSwift (~> 5.1)
-  - RxOptional (4.1.0):
-    - RxCocoa (~> 5)
-    - RxSwift (~> 5)
-  - RxRelay (5.1.1):
-    - RxSwift (~> 5)
-  - RxSwift (5.1.1)
-  - RxSwiftExt (5.2.0):
-    - RxSwiftExt/Core (= 5.2.0)
-    - RxSwiftExt/RxCocoa (= 5.2.0)
-  - RxSwiftExt/Core (5.2.0):
-    - RxSwift (~> 5.0)
-  - RxSwiftExt/RxCocoa (5.2.0):
-    - RxCocoa (~> 5.0)
+  - R.swift (5.4.0):
+    - R.swift.Library (~> 5.3.0)
+  - R.swift.Library (5.3.0)
+  - RxAlamofire (6.1.1):
+    - RxAlamofire/Core (= 6.1.1)
+  - RxAlamofire/Core (6.1.1):
+    - Alamofire (~> 5.4)
+    - RxSwift (~> 6.0)
+  - RxAnimated (0.9.0):
+    - RxAnimated/Core (= 0.9.0)
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxAnimated/Core (0.9.0):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxCocoa (6.2.0):
+    - RxRelay (= 6.2.0)
+    - RxSwift (= 6.2.0)
+  - RxDataSources (5.0.0):
+    - Differentiator (~> 5.0)
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxGesture (4.0.2):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxKeyboard (2.0.0):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxKingfisher (2.1.0):
+    - Kingfisher (~> 5)
+    - RxCocoa (~> 6)
+    - RxSwift (~> 6)
+  - RxOptional (5.0.2):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxRelay (6.2.0):
+    - RxSwift (= 6.2.0)
+  - RxSwift (6.2.0)
+  - RxSwiftExt (6.0.1):
+    - RxSwiftExt/Core (= 6.0.1)
+    - RxSwiftExt/RxCocoa (= 6.0.1)
+  - RxSwiftExt/Core (6.0.1):
+    - RxSwift (~> 6.0)
+  - RxSwiftExt/RxCocoa (6.0.1):
+    - RxCocoa (~> 6.0)
     - RxSwiftExt/Core
-  - RxTheme (4.1.0):
-    - RxCocoa (~> 5.0)
-    - RxSwift (~> 5.0)
-  - RxViewController (1.0.0):
-    - RxCocoa (~> 5.0)
-    - RxSwift (~> 5.0)
+  - RxTheme (6.0.0):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxViewController (2.0.0):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
   - SnapKit (5.0.1)
-  - SwiftDate (6.1.0)
-  - SwiftEntryKit (1.2.3):
+  - SwiftDate (6.3.1)
+  - SwiftEntryKit (1.2.7):
     - QuickLayout (= 3.0.0)
   - SwifterSwift (5.2.0):
     - SwifterSwift/AppKit (= 5.2.0)
@@ -106,36 +104,34 @@ PODS:
   - SwifterSwift/StoreKit (5.2.0)
   - SwifterSwift/SwiftStdlib (5.2.0)
   - SwifterSwift/UIKit (5.2.0)
-  - SwiftMessages (7.0.1):
-    - SwiftMessages/App (= 7.0.1)
-  - SwiftMessages/App (7.0.1)
-  - SwiftRichString (3.7.1)
+  - SwiftMessages (9.0.3):
+    - SwiftMessages/App (= 9.0.3)
+  - SwiftMessages/App (9.0.3)
+  - SwiftRichString (3.7.2)
 
 DEPENDENCIES:
-  - ChameleonFramework/Swift (from `https://github.com/wowansm/Chameleon`, branch `swift5`)
-  - CocoaDebug
-  - CocoaLumberjack/Swift
+  - CocoaLumberjack
   - DateToolsSwift
   - DeviceKit
   - DZNEmptyDataSet
   - FLEX
   - Hero
   - IGListKit
-  - IQKeyboardManagerSwift
   - KeychainAccess
   - Kingfisher
-  - Moya-ObjectMapper/RxSwift
-  - Moya/RxSwift
-  - netfox
   - "NSObject+Rx"
-  - NVActivityIndicatorView
+  - NVActivityIndicatorView/Extended
+  - ObjectMapper
   - R.swift
-  - ReachabilitySwift
+  - RxAlamofire
+  - RxAnimated
   - RxCocoa
   - RxDataSources
   - RxGesture
+  - RxKeyboard
+  - RxKingfisher
   - RxOptional
-  - RxSwift
+  - RxSwift (~> 6.2.0)
   - RxSwiftExt
   - RxTheme
   - RxViewController
@@ -149,7 +145,6 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
-    - CocoaDebug
     - CocoaLumberjack
     - DateToolsSwift
     - DeviceKit
@@ -159,22 +154,21 @@ SPEC REPOS:
     - Hero
     - IGListDiffKit
     - IGListKit
-    - IQKeyboardManagerSwift
     - KeychainAccess
     - Kingfisher
-    - Moya
-    - Moya-ObjectMapper
-    - netfox
     - "NSObject+Rx"
     - NVActivityIndicatorView
     - ObjectMapper
     - QuickLayout
     - R.swift
     - R.swift.Library
-    - ReachabilitySwift
+    - RxAlamofire
+    - RxAnimated
     - RxCocoa
     - RxDataSources
     - RxGesture
+    - RxKeyboard
+    - RxKingfisher
     - RxOptional
     - RxRelay
     - RxSwift
@@ -188,58 +182,45 @@ SPEC REPOS:
     - SwiftMessages
     - SwiftRichString
 
-EXTERNAL SOURCES:
-  ChameleonFramework:
-    :branch: swift5
-    :git: https://github.com/wowansm/Chameleon
-
-CHECKOUT OPTIONS:
-  ChameleonFramework:
-    :commit: 96d52c36a45847fff60bcff7a58fec1e4bd7390b
-    :git: https://github.com/wowansm/Chameleon
-
 SPEC CHECKSUMS:
-  Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
-  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
-  CocoaDebug: fbe21eafb4894150b1f5756d746a963a1cea8f5a
-  CocoaLumberjack: b17ae15142558d08bbacf69775fa10c4abbebcc9
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  CocoaLumberjack: b7e05132ff94f6ae4dfa9d5bce9141893a21d9da
   DateToolsSwift: 4207ada6ad615d8dc076323d27037c94916dbfa6
-  DeviceKit: d081659419cce07c0b5239dbc9fb39ed7413c7fe
-  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
+  DeviceKit: 2c5d7485a2fa10b65c0091b2952d30843a6ba06d
+  Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
-  FLEX: 81096107977a09836eb440173010ceeef01105d6
-  Hero: b7385b75e7259da62f4f85462f59a5082d66b058
+  FLEX: 7ca2c8cd3a435ff501ff6d2f2141e9bdc934eaab
+  Hero: 215865ba3ae41dd9bb08cd6c60a645529c6fc94b
   IGListDiffKit: 665d6cf43ce726e676013db9c7d6c4294259b6b2
   IGListKit: fd5a5d21935298f5849fa49d426843cff97b77c7
-  IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
-  KeychainAccess: 3f760109aa99b05d0f231e28b22642da7153e38a
-  Kingfisher: 7b64389a43139c903ec434788344c288217c792d
-  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
-  Moya-ObjectMapper: 967a99d9ea3aa9c93ddbe112aeca3667f53bfe93
-  netfox: efeec1d23406df6cd605212f09a40957bb5654eb
-  "NSObject+Rx": fa6bbcc1ab1faa06b01466bc09b1e0692bbc5946
-  NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
+  KeychainAccess: c0c4f7f38f6fc7bbe58f5702e25f7bd2f65abf51
+  Kingfisher: a3c03d702433fa6cfedabb2bddbe076fb8f2e902
+  "NSObject+Rx": 49ffbf55ad0bbc29a44547db63a9e33caf0c5d60
+  NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   QuickLayout: 07b45a72b10083fee3f095990cfed1c1e7b27f0a
-  R.swift: 7c52cdc57a66840ffe6cbd8a823d732059d42a32
-  R.swift.Library: 5ba4f1631300caf9a4d890186930da85d540769d
-  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
-  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
-  RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
-  RxGesture: d6bd7447ca3a596c7a9702a6a2b6a2bb5d8bae54
-  RxOptional: b1fcd60856807a564c0215c2184b8d33e7826dc2
-  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
-  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
-  RxSwiftExt: 4ca80336f43c28f11a2825cdd2fc61dd6c044697
-  RxTheme: b4958908f859afe93ce12aaeba37456f369b18bb
-  RxViewController: 7330a46e5c31cd680db169da4c9fc8676e975a81
+  R.swift: c533450b0f7dc494e0993f5f1a1db925d84c3006
+  R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
+  RxAlamofire: beb75a1c452d0de225651db4903f5d29d034a620
+  RxAnimated: e53fb66cafc0539faf881b734f7412a624527f0a
+  RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
+  RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
+  RxGesture: f059f2aeef966fb17dad56ee440e76410f10e55f
+  RxKeyboard: 4f5863f43b4ff0cbb2a20b94688d6b80c8a43c14
+  RxKingfisher: a602fbf8751d756a7cc6190ddfedc2ce0d301377
+  RxOptional: 3664964c96b69dd20c9cf78bdfe546615e26eca8
+  RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
+  RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
+  RxSwiftExt: d61c4b9b06e0a448041b1c659e0f1b5c5a035afc
+  RxTheme: be60cb14e0544b3cbd574cc37fed35ba9d61aa1f
+  RxViewController: 56486fa0afd629a1d6b5ba077f3b8cd9dc31b5d2
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
-  SwiftDate: fa2bb3962056bb44047b4b85a30044e5eae30b03
-  SwiftEntryKit: 340713c2e4a6662c5149629990bf1088bf5f0389
+  SwiftDate: 72d28954e8e1c6c1c0f917ccc8005e4f83c7d4b2
+  SwiftEntryKit: 537c92699d6034efb1ef9c32b11e0b37c97aa589
   SwifterSwift: 334181863c416882d97b7a60c05054d9e4d799e2
-  SwiftMessages: b577dc7043be8b299857ab35bb663dbff6483bd0
-  SwiftRichString: 9a6a70b4fe2cf428e38348b5ada5400da74621fd
+  SwiftMessages: 077f19126c24033fe24042237ecc20261adb46e4
+  SwiftRichString: d61b807db1f8834c26fee92b6dd3e1be2dc5af03
 
-PODFILE CHECKSUM: 9541c1ce2664fe41298bed6929be1b37b7adc767
+PODFILE CHECKSUM: f73441953c8624ebd7b38391d9e78e1e70d22f22
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.10.1

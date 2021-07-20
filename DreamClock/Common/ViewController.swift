@@ -149,12 +149,12 @@ class ViewController: UIViewController, Navigatable, NVActivityIndicatorViewable
         }).disposed(by: rx.disposeBag)
         
         hero.isEnabled = true
-//        navigationItem.backBarButtonItem = backBarButton
-        themeService.rx
-            .bind({ $0.primary }, to: view.rx.backgroundColor)
-            .bind({ $0.secondary }, to: [backBarButton.rx.tintColor, closeBarButton.rx.tintColor])
-            .bind({ $0.text }, to: self.rx.emptyDataSetImageTintColorBinder)
-            .disposed(by: rx.disposeBag)
+
+        view.theme.backgroundColor = themeService.attribute { $0.primary }
+        backBarButton.theme.tintColor = themeService.attribute { $0.secondary }
+        closeBarButton.theme.tintColor = themeService.attribute { $0.secondary }
+        Observable.just(themeService.attribute { $0.text }.value).bind(to: self.rx.emptyDataSetImageTintColorBinder).disposed(by: rx.disposeBag)
+        
         updateUI()
     }
     

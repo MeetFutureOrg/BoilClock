@@ -39,10 +39,9 @@ enum MainTabBarItem: Int {
         let vc = controller(with: viewModel)
         let item = UITabBarItem(title: nil, image: image, selectedImage: selectedImage)
         
-        _ = themeService.rx
-            .bind({ $0.text }, to: item.rx.titleColor)
-            .bind({ $0.text }, to: item.rx.titleSelectedColor)
-        
+        item.setTitleTextAttributes([.foregroundColor: themeService.attribute { $0.text }], for: .normal)
+        item.setTitleTextAttributes([.foregroundColor: themeService.attribute { $0.text }], for: .selected)
+       
         vc.tabBarItem = item
         return vc
     }
@@ -83,10 +82,8 @@ class MainTabBarController: UITabBarController, Navigatable {
 //        tabBar.hero.id = "TabBarID"
 
 //        tabBar.isTranslucent = false
-        themeService.rx
-            .bind({ $0.primaryDark }, to: tabBar.rx.barTintColor)
-            .bind({ $0.secondary }, to: tabBar.rx.tintColor)
-            .disposed(by: rx.disposeBag)
+        tabBar.theme.barTintColor = themeService.attribute { $0.primaryDark }
+        tabBar.theme.tintColor = themeService.attribute { $0.secondary }
     }
     
     func bindViewModel() {

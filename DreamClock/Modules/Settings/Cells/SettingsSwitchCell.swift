@@ -18,9 +18,7 @@ class SettingsSwitchCell: SimpleTableViewCell {
     override func makeUI() {
         super.makeUI()
         stackView.insertArrangedSubview(trigger, at: 2)
-        themeService.rx
-            .bind({ $0.secondary }, to: leftImageView.rx.tintColor)
-            .disposed(by: rx.disposeBag)
+        leftImageView.theme.tintColor = themeService.attribute { $0.secondary }
     }
     
     func bind(to viewModel: SettingsSwitchCellViewModel) {

@@ -46,10 +46,7 @@ class TableViewController: ViewController, UIScrollViewDelegate {
         updateEmptyDataSet.subscribe(onNext: { [weak self] () in
             self?.tableView.reloadEmptyDataSet()
         }).disposed(by: rx.disposeBag)
-        
-        themeService.rx
-            .bind({ $0.separator }, to: tableView.rx.separatorColor)
-            .disposed(by: rx.disposeBag)
+        tableView.theme.separatorColor = themeService.attribute { $0.separator }
     }
     
     override func updateUI() {
@@ -73,9 +70,7 @@ extension TableViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         if let view = view as? UITableViewHeaderFooterView {
             view.textLabel?.font = .systemFont(ofSize: 16, weight: .bold)
-            themeService.rx
-                .bind({ $0.text }, to: view.textLabel!.rx.textColor)
-                .disposed(by: rx.disposeBag)
+            view.textLabel?.theme.textColor = themeService.attribute { $0.text }
         }
     }
 }

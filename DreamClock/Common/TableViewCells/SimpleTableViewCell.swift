@@ -57,11 +57,9 @@ class SimpleTableViewCell: TableViewCell {
     override func makeUI() {
         super.makeUI()
         
-        themeService.rx
-            .bind({ $0.text }, to: titleLabel.rx.textColor)
-            .bind({ $0.textGray }, to: detailLabel.rx.textColor)
-            .bind({ $0.secondary }, to: rightImageView.rx.tintColor)
-            .disposed(by: rx.disposeBag)
+        titleLabel.theme.textColor = themeService.attribute { $0.text }
+        detailLabel.theme.textColor = themeService.attribute { $0.textGray }
+        rightImageView.theme.tintColor = themeService.attribute { $0.secondary }
         
         stackView.spacing = self.inset
         stackView.addArrangedSubview(leftImageView)

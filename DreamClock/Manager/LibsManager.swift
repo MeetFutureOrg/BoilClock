@@ -7,7 +7,6 @@
 //
 
 import SnapKit
-import IQKeyboardManagerSwift
 import CocoaLumberjack
 import Kingfisher
 import FLEX
@@ -21,7 +20,6 @@ import SwifterSwift
 import SwiftDate
 import Hero
 import SwiftMessages
-import netfox
 
 struct LibsManager {
     
@@ -45,13 +43,7 @@ struct LibsManager {
 //        Language.languageService.observeLanguageChange()
     }
     
-    func setupTheme(with window: UIWindow) {
-        
-        themeService.rx
-            .bind({ $0.statusBarStyle }, to: UIApplication.shared.rx.statusBarStyle)
-            .disposed(by: disposeBag)
-   
-    }
+    func setupTheme(with window: UIWindow) {}
     
     func setupActivityView() {
         NVActivityIndicatorView.DEFAULT_TYPE = .ballRotateChase
@@ -59,7 +51,7 @@ struct LibsManager {
     }
     
     func setupKeyboardManager() {
-        IQKeyboardManager.shared.enable = true
+        // IQKeyboardManager.shared.enable = true
     }
     
     func setupKingfisher() {
@@ -88,7 +80,7 @@ struct LibsManager {
     }
     
     func setupNetfox() {
-        NFX.sharedInstance().start()
+        // NFX.sharedInstance().start()
     }
    
 }

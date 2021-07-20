@@ -23,9 +23,8 @@ class LanguageCell: SimpleTableViewCell {
         }
         titleLabel.style = .style111
         detailLabel.style = .style122
-        themeService.rx
-            .bind({ $0.text }, to: titleLabel.rx.textColor)
-            .disposed(by: rx.disposeBag)
+        
+        titleLabel.theme.textColor = themeService.attribute { $0.text }
     }
     
     func bind(to viewModel: LanguageCellViewModel) {

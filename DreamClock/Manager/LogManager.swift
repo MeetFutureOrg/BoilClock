@@ -9,21 +9,28 @@
 import CocoaLumberjack
 
 public func logDebug(_ message: @autoclosure () -> String) {
-    DDLogDebug(message())
+    DDLog(.debug, .debug, message)
 }
 
 public func logError(_ message: @autoclosure () -> String) {
-    DDLogError(message())
+    DDLog(.error, .error, message)
 }
 
 public func logInfo(_ message: @autoclosure () -> String) {
-    DDLogInfo(message())
+    DDLog(.info, .info, message)
 }
 
 public func logVerbose(_ message: @autoclosure () -> String) {
-    DDLogVerbose(message())
+    DDLog(.verbose, .verbose, message)
 }
 
 public func logWarn(_ message: @autoclosure () -> String) {
-    DDLogWarn(message())
+    DDLog(.warning, .warning, message)
+}
+
+private func DDLog(_ level: DDLogLevel, _ flag: DDLogFlag, _ message: () -> String) {
+    let args: [CVarArg] = [message()]
+    withVaList(args) {
+        DDLog.sharedInstance.log(asynchronous: true, level: .debug, flag: .debug, context: 0, file: #file, function: #function, line: #line, tag: nil, format: "%s", arguments: $0)
+    }
 }

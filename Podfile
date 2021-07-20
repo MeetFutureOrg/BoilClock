@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '10.0'
+platform :ios, '13.0'
 
 target 'DreamClock' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
@@ -9,13 +9,11 @@ target 'DreamClock' do
 
   # Pods for DreamClock
   
-  # Networking
-  pod 'Moya/RxSwift'
-  pod 'ReachabilitySwift'
-
   # Rx Extensions
-  pod 'RxSwift'
+  pod 'RxSwift', '~> 6.2.0'
   pod 'RxCocoa'
+  pod 'RxAlamofire'
+  pod 'RxKingfisher'
   pod 'RxDataSources'
   pod 'RxSwiftExt'
   pod 'NSObject+Rx'
@@ -23,9 +21,11 @@ target 'DreamClock' do
   pod 'RxGesture'
   pod 'RxOptional'
   pod 'RxTheme'
+  pod 'RxAnimated'
+  pod 'RxKeyboard'
 
-  # JSON Mapping
-  pod 'Moya-ObjectMapper/RxSwift'
+  # JSON
+  pod 'ObjectMapper'
 
   # Image
   pod 'Kingfisher'
@@ -50,31 +50,21 @@ target 'DreamClock' do
   # UI
   pod 'Hero'
   pod 'IGListKit'
-  pod 'DZNEmptyDataSet'
-  pod 'NVActivityIndicatorView'
+  pod 'NVActivityIndicatorView/Extended'
   pod 'SwiftMessages'
   pod 'SwiftEntryKit'
+  pod 'DZNEmptyDataSet'
   # pod 'ESTabBarController-swift'
   # pod 'RAMAnimatedTabBarController', '~> 3.5'
   # pod 'SkeletonView'
-
-  # Keyboard
-  pod 'IQKeyboardManagerSwift'
-  
-  # Color
-  pod 'ChameleonFramework/Swift', :git => 'https://github.com/wowansm/Chameleon', :branch => 'swift5'
 
   # Code Quality
   pod 'SwifterSwift'
   pod 'SwiftRichString'
   pod 'FLEX'
 
-  # DEBUG
-  pod 'CocoaDebug', :configurations => ['Debug']
-  pod 'netfox', :configurations => ['Debug']
-
-  # Logging
-  pod 'CocoaLumberjack/Swift'
+  # Logger
+  pod 'CocoaLumberjack'
 
   target 'DreamClockTests' do
     inherit! :search_paths
@@ -88,16 +78,14 @@ target 'DreamClock' do
 
 end
 
-# Cocoapods optimization, always clean project after pod updating
-#post_install do |installer|
-#    installer.pods_project.targets.each do |target|
-##        if target.name == 'ChameleonFramework' || target.name == 'netfox'
-#            target.build_configurations.each do |config|
-#                config.build_settings['SWIFT_VERSION'] = '5'
-#            end
-##        end
-#    end
-#end
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
+    end
+  end
+end
+
 #    Dir.glob(installer.sandbox.target_support_files_root + "Pods-*/*.sh").each do |script|
 #        flag_name = File.basename(script, ".sh") + "-Installation-Flag"
 #        folder = "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
