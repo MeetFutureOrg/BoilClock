@@ -25,11 +25,14 @@ class IconViewController: TableViewController {
     override func makeUI() {
         super.makeUI()
         
-        navigationTitle = "settings.personalization.icon.navigation.title".localized()
+        languageChanged.subscribe(onNext: { [weak self] () in
+            self?.navigationTitle = R.string.localizable.settingsPersonalizationIconNavigationTitle.key.localized()
+        }).disposed(by: rx.disposeBag)
+        
         tableView.register(IconCell.self, forCellReuseIdentifier: Identifier.iconCellIdentifier)
     }
     
-    override func bindViewModel() {
+    override func bindViewModel() { 
         super.bindViewModel()
         
         let input = IconViewModel.Input(trigger: Observable.just(()),
@@ -41,11 +44,11 @@ class IconViewController: TableViewController {
                 cell.bind(to: viewModel)
             }.disposed(by: rx.disposeBag)
         
-        output.selected.drive(onNext: { [weak self] (cellViewModel) in
-//            self?.navigationController?.popViewController(animated: true, {
-//                self?.showInfo(title: "settings.preferences.theme.choose.hud.title".localized(), body: "settings.preferences.theme.choose.hud.body".localized() + cellViewModel.theme.title)
-//            })
-        }).disposed(by: rx.disposeBag)
+//        output.selected.drive(onNext: { [weak self] (cellViewModel) in
+////            self?.navigationController?.popViewController(animated: true, {
+////                self?.showInfo(title: "settings.preferences.theme.choose.hud.title".localized(), body: "settings.preferences.theme.choose.hud.body".localized() + cellViewModel.theme.title)
+////            })
+//        }).disposed(by: rx.disposeBag)
     }
 
 }

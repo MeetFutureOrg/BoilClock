@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
 class EventsViewController: TableViewController {
     
@@ -18,6 +20,8 @@ class EventsViewController: TableViewController {
     
     override func makeUI() {
         super.makeUI()
-        navigationTitle = "navigation.title.events".localized()
+        languageChanged.subscribe(onNext: { [weak self] () in
+            self?.navigationTitle = R.string.localizable.navigationTitleEvents.key.localized()
+        }).disposed(by: rx.disposeBag)
     }
 }
