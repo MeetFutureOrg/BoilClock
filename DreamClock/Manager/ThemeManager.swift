@@ -30,17 +30,25 @@ protocol Theme {
 }
 
 struct LightTheme: Theme {
-    let primary = UIColor.white
-    let primaryDark = UIColor.flatWhite
-    var secondary = UIColor.flatRed
-    var secondaryDark = UIColor.flatRedDark
-    let separator = UIColor.flatWhite
-    let text = UIColor.flatBlack
-    let textGray = UIColor.flatGray
-    let background = UIColor.white
-    let statusBarStyle = UIStatusBarStyle.default
-    let barStyle = UIBarStyle.default
-    let keyboardAppearance = UIKeyboardAppearance.light
+    
+    var primary: UIColor = UIColor.white
+    
+    var primaryDark: UIColor = UIColor.white.darken()
+    
+    var secondary: UIColor = UIColor.red
+    
+    var secondaryDark: UIColor = UIColor.red.darken()
+    
+    var separator: UIColor = UIColor.white
+    
+    var text: UIColor = UIColor.black
+    
+    var textGray: UIColor = UIColor.gray
+    
+    var background = UIColor.white
+    var statusBarStyle = UIStatusBarStyle.default
+    var barStyle = UIBarStyle.default
+    var keyboardAppearance = UIKeyboardAppearance.light
     
     init(colorTheme: ColorTheme) {
         secondary = colorTheme.color
@@ -49,17 +57,17 @@ struct LightTheme: Theme {
 }
 
 struct DarkTheme: Theme {
-    let primary = UIColor.flatBlack
-    let primaryDark = UIColor.flatBlackDark
-    var secondary = UIColor.flatRed
-    var secondaryDark = UIColor.flatRedDark
-    let separator = UIColor.flatBlackDark
-    let text = UIColor.flatWhite
-    let textGray = UIColor.flatGray
-    let background = UIColor.flatBlack
-    let statusBarStyle = UIStatusBarStyle.lightContent
-    let barStyle = UIBarStyle.black
-    let keyboardAppearance = UIKeyboardAppearance.dark
+    var primary = UIColor.black
+    var primaryDark = UIColor.black.darken()
+    var secondary = UIColor.red
+    var secondaryDark = UIColor.red.darken()
+    var separator = UIColor.black.darken()
+    var text = UIColor.white
+    var textGray = UIColor.gray
+    var background = UIColor.black
+    var statusBarStyle = UIStatusBarStyle.lightContent
+    var barStyle = UIBarStyle.black
+    var keyboardAppearance = UIKeyboardAppearance.dark
     
     init(colorTheme: ColorTheme) {
         secondary = colorTheme.color
@@ -75,29 +83,29 @@ enum ColorTheme: Int {
     
     var color: UIColor {
         switch self {
-        case .red: return UIColor.flatRed
-        case .green: return UIColor.flatGreen
-        case .blue: return UIColor.flatBlue
-        case .skyBlue: return UIColor.flatSkyBlue
-        case .magenta: return UIColor.flatMagenta
-        case .purple: return UIColor.flatPurple
-        case .watermelon: return UIColor.flatWatermelon
-        case .lime: return UIColor.flatLime
-        case .pink: return UIColor.flatPink
+        case .red: return UIColor.red
+        case .green: return UIColor.green
+        case .blue: return UIColor.blue
+        case .skyBlue: return UIColor.blue
+        case .magenta: return UIColor.magenta
+        case .purple: return UIColor.purple
+        case .watermelon: return UIColor.red
+        case .lime: return UIColor.orange
+        case .pink: return UIColor.systemPink
         }
     }
     
     var colorDark: UIColor {
         switch self {
-        case .red: return UIColor.flatRedDark
-        case .green: return UIColor.flatGreenDark
-        case .blue: return UIColor.flatBlueDark
-        case .skyBlue: return UIColor.flatSkyBlueDark
-        case .magenta: return UIColor.flatMagentaDark
-        case .purple: return UIColor.flatPurpleDark
-        case .watermelon: return UIColor.flatWatermelonDark
-        case .lime: return UIColor.flatLimeDark
-        case .pink: return UIColor.flatPinkDark
+        case .red: return UIColor.red.darken()
+        case .green: return UIColor.green.darken()
+        case .blue: return UIColor.blue.darken()
+        case .skyBlue: return UIColor.blue.darken()
+        case .magenta: return UIColor.magenta.darken()
+        case .purple: return UIColor.purple.darken()
+        case .watermelon: return UIColor.red.darken()
+        case .lime: return UIColor.orange.darken()
+        case .pink: return UIColor.systemPink.darken()
         }
     }
     
@@ -254,14 +262,3 @@ extension Reactive where Base: UINavigationBar {
         }
     }
 }
-
-extension Reactive where Base: UIApplication {
-
-    /// Bindable sink for `statusBarStyle` property
-    var statusBarStyle: Binder<UIStatusBarStyle> {
-        return Binder(self.base) { view, attr in
-            view.statusBarStyle = attr
-        }
-    }
-}
-

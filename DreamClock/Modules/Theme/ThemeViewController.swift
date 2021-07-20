@@ -33,7 +33,10 @@ class ThemeViewController: TableViewController {
     override func makeUI() {
         super.makeUI()
         
-        navigationTitle = "settings.preferences.theme.navigation.title".localized()
+        languageChanged.subscribe(onNext: { [weak self] () in
+            self?.navigationTitle = R.string.localizable.settingsPreferencesThemeNavigationTitle.key.localized()
+        }).disposed(by: rx.disposeBag)
+
         tableView.register(ThemeCell.self, forCellReuseIdentifier: Identifier.themeCellIdentifier)
     }
     

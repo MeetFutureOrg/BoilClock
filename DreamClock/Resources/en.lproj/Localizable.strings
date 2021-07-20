@@ -37,7 +37,7 @@
 "settings.preferences.language"          = "Language";
 
 
-"settings.personalization.cion.navigation.title" = "Choose a icon";
+"settings.personalization.icon.navigation.title" = "Choose A Icon";
 "settings.personalization.section.title" = "Personalization";
 "settings.personalization.icon"          = "Choose Icon";
 "settings.personalization.icon.change.failed.hud.title"     = "Icon Change Failed";
@@ -65,6 +65,7 @@
 "settings.preferences.language.navigation.title" = "Choose Language";
 "settings.preferences.language.choose.hud.title" = "Language Changed";
 "settings.preferences.language.choose.hud.body"  = "Your app language has been change to:  ";
+"settings.preferences.language.choose.follow.system" = "Follow System";
 
 /// no notification permission
 "application.notification.permission.deny.hud.title" = "No Notify Permission";

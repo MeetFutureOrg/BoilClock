@@ -7,32 +7,32 @@
 //
 
 import Foundation
-import ChameleonFramework
+import SwifterSwift
 
 extension UIColor {
     
     static func primary() -> UIColor {
-        return flatBlack
+        return FlatUI.midnightBlue
     }
     
     static func primaryDark() -> UIColor {
-        return flatBlackDark
+        return FlatUI.wetAsphalt
     }
     
     static func secondary() -> UIColor {
-        return flatRed
+        return FlatUI.alizarin
     }
     
     static func secondaryDark() -> UIColor {
-        return flatRedDark
+        return FlatUI.pomegranate
     }
     
     static func separator() -> UIColor {
-        return flatBlackDark
+        return FlatUI.wetAsphalt
     }
     
     static func textBlack() -> UIColor {
-        return flatBlackDark
+        return FlatUI.wetAsphalt
     }
     
     static func textWhite() -> UIColor {
@@ -44,20 +44,11 @@ extension UIColor {
     }
 }
 
-// MARK: Averaging a Color
-
-extension UIColor {
-    
-    static func averageColor(fromImage image: UIImage) -> UIColor {
-        return AverageColorFromImage(image)
-    }
-}
-
 // MARK: Randomizing Colors
 
 extension UIColor {
     
     static func randomColor() -> UIColor {
-        return randomFlat
+        return .random
     }
 }

@@ -36,37 +36,37 @@ class LanguageViewController: TableViewController {
     override func makeUI() {
         super.makeUI()
     
-        navigationTitle = "settings.preferences.language.navigation.title".localized()
+        languageChanged.subscribe(onNext: { [weak self] () in
+            self?.navigationTitle = R.string.localizable.settingsPreferencesLanguageNavigationTitle.key.localized()
+        }).disposed(by: rx.disposeBag)
+        
         tableView.register(LanguageCell.self, forCellReuseIdentifier: Identifier.languageCellIdentifier)
     }
     
     override func bindViewModel() {
         super.bindViewModel()
         
-        let input = LanguageViewModel.Input(trigger: Observable.just(()),
-                                         selection: tableView.rx.modelSelected(LanguageCellViewModel.self).asDriver())
+        let refresh = Observable.of(Observable.just(()),
+                                    languageChanged.asObservable()).merge()
+        
+        let input = LanguageViewModel.Input(trigger: refresh,
+                                         selection: tableView.rx.modelSelected(LanguageSectionItem.self).asDriver())
         let output = viewModel.transform(input: input)
         
-        output.items
-            .drive(tableView.rx.items(cellIdentifier: Identifier.languageCellIdentifier, cellType: LanguageCell.self)) { tableView, viewModel, cell in
+        /// configure cell
+        let dataSource = RxTableViewSectionedReloadDataSource<LanguageSection>(configureCell: { dataSource, tableView, indexPath, item in
+            switch item {
+            case .languageItem(let viewModel):
+                
+                let cell = (tableView.dequeueReusableCell(withIdentifier: Identifier.languageCellIdentifier, for: indexPath) as? LanguageCell)!
                 cell.bind(to: viewModel)
-            }.disposed(by: rx.disposeBag)
+                return cell
+            }
+        })
         
-        output.selected.drive(onNext: { [weak self] (cellViewModel) in
-
-                self?.navigationController?.popViewController(animated: true, {
-                    let viewModel = MainTabBarViewModel(loggedIn: true, provider: provider)
-                    self?.navigator.show(segue: .tabs(viewModel: viewModel), sender: nil, transition: .root(in: Application.shared.window!))
-                    if let tabBarVC = Application.shared.window?.rootViewController as? MainTabBarController {
-                        tabBarVC.selectedIndex = 2
-                        if let strong = self {
-                            strong.showInfo(title: "settings.preferences.language.choose.hud.title".localized(), body: "settings.preferences.language.choose.hud.body".localized() + Language.displayName(for: Language.current()))
-
-                        }
-                    }
-            })
-            
-        }).disposed(by: rx.disposeBag)
+        output.items.asObservable()
+            .bind(to: tableView.rx.items(dataSource: dataSource))
+            .disposed(by: rx.disposeBag)
     }
 }
 

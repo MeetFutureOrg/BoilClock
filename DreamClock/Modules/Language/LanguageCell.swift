@@ -23,17 +23,17 @@ class LanguageCell: SimpleTableViewCell {
         }
         titleLabel.style = .style111
         detailLabel.style = .style122
-        themeService.rx
-            .bind({ $0.text }, to: titleLabel.rx.textColor)
-            .disposed(by: rx.disposeBag)
+        
+        titleLabel.theme.textColor = themeService.attribute { $0.text }
     }
     
     func bind(to viewModel: LanguageCellViewModel) {
-        viewModel.ensignName.drive(onNext: { [weak self] name in
-            self?.leftImageView.image = UIImage(named: name)
+        
+        viewModel.ensignPath.drive(onNext: { [weak self] (path) in
+            self?.leftImageView.image = UIImage(contentsOfFile: path)
         }).disposed(by: rx.disposeBag)
-        viewModel.name.drive(titleLabel.rx.text).disposed(by: rx.disposeBag)
-        viewModel.localeName.drive(detailLabel.rx.text).disposed(by: rx.disposeBag)
+        viewModel.localeName.drive(titleLabel.rx.text).disposed(by: rx.disposeBag)
+        viewModel.name.drive(detailLabel.rx.text).disposed(by: rx.disposeBag)
         viewModel.isCurrent.drive(onNext: { [weak self] (isCurrent) in
             self?.rightImageView.image = isCurrent ? R.image.dc_ic_cell_checked()?.withRenderingMode(.alwaysTemplate) : nil
         }).disposed(by: rx.disposeBag)

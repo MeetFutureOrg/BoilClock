@@ -7,7 +7,6 @@
 //
 
 import SnapKit
-import IQKeyboardManagerSwift
 import CocoaLumberjack
 import Kingfisher
 import FLEX
@@ -21,7 +20,6 @@ import SwifterSwift
 import SwiftDate
 import Hero
 import SwiftMessages
-import netfox
 
 struct LibsManager {
     
@@ -45,13 +43,7 @@ struct LibsManager {
 //        Language.languageService.observeLanguageChange()
     }
     
-    func setupTheme(with window: UIWindow) {
-        
-        themeService.rx
-            .bind({ $0.statusBarStyle }, to: UIApplication.shared.rx.statusBarStyle)
-            .disposed(by: disposeBag)
-   
-    }
+    func setupTheme(with window: UIWindow) {}
     
     func setupActivityView() {
         NVActivityIndicatorView.DEFAULT_TYPE = .ballRotateChase
@@ -59,7 +51,7 @@ struct LibsManager {
     }
     
     func setupKeyboardManager() {
-        IQKeyboardManager.shared.enable = true
+        // IQKeyboardManager.shared.enable = true
     }
     
     func setupKingfisher() {
@@ -75,8 +67,7 @@ struct LibsManager {
     }
     
     func setupCocoaLumberjack() {
-        DDLog.add(DDTTYLogger.sharedInstance) // TTY = Xcode console
-        DDLog.add(DDASLLogger.sharedInstance) // ASL = Apple System Logs
+        DDLog.add(DDOSLogger.sharedInstance) // ASL = Apple System Logs
         
         let fileLogger: DDFileLogger = DDFileLogger() // File Logger
         fileLogger.rollingFrequency = TimeInterval(60*60*24)  // 24 hours
@@ -85,11 +76,11 @@ struct LibsManager {
     }
     
     func setupFLEX() {
-        FLEXManager.shared().isNetworkDebuggingEnabled = true
+        FLEXManager.shared.isNetworkDebuggingEnabled = true
     }
     
     func setupNetfox() {
-        NFX.sharedInstance().start()
+        // NFX.sharedInstance().start()
     }
    
 }
@@ -97,7 +88,7 @@ struct LibsManager {
 extension LibsManager {
     
     func showFlex() {
-        FLEXManager.shared().showExplorer()
+        FLEXManager.shared.showExplorer()
     }
     
     func removeKingfisherCache(completion handler: (() -> Void)?) {

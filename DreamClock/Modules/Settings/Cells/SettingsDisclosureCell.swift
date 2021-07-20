@@ -12,9 +12,7 @@ class SettingsDisclosureCell: SimpleTableViewCell {
 
     override func makeUI() {
         super.makeUI()
-        themeService.rx
-            .bind({ $0.secondary }, to: leftImageView.rx.tintColor)
-            .disposed(by: rx.disposeBag)
+        leftImageView.theme.tintColor = themeService.attribute { $0.secondary }
     }
     
     func bind(to viewModel: SettingsDisclosureCellViewModel) {

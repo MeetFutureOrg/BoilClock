@@ -17,20 +17,20 @@ extension Notification.Name {
 private let CurrentLanguageKey = "CurrentLanguageKey"
 
 /// 默认英文, 如果中文不可用默认是base
-private let DefaultLanguage = "en"
+private let DefaultLanguage = "Base"
 
 /// Base bundle
 private let BaseBundle = "Base"
 
 struct LanguageInfo {
     let ensign: Ensign // 国旗资源名字
-    let languageCode: String // 语言代码
+    let languageCode: Code // 语言代码
     let name: String // 语言名字
     let localeName: String // 语言本地化后的名字
     let isCurrent: Bool // 是否是当前语言
     
-    init(code langCode: String, name: String, localeName: String, isCurrent: Bool) {
-        self.ensign = Ensign(langCode: Code(rawValue: langCode)!)
+    init(code langCode: Code, name: String, localeName: String, isCurrent: Bool) {
+        self.ensign = Ensign(langCode: langCode)
         self.languageCode = langCode
         self.name = name
         self.localeName = localeName
@@ -40,8 +40,16 @@ struct LanguageInfo {
     
     struct Ensign {
         let name: String
+        let path: String
         init(langCode: Code) {
             name = langCode.ensginName
+
+            if let path = Bundle.ensignBundle.path(forResource: langCode.ensginName, ofType: "png") {
+                self.path = path
+            } else {
+                self.path = String()
+            }
+        
 
 //            UIImage(named: langCode.ensginName, in: <#T##Bundle?#>, compatibleWith: <#T##UITraitCollection?#>)
 
@@ -89,29 +97,32 @@ class Language {
     /// 获取应用当前的语言
     ///
     /// - Returns: 当前语言, 例如: en, zh-Hans 等
-    static func current() -> String {
-        if let current = UserDefaults.standard.string(forKey: CurrentLanguageKey) {
-            return current
+    static func current() -> LanguageInfo.Code {
+        if let current = UserDefaults.standard.object(forKey: CurrentLanguageKey) as? String {
+            if let code = LanguageInfo.Code(rawValue: current) {
+                return code
+            }
+            return self.`default`()
         }
-        return `default`()
+        return .base
     }
     
     /// 获取当前应用的默认语言
     ///
     /// - Returns: 当前默认语言, 例如: en, zh-Hans 等
-    static func `default`() -> String {
+    static func `default`() -> LanguageInfo.Code {
         var defaultLanguage: String = String()
         guard let preferredLanguage = Bundle.main.preferredLocalizations.first else {
-            return DefaultLanguage
+            return LanguageInfo.Code(rawValue: DefaultLanguage)!
         }
         
-        let availableLanguages: [String] = self.available()
-        if (availableLanguages.contains(preferredLanguage)) {
+        let availableLanguages = self.available()
+        if (availableLanguages.contains(LanguageInfo.Code(rawValue: preferredLanguage)!)) {
             defaultLanguage = preferredLanguage
         } else {
             defaultLanguage = DefaultLanguage
         }
-        return defaultLanguage
+        return LanguageInfo.Code(rawValue: defaultLanguage)!
     }
     
     
@@ -120,13 +131,14 @@ class Language {
     ///
     /// - Parameter excludeBase: 是否剔除 `Base`, 默认 false -> 不剔除
     /// - Returns: 可用语言列表
-    static func available(_ excludeBase: Bool = false) -> [String] {
+    static func available(_ excludeBase: Bool = false) -> [LanguageInfo.Code] {
         var available = Bundle.main.localizations
         // 剔除 base
-        if let indexOfBase = available.index(of: "Base") , excludeBase == true {
-            available.remove(at: indexOfBase)
-        }
-        return available.sorted()
+//        if let indexOfBase = available.firstIndex(of: "Base") , excludeBase == true {
+//            available.remove(at: indexOfBase)
+//        }
+        available = available.sorted()
+        return available.map { LanguageInfo.Code(rawValue: $0)! }
     }
     
     
@@ -142,10 +154,10 @@ class Language {
     /// 设置语言
     ///
     /// - Parameter language: 需要设置的语言, 例如: en, zh-Hans 等
-    static func setLanguage(_ language: String) {
-        let selected = available().contains(language) ? language : self.default()
+    static func setLanguage(_ langCode: LanguageInfo.Code) {
+        let selected = available().contains(langCode) ? langCode : self.default()
         if (selected != current()){
-            UserDefaults.standard.set(selected, forKey: CurrentLanguageKey)
+            UserDefaults.standard.set(selected.rawValue, forKey: CurrentLanguageKey)
             UserDefaults.standard.synchronize()
             NotificationCenter.default.post(name: Notification.Name.LanguageChange, object: nil)
         }
@@ -171,21 +183,33 @@ class Language {
     ///
     ///                             isCurrent: false
     ///
-    static func getInfo(for language: String) -> LanguageInfo {
-        let isCurrent = language == self.current()
+    static func getInfo(for langCode: LanguageInfo.Code) -> LanguageInfo {
+        let isCurrent = langCode == self.current()
+//        let isCurrent: Bool
+//        if self.current() == .base {
+//            isCurrent = true
+//        } else {
+//            isCurrent = langCode == self.current()
+//        }
+        
         var languageName = ""
         var localeName = ""
-        let languageLocale = NSLocale(localeIdentifier: language)
-        let currentLocale = NSLocale(localeIdentifier: self.current())
-
-        if let lName = languageLocale.displayName(forKey: .identifier, value: language) {
+        let languageLocale = NSLocale(localeIdentifier: langCode.rawValue)
+        let currentLocale = NSLocale(localeIdentifier: self.current().rawValue)
+        
+        if let lName = languageLocale.displayName(forKey: .identifier, value: langCode.rawValue) {
             languageName = lName
         }
         
-        if let name = currentLocale.displayName(forKey: .identifier, value: language) {
+        if let name = currentLocale.displayName(forKey: .identifier, value: langCode.rawValue) {
             localeName = name
         }
-        return LanguageInfo(code: language, name: languageName, localeName: localeName, isCurrent: isCurrent)
+        
+        if langCode == .base {
+            localeName = "settings.preferences.language.choose.follow.system".localized()
+        }
+        
+        return LanguageInfo(code: langCode, name: languageName, localeName: localeName, isCurrent: isCurrent)
     }
     
 //    static func getEnsignPath(by langCode : String) -> String {
@@ -211,11 +235,16 @@ class Language {
     ///
     /// - Parameter language: 语言代码
     /// - Returns: 语言名称, 例如: 中文(简体), English 等
-    static func displayName(for language: String) -> String {
-        let locale : NSLocale = NSLocale(localeIdentifier: current())
-        if let displayName = locale.displayName(forKey: NSLocale.Key.identifier, value: language) {
+    static func displayName(for langCode: LanguageInfo.Code) -> String {
+        let locale : NSLocale = NSLocale(localeIdentifier: self.current().rawValue)
+        if langCode == .base {
+            return "settings.preferences.language.choose.follow.system".localized()
+        }
+        
+        if let displayName = locale.displayName(forKey: NSLocale.Key.identifier, value: langCode.rawValue) {
             return displayName
         }
+        
         return String()
     }
 }
@@ -241,8 +270,13 @@ public extension String {
      */
     func localized(using tableName: String?, in bundle: Bundle?) -> String {
         let bundle: Bundle = bundle ?? .main
-        if let path = bundle.path(forResource: Language.current(), ofType: "lproj"),
+        
+        let preferredLanguage = Bundle.main.preferredLocalizations.first!
+        
+        if let path = bundle.path(forResource: Language.current() == .base ? preferredLanguage : Language.current().rawValue , ofType: "lproj"),
             let bundle = Bundle(path: path) {
+            
+            print(path)
             return bundle.localizedString(forKey: self, value: nil, table: tableName)
         } else if let path = bundle.path(forResource: BaseBundle, ofType: "lproj"),
             let bundle = Bundle(path: path) {
@@ -262,3 +296,9 @@ fileprivate extension Array {
 }
 
 
+extension Bundle {
+    static var ensignBundle: Bundle {
+        let path = main.path(forResource: "CountryEnsign", ofType: "bundle")!
+        return Bundle(path: path)!
+    }
+}

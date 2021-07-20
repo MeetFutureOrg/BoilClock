@@ -32,9 +32,18 @@
 "settings.preferences.nightMode"         = "Night Mode";
 "settings.preferences.theme"             = "Theme";
 "settings.preferences.hapticFeedback"    = "Haptic Feedback";
-"settings.preferences.tapticEngine"       = "(iPhone 6s/Plus and above)";
+"settings.preferences.tapticEngine"      = "(iPhone 6s/Plus and above)";
 "settings.preferences.sound"             = "Sound";
 "settings.preferences.language"          = "Language";
+
+
+"settings.personalization.icon.navigation.title" = "Choose A Icon";
+"settings.personalization.section.title" = "Personalization";
+"settings.personalization.icon"          = "Choose Icon";
+"settings.personalization.icon.change.failed.hud.title"     = "Icon Change Failed";
+"settings.personalization.icon.change.failed.hud.retry"     = "Retry";
+"settings.personalization.icon.change.nosupport.hud.title"  = "Sorry!";
+"settings.personalization.icon.change.nosupport.hud.body"   = "Your iOS version not support icon change service!";
 
 /// settings > theme
 "settings.preferences.theme.navigation.title" = "Choose Theme Color";
@@ -56,6 +65,7 @@
 "settings.preferences.language.navigation.title" = "Choose Language";
 "settings.preferences.language.choose.hud.title" = "Language Changed";
 "settings.preferences.language.choose.hud.body"  = "Your app language has been change to:  ";
+"settings.preferences.language.choose.follow.system" = "Suivre Le Système";
 
 /// no notification permission
 "application.notification.permission.deny.hud.title" = "No Notify Permission";

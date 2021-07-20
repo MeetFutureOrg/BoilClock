@@ -23,7 +23,11 @@ class SettingsViewController: TableViewController {
     override func makeUI() {
         super.makeUI()
 
-        navigationTitle = "navigation.title.settings".localized()
+        languageChanged.subscribe(onNext: { [weak self] () in
+            self?.navigationTitle = R.string.localizable.navigationTitleSettings.key.localized()
+        }).disposed(by: rx.disposeBag)
+        
+
         tableView.register(SettingsSwitchCell.self, forCellReuseIdentifier: Identifier.switchCellIdentifier)
         tableView.register(SettingsDisclosureCell.self, forCellReuseIdentifier: Identifier.disclosureCellIdentifier)
     }
@@ -31,7 +35,10 @@ class SettingsViewController: TableViewController {
     override func bindViewModel() {
         super.bindViewModel()
     
-        let input = SettingsViewModel.Input(trigger: Observable.just(()),
+        let refresh = Observable.of(Observable.just(()),
+                                    languageChanged.asObservable()).merge()
+        
+        let input = SettingsViewModel.Input(trigger: refresh,
                                             selection: tableView.rx.modelSelected(SettingsSectionItem.self).asDriver())
         let output = viewModel.transform(input: input)
         

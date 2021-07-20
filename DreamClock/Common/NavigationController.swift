@@ -24,11 +24,9 @@ class NavigationController: UINavigationController {
         
         //        navigationBar.backIndicatorImage = R.image.icon_navigation_back()
         //        navigationBar.backIndicatorTransitionMaskImage = R.image.icon_navigation_back()
-        themeService.rx
-            .bind({ $0.secondary }, to: navigationBar.rx.tintColor)
-            .bind({ $0.primaryDark }, to: navigationBar.rx.barTintColor)
-            .bind({ [NSAttributedString.Key.foregroundColor: $0.text] }, to: navigationBar.rx.titleTextAttributes)
-            .disposed(by: rx.disposeBag)
+        navigationBar.theme.tintColor = themeService.attribute { $0.secondary }
+        navigationBar.theme.barTintColor = themeService.attribute { $0.primaryDark }
+        navigationBar.theme.titleTextAttributes = themeService.attribute { [NSAttributedString.Key.foregroundColor: $0.text] }
     }
 }
 

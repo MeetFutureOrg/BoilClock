@@ -18,7 +18,7 @@ protocol RxListAdapterDataSource {
 extension Reactive where Base: ListAdapter {
     func items<DataSource: RxListAdapterDataSource & ListAdapterDataSource, O: ObservableType>(dataSource: DataSource)
         -> (_ source: O)
-        -> Disposable where DataSource.Element == O.E {
+        -> Disposable where DataSource.Element == O.Element {
             
             return { source in
                 let subscription = source

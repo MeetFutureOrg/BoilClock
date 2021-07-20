@@ -27,12 +27,16 @@ class AlarmMainViewController: ViewController {
         super.viewDidLoad()
         
         
-        
+        print(Language.current())
     }
 
     override func makeUI() {
         super.makeUI()
-        navigationTitle = "navigation.title.alarm".localized()
+        
+        languageChanged.subscribe(onNext: { [weak self] () in
+            self?.navigationTitle = R.string.localizable.navigationTitleAlarm.key.localized()
+        }).disposed(by: rx.disposeBag)
+        
         view.addSubview(collectionView)
         adapter.collectionView = collectionView
         
@@ -53,7 +57,6 @@ class AlarmMainViewController: ViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationTitle = "navigation.title.alarm".localized()
     }
     
     

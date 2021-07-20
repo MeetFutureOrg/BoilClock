@@ -35,6 +35,7 @@ class IconManager {
                         })
                     }
                 }
+
             }
         } else {
             // Fallback on earlier versions
@@ -166,7 +167,7 @@ fileprivate extension IconManager {
 }
 
 fileprivate extension String {
-    fileprivate func contains(_ string: String, caseSensitive: Bool = true) -> Bool {
+    func contains(_ string: String, caseSensitive: Bool = true) -> Bool {
         if !caseSensitive {
             return range(of: string, options: .caseInsensitive) != nil
         }

@@ -17,8 +17,6 @@ import SwiftMessages
 
 class ViewController: UIViewController, Navigatable, NVActivityIndicatorViewable {
     
-    
-    
     var navigator: Navigator!
     
     let isLoading = BehaviorRelay(value: false)
@@ -31,7 +29,9 @@ class ViewController: UIViewController, Navigatable, NVActivityIndicatorViewable
         }
     }
     
-    var emptyDataSetTitle = "application.view.emptyData.title".localized()
+    let languageChanged = BehaviorRelay<Void>(value: ())
+    
+    var emptyDataSetTitle = R.string.localizable.applicationViewEmptyDataTitle.key.localized()
     var emptyDataSetImage = UIImage(named: "")
     var emptyDataSetImageTintColor = BehaviorRelay<UIColor?>(value: nil)
     
@@ -83,7 +83,6 @@ class ViewController: UIViewController, Navigatable, NVActivityIndicatorViewable
         makeUI()
         bindViewModel()
         
-        
         closeBarButton.rx.tap.asObservable().subscribe(onNext: { [weak self] () in
             self?.navigator.dismiss(sender: self)
         }).disposed(by: rx.disposeBag)
@@ -107,6 +106,10 @@ class ViewController: UIViewController, Navigatable, NVActivityIndicatorViewable
             .subscribe(onNext: { (event) in
                 logDebug("Motion Status changed")
             }).disposed(by: rx.disposeBag)
+        
+        NotificationCenter.default.rx.notification(Notification.Name.LanguageChange).subscribe(onNext: { [weak self] (event) in
+            self?.languageChanged.accept(())
+        }).disposed(by: rx.disposeBag)
         
     }
     
@@ -140,14 +143,18 @@ class ViewController: UIViewController, Navigatable, NVActivityIndicatorViewable
     }
     
     func makeUI() {
-        hero.isEnabled = true
         
-//        navigationItem.backBarButtonItem = backBarButton
-        themeService.rx
-            .bind({ $0.primary }, to: view.rx.backgroundColor)
-            .bind({ $0.secondary }, to: [backBarButton.rx.tintColor, closeBarButton.rx.tintColor])
-            .bind({ $0.text }, to: self.rx.emptyDataSetImageTintColorBinder)
-            .disposed(by: rx.disposeBag)
+        languageChanged.subscribe(onNext: { [weak self] () in
+            self?.emptyDataSetTitle = R.string.localizable.applicationViewEmptyDataTitle.key.localized()
+        }).disposed(by: rx.disposeBag)
+        
+        hero.isEnabled = true
+
+        view.theme.backgroundColor = themeService.attribute { $0.primary }
+        backBarButton.theme.tintColor = themeService.attribute { $0.secondary }
+        closeBarButton.theme.tintColor = themeService.attribute { $0.secondary }
+        Observable.just(themeService.attribute { $0.text }.value).bind(to: self.rx.emptyDataSetImageTintColorBinder).disposed(by: rx.disposeBag)
+        
         updateUI()
     }
     
@@ -273,24 +280,24 @@ extension UIViewController {
         SwiftMessages.hideAll()
     }
     
-    func showInfo(title: String?, body: String?, layout: MessageView.Layout = .tabView, position: SwiftMessages.PresentationStyle = .top, duration: SwiftMessages.Duration = .seconds(seconds: Configs.BaseDuration.hudDuration), buttonTitle: String? = nil, buttonTapHandler: ((_ button: UIButton) -> Void)? = nil) {
-        show(title: title ?? "", body: body ?? "", type: .info, layout: layout, position: position, duration: duration, buttonTitle: buttonTitle, buttonTapHandler: buttonTapHandler)
+    func showInfo(title: String?, body: String?, layout: MessageView.Layout = .tabView, position: SwiftMessages.PresentationStyle = .top, duration: SwiftMessages.Duration = .seconds(seconds: Configs.BaseDuration.hudDuration), icon: UIImage? = nil, buttonTitle: String? = nil, buttonTapHandler: ((_ button: UIButton) -> Void)? = nil) {
+        show(title: title ?? "", body: body ?? "", type: .info, layout: layout, position: position, duration: duration, icon: icon, buttonTitle: buttonTitle, buttonTapHandler: buttonTapHandler)
     }
     
-    func showSuccess(title: String?, body: String?, layout: MessageView.Layout = .tabView, position: SwiftMessages.PresentationStyle = .top, duration: SwiftMessages.Duration = .seconds(seconds: Configs.BaseDuration.hudDuration), buttonTitle: String? = nil, buttonTapHandler: ((_ button: UIButton) -> Void)? = nil) {
-        show(title: title ?? "", body: body ?? "", type: .success, layout: layout, position: position, duration: duration, buttonTitle: buttonTitle, buttonTapHandler: buttonTapHandler)
+    func showSuccess(title: String?, body: String?, layout: MessageView.Layout = .tabView, position: SwiftMessages.PresentationStyle = .top, duration: SwiftMessages.Duration = .seconds(seconds: Configs.BaseDuration.hudDuration), icon: UIImage? = nil, buttonTitle: String? = nil, buttonTapHandler: ((_ button: UIButton) -> Void)? = nil) {
+        show(title: title ?? "", body: body ?? "", type: .success, layout: layout, position: position, duration: duration, icon: icon, buttonTitle: buttonTitle, buttonTapHandler: buttonTapHandler)
     }
     
-    func showWarning(title: String?, body: String?, layout: MessageView.Layout = .tabView, position: SwiftMessages.PresentationStyle = .top, duration: SwiftMessages.Duration = .seconds(seconds: Configs.BaseDuration.hudDuration), buttonTitle: String? = nil, buttonTapHandler: ((_ button: UIButton) -> Void)? = nil) {
-        show(title: title ?? "", body: body ?? "", type: .warning, layout: layout, position: position,duration: duration, buttonTitle: buttonTitle, buttonTapHandler: buttonTapHandler)
+    func showWarning(title: String?, body: String?, layout: MessageView.Layout = .tabView, position: SwiftMessages.PresentationStyle = .top, duration: SwiftMessages.Duration = .seconds(seconds: Configs.BaseDuration.hudDuration), icon: UIImage? = nil, buttonTitle: String? = nil, buttonTapHandler: ((_ button: UIButton) -> Void)? = nil) {
+        show(title: title ?? "", body: body ?? "", type: .warning, layout: layout, position: position,duration: duration, icon: icon, buttonTitle: buttonTitle, buttonTapHandler: buttonTapHandler)
     }
     
-    func showError(title: String?, body: String?, layout: MessageView.Layout = .tabView, position: SwiftMessages.PresentationStyle = .top, duration: SwiftMessages.Duration = .seconds(seconds: Configs.BaseDuration.hudDuration), buttonTitle: String? = nil, buttonTapHandler: ((_ button: UIButton) -> Void)? = nil) {
-        show(title: title ?? "", body: body ?? "", type: .error, layout: layout, position: position, duration: duration, buttonTitle: buttonTitle, buttonTapHandler: buttonTapHandler)
+    func showError(title: String?, body: String?, layout: MessageView.Layout = .tabView, position: SwiftMessages.PresentationStyle = .top, duration: SwiftMessages.Duration = .seconds(seconds: Configs.BaseDuration.hudDuration), icon: UIImage? = nil, buttonTitle: String? = nil, buttonTapHandler: ((_ button: UIButton) -> Void)? = nil) {
+        show(title: title ?? "", body: body ?? "", type: .error, layout: layout, position: position, duration: duration, icon: icon, buttonTitle: buttonTitle, buttonTapHandler: buttonTapHandler)
     }
     
     
-    private func show(title: String, body: String, type: MessageType, layout: MessageView.Layout, position: SwiftMessages.PresentationStyle, duration: SwiftMessages.Duration, buttonTitle: String?, buttonTapHandler: ((_ button: UIButton) -> Void)?) {
+    private func show(title: String, body: String, type: MessageType, layout: MessageView.Layout, position: SwiftMessages.PresentationStyle, duration: SwiftMessages.Duration, icon: UIImage?, buttonTitle: String?, buttonTapHandler: ((_ button: UIButton) -> Void)?) {
         let message = MessageView.viewFromNib(layout: layout)
         switch type {
         case .info:
@@ -302,7 +309,10 @@ extension UIViewController {
         case .error:
             message.configureTheme(.error)
         }
+    
         message.configureContent(title: title, body: body)
+        message.iconImageView?.isHidden = icon == nil
+        message.iconImageView?.image = icon
         message.button?.isHidden = (buttonTitle?.isEmpty ?? true) || buttonTitle == nil
         if let buttonTitle = buttonTitle {
             message.button?.setTitle(buttonTitle, for: .normal)
@@ -314,3 +324,5 @@ extension UIViewController {
         SwiftMessages.show(config: config, view: message)
     }
 }
+
+
