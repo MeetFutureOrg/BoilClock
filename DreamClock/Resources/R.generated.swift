@@ -272,7 +272,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 22 images.
+  /// This `R.image` struct is generated, and contains static references to 24 images.
   struct image {
     /// Image `AppIcon-60`.
     static let appIcon60 = Rswift.ImageResource(bundle: R.hostingBundle, name: "AppIcon-60")
@@ -314,6 +314,10 @@ struct R: Rswift.Validatable {
     static let dc_ic_clock_filled_24_24x24_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_clock_filled_24_24x24_")
     /// Image `dc_ic_clock_outline_24_24x24_`.
     static let dc_ic_clock_outline_24_24x24_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_clock_outline_24_24x24_")
+    /// Image `dc_ic_records_filled_24_24x24_`.
+    static let dc_ic_records_filled_24_24x24_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_records_filled_24_24x24_")
+    /// Image `dc_ic_records_outline_24_24x24_`.
+    static let dc_ic_records_outline_24_24x24_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_records_outline_24_24x24_")
     /// Image `dc_ic_settings_internal_filled_24_24x24_`.
     static let dc_ic_settings_internal_filled_24_24x24_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "dc_ic_settings_internal_filled_24_24x24_")
     /// Image `dc_ic_settings_outline_24_24x24_`.
@@ -460,6 +464,20 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "dc_ic_records_filled_24_24x24_", bundle: ..., traitCollection: ...)`
+    static func dc_ic_records_filled_24_24x24_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.dc_ic_records_filled_24_24x24_, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "dc_ic_records_outline_24_24x24_", bundle: ..., traitCollection: ...)`
+    static func dc_ic_records_outline_24_24x24_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.dc_ic_records_outline_24_24x24_, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "dc_ic_settings_internal_filled_24_24x24_", bundle: ..., traitCollection: ...)`
     static func dc_ic_settings_internal_filled_24_24x24_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.dc_ic_settings_internal_filled_24_24x24_, compatibleWith: traitCollection)
@@ -480,24 +498,24 @@ struct R: Rswift.Validatable {
   struct string {
     /// This `R.string.infoPlist` struct is generated, and contains static references to 1 localization keys.
     struct infoPlist {
-      /// Base translation: Dream Clock
+      /// Base translation: Boil Clock
       ///
       /// Locales: en, zh-Hans, en-GB, en-AU, en-IN, zh-Hant, zh-HK, ja, es, fr, de, ru, it, ko, nl, Base
       static let cfBundleDisplayName = Rswift.StringResource(key: "CFBundleDisplayName", tableName: "infoPlist", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "en-GB", "en-AU", "en-IN", "zh-Hant", "zh-HK", "ja", "es", "fr", "de", "ru", "it", "ko", "nl", "Base"], comment: nil)
 
-      /// Base translation: Dream Clock
+      /// Base translation: Boil Clock
       ///
       /// Locales: en, zh-Hans, en-GB, en-AU, en-IN, zh-Hant, zh-HK, ja, es, fr, de, ru, it, ko, nl, Base
       static func cfBundleDisplayName(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
-          return NSLocalizedString("CFBundleDisplayName", tableName: "infoPlist", bundle: hostingBundle, value: "Dream Clock", comment: "")
+          return NSLocalizedString("CFBundleDisplayName", tableName: "infoPlist", bundle: hostingBundle, value: "Boil Clock", comment: "")
         }
 
         guard let (_, bundle) = localeBundle(tableName: "infoPlist", preferredLanguages: preferredLanguages) else {
           return "CFBundleDisplayName"
         }
 
-        return NSLocalizedString("CFBundleDisplayName", tableName: "infoPlist", bundle: bundle, value: "Dream Clock", comment: "")
+        return NSLocalizedString("CFBundleDisplayName", tableName: "infoPlist", bundle: bundle, value: "Boil Clock", comment: "")
       }
 
       fileprivate init() {}
@@ -547,7 +565,7 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
 
-    /// This `R.string.localizable` struct is generated, and contains static references to 47 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 48 localization keys.
     struct localizable {
       /// Base translation: (iPhone 6s/Plus and above)
       ///
@@ -665,6 +683,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, zh-Hans, en-GB, en-AU, en-IN, zh-Hant, zh-HK, ja, es, fr, de, ru, it, ko, nl, Base
       static let settingsPreferencesThemeColorPurple = Rswift.StringResource(key: "settings.preferences.theme.color.purple", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "en-GB", "en-AU", "en-IN", "zh-Hant", "zh-HK", "ja", "es", "fr", "de", "ru", "it", "ko", "nl", "Base"], comment: nil)
+      /// Base translation: Records
+      ///
+      /// Locales: en, zh-Hans, en-GB, en-AU, en-IN, zh-Hant, zh-HK, ja, es, fr, de, ru, it, ko, nl, Base
+      static let navigationTitleRecords = Rswift.StringResource(key: "navigation.title.records", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "en-GB", "en-AU", "en-IN", "zh-Hant", "zh-HK", "ja", "es", "fr", "de", "ru", "it", "ko", "nl", "Base"], comment: nil)
       /// Base translation: Red
       ///
       /// Locales: en, zh-Hans, en-GB, en-AU, en-IN, zh-Hant, zh-HK, ja, es, fr, de, ru, it, ko, nl, Base
@@ -1171,6 +1193,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("settings.preferences.theme.color.purple", bundle: bundle, value: "Purple", comment: "")
+      }
+
+      /// Base translation: Records
+      ///
+      /// Locales: en, zh-Hans, en-GB, en-AU, en-IN, zh-Hant, zh-HK, ja, es, fr, de, ru, it, ko, nl, Base
+      static func navigationTitleRecords(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("navigation.title.records", bundle: hostingBundle, value: "Records", comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "navigation.title.records"
+        }
+
+        return NSLocalizedString("navigation.title.records", bundle: bundle, value: "Records", comment: "")
       }
 
       /// Base translation: Red

@@ -15,6 +15,7 @@ enum MainTabBarItem: Int {
 
     case events
     case alarm
+    case records
     case settings
     
     func controller(with viewModel: ViewModel) -> UIViewController {
@@ -26,6 +27,10 @@ enum MainTabBarItem: Int {
         case .alarm:
             let vc = R.storyboard.main.alarmViewController()!
             vc.viewModel = viewModel as? AlarmViewModel
+            return NavigationController(rootViewController: vc)
+        case .records:
+            let vc = RecordsViewController()
+            vc.viewModel = viewModel as? RecordsViewModel
             return NavigationController(rootViewController: vc)
         case .settings:
             let vc = R.storyboard.main.settingsViewController()!
@@ -50,6 +55,8 @@ enum MainTabBarItem: Int {
         switch self {
         case .events:   return R.image.dc_ic_calendar_add_outline_24_24x24_()
         case .alarm:    return R.image.dc_ic_clock_outline_24_24x24_()
+        case .records: return
+            R.image.dc_ic_records_outline_24_24x24_()
         case .settings: return R.image.dc_ic_settings_outline_24_24x24_()
         }
     }
@@ -58,6 +65,8 @@ enum MainTabBarItem: Int {
         switch self {
         case .events:   return R.image.dc_ic_calendar_add_filled_24_24x24_()
         case .alarm:    return R.image.dc_ic_clock_filled_24_24x24_()
+        case .records: return
+            R.image.dc_ic_records_filled_24_24x24_()
         case .settings: return R.image.dc_ic_settings_internal_filled_24_24x24_()
         }
     }

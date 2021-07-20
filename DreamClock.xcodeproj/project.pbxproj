@@ -106,6 +106,9 @@
 		A4D7B81121C1043600CC7177 /* AlarmApplicationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D7B81021C1043600CC7177 /* AlarmApplicationProtocol.swift */; };
 		A4D7B81421C1339800CC7177 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D7B81321C1339800CC7177 /* Defaults.swift */; };
 		A4D7B81821C13FA400CC7177 /* DispatchQueue+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D7B81721C13FA400CC7177 /* DispatchQueue+Extension.swift */; };
+		EA455CC426A6C9AB00AF3484 /* RecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA455CC326A6C9AB00AF3484 /* RecordsViewController.swift */; };
+		EA455CC626A6C9BE00AF3484 /* RecordsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA455CC526A6C9BE00AF3484 /* RecordsListController.swift */; };
+		EA455CC826A6C9FB00AF3484 /* RecordsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA455CC726A6C9FB00AF3484 /* RecordsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -297,6 +300,9 @@
 		A70F96F035A4086457C6F90A /* Pods-DreamClockUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamClockUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DreamClockUITests/Pods-DreamClockUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D5B94BB28E44BA37BA709025 /* Pods-DreamClockUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamClockUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DreamClockUITests/Pods-DreamClockUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E5286670B6BE0A195F6A25B5 /* Pods-DreamClock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamClock.release.xcconfig"; path = "Pods/Target Support Files/Pods-DreamClock/Pods-DreamClock.release.xcconfig"; sourceTree = "<group>"; };
+		EA455CC326A6C9AB00AF3484 /* RecordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsViewController.swift; sourceTree = "<group>"; };
+		EA455CC526A6C9BE00AF3484 /* RecordsListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsListController.swift; sourceTree = "<group>"; };
+		EA455CC726A6C9FB00AF3484 /* RecordsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -373,6 +379,7 @@
 		A40D044C21C7936200EAB2B1 /* Icon */ = {
 			isa = PBXGroup;
 			children = (
+				EA455CC226A6A7DE00AF3484 /* NormalMode */,
 				A40D045D21C794A500EAB2B1 /* DarkMode */,
 			);
 			path = Icon;
@@ -389,14 +396,6 @@
 				A40D048621C89C2D00EAB2B1 /* DarkMode-AppIcon-Small-40@3x.png */,
 				A40D048521C89C2D00EAB2B1 /* DarkMode-AppIcon-Small@2x.png */,
 				A40D048A21C89C2E00EAB2B1 /* DarkMode-AppIcon-Small@3x.png */,
-				A40D047521C899F800EAB2B1 /* AppIcon-60@2x.png */,
-				A40D047621C899F900EAB2B1 /* AppIcon-60@3x.png */,
-				A40D047921C899F900EAB2B1 /* AppIcon-Notification@2x.png */,
-				A40D047A21C899F900EAB2B1 /* AppIcon-Notification@3x.png */,
-				A40D047B21C899F900EAB2B1 /* AppIcon-Small-40@2x.png */,
-				A40D047421C899F800EAB2B1 /* AppIcon-Small-40@3x.png */,
-				A40D047721C899F900EAB2B1 /* AppIcon-Small@2x.png */,
-				A40D047821C899F900EAB2B1 /* AppIcon-Small@3x.png */,
 			);
 			path = DarkMode;
 			sourceTree = "<group>";
@@ -706,6 +705,7 @@
 		A463F7FC217E009400EE055A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				EA455CC126A6A74A00AF3484 /* Records */,
 				A42F0E9921801E7F00009369 /* Language */,
 				A42F0E90218006FE00009369 /* Theme */,
 				A42F0E50217F161F00009369 /* Events */,
@@ -746,6 +746,31 @@
 				A42F0E6C217F628E00009369 /* Protocol */,
 			);
 			path = Alarm;
+			sourceTree = "<group>";
+		};
+		EA455CC126A6A74A00AF3484 /* Records */ = {
+			isa = PBXGroup;
+			children = (
+				EA455CC326A6C9AB00AF3484 /* RecordsViewController.swift */,
+				EA455CC526A6C9BE00AF3484 /* RecordsListController.swift */,
+				EA455CC726A6C9FB00AF3484 /* RecordsViewModel.swift */,
+			);
+			path = Records;
+			sourceTree = "<group>";
+		};
+		EA455CC226A6A7DE00AF3484 /* NormalMode */ = {
+			isa = PBXGroup;
+			children = (
+				A40D047521C899F800EAB2B1 /* AppIcon-60@2x.png */,
+				A40D047621C899F900EAB2B1 /* AppIcon-60@3x.png */,
+				A40D047921C899F900EAB2B1 /* AppIcon-Notification@2x.png */,
+				A40D047A21C899F900EAB2B1 /* AppIcon-Notification@3x.png */,
+				A40D047B21C899F900EAB2B1 /* AppIcon-Small-40@2x.png */,
+				A40D047421C899F800EAB2B1 /* AppIcon-Small-40@3x.png */,
+				A40D047721C899F900EAB2B1 /* AppIcon-Small@2x.png */,
+				A40D047821C899F900EAB2B1 /* AppIcon-Small@3x.png */,
+			);
+			path = NormalMode;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1055,6 +1080,7 @@
 				A40D03F721C263EC00EAB2B1 /* FeedbackManager.swift in Sources */,
 				A463F7FF217E0B9200EE055A /* AppDelegate.swift in Sources */,
 				A42F0EA121806B7900009369 /* LanguageCellViewModel.swift in Sources */,
+				EA455CC426A6C9AB00AF3484 /* RecordsViewController.swift in Sources */,
 				A463F81F217E118900EE055A /* NavigationController.swift in Sources */,
 				A42F0E63217F272700009369 /* View.swift in Sources */,
 				A42F0E83217F71C700009369 /* SettingsDisclosureCell.swift in Sources */,
@@ -1064,6 +1090,7 @@
 				A42F0E7E217F6AE500009369 /* UIColor+Dream.swift in Sources */,
 				A42F0E6E217F62BD00009369 /* PropertyReflectable.swift in Sources */,
 				A463F80B217E0CC100EE055A /* Navigator.swift in Sources */,
+				EA455CC826A6C9FB00AF3484 /* RecordsViewModel.swift in Sources */,
 				A42F0E85217F71E100009369 /* SettingsDisclosureCellViewModel.swift in Sources */,
 				A42F0E72217F658900009369 /* Identifier.swift in Sources */,
 				A42F0E75217F69C600009369 /* TableViewCell.swift in Sources */,
@@ -1083,6 +1110,7 @@
 				A40D046121C88B6100EAB2B1 /* IconViewController.swift in Sources */,
 				A40D046321C88BA600EAB2B1 /* IconCell.swift in Sources */,
 				A42F0E58217F1E2A00009369 /* EventsViewModel.swift in Sources */,
+				EA455CC626A6C9BE00AF3484 /* RecordsListController.swift in Sources */,
 				A42F0E8D217F79A100009369 /* SettingsSwitchCellViewModel.swift in Sources */,
 				A42F0E65217F594200009369 /* TableViewController.swift in Sources */,
 				A42F0E6B217F60E900009369 /* AlarmModel.swift in Sources */,

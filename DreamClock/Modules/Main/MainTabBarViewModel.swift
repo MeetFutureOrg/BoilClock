@@ -29,7 +29,7 @@ class MainTabBarViewModel: ViewModel, ViewModelType {
         
         
         let tabBarItems = loggedIn.map { _ -> [MainTabBarItem] in
-            return [.events, .alarm, .settings]
+            return [.events, .alarm, .records, .settings]
             }.asDriver(onErrorJustReturn: [])
         
         return Output(tabBarItems: tabBarItems)
@@ -39,6 +39,7 @@ class MainTabBarViewModel: ViewModel, ViewModelType {
         switch tabBarItem {
         case .events:   return EventsViewModel(provider: provider)
         case .alarm:    return AlarmViewModel(provider: provider)
+        case .records:  return RecordsViewModel(provider: provider)
         case .settings: return SettingsViewModel(provider: provider)
             
         }

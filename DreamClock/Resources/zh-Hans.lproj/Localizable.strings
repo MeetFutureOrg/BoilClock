@@ -24,6 +24,7 @@
 /// 导航标题
 "navigation.title.events"   = "事件";
 "navigation.title.alarm"    = "闹钟";
+"navigation.title.records" = "记录";
 "navigation.title.settings" = "设置";
 
 /// 设置

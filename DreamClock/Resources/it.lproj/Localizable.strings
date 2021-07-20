@@ -24,6 +24,7 @@
 /// navigation title
 "navigation.title.events"   = "Events";
 "navigation.title.alarm"    = "Alarm";
+"navigation.title.records" = "Records";
 "navigation.title.settings" = "Settings";
 
 
